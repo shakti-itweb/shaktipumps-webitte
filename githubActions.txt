@@ -1,3 +1,7 @@
 1.git push origin pranavCommit
 2.Repo : https://github.com/PRANAV1199/Website24.git
 3.Link : https://github.com/PRANAV1199/Website24
+
+
+How to push a repo:
+1.git init
