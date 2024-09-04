@@ -1,0 +1,943 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shakti Pumps</title>
+    <link rel="icon" type="image/x-icon" href="/img/fav.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"  rel="stylesheet">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
+    <link rel='stylesheet' href="/css/bootstrap.min.css">
+    <link rel='stylesheet' href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="/css/style-loading.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+  </head>
+  <!-- Team modal start-->
+  <div class="modal fade" id="teampopup" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="teampopup" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <img src="/images/pop-close.png" alt="">
+          </button>
+        <div class="modal-body">
+         <div class="row">
+          <div class="col-lg-5 col-md-5 col-sm-12 teampropic">
+            <img src="/images/popup-team1.png" alt="">
+          </div>
+          <div class="col-lg-7 col-md-7 col-sm-12 teampopdtls">
+              <h2>Mr. Dinesh Patidar <span>Chairman & Director</span></h2>
+              <p>Is a visionary, self-made industrialist and leader with a strong business acumen and knowledge in development of engineering products and management.</p>
+              <p>His more than 3 decades of experience and extensive business travels across the world helped him to adopt latest and best practices in business to develop a competitive edge.</p>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ <!-- Team modal end-->
+  <body>
+  
+    <header class="fullheader">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-2 col-md-2 col-sm-12">
+            <h1>
+              <a href="/"><img src="/images/Logo.png" alt=""></a>
+            </h1>
+          </div>
+          <div class="col-lg-7 col-md-2 col-sm-12">
+            <!-- <nav>
+              <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Investor Relations</a></li>
+                <li><a href="#">Services & Support</a></li>
+                <li><a href="#">Media</a></li>
+                <li><a href="#">Career</a></li>
+                <li><a href="#">Contact Us</a></li>                
+              </ul>
+            </nav> -->
+            <nav>
+              <div class="navbar">
+                <i class='bx bx-menu'></i>
+                <!-- <div class="logo"><a href="#">Logo</a></div> -->
+                <div class="nav-links">
+                  <div class="sidebar-logo">
+                    <!-- <span class="logo-name">Logo</span> -->
+                    <i class='bx bx-x'></i>
+                  </div>
+                  <!-- <ul class="links">
+                    <li><a href="#">HOME</a></li>
+                    <li>
+                      <a href="#">HTML & CSS</a>
+                      <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
+                      <ul class="htmlCss-sub-menu sub-menu">
+                        <li><a href="#">Web Design</a></li>
+                        <li><a href="#">Login Forms</a></li>
+                        <li><a href="#">Card Design</a></li>
+                        <li class="more">
+                          <span><a href="#">More</a>
+                            <i class='bx bxs-chevron-right arrow more-arrow'></i>
+                          </span>
+                          <ul class="more-sub-menu sub-menu">
+                            <li><a href="#">Neumorphism</a></li>
+                            <li><a href="#">Pre-loader</a></li>
+                            <li><a href="#">Glassmorphism</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">JAVASCRIPT</a>
+                      <i class='bx bxs-chevron-down js-arrow arrow '></i>
+                      <ul class="js-sub-menu sub-menu">
+                        <li><a href="#">Dynamic Clock</a></li>
+                        <li><a href="#">Form Validation</a></li>
+                        <li><a href="#">Card Slider</a></li>
+                        <li><a href="#">Complete Website</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                  </ul> -->
+                  <ul class="links">
+                    <li><a href="/about">About</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">Investor Relations</a></li>
+                    <li><a href="#">Services & Support</a></li>
+                    <li><a href="#">Media</a></li>
+                    <li><a href="#">Career</a></li>
+                    <li><a href="#">Contact Us</a></li>                
+                  </ul>
+                </div>
+                <div class="search-box">
+                  <i class='bx bx-search'></i>
+                  <div class="input-box">
+                    <input type="text" placeholder="Search...">
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+          <div class="col-lg-3 col-md-2 col-sm-12">
+            <div class="top-right">
+              <ul>
+                <li><a href="#"><img src="/images/Whistleblower.png" alt=""></a></li>
+                <li><a href="#"><img src="/images/Search.png" alt=""></a></li>
+                <li><a href="#"><img src="/images/global.png" alt=""> EN <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1.3999L5 4.5999L9 1.3999" stroke="#1F2B4C" stroke-width="1.5" stroke-linecap="round"/>
+                </svg></a></li>
+                <li><a href="#">Login <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1.3999L5 4.5999L9 1.3999" stroke="#1F2B4C" stroke-width="1.5" stroke-linecap="round"/>
+                </svg></a></li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+<section class="about-banner">
+  <div><img src="/images/about-banner.png" alt=""></div>
+  <div class="container">
+    <h2>Pioneering <br>Energy-Efficient<br>
+      Pumping Solutions<br> Since 1982</h2>
+  </div>
+</section>
+<section class="whatlooking weatsakti" data-animation="fadeInUp">
+  <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-12">
+          <h2>We At Shakti</h2>
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-12">
+          <p>Shakti Pumps is a renowned manufacturer specializing in high-efficiency pumping solutions, catering to diverse needs in domestic, solar and industrial sectors. For domestic applications, Shakti Pumps offers reliable pressure booster pumps that ensure consistent water pressure for households.</p>
+          <a href="#" class="welresultsbtn"><img src="/images/pdf-icon.png" alt=""> Download Brochure</a>
+        </div>
+      </div>
+  </div>
+</section>
+<section class="shaktijour">
+<div class="abtjurslide">
+  <div class="jurnpan">
+    <h3>1983</h3>
+    <div class="jurndtls">
+      <div class="jurpic">
+        <img src="/images/jurnpic1.png" alt="">
+      </div>
+      <h4>Highly Advanced Manufacturing Unit Set Up</h4>
+      <p>Shakti Pumps is a renowned manufacturer specializing in high-efficiency.</p>
+    </div>
+  </div>
+  <div class="jurnpan altt">
+    <div class="jurndtls">
+      <div class="jurpic">
+        <img src="/images/jurnpic1.png" alt="">
+      </div>
+      <h4>Highly Advanced Manufacturing Unit Set Up</h4>
+      <p>Shakti Pumps is a renowned manufacturer specializing in high-efficiency.</p>
+    </div>
+    <h3>1995</h3>
+  </div>
+  <div class="jurnpan">
+    <h3>1996</h3>
+    <div class="jurndtls">
+      <div class="jurpic">
+        <img src="/images/jurnpic1.png" alt="">
+      </div>
+      <h4>Highly Advanced Manufacturing Unit Set Up</h4>
+      <p>Shakti Pumps is a renowned manufacturer specializing in high-efficiency.</p>
+    </div>
+  </div>
+  <div class="jurnpan altt">
+    <div class="jurndtls">
+      <div class="jurpic">
+        <img src="/images/jurnpic1.png" alt="">
+      </div>
+      <h4>Highly Advanced Manufacturing Unit Set Up</h4>
+      <p>Shakti Pumps is a renowned manufacturer specializing in high-efficiency.</p>
+    </div>
+    <h3>1997</h3>
+  </div>
+</div>
+</section>
+<section class="missvisson">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12 vissn">
+        <h2>Our Vision</h2>
+        <p>To become a company that constantly strives for quality and customer satisfaction by providing best pumping solutions with global benchmarks and to be a company which integrates Health, Safety and Environmental considerations into all its business decisions and activities, such there will be</p>
+        <ul>
+          <li>Zero Accident</li>
+          <li>Zero Liquid Discharge</li>
+          <li>Zero Carbon Foot Print</li>
+        </ul>
+        <p>To excel with an emphasis on best business and ethical practice with strong organizational values justifying the interest of all stakeholders.</p>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 missn">
+        <h2>Our Mission</h2>
+        <p>To work relentlessly towards coming closer to our vision statement by offering best working environment and training focusing on integrity and ethics.</p>
+        <p>To empower the workforce to offer products and services that exceeds customer expectations by providing value for money and ensure handsome return to our employees and shareholders.</p>
+        <p>To create a safe workplace by reducing injuries, accidents & environmental impact for current and future generations.</p>
+      </div>
+    </div>
+  </div>
+  <img src="/images/green-bg.png" alt="">
+</section>
+<section class="ourvalue">
+  <div class="container"  data-animation="fadeInUp">
+    <h2>Our Values</h2>
+    <!-- partial:index.partial.html -->
+<ul class="tabs">
+  <li class="active" rel="tab1">Brands</li>
+  <li rel="tab2">Innovative</li>
+  <li rel="tab3">Scale</li>
+  <li rel="tab4">Efficient</li>
+  <li rel="tab5">Technology</li>
+  <li rel="tab6">Presence</li>
+  <li rel="tab7">Experience</li>
+  <li rel="tab8">Sustainability</li>
+</ul>
+<div class="tab_container">
+  <h3 class="d_active tab_drawer_heading" rel="tab1">Brands</h3>
+  <div id="tab1" class="tab_content">
+  <div class="row">
+    <div class="col-lg-5 col-md-5 col-sm-6">
+      <img src="/images/tab-pic1.png" alt="">
+    </div>
+    <div class="col-lg-7 col-md-7 col-sm-6">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis volutpat eleifend nisl, id consectetur ex faucibus vitae. Nulla porta nibh finibus accumsan condimentum. Integer eu malesuada nunc. Cras eget ipsum sit amet lacus maximus sagittis. Nulla eu sodales lorem. Sed quis vehicula est. Phasellus cursus consequat arcu, quis dignissim quam dapibus non. Cras vestibulum erat malesuada sapien volutpat maximus. Etiam non neque sit amet ante accumsan facilisis eget mattis nunc.</p>
+      <p>Nulla facilisi. Sed aliquet tempor ex. Donec sagittis urna arcu, in mattis libero hendrerit at. Sed egestas nulla a neque auctor suscipit. Donec varius libero eget velit consectetur, eget tristique dui rhoncus. Nunc nec erat commodo, ornare orci in, volutpat leo. Suspendisse euismod maximus.</p>
+    </div>
+  </div>
+  </div>
+  <!-- #tab1 -->
+  <h3 class="tab_drawer_heading" rel="tab2">Innovative</h3>
+  <div id="tab2" class="tab_content">
+    <div class="row">
+    <div class="col-lg-5 col-md-5 col-sm-6">
+      <img src="/images/tab-pic1.png" alt="">
+    </div>
+    <div class="col-lg-7 col-md-7 col-sm-6">
+      <p>Consectetur adipiscing elit. Duis volutpat eleifend nisl, id consectetur ex faucibus vitae. Nulla porta nibh finibus accumsan condimentum. Integer eu malesuada nunc. Cras eget ipsum sit amet lacus maximus sagittis. Nulla eu sodales lorem. Sed quis vehicula est. Phasellus cursus consequat arcu, quis dignissim quam dapibus non. Cras vestibulum erat malesuada sapien volutpat maximus. Etiam non neque sit amet ante accumsan facilisis eget mattis nunc.</p>
+      <p>Nulla facilisi. Sed aliquet tempor ex. Donec sagittis urna arcu, in mattis libero hendrerit at. Sed egestas nulla a neque auctor suscipit. Donec varius libero eget velit consectetur, eget tristique dui rhoncus. Nunc nec erat commodo, ornare orci in, volutpat leo. Suspendisse euismod maximus.</p>
+    </div>
+  </div>
+  </div>
+  <!-- #tab2 -->
+  <h3 class="tab_drawer_heading" rel="tab3">Scale</h3>
+  <div id="tab3" class="tab_content">
+    <div class="row">
+      <div class="col-lg-5 col-md-5 col-sm-6">
+        <img src="/images/tab-pic1.png" alt="">
+      </div>
+      <div class="col-lg-7 col-md-7 col-sm-6">
+        <p>Duis volutpat eleifend nisl, id consectetur ex faucibus vitae. Nulla porta nibh finibus accumsan condimentum. Integer eu malesuada nunc. Cras eget ipsum sit amet lacus maximus sagittis. Nulla eu sodales lorem. Sed quis vehicula est. Phasellus cursus consequat arcu, quis dignissim quam dapibus non. Cras vestibulum erat malesuada sapien volutpat maximus. Etiam non neque sit amet ante accumsan facilisis eget mattis nunc.</p>
+        <p>Nulla facilisi. Sed aliquet tempor ex. Donec sagittis urna arcu, in mattis libero hendrerit at. Sed egestas nulla a neque auctor suscipit. Donec varius libero eget velit consectetur, eget tristique dui rhoncus. Nunc nec erat commodo, ornare orci in, volutpat leo. Suspendisse euismod maximus.</p>
+      </div>
+    </div>
+  </div>
+  <!-- #tab3 -->
+  <h3 class="tab_drawer_heading" rel="tab4">Efficient</h3>
+  <div id="tab4" class="tab_content">
+    <div class="row">
+      <div class="col-lg-5 col-md-5 col-sm-6">
+        <img src="/images/tab-pic1.png" alt="">
+      </div>
+      <div class="col-lg-7 col-md-7 col-sm-6">
+        <p>Nulla porta nibh finibus accumsan condimentum. Integer eu malesuada nunc. Cras eget ipsum sit amet lacus maximus sagittis. Nulla eu sodales lorem. Sed quis vehicula est. Phasellus cursus consequat arcu, quis dignissim quam dapibus non. Cras vestibulum erat malesuada sapien volutpat maximus. Etiam non neque sit amet ante accumsan facilisis eget mattis nunc.</p>
+        <p>Nulla facilisi. Sed aliquet tempor ex. Donec sagittis urna arcu, in mattis libero hendrerit at. Sed egestas nulla a neque auctor suscipit. Donec varius libero eget velit consectetur, eget tristique dui rhoncus. Nunc nec erat commodo, ornare orci in, volutpat leo. Suspendisse euismod maximus.</p>
+      </div>
+    </div>
+  </div>
+  <!-- #tab4 --> 
+  <h3 class="tab_drawer_heading" rel="tab5">Technology</h3>
+  <div id="tab5" class="tab_content">
+    <div class="row">
+      <div class="col-lg-5 col-md-5 col-sm-6">
+        <img src="/images/tab-pic1.png" alt="">
+      </div>
+      <div class="col-lg-7 col-md-7 col-sm-6">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis volutpat eleifend nisl, id consectetur ex faucibus vitae. Nulla porta nibh finibus accumsan condimentum. Integer eu malesuada nunc. Cras eget ipsum sit amet lacus maximus sagittis. Nulla eu sodales lorem. Sed quis vehicula est. Phasellus cursus consequat arcu, quis dignissim quam dapibus non. Cras vestibulum erat malesuada sapien volutpat maximus. Etiam non neque sit amet ante accumsan facilisis eget mattis nunc.</p>
+        <p>Nulla facilisi. Sed aliquet tempor ex. Donec sagittis urna arcu, in mattis libero hendrerit at. Sed egestas nulla a neque auctor suscipit. Donec varius libero eget velit consectetur, eget tristique dui rhoncus. Nunc nec erat commodo, ornare orci in, volutpat leo. Suspendisse euismod maximus.</p>
+      </div>
+    </div>
+  </div>
+  <!-- #tab5 --> 
+  <h3 class="tab_drawer_heading" rel="tab6">Presence</h3>
+  <div id="tab6" class="tab_content">
+    <div class="row">
+      <div class="col-lg-5 col-md-5 col-sm-6">
+        <img src="/images/tab-pic1.png" alt="">
+      </div>
+      <div class="col-lg-7 col-md-7 col-sm-6">
+        <p>Duis volutpat eleifend nisl, id consectetur ex faucibus vitae. Nulla porta nibh finibus accumsan condimentum. Integer eu malesuada nunc. Cras eget ipsum sit amet lacus maximus sagittis. Nulla eu sodales lorem. Sed quis vehicula est. Phasellus cursus consequat arcu, quis dignissim quam dapibus non. Cras vestibulum erat malesuada sapien volutpat maximus. Etiam non neque sit amet ante accumsan facilisis eget mattis nunc.</p>
+        <p>Nulla facilisi. Sed aliquet tempor ex. Donec sagittis urna arcu, in mattis libero hendrerit at. Sed egestas nulla a neque auctor suscipit. Donec varius libero eget velit consectetur, eget tristique dui rhoncus. Nunc nec erat commodo, ornare orci in, volutpat leo. Suspendisse euismod maximus.</p>
+      </div>
+    </div>
+  </div>
+  <!-- #tab6 --> 
+  <h3 class="tab_drawer_heading" rel="tab6">Sustainability</h3>
+  <div id="tab7" class="tab_content">
+    <div class="row">
+      <div class="col-lg-5 col-md-5 col-sm-6">
+        <img src="/images/tab-pic1.png" alt="">
+      </div>
+      <div class="col-lg-7 col-md-7 col-sm-6">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis volutpat eleifend nisl, id consectetur ex faucibus vitae. Nulla porta nibh finibus accumsan condimentum. Integer eu malesuada nunc. Cras eget ipsum sit amet lacus maximus sagittis. Nulla eu sodales lorem. Sed quis vehicula est. Phasellus cursus consequat arcu, quis dignissim quam dapibus non. Cras vestibulum erat malesuada sapien volutpat maximus. Etiam non neque sit amet ante accumsan facilisis eget mattis nunc.</p>
+        <p>Nulla facilisi. Sed aliquet tempor ex. Donec sagittis urna arcu, in mattis libero hendrerit at. Sed egestas nulla a neque auctor suscipit. Donec varius libero eget velit consectetur, eget tristique dui rhoncus. Nunc nec erat commodo, ornare orci in, volutpat leo. Suspendisse euismod maximus.</p>
+      </div>
+    </div>
+  </div>
+  <!-- #tab7 --> 
+  <h3 class="tab_drawer_heading" rel="tab8">Tab 8</h3>
+  <div id="tab8" class="tab_content">
+    <div class="row">
+      <div class="col-lg-5 col-md-5 col-sm-6">
+        <img src="/images/tab-pic1.png" alt="">
+      </div>
+      <div class="col-lg-7 col-md-7 col-sm-6">
+        <p>Consectetur adipiscing elit. Duis volutpat eleifend nisl, id consectetur ex faucibus vitae. Nulla porta nibh finibus accumsan condimentum. Integer eu malesuada nunc. Cras eget ipsum sit amet lacus maximus sagittis. Nulla eu sodales lorem. Sed quis vehicula est. Phasellus cursus consequat arcu, quis dignissim quam dapibus non. Cras vestibulum erat malesuada sapien volutpat maximus. Etiam non neque sit amet ante accumsan facilisis eget mattis nunc.</p>
+        <p>Nulla facilisi. Sed aliquet tempor ex. Donec sagittis urna arcu, in mattis libero hendrerit at. Sed egestas nulla a neque auctor suscipit. Donec varius libero eget velit consectetur, eget tristique dui rhoncus. Nunc nec erat commodo, ornare orci in, volutpat leo. Suspendisse euismod maximus.</p>
+      </div>
+    </div>
+  </div>
+  <!-- #tab8 --> 
+</div>
+<!-- .tab_container -->
+</div>
+<!-- partial -->
+  </div>
+</section>
+<section class="boarddirector">
+    <div class="container">
+      <h2>Board of Directors</h2>
+      <div class="directorlists">
+        <div class="mempan">
+          <img src="/images/member1.png" alt="">
+          <h3>Mr. Dinesh Patidar <span>Chairman & Director</span></h3>
+          <img src="/images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup">
+        </div>
+        <div class="mempan">
+          <img src="/images/member2.png" alt="">
+          <h3>Mr. Ramesh Patidar <span>Managing Director</span></h3>
+          <img src="/images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup">
+        </div>
+        <div class="mempan">
+          <img src="/images/member3.png" alt="">
+          <h3>Mr. Sunil Patidar <span>Executive Director</span></h3>
+          <img src="/images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup">
+        </div>
+        <div class="mempan">
+          <img src="/images/member4.png" alt="">
+          <h3>Mr. Ashwin Bhootda <span>Whole Time Director</span></h3>
+          <img src="/images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup">
+        </div>
+        <div class="mempan">
+          <img src="/images/member5.png" alt="">
+          <h3>Mr. Hirabhai Somabhai Patel <span>Independent Director</span></h3>
+          <img src="/images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup">
+        </div>
+        <div class="mempan">
+          <img src="/images/member6.png" alt="">
+          <h3>Mr. Bhim Singh <span>Independent Director</span></h3>
+          <img src="/images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup">
+        </div>
+        <div class="mempan">
+          <img src="/images/member7.png" alt="">
+          <h3>Mr. V.S.S. Pavan Kumar Hari <span>Independent Director</span></h3>
+          <img src="/images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup">
+        </div>
+        <div class="mempan">
+          <img src="/images/member8.png" alt="">
+          <h3>Mr. Keyur Bipinchandra Thaker <span>Executive Director</span></h3>
+          <img src="/images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup">
+        </div>
+        <div class="mempan">
+          <img src="/images/member9.png" alt="">
+          <h3>Mrs. Nishtha Neema <span>Independent Director</span></h3>
+          <img src="/images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup">
+        </div>
+      </div>
+      <div class="managerlists">
+        <h2>Managerial Persons</h2>
+        <div class="mempan">
+          <img src="/images/dummy-pic.png" alt="">
+          <h3>Mr. Dinesh Patel <span>Chief Financial Officer</span></h3>
+          <img src="/images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup">
+        </div>
+        <div class="mempan">
+          <img src="/images/dummy-pic.png" alt="">
+          <h3>Mr. Ravi Patidar <span>Company Secretary</span></h3>
+          <img src="/images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup">
+        </div>
+        <div class="mempan">
+          <img src="/images/dummy-pic.png" alt="">
+          <h3>Dr Chinmay Jain <span>Chief Technical Officer</span></h3>
+          <img src="/images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup">
+        </div>
+        <div class="mempan">
+          <img src="/images/dummy-pic.png" alt="">
+          <h3>Prof. BM Sharma <span>Overall Head (Operations & HR)</span></h3>
+          <img src="/images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup">
+        </div>
+      </div>
+    </div>
+</section>
+<section class="hon-certificate">
+  <div class="container">
+    <h2>Honors & Accolades</h2>
+    <div class="honslide">
+      <div class="honpan">
+       <div class="honimgtab"><img src="/images/certificate1.png" alt=""></div> 
+        <h3>First Patent</h3>
+        <p>Company Received Its First Patent Certificate For "A Unidirectional Solar Water Pump With Grid-Tied Power Generation".</p>
+      </div>
+      <div class="honpan">
+        <div class="honimgtab"><img src="/images/certificate2.png" alt=""></div> 
+         <h3>Best Employer Brand Award MP, 2019</h3>
+         <p>Shakti Pumps Was Awarded By Madhya Pradesh Solar Energy Leadership 2019.</p>
+       </div>
+       <div class="honpan">
+        <div class="honimgtab"><img src="/images/certificate3.png" alt=""></div> 
+         <h3>Mp Leadership 2019</h3>
+         <p>Shakti Pumps was awarded by Madhya Pradesh Solar Energy Leadership 2019.</p>
+       </div>
+       <div class="honpan">
+        <div class="honimgtab"><img src="/images/certificate4.png" alt=""></div> 
+         <h3>BEE-GEF-UNIDO 2018</h3>
+         <p>Shakti Pumps was winner of 2018 Innovation Challenge  by BEE-GEF-UNIDO</p>
+       </div>
+       <div class="honpan">
+        <div class="honimgtab"><img src="/images/certificate5.png" alt=""></div> 
+         <h3>Veichi, 2016</h3>
+         <p>Shakti Pumps was awarded best strategic partner award 2016.</p>
+       </div>
+    </div>
+    <a href="#" class="readmore">View All Awards</a>
+  </div>
+</section>
+<section class="infrastruc">
+      <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <h2>Infrastructure <br>(Factory And <br>R&D Centres)</h2>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-12">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis fringilla scelerisque. Curabitur tristique dictum velit id malesuada. Aenean et dolor velit. Sed pharetra est eu augue vestibulum, sit amet pellentesque enim gravida. Fusce pretium ipsum elit, ut commodo justo porttitor in. Nulla tincidunt est id sollicitudin suscipit.</p>
+              <a href="/infrastructure" class="readmore">Read More</a>
+            </div>
+          </div>
+      </div>
+</section>
+<section class="patents">
+    <div class="container">
+      <h2>Patents</h2>
+        <div class="patentslider">
+          <div class="patentpan">
+           <div class="cerftab"><img src="/images/patent-pic1.png" alt=""></div> 
+            <h3>1st Patent Certificate</h3>
+          </div>
+          <div class="patentpan">
+            <div class="cerftab"><img src="/images/patent-pic1.png" alt=""></div> 
+             <h3>2nd Patent Certificate</h3>
+           </div>
+           <div class="patentpan">
+            <div class="cerftab"><img src="/images/patent-pic1.png" alt=""></div> 
+             <h3>3rd Patent Certificate</h3>
+           </div>
+           <div class="patentpan">
+            <div class="cerftab"><img src="/images/patent-pic1.png" alt=""></div> 
+             <h3>4th Patent Certificate</h3>
+           </div>
+           <div class="patentpan">
+            <div class="cerftab"><img src="/images/patent-pic1.png" alt=""></div> 
+             <h3>5th Patent Certificate</h3>
+           </div>
+
+        </div>
+        <a href="#" class="readmore">View All Patents</a>
+    </div>
+</section>
+<footer class="full-footer desk">
+  <section class="footerlinks">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-12">
+          <h3>Contact & Support</h3>
+          <p>Shakti Pumps (India) Ltd.</p>
+          <p>Head Office:
+            Plot No. 401, 402 & 413, Sector III,
+            Industrial Area, Pithampur - 454774
+            Dhar (M.P.) India.</p>
+          <p>Email: info@shaktipumps.com</p>
+          <p>Phone: +91-7292-410500<br>
+            Fax: +91-7292-410645<br>
+            Toll Free(INDIA): 1800-103-5555
+          </p>
+        </div>
+        <div class="col-lg-9 col-md-9 col-sm-12">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-12">
+              <h3>Login</h3>
+              <ul>
+                <li><a href="#">Employee Portal</a></li>
+                <li><a href="#">App Dashboard</a></li>
+                <li><a href="#">New Shakti Solar RMS</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12">
+              <h3>Policies</h3>
+              <ul>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">IMS</a></li>
+                <li><a href="#">Media</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12">
+              <h3>Sister Company</h3>
+              <ul>
+                <li><a href="#">Shakti Energy Solution</a></li>
+                <li><a href="#">Shakti EV Mobility</a></li>
+                <li><a href="#">Shakti Irrigation</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Shakti Portal</a></li>
+                <li><a href="#">Pump Selection</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12">
+              <h3>CSR</h3>
+              <ul>
+                <li><a href="#">Green Energy</a></li>
+                <li><a href="#">Sustainabilty</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12">
+              <h3>Vendor Registration</h3>
+              <ul>
+                <li><a href="#">Registration Status</a></li>
+                <li><a href="#">Dealership Inquiry</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12">
+              <h3>More</h3>
+              <ul>
+                <li><a href="#">E Tender</a></li>
+                <li><a href="#">Shakti App Store</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 flogo"><img src="/images/flogo.png" alt=""></div>
+           </div>
+         
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="footsocial">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-md-10 col-sm-12">
+          <p>As India's leading manufacturer of energy efficient submersible pumps, we are well-known in our industry. We create our products for a number of sectors including agricultural, industrial, domestic and horticultural. However, this wasn't always the case. Since our humble beginnings back in 1982, we have worked hard to get to where we are today and have had to embrace every opportunity that has come our way.</p>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 fsocial">
+          <h3>Follow Us</h3>
+        <div class="fsocilicons">
+          <a href="#"><img src="/images/whatsapp.png" alt=""></a>
+          <a href="#"><img src="/images/call.png" alt=""></a>
+          <a href="#"><img src="/images/fb.png" alt=""></a>
+          <a href="#"><img src="/images/linkdin.png" alt=""></a>
+          <a href="#"><img src="/images/youtube.png" alt=""></a>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="footcopy">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>© 2024 Shakti Pumps (India) Ltd. All Rights Reserved.</p>
+        </div>
+        </div>
+    </div>
+  </section>
+</footer>
+<footer class="full-footer mob">
+  <div class="footmenu">Others Menu <i class="bx bx-menu"></i></div>
+  <div class="fmenumob">
+    <section class="footerlinks">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-12">
+          <h3>Contact & Support</h3>
+          <p>Shakti Pumps (India) Ltd.</p>
+          <p>Head Office:
+            Plot No. 401, 402 & 413, Sector III,
+            Industrial Area, Pithampur - 454774
+            Dhar (M.P.) India.</p>
+          <p>Email: info@shaktipumps.com
+            Phone: +91-7292-410500
+            Fax: +91-7292-410645
+            Toll Free(INDIA): 1800-103-5555
+          </p>
+        </div>
+        <div class="col-lg-9 col-md-9 col-sm-12">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-12">
+              <h3>Login</h3>
+              <ul>
+                <li><a href="#">Employee Portal</a></li>
+                <li><a href="#">App Dashboard</a></li>
+                <li><a href="#">New Shakti Solar RMS</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12">
+              <h3>Policies</h3>
+              <ul>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">IMS</a></li>
+                <li><a href="#">Media</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12">
+              <h3>Sister Company</h3>
+              <ul>
+                <li><a href="#">Shakti Energy Solution</a></li>
+                <li><a href="#">Shakti EV Mobility</a></li>
+                <li><a href="#">Shakti Irrigation</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Shakti Portal</a></li>
+                <li><a href="#">Pump Selection</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12">
+              <h3>CSR</h3>
+              <ul>
+                <li><a href="#">Green Energy</a></li>
+                <li><a href="#">Sustainabilty</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12">
+              <h3>Vendor Registration</h3>
+              <ul>
+                <li><a href="#">Registration Status</a></li>
+                <li><a href="#">Dealership Inquiry</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12">
+              <h3>More</h3>
+              <ul>
+                <li><a href="#">E Tender</a></li>
+                <li><a href="#">Shakti App Store</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 flogo"><img src="/images/flogo.png" alt=""></div>
+           </div>
+         
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="footsocial">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>As India's leading manufacturer of energy efficient submersible pumps, we are well-known in our industry. We create our products for a number of sectors including agricultural, industrial, domestic and horticultural. However, this wasn't always the case. Since our humble beginnings back in 1982, we have worked hard to get to where we are today and have had to embrace every opportunity that has come our way.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+    <section class="footcopy">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <p>© 2024 Shakti Pumps (India) Ltd. All Rights Reserved.</p>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 fsocial">
+          <h3>Follow Us</h3>
+        <div class="fsocilicons">
+          <a href="#"><img src="/images/whatsapp.png" alt=""></a>
+          <a href="#"><img src="/images/call.png" alt=""></a>
+          <a href="#"><img src="/images/fb.png" alt=""></a>
+          <a href="#"><img src="/images/linkdin.png" alt=""></a>
+          <a href="#"><img src="/images/youtube.png" alt=""></a>
+        </div>
+        </div>
+        </div>
+    </div>
+  </section>
+</footer>
+<script type="text/javascript" src="/js/owl.carousel.js"></script>
+<script type="text/javascript" src="/js/script-loading.js"></script>
+<script type="text/javascript" src="/js/script-numbercounter.js"></script>
+<script type="text/javascript" src="/js/tabscript.js"></script>
+<script type="text/javascript" src="/js/menu-script.js"></script>
+<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js'></script> -->
+<script>
+  $(document).ready(function() {
+        var owl = $('.testimonialslide');
+        owl.owlCarousel({
+          margin: 10,
+          nav: true,
+          loop: true,
+          autoplay: {
+    delay: 2400,
+    disableOnInteraction: false,
+  },
+          responsive: {
+            0: {
+              items: 1
+            },
+            600: {
+              items: 1
+            },
+            1000: {
+              items: 1
+            }
+          }
+        });
+      });
+</script>
+<script>
+  $(document).ready(function() {
+        var owl = $('.suuslider');
+        owl.owlCarousel({
+          margin: 10,
+          nav: true,
+          loop: true,
+          autoplay: {
+    delay: 2400,
+    disableOnInteraction: false,
+  },
+          responsive: {
+            0: {
+              items: 1
+            },
+            600: {
+              items: 2
+            },
+            1000: {
+              items: 3
+            }
+          }
+        });
+      });
+</script>
+<script>
+  $(document).ready(function() {
+        var owl = $('.motorsslide');
+        owl.owlCarousel({
+          margin: 10,
+          nav: true,
+          loop: true,
+          autoplay: {
+    delay: 2400,
+    disableOnInteraction: false,
+  },
+          responsive: {
+            0: {
+              items: 1
+            },
+            600: {
+              items: 2
+            },
+            1000: {
+              items: 2
+            }
+          }
+        });
+      });
+</script>
+<script>
+  $(document).ready(function() {
+        var owl = $('.eventslide');
+        owl.owlCarousel({
+          margin: 10,
+          nav: true,
+          loop: true,
+          autoplay: {
+    delay: 2400,
+    disableOnInteraction: false,
+  },
+          responsive: {
+            0: {
+              items: 1
+            },
+            600: {
+              items: 1
+            },
+            1000: {
+              items: 1
+            }
+          }
+        });
+      });
+</script>
+<script>
+  $(document).ready(function() {
+        var owl = $('.patentslider');
+        owl.owlCarousel({
+          margin: 10,
+          nav: true,
+          loop: true,
+          autoplay: {
+    delay: 2400,
+    disableOnInteraction: false,
+  },
+          responsive: {
+            0: {
+              items: 1
+            },
+            600: {
+              items: 3
+            },
+            1000: {
+              items: 5
+            }
+          }
+        });
+      });
+</script>
+
+<script>
+  $(document).ready(function() {
+        var owl = $('.honslide');
+        owl.owlCarousel({
+          margin: 10,
+          nav: true,
+          loop: true,
+          autoplay: {
+    delay: 2400,
+    disableOnInteraction: false,
+  },
+          responsive: {
+            0: {
+              items: 1
+            },
+            600: {
+              items: 3
+            },
+            1000: {
+              items: 5
+            }
+          }
+        });
+      });
+</script>
+<script>
+  $(document).ready(function() {
+    var owl = $('.abtjurslide');
+    var isReversing = false; // Track if we are in reverse mode
+
+    owl.owlCarousel({
+      margin: 10,
+      nav: true,
+      loop: false, // Disable looping
+      autoplay: true, // Enable autoplay
+      autoplayTimeout: 5000, // Duration between transitions (in milliseconds)
+      autoplayHoverPause: true, // Pause on hover
+      startPosition: 0, // Start from the first item
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 2
+        },
+        1000: {
+          items: 3
+        }
+      }
+    });
+  });
+</script>
+
+
+
+<!-- <script>
+  $(document).ready(function() {
+    $(".abtjurslide").owlCarousel({
+        items : 3,
+        itemsDesktop:[1199,3],
+        itemsDesktopSmall:[980,2],
+        itemsMobile : [600,1],
+        navigation:true,
+        navigationText:["",""],
+        pagination:true,
+        loop:true,
+        autoPlay:true
+    });
+});
+</script> -->
+<script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+<script>
+  $(document).ready(function(){
+    $(".footmenu").click(function(){
+      $(".fmenumob").toggle();
+    });
+  });
+  </script>
+     </body>
+      </html>
