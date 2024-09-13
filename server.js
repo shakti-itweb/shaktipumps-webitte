@@ -1,18 +1,23 @@
 const express = require('express');
 const env = require("dotenv");
 const app = express();
-const path = require('path')
+const path = require('path');
 const homeRoutes = require('./routes/homeRoutes');
 const aboutRoutes = require('./routes/aboutRoutes');
 const csrRoutes = require('./routes/csrRoutes');
-const infraRoute = require('./routes/infrastructureRoutes')
+const infraRoute = require('./routes/infrastructureRoutes');
 const domesticRoute = require('./routes/domesticRoutes');
 const goverment = require('./routes/govermentRouter');
-const international = require('./routes/internationalRoutes')
+const international = require('./routes/internationalRoutes');
+const newseventListing = require('./routes/newseventlistingRoutes');
+const investorNotice = require('./routes/noticeInvestorRoutes');
+const patent = require('./routes/patentRoutes');
+const pmKusum = require('./routes/pmKusumRoutes');
+
 env.config();
 app.use(express.json());
 app.use(express.urlencoded({extended : true}));
-app.use(express.static(path.join(__dirname,'public')))
+app.use(express.static(path.join(__dirname,'public')));
 app.set('view engine', 'ejs');
 app.set('views',path.resolve("./views"));
 
@@ -24,15 +29,19 @@ app.use('/infrastructure',infraRoute);
 app.use('/domestic',domesticRoute);
 app.use('/goverment',goverment);
 app.use('/international',international);
+app.use('/newseventListing',newseventListing); //Contain both event as well as news
+app.use('/noticeInvestor',investorNotice);//Contain both notice as well as investor
+app.use('/patent',patent);
+app.use('/pmKusum',pmKusum);
 
 
 app.get('/check',(req,res)=>{
     // res.send("Your are rendreing from HTML");
     // return res.render("test")
-    return res.render("homepage")
+    return res.render("homepage");
 })
 
 const port = process.env.port || 3000;
 app.listen(port,()=>{
-    console.log(`You are listining at ${port}`)
+    console.log(`You are listining at ${port}`);
 })

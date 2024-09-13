@@ -124,8 +124,13 @@ only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
   }
 .testpropic{margin: 0 auto;}
 .testimonialslide .owl-nav{top: 20px;}
-.testimoni h2{text-align: center;}
+.testimoni h2{text-align: center; font-size: 10vw;}
+.pmkusumvideo h2{font-size: 8vw;}
+.pmkusumvideo{padding: 20px 0;}
 .motorssec{padding: 30px 0;}
+.pmkusumapplyvid{height: auto; padding: 50px;}
+.pmkusumapplyvid h2{padding-bottom: 20px; font-size: 10vw;}
+.pmkusumapplyvid p{padding-top: 20px;}
 .motorpan {
     text-align: center;
   }
@@ -382,6 +387,46 @@ only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
     padding-left: 30px;
   }
   .patentapp{flex-wrap: wrap;}
+  .pmkusumschemetbl{overflow-x: auto;}
+  .about-banner.domesticban .domebantxt.pmkusumbantxt {
+    width: auto;
+    text-align: left;
+  }
+  .pmkusumban img{
+    min-height: 430px;
+    object-fit: cover;}
+    .pmkusumschemetbl table{width: 1000px;}
+    .about-banner.domesticban .domebantxt.statebantxt{text-align: left;}
+    .stateperc img, .about-banner.domesticban .domebantxt a img {
+      width: auto;
+      height: auto !important;
+      margin-top: 0 !important;
+      }
+    .stateperc{max-width: 100%;}
+    .stathowtoapp .welresultsbtn{margin: 0;}
+    .stban img{height: 480px !important;
+      object-fit: cover;}
+      .client-logo {
+        gap: 20px;
+        overflow-x: scroll;
+        padding-bottom: 20px;
+        gap: 20px;
+      }
+      .solaroem .stban img{height: 350px !important;}
+      .indusban img {
+        height: 400px !important;
+      }
+      .indusbannerbtn{flex-wrap: wrap;}
+      .indusbannerbtn .welresultsbtn{margin-bottom: 0;}
+      .lftindus, .rgtindusoem{padding: 30px; height: auto;}
+      .lftindus h2, .rgtindusoem h2, .indapplicationtype h2, .productenq h2, .ourclients h2{font-size: 10vw;}
+      .productenq{margin-top: 0; padding: 20px 0;}
+      .proenqfrm select.selind, .proenqfrm select.selhosp{width: 100%; margin-bottom: 5px;}
+      .ourclients{padding: 30px 0;}
+      .makeussuccess.procat {
+        max-height: inherit;
+        margin-bottom: 0;
+      }
 }
 
 

@@ -17,6 +17,42 @@
     <link rel="stylesheet" href="/css/style-loading.css" />
     <link rel="stylesheet" href="/css/responsive.css" />
   </head>
+    <!-- patent modal start-->
+    <div class="modal fade" id="patentpopup" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="patentpopup" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+              <img src="/images/pop-close.png" alt="">
+            </button>
+          <div class="modal-body">
+           <div class="row">
+            <div class="col-lg-5 col-md-5 col-sm-12">
+              <div class="patentpropic"><img src="/images/popup-patentimg.png" alt=""></div>
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-12">
+              <div class="patentpopdtls">
+                <h5>1<sup>st</sup> Patent Certificate <span>Shakti Pumps (India) Limited Has Received</span></h5>
+              <h2>“A Unidirectional Solar Water Pump With Grid-Tied Power Generation”</h2>
+              <div class="patentapp">
+                  <div class="popappno">
+                    <p><span>Patent No.</span> 393702</p>
+                    <p><span>Application No.</span> 201821023886</p>
+                  </div>
+                  <div class="popfillno">
+                    <p><span>Date Of Filing:</span> 27/06/2018</p>
+                    <p><span>Patent:</span> Shakti Pumps (India) Ltd.</p>
+                  </div>
+              </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc semper consectetur est non imperdiet. Morbi velit sem, suscipit sit amet sem sed, tristique tempus felis. Nulla ornare varius turpis eget finibus.</p>
+                <p>Vestibulum in nibh quis risus gravida egestas quis quis leo. Aliquam erat volutpat. In sed nibh mollis quam lobortis blandit. Integer sed massa sed orci varius vestibulum ac vel nunc. Fusce vehicula mattis libero nec pharetra. Ut at libero in lacus molestie blandit. Integer tristique non risus in sagittis. Maecenas pharetra consequat tellus id sodales.</p>
+              </div>
+            </div>
+           </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   <!-- patent modal end-->
   <body>
   
     <header class="fullheader">
@@ -24,22 +60,10 @@
         <div class="row">
           <div class="col-lg-2 col-md-2 col-sm-12">
             <h1>
-              <a href="/"><img src="/images/Logo.png" alt=""></a>
+              <a href="#"><img src="/images/Logo.png" alt=""></a>
             </h1>
           </div>
           <div class="col-lg-7 col-md-2 col-sm-12">
-            <!-- <nav>
-              <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Categories</a></li>
-                <li><a href="#">Product</a></li>
-                <li><a href="#">Investor Relations</a></li>
-                <li><a href="#">Services & Support</a></li>
-                <li><a href="#">Media</a></li>
-                <li><a href="#">Career</a></li>
-                <li><a href="#">Contact Us</a></li>                
-              </ul>
-            </nav> -->
             <nav>
               <div class="navbar">
                 <i class='bx bx-menu'></i>
@@ -49,42 +73,8 @@
                     <!-- <span class="logo-name">Logo</span> -->
                     <i class='bx bx-x'></i>
                   </div>
-                  <!-- <ul class="links">
-                    <li><a href="#">HOME</a></li>
-                    <li>
-                      <a href="#">HTML & CSS</a>
-                      <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
-                      <ul class="htmlCss-sub-menu sub-menu">
-                        <li><a href="#">Web Design</a></li>
-                        <li><a href="#">Login Forms</a></li>
-                        <li><a href="#">Card Design</a></li>
-                        <li class="more">
-                          <span><a href="#">More</a>
-                            <i class='bx bxs-chevron-right arrow more-arrow'></i>
-                          </span>
-                          <ul class="more-sub-menu sub-menu">
-                            <li><a href="#">Neumorphism</a></li>
-                            <li><a href="#">Pre-loader</a></li>
-                            <li><a href="#">Glassmorphism</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="#">JAVASCRIPT</a>
-                      <i class='bx bxs-chevron-down js-arrow arrow '></i>
-                      <ul class="js-sub-menu sub-menu">
-                        <li><a href="#">Dynamic Clock</a></li>
-                        <li><a href="#">Form Validation</a></li>
-                        <li><a href="#">Card Slider</a></li>
-                        <li><a href="#">Complete Website</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">ABOUT US</a></li>
-                    <li><a href="#">CONTACT US</a></li>
-                  </ul> -->
-                  <ul class="links">
-                    <li><a href="/about">About</a></li>
+                    <ul class="links">
+                    <li><a href="#">About</a></li>
                     <li><a href="#">Categories</a></li>
                     <li><a href="#">Product</a></li>
                     <li><a href="#">Investor Relations</a></li>
@@ -121,234 +111,73 @@
         </div>
       </div>
     </header>
-<section class="about-banner domesticban govtban">
-  <div><img src="/images/government-banner.png" alt=""></div>
-  <div class="container">
-    <div class="domebantxt govtbantxt">
-      <h2><img src="/images/govt.png" alt=""> Government Project</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu commodo.</p>
-      <a href="#" class="welresultsbtn"><img src="/images/pdf-icon.png" alt=""> Download Corporate Broshure</a>
-    </div>
-  </div>
-</section>
-<section class="numbercount">
-  <div class="container">
-    <div class="numberinc govetntcount">
-      <!-- partial:index.partial.html -->
-<div class="counter-container">
-    <img src="/images/count-icon5.png" alt="">
-      <div class="count-wrap"><div class="counter" data-target="500"></div>+</div>
-      <span>Total Projects</span>
-    </div>
-    <div class="counter-container">
-      <img src="/images/count-icon3.png" alt="">
-      <div class="count-wrap"><div class="counter" data-target="2800"></div>+</div>
-      <span>Pumps Installed</span>
-    </div>
-    <div class="counter-container">
-      <img src="/images/count-icon6.png" alt="">
-      <div class="count-wrap"><div class="counter" data-target="42"></div>+</div>
-      <span>Total SKU</span>
-    </div>
-  
-    <div class="counter-container">
-      <img src="/images/count-icon2.png" alt="">
-      <div class="count-wrap"><div class="counter" data-target="490"></div>+</div>
-      <span>Happy Customer</span>
-    </div>
-<!-- partial -->
-    </div>
-  </div>
-</section> 
-<section class="makeussuccess relatedproducts govtrelpro">
-  <div class="container">
-    <h2>
-      <span>Shakti pumps</span>
-      Related Products
-    </h2>
-    <div class="suuslider">
-      <div class="sucpan">
-        <img src="/images/product1.png" alt="">
-        <h3>Submersible Pumps</h3>
-        <h4>Pumps <span>50 Hz</span></h4>  
-      </div>
-      <div class="sucpan">
-        <img src="/images/product2.png" alt="">
-        <h3>Solar Pumps</h3>
-        <h4>Pumps <span>50 Hz</span></h4>
-      </div>
-      <div class="sucpan">
-        <img src="/images/product3.png" alt="">
-        <h3>Vertical Multistage Cen..</h3>
-        <h4>Pumps <span>50 Hz</span></h4>
-      </div>
-      <div class="sucpan">
-        <img src="/images/product4.png" alt="">
-        <h3>Shallow Well & Slow Spe..</h3>
-        <h4>Pumps <span>50 Hz</span></h4>
-      </div>
-      
-    </div>
-    <div class="productsbtns">
-      <a href="#">Check All Products</a>
-    </div>
-  </div>
-</section>
-<section class="shaktijour govtjouny">
-  <div class="abtjurslide">
-    <div class="jurnpan">
-      <h3>2012</h3>
-      <div class="jurndtls">
-        <div class="jurpic">
-          <img src="/images/jurnpic1.png" alt="">
-        </div>
-        <h4>Highly Advanced Manufacturing Unit Set Up</h4>
-        <p>Shakti Pumps is a renowned manufacturer specializing in high-efficiency.</p>
-      </div>
-    </div>
-    <div class="jurnpan altt">
-      <div class="jurndtls">
-        <div class="jurpic">
-          <img src="/images/jurnpic1.png" alt="">
-        </div>
-        <h4>Highly Advanced Manufacturing Unit Set Up</h4>
-        <p>Shakti Pumps is a renowned manufacturer specializing in high-efficiency.</p>
-      </div>
-      <h3>2014</h3>
-    </div>
-    <div class="jurnpan">
-      <h3>2017</h3>
-      <div class="jurndtls">
-        <div class="jurpic">
-          <img src="/images/jurnpic1.png" alt="">
-        </div>
-        <h4>Highly Advanced Manufacturing Unit Set Up</h4>
-        <p>Shakti Pumps is a renowned manufacturer specializing in high-efficiency.</p>
-      </div>
-    </div>
-    <div class="jurnpan altt">
-      <div class="jurndtls">
-        <div class="jurpic">
-          <img src="/images/jurnpic1.png" alt="">
-        </div>
-        <h4>Highly Advanced Manufacturing Unit Set Up</h4>
-        <p>Shakti Pumps is a renowned manufacturer specializing in high-efficiency.</p>
-      </div>
-      <h3>2020</h3>
-    </div>
-  </div>
-  </section>
-  <section class="whatlooking contribution">
-    <div class="container">
-        <div class="row">
-          <div class="col-lg-5 col-md-5 col-sm-12">
-            <h2>Contribution In <br>Renewal Energy</h2>
-          </div>
-          <div class="col-lg-7 col-md-7 col-sm-12">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu commodo dui. Maecenas id facilisis mauris, at sagittis nisl. Phasellus porta imperdiet nunc eget vehicula. Donec lobortis mi eget enim viverra euismod. Nunc sit amet odio sit amet.</p>
-            <p>Duis nec est a nisl lacinia blandit euismod nec tortor. Fusce iaculis purus eu iaculis blandit. Maecenas pretium, erat nec tempor gravida, enim diam consequat tellus, sed consequat arcu nulla in lectus. Curabitur blandit.</p>
-          </div>
-        </div>
-    </div>
-  </section> 
-  <section class="makeussuccess govtprepro">
-    <div class="container">
-      <h2>
-        <span>Shakti Pumps</span>
-        Presence & Projects
+<section class="newsfilter">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h2>Patents
+        <span>Total Patents: 20</span>
       </h2>
-      <div class="govtsuuslider">
-        <div class="sucpan">
-          <img src="/images/suc-pic1.png" alt="">
-          <h3>Technology</h3>
-          <div class="succhover">
-            <h3>Title Goes Here</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis volutpat eleifend nisl, id consectetur ex faucibus vitae. Nulla porta nibh finibus accumsan condimentum. Integer eu malesuada nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
-        </div>
-        <div class="sucpan">
-          <img src="/images/suc-pic2.png" alt="">
-          <h3>Efficient</h3>
-          <div class="succhover">
-            <h3>Title Goes Here</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis volutpat eleifend nisl, id consectetur ex faucibus vitae. Nulla porta nibh finibus accumsan condimentum. Integer eu malesuada nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
-        </div>
-        <div class="sucpan">
-          <img src="/images/suc-pic3.png" alt="">
-          <h3>Sustainability</h3>
-          <div class="succhover">
-            <h3>Title Goes Here</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis volutpat eleifend nisl, id consectetur ex faucibus vitae. Nulla porta nibh finibus accumsan condimentum. Integer eu malesuada nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="numbercount pmkusumsche">
-    <div class="container">
-      <h2>PM KUSUM Scheme</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu commodo dui. Maecenas id facilisis mauris, at sagittis nisl. Phasellus porta imperdiet nunc eget vehicula. Donec lobortis mi eget enim viverra euismod. Nunc sit amet odio sit amet dui euismod luctus quis sed nulla. Curabitur vestibulum ligula a sapien semper pharetra. Sed ultrices tincidunt sem, id pretium nunc auctor commodo. In mauris nunc, convallis quis sem eget, suscipit ultricies massa.</p>
-      <div class="numberinc govetntcount">
-        <!-- partial:index.partial.html -->
-  <div class="counter-container">
-      <img src="/images/count-icon5.png" alt="">
-        <div class="count-wrap"><div class="counter" data-target="500"></div>+</div>
-        <span>Total Projects</span>
-      </div>
-      <div class="counter-container">
-        <img src="/images/count-icon3.png" alt="">
-        <div class="count-wrap"><div class="counter" data-target="2800"></div>+</div>
-        <span>Pumps Installed</span>
-      </div>
-      <div class="counter-container">
-        <img src="/images/count-icon6.png" alt="">
-        <div class="count-wrap"><div class="counter" data-target="42"></div>+</div>
-        <span>Total SKU</span>
-      </div>
-    
-      <div class="counter-container">
-        <img src="/images/count-icon2.png" alt="">
-        <div class="count-wrap"><div class="counter" data-target="490"></div>+</div>
-        <span>Happy Customer</span>
-      </div>
-  <!-- partial -->
-      </div>
-      <a href="/pmKusum/pm-kusum" class="readmore">Read More</a>
-    </div>
-  </section> 
-<section class="testimoni">
-  <div class="container">
-    <h2><span>Client’s</span> Testimonials</h2>
-    <div class="testimonialslide">
-      <div class="testipan">
-        <div class="row">
-          <div class="col-lg-4 col-md-4 col-sm-12">
-            <div class="domtestpropic">
-              <img src="/images/dom-testipic.png" alt="">
-              <img src="/images/play-icon.png" alt="" class="testprovidbtn">
-            </div>
-          </div>
-          <div class="col-lg-8 col-md-8 col-sm-12">
-            <p>Hearty wishes to you all in Shakti Pumps. We are a small group of brothers, who have installed 3nos 5HP Pumps to the bore well. Thanks to the timely help and action. Our 9acres paddy crop is saved.</p>
-            <p>At the same time having installed the pumps, I bought 2000 Equity shares of Shakti Pumps @ 172. Oh! My phenomenal jump and good annual result. God Bless the entire team of performance and give you more energy in bringing the solar energy into noble use.</p>
-            <h3>Mr. Krishna Murti, Bangalore <span>CEO, Company Name</span></h3>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
+</div>
 </section>
-<section class="partershakti govtinsta">
+<section class="patentlists">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12">
-          <h2>do you want to be a installer and work <br>in a govt project with shakti pumps</h2>
-      </div>
-      <div class="col-lg-6 col-md-6 col-sm-12">
-        <a href="#" class="readmore">Apply Now</a>
-      </div>
-      </div>
+      <ul>
+        <li>
+          <img src="/images/patent-cert.png" alt="">
+          <button data-bs-toggle="modal" data-bs-target="#patentpopup">1 <sup>st</sup> Patent Certificate</button>
+        </li>
+        <li>
+          <img src="/images/patent-cert.png" alt="">
+          <button data-bs-toggle="modal" data-bs-target="#patentpopup">2 <sup>nd</sup> Patent Certificate</button>
+        </li>
+        <li>
+          <img src="/images/patent-cert.png" alt="">
+          <button data-bs-toggle="modal" data-bs-target="#patentpopup">3 <sup>rd</sup> Patent Certificate</button>
+        </li>
+        <li>
+          <img src="/images/patent-cert.png" alt="">
+          <button data-bs-toggle="modal" data-bs-target="#patentpopup">4 <sup>th</sup> Patent Certificate</button>
+        </li>
+        <li>
+          <img src="/images/patent-cert.png" alt="">
+          <button data-bs-toggle="modal" data-bs-target="#patentpopup">5 <sup>th</sup> Patent Certificate</button>
+        </li>
+        <li>
+          <img src="/images/patent-cert.png" alt="">
+          <button data-bs-toggle="modal" data-bs-target="#patentpopup">1 <sup>st</sup> Patent Certificate</button>
+        </li>
+        <li>
+          <img src="/images/patent-cert.png" alt="">
+          <button data-bs-toggle="modal" data-bs-target="#patentpopup">2 <sup>nd</sup> Patent Certificate</button>
+        </li>
+        <li>
+          <img src="/images/patent-cert.png" alt="">
+          <button data-bs-toggle="modal" data-bs-target="#patentpopup">3 <sup>rd</sup> Patent Certificate</button>
+        </li>
+        <li>
+          <img src="/images/patent-cert.png" alt="">
+          <button data-bs-toggle="modal" data-bs-target="#patentpopup">4 <sup>th</sup> Patent Certificate</button>
+        </li>
+        <li>
+          <img src="/images/patent-cert.png" alt="">
+          <button data-bs-toggle="modal" data-bs-target="#patentpopup">5 <sup>th</sup> Patent Certificate</button>
+        </li>
+        <li>
+          <img src="/images/patent-cert.png" alt="">
+          <button data-bs-toggle="modal" data-bs-target="#patentpopup">1 <sup>st</sup> Patent Certificate</button>
+        </li>
+        <li>
+          <img src="/images/patent-cert.png" alt="">
+          <button data-bs-toggle="modal" data-bs-target="#patentpopup">2 <sup>nd</sup> Patent Certificate</button>
+        </li>
+        <li>
+          <img src="/images/patent-cert.png" alt="">
+          <button data-bs-toggle="modal" data-bs-target="#patentpopup">3 <sup>rd</sup> Patent Certificate</button>
+        </li>
+      </ul>
     </div>
 </section>
 <footer class="full-footer desk">
@@ -356,116 +185,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-3 col-md-3 col-sm-12">
-          <h3>Contact & Support</h3>
-          <p>Shakti Pumps (India) Ltd.</p>
-          <p>Head Office:
-            Plot No. 401, 402 & 413, Sector III,
-            Industrial Area, Pithampur - 454774
-            Dhar (M.P.) India.</p>
-          <p>Email: info@shaktipumps.com</p>
-          <p>Phone: +91-7292-410500<br>
-            Fax: +91-7292-410645<br>
-            Toll Free(INDIA): 1800-103-5555
-          </p>
-        </div>
-        <div class="col-lg-9 col-md-9 col-sm-12">
-          <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-12">
-              <h3>Login</h3>
-              <ul>
-                <li><a href="#">Employee Portal</a></li>
-                <li><a href="#">App Dashboard</a></li>
-                <li><a href="#">New Shakti Solar RMS</a></li>
-              </ul>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-12">
-              <h3>Policies</h3>
-              <ul>
-                <li><a href="#">Privacy</a></li>
-                <li><a href="#">IMS</a></li>
-                <li><a href="#">Media</a></li>
-              </ul>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-12">
-              <h3>Sister Company</h3>
-              <ul>
-                <li><a href="#">Shakti Energy Solution</a></li>
-                <li><a href="#">Shakti EV Mobility</a></li>
-                <li><a href="#">Shakti Irrigation</a></li>
-              </ul>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-12">
-              <h3>Quick Links</h3>
-              <ul>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Shakti Portal</a></li>
-                <li><a href="#">Pump Selection</a></li>
-              </ul>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-12">
-              <h3>CSR</h3>
-              <ul>
-                <li><a href="#">Green Energy</a></li>
-                <li><a href="#">Sustainabilty</a></li>
-              </ul>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-12">
-              <h3>Vendor Registration</h3>
-              <ul>
-                <li><a href="#">Registration Status</a></li>
-                <li><a href="#">Dealership Inquiry</a></li>
-              </ul>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-12">
-              <h3>More</h3>
-              <ul>
-                <li><a href="#">E Tender</a></li>
-                <li><a href="#">Shakti App Store</a></li>
-              </ul>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-12 flogo"><img src="/images/flogo.png" alt=""></div>
-           </div>
-         
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="footsocial">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-10 col-md-10 col-sm-12">
-          <p>As India's leading manufacturer of energy efficient submersible pumps, we are well-known in our industry. We create our products for a number of sectors including agricultural, industrial, domestic and horticultural. However, this wasn't always the case. Since our humble beginnings back in 1982, we have worked hard to get to where we are today and have had to embrace every opportunity that has come our way.</p>
-        </div>
-        <div class="col-lg-2 col-md-2 col-sm-12 fsocial">
-          <h3>Follow Us</h3>
-        <div class="fsocilicons">
-          <a href="#"><img src="/images/whatsapp.png" alt=""></a>
-          <a href="#"><img src="/images/call.png" alt=""></a>
-          <a href="#"><img src="/images/fb.png" alt=""></a>
-          <a href="#"><img src="/images/linkdin.png" alt=""></a>
-          <a href="#"><img src="/images/youtube.png" alt=""></a>
-        </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="footcopy">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <p>© 2024 Shakti Pumps (India) Ltd. All Rights Reserved.</p>
-        </div>
-        </div>
-    </div>
-  </section>
-</footer>
-<footer class="full-footer mob">
-  <div class="footmenu">Others Menu <i class="bx bx-menu"></i></div>
-  <div class="fmenumob">
-    <section class="footerlinks">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3 col-md-3 col-sm-12">
+          <img src="/images/f_logo.png" alt="">
           <h3>Contact & Support</h3>
           <p>Shakti Pumps (India) Ltd.</p>
           <p>Head Office:
@@ -533,7 +253,116 @@
                 <li><a href="#">Shakti App Store</a></li>
               </ul>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-12 flogo"><img src="/images/flogo.png" alt=""></div>
+           </div>
+         
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="footsocial">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-md-10 col-sm-12">
+          <p>As India's leading manufacturer of energy efficient submersible pumps, we are well-known in our industry. We create our products for a number of sectors including agricultural, industrial, domestic and horticultural. However, this wasn't always the case. Since our humble beginnings back in 1982, we have worked hard to get to where we are today and have had to embrace every opportunity that has come our way.</p>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-12 fsocial">
+          <h3>Follow Us</h3>
+        <div class="fsocilicons">
+          <a href="#"><img src="/images/whatsapp.png" alt=""></a>
+          <a href="#"><img src="/images/call.png" alt=""></a>
+          <a href="#"><img src="/images/fb.png" alt=""></a>
+          <a href="#"><img src="/images/linkdin.png" alt=""></a>
+          <a href="#"><img src="/images/youtube.png" alt=""></a>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="footcopy">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>© 2024 Shakti Pumps (India) Ltd. All Rights Reserved.</p>
+        </div>
+        </div>
+    </div>
+  </section>
+</footer>
+<footer class="full-footer mob">
+  <div class="footmenu">Others Menu <i class="bx bx-menu"></i></div>
+  <div class="fmenumob">
+    <section class="footerlinks">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-12">
+          <img src="/images/f_logo.png" alt="">
+          <h3>Contact & Support</h3>
+          <p>Shakti Pumps (India) Ltd.</p>
+          <p>Head Office:
+            Plot No. 401, 402 & 413, Sector III,
+            Industrial Area, Pithampur - 454774
+            Dhar (M.P.) India.</p>
+          <p>Email: info@shaktipumps.com
+            Phone: +91-7292-410500
+            Fax: +91-7292-410645
+            Toll Free(INDIA): 1800-103-5555
+          </p>
+        </div>
+        <div class="col-lg-9 col-md-9 col-sm-12">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-12">
+              <h3>Login</h3>
+              <ul>
+                <li><a href="#">Employee Portal</a></li>
+                <li><a href="#">App Dashboard</a></li>
+                <li><a href="#">New Shakti Solar RMS</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12">
+              <h3>Policies</h3>
+              <ul>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">IMS</a></li>
+                <li><a href="#">Media</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12">
+              <h3>Sister Company</h3>
+              <ul>
+                <li><a href="#">Shakti Energy Solution</a></li>
+                <li><a href="#">Shakti EV Mobility</a></li>
+                <li><a href="#">Shakti Irrigation</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Shakti Portal</a></li>
+                <li><a href="#">Pump Selection</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12">
+              <h3>CSR</h3>
+              <ul>
+                <li><a href="#">Green Energy</a></li>
+                <li><a href="#">Sustainabilty</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12">
+              <h3>Vendor Registration</h3>
+              <ul>
+                <li><a href="#">Registration Status</a></li>
+                <li><a href="#">Dealership Inquiry</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12">
+              <h3>More</h3>
+              <ul>
+                <li><a href="#">E Tender</a></li>
+                <li><a href="#">Shakti App Store</a></li>
+              </ul>
+            </div>
            </div>
          
         </div>
@@ -623,31 +452,6 @@
             },
             1000: {
               items: 4
-            }
-          }
-        });
-      });
-</script>
-<script>
-  $(document).ready(function() {
-        var owl = $('.govtsuuslider');
-        owl.owlCarousel({
-          margin: 15,
-          nav: true,
-          loop: true,
-          autoplay: {
-    delay: 2400,
-    disableOnInteraction: false,
-  },
-          responsive: {
-            0: {
-              items: 1
-            },
-            600: {
-              items: 2
-            },
-            1000: {
-              items: 3
             }
           }
         });
@@ -754,7 +558,7 @@
         });
       });
 </script>
-<script>
+<!-- <script>
   $(document).ready(function() {
         var owl = $('.abtjurslide');
         owl.owlCarousel({
@@ -778,8 +582,8 @@
           }
         });
       });
-</script>
-<!-- <script>
+</script> -->
+<script>
   $(document).ready(function() {
     $(".abtjurslide").owlCarousel({
         items : 3,
@@ -793,7 +597,7 @@
         autoPlay:true
     });
 });
-</script> -->
+</script>
 <script>
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
