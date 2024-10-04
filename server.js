@@ -15,6 +15,7 @@ const patent = require('./routes/patentRoutes');
 const pmKusum = require('./routes/pmKusumRoutes');
 const industrial = require('./routes/industrialRouter');
 const product = require('./routes/productRoutes');
+const solaroem = require('./routes/solarOEMRouter')
 
 env.config();
 app.use(express.json());
@@ -37,7 +38,7 @@ app.use('/patent',patent);
 app.use('/pmKusum',pmKusum);
 app.use('/industrial',industrial);
 app.use('/product',product);
-
+app.use('/solaroem',solaroem);
 app.get('/check',(req,res)=>{
     // res.send("Your are rendreing from HTML");
     // return res.render("test")

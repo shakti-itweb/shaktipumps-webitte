@@ -56,9 +56,10 @@ const getfetchProductsForListing = async (req, res) => {
 };
 
 const getfetchProductDetails = async (req, res) => {
-  console.log(req.params.pageValue);
+  // console.log(req.params.pageValue);
     const table = req.params.table;
     const id = req.params.item;
+    console.log(table,id);
   try {
     if (table == "pumps") {
         await db.connect();
