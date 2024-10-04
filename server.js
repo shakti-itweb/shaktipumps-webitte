@@ -13,6 +13,8 @@ const newseventListing = require('./routes/newseventlistingRoutes');
 const investorNotice = require('./routes/noticeInvestorRoutes');
 const patent = require('./routes/patentRoutes');
 const pmKusum = require('./routes/pmKusumRoutes');
+const industrial = require('./routes/industrialRouter');
+const product = require('./routes/productRoutes');
 
 env.config();
 app.use(express.json());
@@ -33,7 +35,8 @@ app.use('/newseventListing',newseventListing); //Contain both event as well as n
 app.use('/noticeInvestor',investorNotice);//Contain both notice as well as investor
 app.use('/patent',patent);
 app.use('/pmKusum',pmKusum);
-
+app.use('/industrial',industrial);
+app.use('/product',product);
 
 app.get('/check',(req,res)=>{
     // res.send("Your are rendreing from HTML");

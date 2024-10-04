@@ -231,7 +231,7 @@ only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
     /* .foundtiontab .tab_content {
       border: 1px solid #414D6E;
     } */
-    .d_active.tab_drawer_heading {
+    .d_active.tab_drawer_heading,  .d_actives.tab_drawer_headings {
       border-top: 0;
     }
     .about-banner.sevsaktiban .container {
@@ -257,11 +257,11 @@ only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
 @media only screen and (max-width: 768px) {
   .jurndtls h4{max-width: 320px; font-size:4vw; line-height: 6vw;}
   .jurndtls p{max-width: 320px; text-align: left;}
-.tabs {
+.tabs, .tabss {
  display: none;
 }
-.tab_content{border: 1px solid #02E270;}
-.tab_drawer_heading {
+.tab_content, .tab_contents{border: 1px solid #02E270;}
+.tab_drawer_heading, .tab_drawer_headings {
     background:url(../images/downarrow.png) 97% center no-repeat #1F2B4C;
     background-size: 15px;
     color: #fff;
@@ -279,7 +279,7 @@ only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
     font-size: 4vw;
     font-weight: 500;
         }
-  .d_active {
+  .d_active, .d_actives {
       background:url(../images/uparrow.png) 97% center no-repeat #02E270;
       background-size: 15px;
       color: #fff;
@@ -427,6 +427,105 @@ only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
         max-height: inherit;
         margin-bottom: 0;
       }
+      .carrban img {
+        height: 400px;
+        object-fit: cover;
+      }
+      .careerbantxt p{padding-bottom: 0;}
+      .careerbanserch{margin-bottom: 0;}
+      .lifeatcard, .careerdeptcard{flex-wrap: wrap;  justify-content: center;}
+      .cardeptcardbox{width: auto; flex-shrink: inherit; min-width: 310px; margin-bottom: 20px;}
+      .careerdept {
+        margin-bottom: 0px !important;
+      }
+    .dropcvpan .interpart h5{font-size: 8vw;
+      line-height: 9vw;}
+      .dropcvpan h5 span{text-align: center;}
+      .changecountry.dropcvpan {
+        padding-bottom: 10px;
+      }
+      .walkincontent {
+        padding: 15px !important;
+      }
+      .walkincontent h2{font-size: 10vw; margin-bottom: 0;}
+      .walkincontent h3{font-size: 4vw;}
+      .walkinshedule h6{font-size: 14px;}
+      .empengament h3{margin-top: 25px;}
+      .empengament .row:nth-child(2n+1) .col-lg-4 {
+        order: inherit;
+      }
+      .empengament{padding-bottom: 0;}
+      .empengament h2{
+        font-size: 8vw;
+        line-height: 8vw;
+      }
+      .jonopenhead{flex-wrap: wrap;}
+      .jonopenhead h2{margin-bottom: 0; padding-bottom: 10px;}
+      .jonopenhead ul{margin-top: 0; margin-bottom: 20px;}
+      .makeussuccess.careerdept.jobopensec {
+        padding-top: 20px;
+        max-height: inherit;
+        margin-bottom: 0 !important;
+      }
+  .jobcards {
+    margin-top: 0;
+  }
+  .careerdeptcard h3{text-align: left; margin-bottom: 10px;}
+  .careerdeptcard h3 span{float: none; display: block;}
+  .jobappbtnsec h3 span {
+    float: right;
+  }
+  .jobcards{padding-bottom: 0;}
+  .carlifeat{padding: 20px 0;}
+  .financedtlstitle{flex-wrap: wrap;}
+  .keyhighcards{
+    width: auto;
+    min-width: 300px;
+    max-width: 300px;
+  }
+  .foundtiontab.financialyeartab{margin: 15px;}
+  .financedtlstab{padding: 0;}
+  .selectcat{
+    position: relative;
+    width: auto;
+    margin-bottom: 20px;
+    left: auto;
+    top: auto;
+    padding-left: 0;
+  }
+  .financedtlstab .financedtlstitle h2{font-size: 7vw; line-height: 10vw;}
+  .liferesouce{flex-wrap: wrap;}
+  .solarpanban{padding-bottom: 30px;}
+  .solarpanban h2 {
+    font-size: 7vw;
+    line-height: 8vw;
+  }
+  .solarpanban p{font-size: 14px; padding-bottom: 5px;}
+  .whatsoptimal h2{ font-size: 6vw; line-height: 7vw; }
+  .whatsoptimal select{width: 49%;}
+  .optimalcalen ul li{width: 84px;}
+  .solarbtmpara{padding-top: 0;}
+  .complainregfrm input[type="text"], .complainregfrm input[type="email"], .complainregfrm textarea {margin-top: 10px;}
+  .faqpan h4{font-size: 3vw;}
+  .faqviddownlbtn{margin-top: 15px;}
+  .about-banner.servsuppban .sevisuppbantxt h2{font-size: 10vw;}
+  .servsuppbanbtn{flex-wrap: wrap; justify-content: center;}
+  .servsuppbanbtn a{width: 270px;}
+  .about-banner.servsuppban {
+    height: 760px;
+  }
+  .servsuppbanbtn{margin-bottom: 10px;}
+  .suppfaq h2{font-size: 10vw;
+    line-height: 12vw;}
+    .suppfaq {
+      padding: 30px 0;
+    }
+    .makeussuccess.mediavideopan{padding: 30px 0;}
+    .makeussuccess.mediavideopan h3{top: 120px; right: auto;}
+    .mediapresskit{background-size: contain; height: auto;}
+    .mrdiapreeontent{position: relative; width: auto; top: 30px;}
+    .mrdiapreeontent h2{font-size: 8vw; line-height: 10vw; padding: 10px 0;}
+    .presskitlisting {padding-top: 50px;}
 }
 
 
@@ -740,6 +839,47 @@ nav{
       .navbar .nav-links.show2 .links .more-arrow{
         transform: rotate(90deg);
       }
+.jobintro::after {width: auto;}
+.jobintro{padding:0 15px;}
+.jobintrocont{padding-right: 0; padding-bottom: 20px;}
+.contactinfobox{flex-wrap: wrap; padding: 20px;}
+.greenenglft h2{font-size: 10vw;}
+.downloadcardpan {
+  width: auto;
+}
+.blogdetail h2{font-size: 7vw; line-height: 10vw;}
+.blogdetail h3{font-size: 16px; line-height: 26px;}
+.blgrgtcontxt h3{font-size: 11px; line-height: 18px;}
+.careerbanserch input[type="text"] {
+  width: 84%;
+}
+.videosearch select, .careerbanserch{height: 42px;}
+.careerbanserch input[type="text"]{height: 32px; padding-left: 5px;}
+.careerbanserch input[type="submit"]{margin-right: 0;
+  background-size: 14px;}
+  .blogdtlsrgt{margin-top: 15px;}
+  .blogslide h3{
+    top: 10px;
+    right: 20px;
+  }
+  .blogslide .container{padding-top: 10px;}
+  .blogslide .suuslider {
+    margin-top: -60px;
+  }
+  .blogdetail {
+    padding: 30px 0;
+  }
+  .loginpopdesi {
+    padding: 30px;
+  }
+  .deskmenu{opacity: 0; height:0 !important;}
+  .mobmenu{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+  }
   }
   @media (max-width:370px){
     nav .navbar .nav-links{
