@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shakti Pumps</title>
+    <link rel="icon" type="image/x-icon" href="/img/fav.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"  rel="stylesheet">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
+    <link rel='stylesheet' href="/css/bootstrap.min.css">
+    <link rel='stylesheet' href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="/css/style-loading.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+  </head>
+  <body>
+  
+    <%- include('../common/header.ejs') %>
+
+    <section class="produttitlebar jobdetailsban">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-8 col-sm-12">
+            <div class="protitlebrcam jobdetailbd">
+              <h2><span><%=jobDetails.department%></span><%=jobDetails.title%>: <%= (jobDetails.expyear == 0 && jobDetails.expmonth == 0) ? 'Fresher' : 'Experience' %></h2>
+              <ul>
+                <li><img src="/images/news-icon.png" alt=""> Ref.No. <span>#<%=jobDetails.SAP_job_ID%></span></li>
+                <li><img src="/images/location-small.png" alt=""><%=jobDetails.location%></li>
+                <li><img src="/images/briefcase.png" alt=""> Job Opening <strong><%=jobDetails.noofpos%></strong></li>
+              </ul>
+            </div>
+         </div>
+          <div class="col-lg-4 col-md-4 col-sm-12">
+            <div class="prodtlsrgtbtn jobapplldtls">
+              <!-- <a href="#" class="welresultsbtn">Resume Status</a> -->
+              <a href="https://www.shaktipumps.com/hrindia/resume_post.php?jobID=<%=jobDetails.SAP_job_ID%>&department=<%=jobDetails.department%>" target="_blank" class="welresultsbtn green">Apply Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<section class="jobintro">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9 col-md-9 col-sm-12 jobintrocont">
+        <!-- <h2>Introduction</h2> old  -->
+        <h2>Description</h2>
+        <p><%=jobDetails.description%></p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus condimentum accumsan ante, ut facilisis sapien cursus sed. Vivamus lacinia, felis et efficitur pellentesque, lacus mauris facilisis arcu, ac cursus ipsum mauris a erat.</p>
+        <p>Mauris tortor odio, mollis vitae eleifend vel, efficitur id elit. Cras justo tortor, hendrerit sit amet eros eget, finibus condimentum quam. Proin fermentum congue quam. Nam interdum, urna in imperdiet volutpat, dui metus fringilla erat, eget mattis dui libero et massa. Ut luctus nibh a nibh euismod eleifend. Ut sit amet ornare nisi, ac sodales lorem.</p>
+        <p>Integer elementum id sapien nec aliquet. Phasellus nec mauris eu est gravida facilisis a sit amet sem. Fusce sit amet enim sed nulla rutrum finibus. Pellentesque ac nibh dui. Nam id libero et est sagittis ultrices in nec libero. Quisque tempor aliquet venenatis. Cras in pretium ante. Curabitur efficitur, mi condimentum malesuada porttitor, justo lorem eleifend metus, eget aliquet est nunc quis quam. Nunc pulvinar varius laoreet. Nulla ut lectus sem. Proin tempor pharetra placerat. In nisi metus, elementum at lectus id, laoreet laoreet urna. In tincidunt.</p>
+        <h2>Required Technical and Professional Expertise</h2>
+        <p>Nam interdum, urna in imperdiet volutpat, dui metus fringilla erat, eget mattis dui libero et massa. Ut luctus nibh a nibh euismod eleifend. Ut sit amet ornare nisi, ac sodales lorem.</p>
+        <ul>
+          <li>High Operating Efficiency</li>
+          <li>Highly Durable & Hygienic</li>
+          <li>Good Resistance To Stand</li>
+          <li>Can Be Easily Dismantle And Repair</li>
+        </ul>
+        <h2>Your Role and Responsibilities</h2>
+        <p>Mauris tortor odio, mollis vitae eleifend vel, efficitur id elit. Cras justo tortor, hendrerit sit amet eros eget, finibus condimentum quam. Proin fermentum congue quam. Nam interdum, urna in imperdiet volutpat, dui metus fringilla erat, eget mattis dui libero et massa. Ut luctus nibh a nibh euismod eleifend. Ut sit amet ornare nisi, ac sodales lorem.</p>
+        <p>Your primary responsibilities include:</p>
+        <ul>
+          <li>High Operating Efficiency</li>
+          <li>Highly Durable & Hygienic</li>
+          <li>Good Resistance To Stand</li>
+          <li>Can Be Easily Dismantle And Repair</li>
+        </ul>
+      </div>
+    <div class="col-lg-3 col-md-3 col-sm-12 keyjobdtls">
+      <h2>Key Job Details</h2>
+      <p><span>Ref. No.</span> #<%=jobDetails.SAP_job_ID%></p>
+      <p><span>Job Role</span><%=jobDetails.title%></p>
+      <p><span>Experience</span><%= (jobDetails.expyear == 0 && jobDetails.expmonth == 0) ? 'Fresher' : 'Experience' %></p>
+      <p><span>Experience Required</span><%=jobDetails.expyear%> Years & <%=jobDetails.expmonth%> month</p>
+      <p><span>Department</span><%=jobDetails.department%></p>
+      <p><span>Location</span><%=jobDetails.location%></p>
+      <div class="dontfottime">
+        <h2>Don’t see a fit at this time?</h2>
+        <p>Don’t worry. Drop your CV & get notified about the latest opportunities.</p>
+        <a href="https://www.shaktipumps.com/hrindia/resume_post.php" target="_blank" class="dropcv">Drop Your CV</a>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+    <section class="changecountry dropcvpan">
+      <div class="container">
+        <div class="row interpart">
+          <div class="col-lg-10 col-md-10 col-md-12">
+            <h5>Drop Your CV For Future Opportunities <span>We are always looking for talented and passionate individuals to join our team</span></h5>
+          </div>
+          <div class="col-lg-2 col-md-2 col-md-12">
+            <a href="https://www.shaktipumps.com/hrindia/resume_post.php" target="_blank" class="readmore changecoun">Drop Your CV</a>
+          </div>
+        </div>
+      </div>
+</section>
+<%- include('../common/footer.ejs') %>
+     </body>
+      </html>

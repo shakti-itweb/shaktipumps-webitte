@@ -13,10 +13,14 @@ const newseventListing = require('./routes/newseventlistingRoutes');
 const investorNotice = require('./routes/noticeInvestorRoutes');
 const patent = require('./routes/patentRoutes');
 const pmKusum = require('./routes/pmKusumRoutes');
+const career = require('./routes/careerRoutes');
+const contact = require('./routes/contactRoutes');
 
 env.config();
 app.use(express.json());
 app.use(express.urlencoded({extended : true}));
+// Set trust proxy if your app is behind a proxy (like Heroku, AWS, etc.)
+app.set('trust proxy', true); // Important for getting the correct IP address
 app.use(express.static(path.join(__dirname,'public')));
 app.set('view engine', 'ejs');
 app.set('views',path.resolve("./views"));
@@ -33,6 +37,8 @@ app.use('/newseventListing',newseventListing); //Contain both event as well as n
 app.use('/noticeInvestor',investorNotice);//Contain both notice as well as investor
 app.use('/patent',patent);
 app.use('/pmKusum',pmKusum);
+app.use('/career', career);
+app.use('/contact', contact)
 
 
 app.get('/check',(req,res)=>{

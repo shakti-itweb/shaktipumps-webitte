@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shakti Pumps</title>
+    <link rel="icon" type="image/x-icon" href="/img/fav.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"  rel="stylesheet">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
+    <link rel='stylesheet' href="/css/bootstrap.min.css">
+    <link rel='stylesheet' href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="/css/style-loading.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+  </head>
+  <body>
+
+    <%- include('../common/header.ejs') %>
+
+    <section class="about-banner infraban">
+        <div class="carrban"><img src="/images/banner-career.png" alt=""></div>
+        <div class="container careerbantxt">
+          <h2>Build A Future You Believe In</h2>
+          <p>Shakti Pumps offers dynamic career opportunities in a cutting-edge manufacturing environment, fostering <br>growth through innovation and skill development. Join with us for a rewarding career in innovative pump manufacturing,<br> where your growth drives global water solutions.</p>
+          <div class="careerbanserch"><input type="text" placeholder="Search By Keyword" value=""><input type="submit" value=""></div>
+          <a href="#" class="welresultsbtn"><img src="/images/calendar-ban.png" alt=""> 10th Sept. 2024 (Check Walk In Interview)</a>
+        </div>
+      </section>
+    <section class="carlifeat">
+        <div class="container">
+            <h2>Life At Shakti</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu commodo dui. Maecenas id facilisis mauris, at sagittis nisl. Phasellus porta imperdiet nunc eget vehicula. Duis nec est a nisl lacinia blandit euismod nec tortor. Fusce iaculis purus eu iaculis blandit.</p>
+            <div class="lifeatcard">
+                <div class="lifeatshaktibenif">
+                    <img src="/images/opp-icon.png" alt="">
+                    <h3>Better Opportunities</h3>
+                    <p>Shakti Pumps offers better opportunities for professionals looking to advance their careers in a dynamic and innovative environment.</p>
+                </div>
+                <div class="lifeatshaktibenif">
+                    <img src="/images/opp-icon2.png" alt="">
+                    <h3>Learning Environment</h3>
+                    <p>We believe that investing in our employees’ knowledge and skills is key to driving innovation and maintaining our leadership in the industry.</p>
+                </div>
+                <div class="lifeatshaktibenif">
+                    <img src="/images/opp-icon3.png" alt="">
+                    <h3>Employee Growth</h3>
+                    <p>Employee growth at Shakti Pumps is a key focus, with a commitment to fostering development through continuous learning & skill enhancement.</p>
+                </div>
+            </div>
+            <a href="/career/life-at-shakti" class="readmore">Read More</a>
+        </div>
+    </section>
+    <section class="makeussuccess procat careerdept">
+      <div class="container">
+        <h2>
+          <span>Opportunities With Us</span>
+          Our Departments
+          
+        </h2>     
+      </div>
+    </section>
+    <section class="jobcards">
+      <div class="container">
+        <div class="careerboxpan">
+          <div class="careerdeptcard">
+            <h3>Research & Development Department<span>Total Job Opening <strong><%=ResearchAndDev.reduce((accumulator,curr_val)=> accumulator + Number(curr_val.noofpos), 0 )%></strong></span></h3>
+            <div class="row">
+
+                <% ResearchAndDev.forEach(function(val) {%>
+                  <div class="col-lg-4 col-md-4 col-sm-12 mb-5">
+                    <div class="cardeptcardbox">
+                      <h4>R&D Department</h4>
+                      <h5>Ref.No. <strong>#<%=val.SAP_job_ID%></strong></h5>
+                      <p><%=val.description%></p>
+                      <h6><img src="/images/location-small.png" alt=""> <%=val.location%> <span>Job Location</span></h6>
+                      <div class="jobappbtnsec"><a href="/career/jobDetails?jobid=<%=val.jobid%>" class="jobappbtn lh-40">Job Details</a> <h3><span>Job Opening <strong><%=val.noofpos%></strong></span></h3></div>
+                    </div>
+                  </div>
+              <% }) %>
+
+              
+              <!-- <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="cardeptcardbox">
+                  <h4>R&D Department</h4>
+                  <h5>Ref.No. <strong>#10663</strong></h5>
+                  <p>Shakti Pumps' Research & Development (R&D) division is the cornerstone of our commitment to innovation and technological advancement.</p>
+                  <h6><img src="/images/location-small.png" alt=""> Indore, Chandigarh, Mumbai <span>Job Location</span></h6>
+                  <div class="jobappbtnsec"><a href="/career/jobDetails" class="jobappbtn">Job Details</a> <h3><span>Job Opening <strong>05</strong></span></h3></div>
+              </div>
+              </div> -->
+            </div>
+          </div>
+
+          <div class="careerdeptcard">
+            <h3>Department Of Information Technology<span>Total Job Opening <strong><%=InformTech.reduce((accumulator,curr_val)=> accumulator + Number(curr_val.noofpos), 0 )%></strong></span></h3>
+            <div class="row">
+              <% InformTech.forEach(function(val) {%>
+                <div class="col-lg-4 col-md-4 col-sm-12 mb-5">
+                  <div class="cardeptcardbox">
+                    <h4>Information Technology Department</h4>
+                    <h5>Ref.No. <strong>#<%=val.SAP_job_ID%></strong></h5>
+                    <p><%=val.description%></p>
+                    <h6><img src="/images/location-small.png" alt=""> <%=val.location%> <span>Job Location</span></h6>
+                    <div class="jobappbtnsec"><a href="/career/jobDetails?jobid=<%=val.jobid%>" class="jobappbtn lh-40">Job Details</a> <h3><span>Job Opening <strong><%=val.noofpos%></strong></span></h3></div>
+                  </div>
+                </div>
+            <% }) %>
+            </div>
+          </div>
+
+          <div class="careerdeptcard">
+            <h3>Human Resource Department<span>Total Job Opening <strong><%=HR.reduce((accumulator,curr_val)=> accumulator + Number(curr_val.noofpos), 0 )%></strong></span></h3>
+            <div class="row">
+              <% HR.forEach(function(val) {%>
+                <div class="col-lg-4 col-md-4 col-sm-12 mb-5">
+                  <div class="cardeptcardbox">
+                    <h4>Information Technology Department</h4>
+                    <h5>Ref.No. <strong>#<%=val.SAP_job_ID%></strong></h5>
+                    <p><%=val.description%></p>
+                    <h6><img src="/images/location-small.png" alt=""> <%=val.location%> <span>Job Location</span></h6>
+                    <div class="jobappbtnsec"><a href="/career/jobDetails?jobid=<%=val.jobid%>" class="jobappbtn lh-40">Job Details</a> <h3><span>Job Opening <strong><%=val.noofpos%></strong></span></h3></div>
+                  </div>
+                </div>
+            <% }) %>
+            </div>
+  
+          </div>
+          <div class="careerdeptcard">
+            <h3>Industry Sales<span>Total Job Opening <strong><%=IndustrySales.reduce((accumulator,curr_val)=> accumulator + Number(curr_val.noofpos), 0 )%></strong></span></h3>
+            <div class="row">
+              <% IndustrySales.forEach(function(val) {%>
+                <div class="col-lg-4 col-md-4 col-sm-12 mb-5">
+                  <div class="cardeptcardbox">
+                    <h4>Information Technology Department</h4>
+                    <h5>Ref.No. <strong>#<%=val.SAP_job_ID%></strong></h5>
+                    <p><%=val.description%></p>
+                    <h6><img src="/images/location-small.png" alt=""> <%=val.location%> <span>Job Location</span></h6>
+                    <div class="jobappbtnsec"><a href="/career/jobDetails?jobid=<%=val.jobid%>" class="jobappbtn lh-40">Job Details</a> <h3><span>Job Opening <strong><%=val.noofpos%></strong></span></h3></div>
+                  </div>
+                </div>
+            <% }) %>
+            </div>
+  
+          </div>
+          <div class="careerdeptcard">
+            <h3>International Business<span>Total Job Opening <strong><%=IB.reduce((accumulator,curr_val)=> accumulator + Number(curr_val.noofpos), 0 )%></strong></span></h3>
+            <div class="row">
+              <% IB.forEach(function(val) {%>
+                <div class="col-lg-4 col-md-4 col-sm-12 mb-5">
+                  <div class="cardeptcardbox">
+                    <h4>Information Technology Department</h4>
+                    <h5>Ref.No. <strong>#<%=val.SAP_job_ID%></strong></h5>
+                    <p><%=val.description%></p>
+                    <h6><img src="/images/location-small.png" alt=""> <%=val.location%> <span>Job Location</span></h6>
+                    <div class="jobappbtnsec"><a href="/career/jobDetails?jobid=<%=val.jobid%>" class="jobappbtn lh-40">Job Details</a> <h3><span>Job Opening <strong><%=val.noofpos%></strong></span></h3></div>
+                  </div>
+                </div>
+            <% }) %>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="changecountry dropcvpan">
+      <div class="container">
+        <div class="row interpart">
+          <div class="col-lg-10 col-md-10 col-md-12">
+            <h5>Drop Your CV For Future Opportunities <span>We are always looking for talented and passionate individuals to join our team</span></h5>
+          </div>
+          <div class="col-lg-2 col-md-2 col-md-12">
+            <a href="https://www.shaktipumps.com/hrindia/resume_post.php" target="_blank" class="readmore changecoun">Drop Your CV</a>
+          </div>
+        </div>
+      </div>
+</section>
+<section class="walkininteviewsec">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <img src="/images/walkin-pic.png" alt="">
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 walkincontent">
+        <h2>Walk In Interview</h2>
+        <h3>Walk-In Drive For Branch Sales Manager</h3>
+        <h4>Industrial OEM Department <span> |   Ref. No.</span> #10663</h4>
+        <div class="walkinshedule">
+            <h6><img src="/images/date-blk.png" alt=""> 01 Sep, 2024 <span>Interview Date</span></h6>
+            <h6><img src="/images/time-blk.png" alt=""> 10:00 AM <span>Time</span></h6>
+            <h6 class="locsheduintv"><img src="/images/location-blk.png" alt=""> Indore <br>226 Shastri Market, Second Floor, M.G. Road<span>Interview Venue</span></h6>
+        </div>
+        <h5>Job Role:</h5>
+        <p>Dentification of potential market, sales cum service to customer, clusters for sales cum service. Sales and strategize the maximum market penetration through them.
+          Creation of strong. Segment network expansion in respective territory.</p>
+        <a class="jobappbtn lh-40" style="padding: 5px;" href="https://www.shaktipumps.com/hrinda/resume_post.php">Drop Your CV</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="testimoni">
+    <div class="container">
+      <h2><span>Employee Testimonials</span> Imagine With Us</h2>
+      <div class="testimonialslide">
+        <div class="testipan">
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="domtestpropic">
+                <img src="/images/dom-testipic.png" alt="">
+                <img src="/images/play-icon.png" alt="" class="testprovidbtn">
+              </div>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-12">
+              <p>Hearty wishes to you all in Shakti Pumps. We are a small group of brothers, who have installed 3nos 5HP Pumps to the bore well. Thanks to the timely help and action. Our 9acres paddy crop is saved.</p>
+              <p>At the same time having installed the pumps, I bought 2000 Equity shares of Shakti Pumps @ 172. Oh! My phenomenal jump and good annual result. God Bless the entire team of performance and give you more energy in bringing the solar energy into noble use.</p>
+              <h3>Mr. Krishna Murti, Bangalore <span>CEO, Company Name</span></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- include footer -->
+  <%- include('../common/footer.ejs') %>
+     </body>
+      </html>

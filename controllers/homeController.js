@@ -2,7 +2,13 @@
 
 //Showing data from a home page
 const getHomePage = (req, res) => {
-    res.render('index');  // Renders index.ejs
+  var data;
+    if(req.query.message == 'dataSaved'){
+      data = {
+        "message" : "Your query has been recorded"
+      }
+    }
+    res.render('index' , {data});  // Renders index.ejs
   };
   
 

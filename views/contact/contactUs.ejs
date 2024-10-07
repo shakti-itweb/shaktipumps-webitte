@@ -1,0 +1,341 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shakti Pumps</title>
+    <link rel="icon" type="image/x-icon" href="/img/fav.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"  rel="stylesheet">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
+    <link rel='stylesheet' href="/css/bootstrap.min.css">
+    <link rel='stylesheet' href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="/css/style-loading.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+  </head>
+  <body>
+  
+
+    <%- include('../common/header.ejs') %>
+
+
+
+    <section class="productban mediabann">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <h2>We’re here to help</h2>
+            <p>Tell us what you’re looking for and we’ll get you connected to the right people.</p>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <img src="/images/contact-banpic.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="complainregfrm contactgetans">
+      <div class="container">
+        <h2>Get Answers To Your Questions
+          <span>Contact us for support or inquiries! we're ready to assist you.</span>
+        </h2>
+        <form method="post" action="/contact/submitForm">
+          <div class="row">
+            <div class="col-lg-2 col-md-3 col-sm-12 mb-3">
+              <input type="text" placeholder="Name" name="name">
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-12 mb-3">
+              <input type="text" placeholder="Firm Name" name="firm_name">
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-12 mb-3">
+              <input type="email" placeholder="Email" name="email">
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-12 mb-3">
+              <select name="country">
+                <option>Country</option>
+                <% countryList.map((val)=>{ %>
+                    <option value="<%=val.value%>"><%=val.name%></option>
+                <% }) %>
+              </select>
+            </div>
+            <!-- <div class="col-lg-2 col-md-3 col-sm-12 mb-3">
+              <select name="state">
+                <option>State</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Tripura">Tripura</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="West Bengal">West Bengal</option>                  
+              </select>
+            </div> -->
+            <div class="col-lg-2 col-md-3 col-sm-12 mb-3">
+              <select name="enquiry_for">
+                <option>Enquiry for</option>
+                <option>Dealership Enquiry</option>
+                <option>Industrial Enquiry</option>
+              </select>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-12 mb-3">
+              <input type="text" maxlength="10" name="phone" placeholder="Phone">
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <textarea name="message" placeholder="Message"></textarea>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 contactsubmit">
+              <input type="reset" value="Reset">
+              <input type="submit" value="Send Message">
+            </div>
+          </div>
+        </form>
+        
+      </div>
+    </section>
+    <section class="contact-corpoaddress">
+      <div class="container">
+        <h2>Corporate Address <span>Shakti Pumps (India) Limited</span></h2>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <h3><img src="/images/Location-addicon.png" alt=""> Head Office, India</h3>
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-12">
+                <h4>Address</h4>
+                <p>Plot No. 401, 402, & 413, <br>Industrial Area<br>Sector - 3, Pithampur,<br>Dist. Dhar - 454774<br>
+                  Madhya Pradesh, India</p>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-12">
+                <h4>Contact Info</h4>
+                <p><span>Email:</span> info@shaktipumps.com</p>
+                <p><span>Phone:</span> +91-7292-410500</p>
+                <p><span>Toll Free (INDIA):</span> 1800-103-5555</p>
+                <p><span>Fax:</span> +91-7292-410645</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <h3><img src="/images/Location-addicon.png" alt=""> Head Office, India</h3>
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-12">
+                <h4>Address</h4>
+                <p>Plot No. 401, 402, & 413, <br>Industrial Area<br>Sector - 3, Pithampur,<br>Dist. Dhar - 454774<br>
+                  Madhya Pradesh, India</p>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-12">
+                <h4>Contact Info</h4>
+                <p><span>Email:</span> info@shaktipumps.com</p>
+                <p><span>Phone:</span> +91-7292-410500</p>
+                <p><span>Toll Free (INDIA):</span> 1800-103-5555</p>
+                <p><span>Fax:</span> +91-7292-410645</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="domesticmap suppservmap">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <h2>Branch Office & Warehouse</h2>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="mapselectopt">
+              <select>
+                <option>Country</option>
+              </select>
+              <select>
+                <option>State</option>
+              </select>
+              <select>
+                <option>City</option>
+              </select>
+              <input type="text" placeholder="Zip">
+            </div>
+          </div>
+        </div>
+        <div class="mapwrap">
+          <div class="mapflex">
+              <div class="globmap">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24135244.25614283!2d26.439265026482595!3d42.402253968254925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1724242529127!5m2!1sen!2sin" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            <div class="maprgt">
+              <h3>India <span>(25)</span></h3>
+              <!-- partial:index.partial.html -->
+              <div id="accordion" class="maprgtscroll">
+                <h4 class="accordion-toggle active"><img src="/images/acc-location-icon.png" alt=""> Andhra Pradesh (02)</h4>
+                <div class="accordion-content default">
+                  <div class="mapquerybox">
+                    <h5>Aluru</h5>
+                    <div class="maplocrow">
+                      <div class="maploclist">
+                        <p><span>Area :</span> Nizampatnam</p>
+                        <p><span>Zip :</span> 522314</p>
+                      </div>
+                      <a href="#">Query</a>
+                    </div>
+                  </div>
+                  <div class="mapquerybox">
+                    <h5>Aluru</h5>
+                    <div class="maplocrow">
+                      <div class="maploclist">
+                        <p><span>Area :</span> Nizampatnam</p>
+                        <p><span>Zip :</span> 522314</p>
+                      </div>
+                      <a href="#">Query</a>
+                    </div>
+                  </div>
+                </div>
+                <h4 class="accordion-toggle"><img src="/images/acc-location-icon.png" alt=""> Arunachal Pradesh (05)</h4>
+                <div class="accordion-content">
+                  <div class="mapquerybox">
+                    <h5>Aluru</h5>
+                    <div class="maplocrow">
+                      <div class="maploclist">
+                        <p><span>Area :</span> Nizampatnam</p>
+                        <p><span>Zip :</span> 522314</p>
+                      </div>
+                      <a href="#">Query</a>
+                    </div>
+                  </div>
+                </div>
+                <h4 class="accordion-toggle"><img src="/images/acc-location-icon.png" alt=""> Assam (10)</h4>
+                <div class="accordion-content">
+                  <div class="mapquerybox">
+                    <h5>Aluru</h5>
+                    <div class="maplocrow">
+                      <div class="maploclist">
+                        <p><span>Area :</span> Nizampatnam</p>
+                        <p><span>Zip :</span> 522314</p>
+                      </div>
+                      <a href="#">Query</a>
+                    </div>
+                  </div>
+                </div>
+                <h4 class="accordion-toggle"><img src="/images/acc-location-icon.png" alt=""> Bihar (02)</h4>
+                <div class="accordion-content">
+                  <div class="mapquerybox">
+                    <h5>Aluru</h5>
+                    <div class="maplocrow">
+                      <div class="maploclist">
+                        <p><span>Area :</span> Nizampatnam</p>
+                        <p><span>Zip :</span> 522314</p>
+                      </div>
+                      <a href="#">Query</a>
+                    </div>
+                  </div>
+                </div>
+                <h4 class="accordion-toggle"><img src="/images/acc-location-icon.png" alt=""> Gujarat (15)</h4>
+                <div class="accordion-content">
+                  <div class="mapquerybox">
+                    <h5>Aluru</h5>
+                    <div class="maplocrow">
+                      <div class="maploclist">
+                        <p><span>Area :</span> Nizampatnam</p>
+                        <p><span>Zip :</span> 522314</p>
+                      </div>
+                      <a href="#">Query</a>
+                    </div>
+                  </div>
+                </div>
+                <h4 class="accordion-toggle"><img src="/images/acc-location-icon.png" alt=""> Maharashtra (05)</h4>
+                <div class="accordion-content">
+                  <div class="mapquerybox">
+                    <h5>Aluru</h5>
+                    <div class="maplocrow">
+                      <div class="maploclist">
+                        <p><span>Area :</span> Nizampatnam</p>
+                        <p><span>Zip :</span> 522314</p>
+                      </div>
+                      <a href="#">Query</a>
+                    </div>
+                  </div>
+                </div>
+                <h4 class="accordion-toggle"><img src="/images/acc-location-icon.png" alt=""> Arunachal Pradesh (05)</h4>
+                <div class="accordion-content">
+                  <div class="mapquerybox">
+                    <h5>Aluru</h5>
+                    <div class="maplocrow">
+                      <div class="maploclist">
+                        <p><span>Area :</span> Nizampatnam</p>
+                        <p><span>Zip :</span> 522314</p>
+                      </div>
+                      <a href="#">Query</a>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+              <!-- partial -->
+              <div>
+      
+              </div>
+            </div>
+          </div>
+        </div>
+     
+      </div>
+    </section>
+<section class="contact-oversesadd">
+  <div class="container">
+    <h2>Overseas Office</h2>
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="overseas-ofccard">
+          <h3><img src="/images/flag-UAE.png" alt="">United Arab Emirates</h3>
+          <h4>Shakti Pumps (FZE)</h4>
+          <p>Q4 - 267, P O Box 8521,<br>Sharjah Airport International Free Zone<br>Sharjah - UAE</p>
+          <p><span>Phone:</span> +971-5088-31589, +971-6557-8028</p>
+          <p> <span>Fax:</span>+971-6557-8297</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="overseas-ofccard">
+          <h3><img src="/images/flag-USA.png" alt="">United States</h3>
+          <h4>Shakti Pumps (FZE)</h4>
+          <p>Q4 - 267, P O Box 8521,<br>Sharjah Airport International Free Zone<br>Sharjah - UAE</p>
+          <p><span>Phone:</span> +971-5088-31589, +971-6557-8028</p>
+          <p> <span>Fax:</span>+971-6557-8297</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="overseas-ofccard">
+          <h3><img src="/images/flag-bang.png" alt="">Bangladesh</h3>
+          <h4>Shakti Pumps (FZE)</h4>
+          <p>Q4 - 267, P O Box 8521,<br>Sharjah Airport International Free Zone<br>Sharjah - UAE</p>
+          <p><span>Phone:</span> +971-5088-31589, +971-6557-8028</p>
+          <p> <span>Fax:</span>+971-6557-8297</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <%- include('../common/footer.ejs')%>
+  
+     </body>
+      </html>
