@@ -872,6 +872,14 @@ nav{
   .loginpopdesi {
     padding: 30px;
   }
+  .deskmenu{opacity: 0; height:0 !important;}
+  .mobmenu{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+  }
   }
   @media (max-width:370px){
     nav .navbar .nav-links{

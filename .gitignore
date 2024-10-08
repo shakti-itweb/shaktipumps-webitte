@@ -1,6 +1,7 @@
 # Ignore node_modules folder
 node_modules/
 
+
 # Ignore public images
 public/images/
 
@@ -27,3 +28,8 @@ public/js/*.js
 
 # Ignore CSS files in public
 public/css/*.css
+
+
+
+node_modules
+/node_modules

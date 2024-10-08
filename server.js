@@ -16,6 +16,10 @@ const pmKusum = require('./routes/pmKusumRoutes');
 const career = require('./routes/careerRoutes');
 const contact = require('./routes/contactRoutes');
 const media = require('./routes/mediaRoutes');
+const industrial = require('./routes/industrialRouter');
+const product = require('./routes/productRoutes');
+const solaroem = require('./routes/solarOEMRouter')
+const serviceSupport = require('./routes/serviceSupport');
 
 env.config();
 app.use(express.json());
@@ -43,11 +47,21 @@ app.use('/contact', contact);
 app.use('/media', media);
 
 
+app.use('/industrial',industrial);
+app.use('/product',product);
+app.use('/solaroem',solaroem);
+app.use('/service-support', serviceSupport);
+
+
+
 app.get('/check',(req,res)=>{
     // res.send("Your are rendreing from HTML");
     // return res.render("test")
     return res.render("homepage");
 })
+
+
+
 
 const port = process.env.port || 3000;
 app.listen(port,()=>{
