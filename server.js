@@ -15,6 +15,7 @@ const patent = require('./routes/patentRoutes');
 const pmKusum = require('./routes/pmKusumRoutes');
 const career = require('./routes/careerRoutes');
 const contact = require('./routes/contactRoutes');
+const media = require('./routes/mediaRoutes');
 
 env.config();
 app.use(express.json());
@@ -38,7 +39,8 @@ app.use('/noticeInvestor',investorNotice);//Contain both notice as well as inves
 app.use('/patent',patent);
 app.use('/pmKusum',pmKusum);
 app.use('/career', career);
-app.use('/contact', contact)
+app.use('/contact', contact);
+app.use('/media', media);
 
 
 app.get('/check',(req,res)=>{
