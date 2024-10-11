@@ -20,6 +20,7 @@ const industrial = require('./routes/industrialRouter');
 const product = require('./routes/productRoutes');
 const solaroem = require('./routes/solarOEMRouter')
 const serviceSupport = require('./routes/serviceSupport');
+const financial = require('./routes/financialReports');
 
 env.config();
 app.use(express.json());
@@ -27,6 +28,7 @@ app.use(express.urlencoded({extended : true}));
 // Set trust proxy if your app is behind a proxy (like Heroku, AWS, etc.)
 app.set('trust proxy', true); // Important for getting the correct IP address
 app.use(express.static(path.join(__dirname,'public')));
+app.use('/pdfFiles', express.static(path.join(__dirname, 'pdfFiles')));
 app.set('view engine', 'ejs');
 app.set('views',path.resolve("./views"));
 
@@ -45,12 +47,11 @@ app.use('/pmKusum',pmKusum);
 app.use('/career', career);
 app.use('/contact', contact);
 app.use('/media', media);
-
-
 app.use('/industrial',industrial);
 app.use('/product',product);
 app.use('/solaroem',solaroem);
 app.use('/service-support', serviceSupport);
+app.use('/investor-relation',financial);
 
 
 
