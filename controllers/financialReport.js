@@ -59,6 +59,14 @@ const getFinancialReport = async (req, res) => {
     res.render("financialReports/boardMeeting",{OutcomeofBoardMeeting,intimationofBoardMeeting});
   };
 
+  const getInvestorEducation = async (req, res) => {
+    await db.connect();
+    const unpaidDividendInvestors = await db.request().query(`select * from unpaidDividendInvestors`);
+    const IEPFShares = await db.request().query(`select * from IEPFShares`);
+    const IEPFAmount = await db.request().query(`select * from IEPFAmount`);
+    res.render("financialReports/investorsEducation",{unpaidDividendInvestors,IEPFShares,IEPFAmount});
+  };
+
   const getFinancialReportInfo = (req, res) => {
     res.json({ info: "financial report information" });
   };
@@ -74,6 +82,7 @@ const getFinancialReport = async (req, res) => {
     getcomplianceCertificateReport,
     getkycUpdateReport,
     getNewsAndAnnouncement,
-    getBoardMeeting
+    getBoardMeeting,
+    getInvestorEducation
   };
   

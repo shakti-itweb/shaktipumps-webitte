@@ -17,6 +17,7 @@ router.get('/complianceCertificate',financialReports.getcomplianceCertificateRep
 router.get('/kycUpdate',financialReports.getkycUpdateReport);
 router.get('/newsAndAnnouncement',financialReports.getNewsAndAnnouncement);
 router.get('/boardMeeting',financialReports.getBoardMeeting);
+router.get('/investorEducation',financialReports.getInvestorEducation);
 router.get('/info',financialReports.getFinancialReportInfo);
 
 
