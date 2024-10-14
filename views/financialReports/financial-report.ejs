@@ -130,8 +130,10 @@
   <section class="foundtiontab financialyeartab">
     <div class="container">
     <div class="selectcat">
-      <select>
-        <option>Select Financial Year</option>
+      <select onchange="getval(this.value);">
+        <option>ALL</option>
+        <option value="2024-2025">2024-2025</option>
+        <option value="2023-2024">2023-2024</option>
       </select>
     </div>
         <!-- partial:index.partial.html -->
@@ -153,19 +155,11 @@
             <a href="#" class="resultsbtn"><img src="/images/pdf-icon.png" alt=""> Report Download: 2023-24</a>
           </div>
           <div class="downloadcardlist">
-            <div class="downloadcardpan">
-              <h3>Select Financial Year <span>Annual Report of Shakti Pumps (I) Ltd.</span></h3>
-              <a href="#" class="readmore"><img src="/images/pdf-iconwh.png" alt=""> Download</a>
-            </div>
-            <!-- <div class="downloadcardpan">
-              <h3>Select Financial Year <span>Annual Report of Shakti Pumps (I) Ltd.</span></h3>
-              <a href="#" class="readmore"><img src="/images/pdf-iconwh.png" alt=""> Download</a>
-            </div> -->
-
-
+     
             <% if (Array.isArray(quarterlyResults.recordset) && quarterlyResults.recordset.length > 0) {quarterlyResults.recordset.forEach(function(file) { %>
-              <div class="downloadcardpan">
-                <h3><%=file.fileName %> <span><%=file.quater%> Annual Report of Shakti Pumps (I) Ltd.</span></h3>
+              <div class="downloadcardpan" id="<%=file.year %>">
+                <h3><%=file.fileName %><span><%=file.quater%> Annual Report of Shakti Pumps (I) Ltd.</span><span><%=file.year %></span></h3>
+                <!-- <h3><span><%=file.year %></span></h3> -->
                 <a href="/pdfFiles/financialReports/qualityResults/<%=file.path%>" class="readmore" target="_blank"><img src="/images/pdf-iconwh.png" alt=""> Download</a>
               </div>
               <% })} %>
@@ -182,7 +176,7 @@
           </div>
           <div class="downloadcardlist">
             <% if (Array.isArray(annualReport.recordset) && annualReport.recordset.length > 0) {annualReport.recordset.forEach(function(file) { %>
-              <div class="downloadcardpan">
+              <div class="downloadcardpan" id="<%=file.year %>">
                 <h3><%=file.fileName %> <span><%=file.year%> Annual Report of Shakti Pumps (I) Ltd.</span></h3>
                 <a href="/pdfFiles/financialReports/annualReport/<%=file.path%>" class="readmore" target="_blank"><img src="/images/pdf-iconwh.png" alt=""> Download</a>
               </div>
@@ -196,7 +190,7 @@
           </div>
           <div class="downloadcardlist">
             <% if (Array.isArray(BRSR.recordset) && BRSR.recordset.length > 0) {BRSR.recordset.forEach(function(file) { %>
-              <div class="downloadcardpan">
+              <div class="downloadcardpan" id="<%=file.year %>">
                 <h3><%=file.fileName %> <span><%=file.year%> Annual Report of Shakti Pumps (I) Ltd.</span></h3>
                 <a href="/pdfFiles/financialReports/BRSR/<%=file.path%>" class="readmore" target="_blank"><img src="/images/pdf-iconwh.png" alt=""> Download</a>
               </div>
@@ -213,7 +207,7 @@
           </div>
           <div class="downloadcardlist">
             <% if (Array.isArray(annualReturns.recordset) && annualReturns.recordset.length > 0) {annualReturns.recordset.forEach(function(file) { %>
-              <div class="downloadcardpan">
+              <div class="downloadcardpan" id="<%=file.year %>">
                 <h3><%=file.fileName %> <span><%=file.year%> Annual Report of Shakti Pumps (I) Ltd.</span></h3>
                 <a href="/pdfFiles/financialReports/annualReturns/<%=file.path%>" class="readmore" target="_blank"><img src="/images/pdf-iconwh.png" alt=""> Download</a>
               </div>
@@ -231,7 +225,7 @@
           </div>
           <div class="downloadcardlist">
             <% if (Array.isArray(resultRelease.recordset) && resultRelease.recordset.length > 0) {resultRelease.recordset.forEach(function(file) { %>
-              <div class="downloadcardpan">
+              <div class="downloadcardpan" id="<%=file.year %>">
                 <h3><%=file.fileName %> <span><%=file.year%> Annual Report of Shakti Pumps (I) Ltd.</span></h3>
                 <a href="/pdfFiles/financialReports/resultRelease/<%=file.path%>" class="readmore" target="_blank"><img src="/images/pdf-iconwh.png" alt=""> Download</a>
               </div>
@@ -245,7 +239,7 @@
             </div>
             <div class="downloadcardlist">
               <% if (Array.isArray(resultRelease.recordset) && resultRelease.recordset.length > 0) {resultRelease.recordset.forEach(function(file) { %>
-                <div class="downloadcardpan">
+                <div class="downloadcardpan" id="<%=file.year %>">
                   <h3><%=file.fileName %> <span><%=file.year%> Annual Report of Shakti Pumps (I) Ltd.</span></h3>
                   <a href="/pdfFiles/financialReports/resultRelease/<%=file.path%>" class="readmore" target="_blank"><img src="/images/pdf-iconwh.png" alt=""> Download</a>
                 </div>
@@ -264,7 +258,7 @@
           </div>
           <div class="downloadcardlist">
             <% if (Array.isArray(relatedPartyDisclosure.recordset) && relatedPartyDisclosure.recordset.length > 0) {relatedPartyDisclosure.recordset.forEach(function(file) { %>
-              <div class="downloadcardpan">
+              <div class="downloadcardpan" id="<%=file.year %>">
                 <h3><%=file.fileName %> <span><%=file.path%> Annual Report of Shakti Pumps (I) Ltd.</span></h3>
                 <a href="/pdfFiles/financialReports/relatedPartyDisclosure/<%=file.path%>" class="readmore" target="_blank"><img src="/pdfFiles/financialReports/relatedPartyDisclosure/<%=file.path%>" alt=""> Download</a>
               </div>
@@ -707,5 +701,26 @@ $(function () {
     });
   });
   </script>
+<!-- Working Start -->
+<script>
+  function getval(selectedYear) {
+    // Get all divs with class 'downloadcardpan'
+    var reportDivs = document.getElementsByClassName('downloadcardpan');
+
+    // Loop through each div
+    for (var i = 0; i < reportDivs.length; i++) {
+      var div = reportDivs[i];
+      
+      // Show all divs if 'ALL' is selected, otherwise hide non-matching years
+      if (selectedYear === 'ALL' || div.id === selectedYear) {
+        div.style.display = 'block'; // Show the matching div
+      } else {
+        div.style.display = 'none'; // Hide the non-matching divs
+      }
+    }
+  }
+</script>
+
+<!-- Working ends here -->
      </body>
       </html>
