@@ -72,11 +72,20 @@ const jobDetails = async (req,res) => {
     let jobDetails;
     try {
         await db.connect();
+        console.log(`select * from postjob where jobId = ${jobId}`);
         jobDetails = await db.request().query(`select * from postjob where jobId = ${jobId}`);
         jobDetails = jobDetails.recordset;
         jobDetails = jobDetails.at(0);
         console.log("Printing job details :: ", jobDetails);
-        res.render('career/jobDetails', {jobDetails});
+
+        let paragraphArray = jobDetails.description.split('/n');
+        let techAndProfSkillsArray = jobDetails.techAndProfExp.split('/n');
+        let techAndProfSkillsArrayPara = techAndProfSkillsArray.at(0);
+        let rolesAndResArray = jobDetails.rolesAndResp.split('/n');
+        let rolesAndResArrayPara = rolesAndResArray.at(0);
+
+        console.log(paragraphArray, techAndProfSkillsArray, rolesAndResArray);
+        res.render('career/jobDetails', {jobDetails , paragraphArray, techAndProfSkillsArray, rolesAndResArray,techAndProfSkillsArrayPara,rolesAndResArrayPara });
         return;
     } catch (error) {
         console.log("Error in try block :: ", error);

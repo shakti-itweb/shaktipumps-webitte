@@ -1,7 +1,7 @@
 const db = require('../database/config');
 const { all } = require('../routes/homeRoutes');
 
-let totalPressRelease, last3Release, recentEvent; 
+let totalPressRelease, last3Release, recentEvent, last4News, last3Blogs, totalBlogs; 
 
 const fetchCommonData = async () => {
     try {
@@ -17,6 +17,18 @@ const fetchCommonData = async () => {
             last3Release = await db.request().query(`SELECT TOP 3 * FROM press_release ORDER BY createdOn DESC;`)
             last3Release = await last3Release.recordset;
 
+
+            // last 4 news
+            last4News = await db.request().query(`select top 4 * from shakti_news order by createdOn desc;`);
+            if(last4News.rowsAffected == 0){
+                console.log("Last 4 news not found in db");
+                throw "Last 4 news not found in db";
+            }else{
+                last4News = await last4News.recordset;
+            }
+
+
+
             // most recent event
             recentEvent = await db.request().query(`select top 1 * from shakti_events ORDER BY createdOn Desc;`);
             if(recentEvent.rowsAffected == 0){
@@ -25,9 +37,21 @@ const fetchCommonData = async () => {
             }else{
                 recentEvent = await recentEvent.recordset.at(0);
             }
+
+
+            // last3Blogs
+            last3Blogs = await db.request().query(`select top 3 * from shakti_blogs order by createdOn desc;`);
+            totalBlogs = await db.request().query(`select * from shakti_blogs`);
+            if(last3Blogs.rowsAffected.at(0) == 0) {
+                console.log("Last 3 blogs not found");
+                throw "Last 3 blgos not found";
+            }else{
+                last3Blogs = last3Blogs.recordset;
+                totalBlogs = totalBlogs.rowsAffected.at(0);
+            }
     
             // console.log(totalPressRelease,last3Release, recentEvent);
-            console.log(last3Release)
+            // console.log(last3Blogs)
             return;
         }
     } catch (error) {
@@ -47,7 +71,7 @@ const fetchCommonData = async () => {
 
 const mediaHome = async (req,res) => {
     fetchCommonData();
-    res.render('media/media.ejs', {totalPressRelease, last3Release, recentEvent});
+    res.render('media/media.ejs', {totalPressRelease, last3Release, recentEvent, last4News,last3Blogs, totalBlogs});
     // res.render('media/media.ejs');
 }
 
@@ -78,12 +102,56 @@ const newsDetails = async (req,res) => {
 
 
 const listBlog = async (req,res) => {
-    res.render('media/blogList.ejs');
+    // fetch all blogs from db
+    let allBlogs;
+    try {
+        await db.connect();
+        allBlogs = await db.request().query(`select * from shakti_blogs;`);
+        if(allBlogs.rowsAffected.at(0) == 0){
+            console.log("No blogs found")
+        }else{
+            allBlogs = allBlogs.recordset;
+            console.log("Printing all blogs :: ", allBlogs)
+            return res.render('media/blogList.ejs' , {allBlogs});
+        }
+    } catch (error) {
+        console.log("Error:: ", error);
+    }finally{
+        await db.close();
+    }
+
+
+    // res.render('media/blogList.ejs');
 }
 
 
 const blogDetails = async (req,res) => {
-    res.render('media/blogDetails.ejs');
+
+    const blogId = req.query.id;
+    try {
+        await db.connect();
+        let blogDetail = await db.request().query(`select * from shakti_blogs where id = ${blogId}`);
+        if(blogDetail.rowsAffected.at(0) == 0) {
+            console.log("Blog details not found in db");
+            throw "Blog details not foudn in db";
+        }else{
+            blogDetail = blogDetail.recordset.at(0);
+            console.log(blogDetail);
+
+            let paragraphArray = blogDetail.description.split('/n');
+            let headingH3 = paragraphArray.filter((string)=>{
+                return string.startsWith('[h3]');
+            })
+
+            console.log(paragraphArray, headingH3)
+            return res.render('media/blogDetails.ejs', {blogDetail, paragraphArray, headingH3});
+        }
+    } catch (error) {
+        console.log(error);
+    }finally{
+        await db.close();
+    }
+    
 }
 
 

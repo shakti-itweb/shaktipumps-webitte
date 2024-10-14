@@ -278,6 +278,31 @@
 </script>
 <script>
   $(document).ready(function() {
+        var owl = $('.chproslider');
+        owl.owlCarousel({
+          margin: 15,
+          nav: true,
+          loop: true,
+          autoplay: {
+    delay: 2400,
+    disableOnInteraction: false,
+  },
+          responsive: {
+            0: {
+              items: 1
+            },
+            600: {
+              items: 2
+            },
+            1000: {
+              items: 4
+            }
+          }
+        });
+      });
+</script>
+<script>
+  $(document).ready(function() {
         var owl = $('.motorsslide');
         owl.owlCarousel({
           margin: 10,
@@ -456,7 +481,7 @@ $(function () {
   </script>
   <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script>
   <script src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js'>
-  </script><script  src="/js/scalscript.js"></script>.
+  </script><script  src="/js/scalscript.js"></script>
   <script src='https://unpkg.com/xzoom/dist/xzoom.min.js'></script>
   <script  src="/js/script-product.js"></script>
 
@@ -498,22 +523,6 @@ $(function () {
   // }
 </script>
 
-
-<!-- js for custom dropdown -->
-<script>
-  const showDropDown = (id1, id2) => {
-    const firstEle = document.getElementById(id1);
-    const secondEle = document.getElementById(id2);
-
-    firstEle.classList.add('show');
-    firstEle.setAttribute('aria-expanded', true);
-
-
-    secondEle.classList.remove('dropdown-menu');
-    secondEle.classList.add('dropdown-menu-show');
-    secondEle.setAttribute('data-bs-popper', 'static');
-  }
-</script>
 
 
 
