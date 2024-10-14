@@ -45,8 +45,24 @@
 </section>
 <section class="videogalleryy">
     <div class="container">
-        <div class="liferesouce">
-            <div class="lifrresoucecard">
+
+      <div class="liferesouce">
+        <% if(Array.isArray(allBlogs) && allBlogs.length > 0){%>
+          <% allBlogs.map((blog)=>{ %>
+            
+              <div class="lifrresoucecard">
+                <img src="<%= blog?.image_path %><%= blog?.cover_image2%>" alt="">
+                <h5><%= blog?.blog_category %></h5>
+                <h4><%= blog?.heading.slice(0,71)%>...</h4>
+                <h6><%= blog?.createdOn %><a href="/media/blog-details?id=<%= blog?.id %>"><img src="/images/more-arrow.png" alt=""></a></h6>
+              </div>
+          <%})%>
+          <% } %>
+        </div>
+
+
+        
+            <!-- <div class="lifrresoucecard">
               <img src="/images/blog-pic1.png" alt="">
               <h5>Category Name</h5>
               <h4>Shakti Pumps has installed a total of 107 pump sets at Bharat Mandapam</h4>
@@ -93,14 +109,8 @@
               <h5>Category Name</h5>
               <h4>Shakti Pumps has installed a total of 107 pump sets at Bharat Mandapam</h4>
               <h6>15th May, 2024 <a href="/media/blog-details"><img src="/images/more-arrow.png" alt=""></a></h6>
-            </div>
-            <div class="lifrresoucecard">
-              <img src="/images/blog-pic1.png" alt="">
-              <h5>Category Name</h5>
-              <h4>Shakti Pumps has installed a total of 107 pump sets at Bharat Mandapam</h4>
-              <h6>15th May, 2024 <a href="/media/blog-details"><img src="/images/more-arrow.png" alt=""></a></h6>
-            </div>
-          </div>
+            </div> -->
+          
           <div class="moreloadpro">
             <a href="#" class="readmore">View More 60 Shakti Blogs</a>
           </div>

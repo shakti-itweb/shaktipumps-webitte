@@ -12,6 +12,12 @@ const getFinancialReport = async (req, res) => {
     res.render("financialReports/financial-report",{quarterlyResults,annualReturns,relatedPartyDisclosure,annualReport,BRSR,resultRelease,investorPresentation});
   };
 
+
+
+  const getChairmanProfile = async (req, res) => {
+    res.render("financialReports/chairman-profile");
+  };
+
   const getSubsidiaryResult = async (req, res) => {
     await db.connect();
     const shareholding = await db.request().query(`select * from shareholding`);
@@ -83,6 +89,7 @@ const getFinancialReport = async (req, res) => {
     getkycUpdateReport,
     getNewsAndAnnouncement,
     getBoardMeeting,
-    getInvestorEducation
+    getInvestorEducation,
+    getChairmanProfile
   };
   

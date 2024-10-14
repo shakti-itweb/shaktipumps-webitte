@@ -57,7 +57,17 @@
         <div class="newspan">
           <h2>News</h2>
         <ul>
-          <li>
+          <% if(Array.isArray(last4News) && last4News.length > 0){%>
+            <% last4News.map((news)=>{ %>
+              <li>
+                <a href="/media/news-listing">
+                  <p><%= news?.heading.slice(0,72)%>...</p>
+                  <div><span> <%= news?.news_date%></span> <span>Times Of India</span></div>
+                </a>
+              </li>
+              <% })%>
+            <%}%>
+          <!-- <li>
             <p>Shakti Domestic pumps are Ideal for homes to maintain water pressure in</p>
             <div><span> 10th Jan, 2024</span> <span>Times Of India</span></div>
           </li>
@@ -72,7 +82,7 @@
           <li>
             <p>Shakti Domestic pumps are Ideal for homes to maintain water pressure in</p>
             <div><span> 10th Jan, 2024</span> <span>Times Of India</span></div>
-          </li>
+          </li> -->
         </ul>
         <a href="/media/news-listing" class="readmore">View All News</a>
         </div>
@@ -83,7 +93,7 @@
           <div class="eventslide">
           <div class="eventpan">
           <img src="images/eventpic1.png">
-          <p><%= recentEvent?.event_name ? recentEvent?.event_name.slice(0,40) : '-'%><span><%= recentEvent?.event_frm_date %></span></p>
+          <p><%= recentEvent?.event_name ? recentEvent?.event_name.slice(0,63) : '-'%>...<span><%= recentEvent?.event_frm_date %></span></p>
           </div>
           </div>
           
@@ -96,7 +106,7 @@
 <section class="makeussuccess mediavideopan">
   <div class="container suppteam">
     <h2><span>Stay With</span>Shakti Videos</h2>
-    <h3 style="right: 470px;">Total Happy Customers <span>50</span></h3>
+    <!-- <h3 style="right: 470px;">Total Happy Customers <span>50</span></h3> -->
     <div class="suuslider">
       <div class="lifrresoucecard">
         <!-- <img src="images/video-pic1.png" alt=""> -->
@@ -338,9 +348,22 @@
 <section class="makeussuccess blogslide">
   <div class="container suppteam">
     <h2>Shakti Blog</h2>
-    <h3>Total Shakti Blog <span>50</span></h3>
+    <h3>Total Shakti Blog <span><%= totalBlogs %></span></h3>
     <div class="suuslider">
-      <div class="lifrresoucecard">
+
+      <%if(Array.isArray(last3Blogs) && last3Blogs.length > 0) {%>
+        <% last3Blogs.map((blog)=>{ %>
+          <div class="lifrresoucecard">
+            <a href="/media/blog-listing">
+                <img src="<%= blog?.image_path%><%= blog?.cover_image1%>" alt="">
+                <h5><%= blog?.blog_category %></h5> 
+                <h4><%= blog?.heading.slice(0,71) %>...</h4>
+                <h6><img src="images/calendar.png" alt=""><%= blog?.createdOn %></h6>
+            </a>
+          </div>
+        <%})%>
+        <%}%>
+      <!-- <div class="lifrresoucecard">
         <a href="/media/blog-listing">
             <img src="images/blog-pic1.png" alt="">
             <h5>Category Name</h5> 
@@ -363,7 +386,7 @@
             <h4>Shakti Pumps has installed a total of 107 pump sets at Bharat Mandapam</h4>
             <h6><img src="images/calendar.png" alt=""> 15th May, 2024</h6>
         </a>
-      </div>
+      </div> -->
       </div>
   </div>
 </section> 

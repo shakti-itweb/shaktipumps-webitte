@@ -346,7 +346,19 @@
         <div class="newspan">
           <h2>News</h2>
         <ul>
-          <li>
+
+        <% if(Array.isArray(last4News) && last4News.length > 0){%>
+            <% last4News.map((news)=>{ %>
+              <li>
+                <a href="/media/news-listing">
+                  <p><%= news?.heading.slice(0,72)%>...</p>
+                  <div><span> <%= news?.news_date%></span> <span>Times Of India</span></div>
+                </a>
+              </li>
+              <% })%>
+            <%}%>
+          
+          <!-- <li>
             <p>Shakti Domestic pumps are Ideal for homes to maintain water pressure in</p>
             <div><span> 10th Jan, 2024</span> <span>Times Of India</span></div>
           </li>
@@ -361,9 +373,11 @@
           <li>
             <p>Shakti Domestic pumps are Ideal for homes to maintain water pressure in</p>
             <div><span> 10th Jan, 2024</span> <span>Times Of India</span></div>
-          </li>
+          </li> -->
+
+
         </ul>
-        <a href="/newseventListing" class="readmore">View All News</a>
+        <a href="/media/news-listing" class="readmore">View All News</a>
         </div>
       </div>
       <div class="col-lg-8 col-md-8 col-sm-12">
@@ -372,7 +386,7 @@
           <div class="eventslide">
           <div class="eventpan">
           <img src="/images/eventpic1.png">
-          <p>Shakti Domestic pumps are Ideal for <span>10th Jan, 2024 | Times Of India</span></p>
+          <p><%= recentEvent?.event_name.slice(0,36)%> <span><%= recentEvent?.event_frm_date%> | Times Of India</span></p>
           </div>
           </div>
           
