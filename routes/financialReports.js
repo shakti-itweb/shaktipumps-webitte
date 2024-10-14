@@ -10,6 +10,7 @@ const router = express.Router();
 
 const financialReports = require('../controllers/financialReport');
 router.get('/',financialReports.getFinancialReport);
+router.get('/chairmanProfile',financialReports.getChairmanProfile);
 router.get('/shareholding',financialReports.getSubsidiaryResult);
 router.get('/reportOfGovernance',financialReports.getreportOfCopyGovernance);
 router.get('/secratrialAuditReport',financialReports.getauditSecratrialReport);

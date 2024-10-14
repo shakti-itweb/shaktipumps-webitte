@@ -278,6 +278,31 @@
 </script>
 <script>
   $(document).ready(function() {
+        var owl = $('.chproslider');
+        owl.owlCarousel({
+          margin: 15,
+          nav: true,
+          loop: true,
+          autoplay: {
+    delay: 2400,
+    disableOnInteraction: false,
+  },
+          responsive: {
+            0: {
+              items: 1
+            },
+            600: {
+              items: 2
+            },
+            1000: {
+              items: 4
+            }
+          }
+        });
+      });
+</script>
+<script>
+  $(document).ready(function() {
         var owl = $('.motorsslide');
         owl.owlCarousel({
           margin: 10,
@@ -460,10 +485,10 @@ $(function () {
   <script src='https://unpkg.com/xzoom/dist/xzoom.min.js'></script>
   <script  src="/js/script-product.js"></script>
 
-  {/* google maps api key */}
+  <!-- {/* google maps api key */} -->
   <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvR5pNOvll3ZzLp3ioyktyntl2ilibzxM&callback=initMap" async defer></script> -->
 
-  {/* js for map  */}
+  <!-- {/* js for map  */} -->
   <script>
   // const locations = [
   //   { lat: 15.9129, lng: 79.7400, title: "Andhra Pradesh" },
