@@ -3983,6 +3983,11 @@ padding-bottom: 5px; margin-bottom: 10px;
   background: #fff;
   position: relative;
 }
+
+
+.makeussuccess > iframe {
+  border-radius: 20px!important;
+}
 .makeussuccess.mediavideopan .lifrresoucecard h4 {
   overflow: hidden;
   color: var(--Tertiary-Color-Dark-1000, #161E3E);

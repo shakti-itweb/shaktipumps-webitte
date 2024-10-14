@@ -26,25 +26,21 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
-      <h2>Shakti Domestic pumps are Ideal for homes to maintain water pressure in taps and for general applications</h2>
-      <h3><span><img src="/images/calendar.png" alt=""> 10th Jan, 2024</span>  <span><img src="/images/news-icon.png" alt="" height="24"> Times Of India</span></h3>
+      <h2><%= eventDetails.event_name %></h2>
+      <h3><span><img src="/images/calendar.png" alt=""> <%= eventDetails.event_frm_date %> </span>  <span><img src="/images/news-icon.png" alt="" height="24"> Times Of India</span></h3>
     </div>
   </div>
 </div>
 </section>
 <section class="newsdetailsdesc">
     <div class="container">
-        <img src="/images/news-dtlsthum.png" alt="" class="ndtlsthum">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc semper consectetur est non imperdiet. Morbi velit sem, suscipit sit amet sem sed, tristique tempus felis. Nulla ornare varius turpis eget finibus. Vestibulum in nibh quis risus gravida egestas quis quis leo.</p>
-        <p>Aliquam erat volutpat. In sed nibh mollis quam lobortis blandit. Integer sed massa sed orci varius vestibulum ac vel nunc. Fusce vehicula mattis libero nec pharetra. Ut at libero in lacus molestie blandit. Integer tristique non risus in sagittis. Maecenas pharetra consequat tellus id sodales.</p>
-        <p>Aliquam eu sollicitudin metus, vel gravida leo. Aenean interdum fringilla consequat. Integer nisl metus, suscipit non est quis, posuere volutpat metus. Aenean rutrum posuere gravida. Duis pretium dui quis lacus sodales, quis tincidunt erat ultricies. Integer nec venenatis leo. Donec sit amet faucibus leo, nec malesuada turpis.</p>
-        <p>Donec mauris odio, placerat et feugiat quis, pellentesque in nisi. Vivamus tortor metus, euismod quis aliquet vel, feugiat id sem. Pellentesque sed tincidunt nisl. Cras vitae leoskiquis augue aliquam accumsan</p>
-        <br>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc semper consectetur est non imperdiet. Morbi velit sem, suscipit sit amet sem sed, tristique tempus felis. Nulla ornare varius turpis eget finibus. Vestibulum in nibh quis risus gravida egestas quis quis leo. Aliquam erat volutpat. In sed nibh mollis quam lobortis blandit. Integer sed massa sed orci varius vestibulum ac vel nunc. Fusce vehicula mattis libero nec pharetra. Ut at libero in lacus molestie blandit. Integer tristique non risus in sagittis. Maecenas pharetra consequat tellus id sodales.</p>
-        <p>Aliquam eu sollicitudin metus, vel gravida leo. Aenean interdum fringilla consequat. Integer nisl metus, suscipit non est quis, posuere volutpat metus. Aenean rutrum posuere gravida. Duis pretium dui quis lacus sodales, quis tincidunt erat ultricies. Integer nec venenatis leo. Donec sit amet faucibus leo, nec malesuada turpis. Donec mauris odio, placerat.</p>
+        <img src="<%= eventDetails.image_path%><%= eventDetails.actual_image%>" alt="" class="ndtlsthum">
+          <% for(let i=0; i<paragraphArray.length; i++){ %>
+            <p><%= paragraphArray[i] %></p>
+        <% } %>
     </div>
 </section>
-<section class="othernews">
+<!-- <section class="othernews">
   <div class="container">
     <h2 class="newslihead">Other News</h2>
     <div class="othernewsslide">
@@ -62,7 +58,7 @@
           </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <%- include('../common/footer.ejs') %>
      </body>
