@@ -27,7 +27,7 @@
           <div class="col-lg-6 col-md-6 col-sm-12">
             <h2>Media</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent posuere nibh.</p>
-            <a href="#" class="welresultsbtn"><img src="images/pdf-icon.png" alt=""> Download Corporate Brochure</a>
+            <a href="/images/pressKit/corporate_broucher.pdf" class="welresultsbtn"><img src="images/pdf-icon.png" alt=""> Download Corporate Brochure</a>
           </div>
           <div class="col-lg-6 col-md-6 col-sm-12 mediaban">
             <img src="images/media-banner.png" alt="">
@@ -83,11 +83,11 @@
           <div class="eventslide">
           <div class="eventpan">
           <img src="images/eventpic1.png">
-          <p>Shakti Domestic pumps are Ideal for <span>10th Jan, 2024 | Times Of India</span></p>
+          <p><%= recentEvent?.event_name ? recentEvent?.event_name.slice(0,40) : '-'%><span><%= recentEvent?.event_frm_date %></span></p>
           </div>
           </div>
           
-          <a href="#" class="readmore">All Events</a>
+          <a href="/newseventListing/event-list" class="readmore">All Events</a>
         </div>
       </div>
     </div>
@@ -96,9 +96,45 @@
 <section class="makeussuccess mediavideopan">
   <div class="container suppteam">
     <h2><span>Stay With</span>Shakti Videos</h2>
-    <h3>Total Happy Customers <span>50</span></h3>
+    <h3 style="right: 470px;">Total Happy Customers <span>50</span></h3>
     <div class="suuslider">
       <div class="lifrresoucecard">
+        <!-- <img src="images/video-pic1.png" alt=""> -->
+        <!-- <img src="images/play-icon.png" alt="" class="play-icon"> -->
+        <iframe width="250" height="280" src="https://www.youtube.com/embed/6YUoqa9o7y4?si=p1ddHcF1Ri7GI1gr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h5>Category Name</h5>
+        <h4>Hum Hain Desh Ke Annadata Ki Shakti - ShaktiPumps New TVC</h4>
+        <h6>15th May, 2024 <a href="#"><img src="images/more-arrow.png" alt=""></a></h6> 
+        
+      </div>
+      <div class="lifrresoucecard">
+        <!-- <img src="images/video-pic1.png" alt=""> -->
+        <!-- <img src="images/play-icon.png" alt="" class="play-icon"> -->
+        <iframe width="250" height="280" src="https://www.youtube.com/embed/n_y3h62JTng?si=2AXAIOn4XuWT2iRj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h5>Category Name</h5>
+        <h4>Hum Hain Desh Ke Annadata Ki Shakti - ShaktiPumps New TVC</h4>
+        <h6>15th May, 2024 <a href="#"><img src="images/more-arrow.png" alt=""></a></h6> 
+        
+      </div>
+      <div class="lifrresoucecard">
+        <!-- <img src="images/video-pic1.png" alt=""> -->
+        <!-- <img src="images/play-icon.png" alt="" class="play-icon"> -->
+        <iframe width="250" height="280" src="https://www.youtube.com/embed/uC1iJcYOyeY?si=h49UPLU5J3ccQiR1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h5>Category Name</h5>
+        <h4>Hum Hain Desh Ke Annadata Ki Shakti - ShaktiPumps New TVC</h4>
+        <h6>15th May, 2024 <a href="#"><img src="images/more-arrow.png" alt=""></a></h6> 
+        
+      </div>
+      <div class="lifrresoucecard">
+        <!-- <img src="images/video-pic1.png" alt=""> -->
+        <!-- <img src="images/play-icon.png" alt="" class="play-icon"> -->
+        <iframe width="250" height="280" src="https://www.youtube.com/embed/vm7mD2-JyG0?si=kI2IoqIFSv2g5Xqh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h5>Category Name</h5>
+        <h4>Hum Hain Desh Ke Annadata Ki Shakti - ShaktiPumps New TVC</h4>
+        <h6>15th May, 2024 <a href="#"><img src="images/more-arrow.png" alt=""></a></h6> 
+        
+      </div>
+      <!-- <div class="lifrresoucecard">
         <img src="images/video-pic1.png" alt="">
         <img src="images/play-icon.png" alt="" class="play-icon">
         <h5>Category Name</h5>
@@ -111,14 +147,7 @@
         <h5>Category Name</h5>
         <h4>Hum Hain Desh Ke Annadata Ki Shakti - ShaktiPumps New TVC</h4>
         <h6>15th May, 2024 <a href="#"><img src="images/more-arrow.png" alt=""></a></h6>
-      </div>
-      <div class="lifrresoucecard">
-        <img src="images/video-pic1.png" alt="">
-        <img src="images/play-icon.png" alt="" class="play-icon">
-        <h5>Category Name</h5>
-        <h4>Hum Hain Desh Ke Annadata Ki Shakti - ShaktiPumps New TVC</h4>
-        <h6>15th May, 2024 <a href="#"><img src="images/more-arrow.png" alt=""></a></h6>
-      </div>
+      </div> -->
       </div>
   </div>
 </section>  
@@ -129,30 +158,55 @@
         <div class="medividcol">
           <!-- <img src="images/shaktipumpsmedivideobg.png" alt="" class="vidbgg"> -->
           <div class="mrdiapreeontent">
-            <img src="images/play-wh.png" alt="">
+
+            <!-- youtube embbed video link -->
+            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/P288aXXyeMg?si=DCT0v0DleXUHv_7H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+
+
+            <a href="https://www.youtube.com/embed/P288aXXyeMg?si=DCT0v0DleXUHv_7H"><img src="images/play-wh.png" alt=""></a>
           <h2>
             <span>Shakti Pumps</span>
             Corporate Movie
           </h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu commodo dui. Maecenas id facilisis mauris, at sagittis nisl. Phasellus porta imperdiet nunc eget vehicula.</p>
+
+
           </div>
         </div>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-12">
         <div class="presskitlisting">
           <h2>Press Kit</h2>
-          <h3>Company Logos 2015</h3>
-          <div class="mediapdfdown">
-            <div class="mediafromat"><img src="images/png-icon.png" alt=""></div>
-            <h4>Company logo - Vertical <span>PNG format</span></h4>
-           <img src="images/download-icons.png" alt="" class="mediadownld">
-          </div>
-          <div class="mediapdfdown">
-            <div class="mediafromat"><img src="images/png-icon.png" alt=""></div>
-            <h4>Company logo - Vertical <span>PNG format</span></h4>
-           <img src="images/download-icons.png" alt="" class="mediadownld">
-          </div>
-          <h3>Company Logos 2015</h3>
+          <!-- <h3>Company Logos 2015</h3> -->
+          <a href="/images/pressKit/vertical_logo.png" target="_blank">
+            <div class="mediapdfdown">
+              <div class="mediafromat"><img src="images/png-icon.png" alt=""></div>
+              <h4>Company logo - Vertical <span>PNG format</span></h4>
+            <img src="images/download-icons.png" alt="" class="mediadownld">
+            </div>
+          </a>
+          <a href="/images/pressKit/horizontal_logo.png" target="_blank">
+            <div class="mediapdfdown">
+              <div class="mediafromat"><img src="images/jpg-icon.png" alt=""></div>
+              <h4>Company logo - Horizontal <span>JPG format</span></h4>
+            <img src="images/download-icons.png" alt="" class="mediadownld">
+            </div>
+          </a>
+          <a href="/images/pressKit/cmdPhotos.zip" target="_blank">
+            <div class="mediapdfdown">
+              <div class="mediafromat"><img src="images/jpg-icon.png" alt=""></div>
+              <h4>CMD Photo's <span>JPG format</span></h4>
+            <img src="images/download-icons.png" alt="" class="mediadownld">
+            </div>
+          </a>
+          <a href="/images/pressKit/corporate_broucher.pdf" target="_blank">
+            <div class="mediapdfdown">
+              <div class="mediafromat"><img src="images/pdf-icon2.png" alt=""></div>
+              <h4>Corporate Broucher <span>PDF format</span></h4>
+            <img src="images/download-icons.png" alt="" class="mediadownld">
+            </div>
+          </a>
+          <!-- <h3>Company Logos 2015</h3>
           <div class="mediapdfdown">
             <div class="mediafromat"><img src="images/jpg-icon.png" alt=""></div>
             <h4>Company logo - Vertical <span>PNG format</span></h4>
@@ -162,7 +216,7 @@
             <div class="mediafromat"><img src="images/pdf-icon2.png" alt=""></div>
             <h4>Company logo - Vertical <span>PNG format</span></h4>
            <img src="images/download-icons.png" alt="" class="mediadownld">
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -242,10 +296,29 @@
 <section class="makeussuccess mediavideopan shktpressrel">
   <div class="container suppteam">
     <h2><span>Shakti Pumps</span>Press Release</h2>
-    <h3>Total Press Release <span>50</span></h3>
+    <h3 style="right: 475px;">Total Press Release <span><%= totalPressRelease %></span></h3>
     <div class="suuslider">
 
-        <a href="/media/press-release">
+      <% if(Array.isArray(last3Release) && last3Release.length > 0){ %>
+        <% last3Release.map((val)=>{ %>
+          <a href="/media/press-release">
+            <div class="lifrresoucecard pressrelcard">
+              <img src="<%= val.image_path %><%= val.image_name%>" alt="">
+              <h4><%= val.image_description %></h4>
+              <h6><img src="images/calendar.png" alt=""> <%= val.createdOn %></h6>
+            </div>
+          </a>
+          <% }) %>
+        <%}%>
+
+        <!-- <a href="/media/press-release">
+      <div class="lifrresoucecard pressrelcard">
+        <img src="images/mediscreen1.png" alt="">
+        <h4>Shakti Pumps Receives Patent</h4>
+        <h6><img src="images/calendar.png" alt=""> 15th May, 2024</h6>
+      </div>
+    </a> -->
+        <!-- <a href="/media/press-release">
       <div class="lifrresoucecard pressrelcard">
         <img src="images/mediscreen1.png" alt="">
         <h4>Shakti Pumps Receives Patent</h4>
@@ -258,14 +331,7 @@
         <h4>Shakti Pumps Receives Patent</h4>
         <h6><img src="images/calendar.png" alt=""> 15th May, 2024</h6>
       </div>
-    </a>
-        <a href="/media/press-release">
-      <div class="lifrresoucecard pressrelcard">
-        <img src="images/mediscreen1.png" alt="">
-        <h4>Shakti Pumps Receives Patent</h4>
-        <h6><img src="images/calendar.png" alt=""> 15th May, 2024</h6>
-      </div>
-    </a>
+    </a> -->
       </div>
   </div>
 </section> 

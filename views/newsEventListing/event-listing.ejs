@@ -26,7 +26,7 @@
   <div class="row">
     <div class="col-lg-8 col-md-8 col-sm-12">
       <h2>Shakti Pumps Events
-        <span>Total News: 20</span>
+        <span>Total events: <%= Array.isArray(allEvents) ? allEvents.length : 0 %></span>
       </h2>
     </div>
     <div class="col-lg-4 col-md-4 col-sm-12 newfilrgt">
@@ -41,7 +41,30 @@
 <section class="newslist">
   <div class="container">
     <div class="row">
-      <div class="col-lg-6 col-md-6 col-sm-12">
+
+      
+    <% if(Array.isArray(allEvents) && allEvents.length > 0){ %>
+      <% allEvents.map((event)=>{ %>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="row newslistpan">
+            <div class="col-lg-4 col-md-4 col-sm-12 newslithum">
+              <img src="<%=event.image_path%><%=event.cover_image%>" alt="">
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-12 newslistdtlsrgt">
+              <h4><%= event.event_category %></h4>
+              <h2><%= event.event_name %></h2>
+              <h3><span><img src="/images/calendar.png" alt=""><%= event.event_frm_date.slice(0,10) %></span> to <span><img src="/images/calendar.png" alt=""><%= event.event_to_date.slice(4,15) %></span></h3>
+              <!-- <span><img src="/images/news-icon.png" alt="" height="24"> Times Of India</span> -->
+              <p><%= event.event_description.slice(0,90)%></p>
+              <a href="/newseventListing/particular-event?id=<%= event.id %>">Read More <img src="/images/newsmore-arrow.png" alt=""></a>
+            </div>
+          </div>
+        </div>
+      <% })%>
+      <%}%>
+
+
+      <!-- <div class="col-lg-6 col-md-6 col-sm-12">
         <div class="row newslistpan">
           <div class="col-lg-4 col-md-4 col-sm-12 newslithum">
             <img src="/images/news-pic1.png" alt="">
@@ -180,9 +203,9 @@
             <a href="/newseventListing/particular-event">Read More <img src="/images/newsmore-arrow.png" alt=""></a>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
-    <a href="#" class="readmore">Load More</a>
+    <!-- <a href="#" class="readmore">Load More</a> -->
   </div>
 </section>
 <%- include('../common/footer.ejs') %>
