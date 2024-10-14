@@ -460,10 +460,9 @@ $(function () {
   <script src='https://unpkg.com/xzoom/dist/xzoom.min.js'></script>
   <script  src="/js/script-product.js"></script>
 
-  {/* google maps api key */}
   <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvR5pNOvll3ZzLp3ioyktyntl2ilibzxM&callback=initMap" async defer></script> -->
 
-  {/* js for map  */}
+  <!-- {/* js for map  */} -->
   <script>
   // const locations = [
   //   { lat: 15.9129, lng: 79.7400, title: "Andhra Pradesh" },
@@ -497,6 +496,23 @@ $(function () {
   //     });
   //   });
   // }
+</script>
+
+
+<!-- js for custom dropdown -->
+<script>
+  const showDropDown = (id1, id2) => {
+    const firstEle = document.getElementById(id1);
+    const secondEle = document.getElementById(id2);
+
+    firstEle.classList.add('show');
+    firstEle.setAttribute('aria-expanded', true);
+
+
+    secondEle.classList.remove('dropdown-menu');
+    secondEle.classList.add('dropdown-menu-show');
+    secondEle.setAttribute('data-bs-popper', 'static');
+  }
 </script>
 
 
