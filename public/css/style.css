@@ -5576,18 +5576,11 @@ dl.dropdown dt span:nth-child(3) {
 	border-width: 1px;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.09);
 }
+
 .mobmenu{display: none;}
 .deskmenu{opacity: 1; height:auto !important;}
 /* ======== Country flag css end====== */
 
-/* ======== Country flag css end====== */
-
-
-
-/* custom css start */
-.lh-40{
-  line-height: 40px!important;
-}
 /* ===== Mobile menu ==== */
 .mobile-menu {
   position: relative;
