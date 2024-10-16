@@ -12,7 +12,8 @@ const fetchCommonData = async (req,res) => {
       console.log("last 4 news not found");
       throw "Last 4 news not found";
     }else{
-      last4News = await last4News.recordset;
+      last4News = last4News.recordset;
+      console.log();
     }
 
 
@@ -32,16 +33,17 @@ const fetchCommonData = async (req,res) => {
 
 
 //Showing data from a home page
-const getHomePage = (req, res) => {
+const getHomePage = async (req, res) => {
 
 
-  fetchCommonData();
+  await fetchCommonData();
   var data;
     if(req.query.message == 'dataSaved'){
       data = {
         "message" : "Your query has been recorded"
       }
     }
+
     res.render('index' , {data, last4News, recentEvent});  // Renders index.ejs
   };
   

@@ -15,7 +15,7 @@ const fetchCommonData = async () => {
             totalPressRelease = queryResponse.rowsAffected.at(0);
     
             last3Release = await db.request().query(`SELECT TOP 3 * FROM press_release ORDER BY createdOn DESC;`)
-            last3Release = await last3Release.recordset;
+            last3Release = last3Release.recordset;
 
 
             // last 4 news
@@ -24,7 +24,7 @@ const fetchCommonData = async () => {
                 console.log("Last 4 news not found in db");
                 throw "Last 4 news not found in db";
             }else{
-                last4News = await last4News.recordset;
+                last4News = last4News.recordset;
             }
 
 
@@ -55,7 +55,7 @@ const fetchCommonData = async () => {
             return;
         }
     } catch (error) {
-        console.log("Error found :: ", error);
+        console.log("Error found -->  :: ", error);
     } finally {
         await db.close(); 
     }
@@ -70,7 +70,7 @@ const fetchCommonData = async () => {
 
 
 const mediaHome = async (req,res) => {
-    fetchCommonData();
+    await fetchCommonData();
     res.render('media/media.ejs', {totalPressRelease, last3Release, recentEvent, last4News,last3Blogs, totalBlogs});
     // res.render('media/media.ejs');
 }
