@@ -51,6 +51,8 @@ const home = async (req,res) => {
             return (val.department == 'Industry Sales');
         })
 
+        
+
 
         res.render("career/career", {InformTech, ResearchAndDev, HR, IB, IndustrySales});
         return; //This will prevent from multiple rendering

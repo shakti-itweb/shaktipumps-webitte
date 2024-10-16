@@ -226,6 +226,32 @@
 <script type="text/javascript" src="/js/script-countryflag.js"></script>
 <!-- <script type="text/javascript" src="/js/tab-script.js"></script> -->
 <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js'></script> -->
+
+<script>
+  $(document).ready(function() {
+        var owl = $('.suuslider');
+        owl.owlCarousel({
+          margin: 15,
+          nav: true,
+          loop: true,
+          autoplay: {
+    delay: 2400,
+    disableOnInteraction: false,
+  },
+          responsive: {
+            0: {
+              items: 1
+            },
+            600: {
+              items: 2
+            },
+            1000: {
+              items: 4
+            }
+          }
+        });
+      });
+</script>
 <script>
   $(document).ready(function() {
         var owl = $('.testimonialslide');
@@ -253,7 +279,7 @@
 </script>
 <script>
   $(document).ready(function() {
-        var owl = $('.suuslider');
+        var owl = $('.govtsuuslider');
         owl.owlCarousel({
           margin: 15,
           nav: true,
@@ -270,7 +296,7 @@
               items: 2
             },
             1000: {
-              items: 4
+              items: 3
             }
           }
         });
@@ -402,6 +428,31 @@
         });
       });
 </script>
+<script>
+  $(document).ready(function() {
+        var owl = $('.happcusslider');
+        owl.owlCarousel({
+          margin: 10,
+          nav: true,
+          loop: true,
+          autoplay: {
+    delay: 2400,
+    disableOnInteraction: false,
+  },
+          responsive: {
+            0: {
+              items: 1
+            },
+            600: {
+              items: 3
+            },
+            1000: {
+              items: 3
+            }
+          }
+        });
+      });
+</script>
 <!-- <script>
   $(document).ready(function() {
         var owl = $('.abtjurslide');
@@ -522,6 +573,41 @@ $(function () {
   //   });
   // }
 </script>
+
+
+<!-- Working Start -->
+<script>
+  function getval(selectedYear) {
+    // Get all divs with class 'downloadcardpan'
+    var reportDivs = document.getElementsByClassName('downloadcardpan');
+
+    // Loop through each div
+    for (var i = 0; i < reportDivs.length; i++) {
+      var div = reportDivs[i];
+      
+      // Show all divs if 'ALL' is selected, otherwise hide non-matching years
+      if (selectedYear === 'ALL' || div.id === selectedYear) {
+        div.style.display = 'block'; // Show the matching div
+      } else {
+        div.style.display = 'none'; // Hide the non-matching divs
+      }
+    }
+  }
+</script>
+
+<!-- Working ends here -->
+
+
+<!-- google translate -->
+<!-- <script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      { pageLanguage: 'en' },
+      'google_translate_element'
+    );
+  }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
 
 
 
