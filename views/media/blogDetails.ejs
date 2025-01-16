@@ -4,90 +4,106 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shakti Pumps</title>
-    <link rel="icon" type="image/x-icon" href="/img/fav.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"  rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/img/fav.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <script type="text/javascript" src="/js/jquery.min.js"></script>
     <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
-    <link rel='stylesheet' href="/css/bootstrap.min.css">
-    <link rel='stylesheet' href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+    />
     <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
     <link rel="stylesheet" href="/css/style-loading.css" />
     <link rel="stylesheet" href="/css/responsive.css" />
   </head>
   <body>
-
-
     <%- include('../common/header.ejs') %>
 
-<section class="shaktivideobann">
-    <div class="container">
+    <section class="shaktivideobann">
+      <div class="container">
         <div class="row">
-            <div class="col-lg-5 col-md-5 col-sm-12">
-                <div class="protitlebrcam">
-                    <h2>Shakti Blog</h2>
-                    <ul>
-                      <li><a href="#">Home</a></li>
-                      <li><a href="#" class="active">Shakti Pumps has installed a total of 107 pump sets</a></li>
-                    </ul>
-                  </div>
+          <div class="col-lg-5 col-md-5 col-sm-12">
+            <div class="protitlebrcam">
+              <h2>Shakti Blog</h2>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li>
+                  <a href="#" class="active"
+                    >Shakti Pumps has installed a total of 107 pump sets</a
+                  >
+                </li>
+              </ul>
             </div>
-            <div class="col-lg-7 col-md-7 col-sm-12 videosearch">
-                <select>
-                    <option>Select Category</option>
-                </select>
-                <div class="careerbanserch"><input type="text" placeholder="Search By Title or Description.." value=""><input type="submit" value=""></div>
+          </div>
+          <div class="col-lg-7 col-md-7 col-sm-12 videosearch">
+            <select>
+              <option>Select Category</option>
+            </select>
+            <div class="careerbanserch">
+              <input
+                type="text"
+                placeholder="Search By Title or Description.."
+                value=""
+              /><input type="submit" value="" />
             </div>
+          </div>
         </div>
-    </div>
-</section>
-<section class="blogdetail">
-    <div class="container">
+      </div>
+    </section>
+    <section class="blogdetail">
+      <div class="container">
         <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12">
-                <div class="blogdtlslft">
-                    <div class="blogdtlscat">
-                        <h5><%= blogDetail?.blog_category %></h5> | <h6> <img src="/images/calendar.png" alt="">  <%= blogDetail?.createdOn %></h6>
-                    </div>
-                <h2><%= blogDetail?.heading %></h2>
-                <img src="<%= blogDetail?.image_path %><%= blogDetail?.actual_image %>" alt="">
-                <% if(Array.isArray(paragraphArray) && paragraphArray.length > 0) { %>
-                    <% paragraphArray.map((val)=>{ %>
-                        <% if(!val.startsWith("[h")){ %>
-                            <p><%= val %></p>
-                        <%} else { %>
-                            <% if(val.slice(1,3) == 'h1'){ %>
-                                <h1><%= val.slice(4) %></h1>
-                            <% } %>
-                            <% if(val.slice(1,3) == 'h2'){ %>
-                                <h2><%= val.slice(4) %></h2>
-                            <% } %>
-                            <% if(val.slice(1,3) == 'h3'){ %>
-                                <h3><%= val.slice(4) %></h3>
-                            <% } %>
-                            <% if(val.slice(1,3) == 'h4'){ %>
-                                <h4><%= val.slice(4) %></h4>
-                            <% } %>
-                            <% if(val.slice(1,3) == 'h5'){ %>
-                                <h5><%= val.slice(4) %></h5>
-                            <% } %>
-                            <% if(val.slice(1,3) == 'h6'){ %>
-                                <h6><%= val.slice(4) %></h6>
-                            <% } %>
-                        <% }%>
-                    <% }) %>
-                    <% } %>
-                <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eleifend varius nulla a maximus. Fusce efficitur pellentesque auctor. Cras eget auctor neque, ut egestas eros. Etiam risus elit, pharetra finibus erat eu, iaculis vestibulum tellus. Vivamus eleifend volutpat ultricies. Nullam a risus dictum, pharetra arcu eget, elementum mauris.</p>
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="blogdtlslft">
+              <div class="blogdtlscat">
+                <h5><%= blogDetail?.blog_category %></h5>
+                |
+                <h6>
+                  <img src="/images/calendar.png" alt="" /> <%=
+                  blogDetail?.createdOn %>
+                </h6>
+              </div>
+              <h2><%= blogDetail?.heading %></h2>
+              <img
+                src="<%= blogDetail?.image_path %><%= blogDetail?.actual_image %>"
+                alt=""
+              />
+              <% if(Array.isArray(paragraphArray) && paragraphArray.length > 0)
+              { %> <% paragraphArray.map((val)=>{ %> <%
+              if(!val.startsWith("[h")){ %>
+              <p><%= val %></p>
+              <%} else { %> <% if(val.slice(1,3) == 'h1'){ %>
+              <h1><%= val.slice(4) %></h1>
+              <% } %> <% if(val.slice(1,3) == 'h2'){ %>
+              <h2><%= val.slice(4) %></h2>
+              <% } %> <% if(val.slice(1,3) == 'h3'){ %>
+              <h3><%= val.slice(4) %></h3>
+              <% } %> <% if(val.slice(1,3) == 'h4'){ %>
+              <h4><%= val.slice(4) %></h4>
+              <% } %> <% if(val.slice(1,3) == 'h5'){ %>
+              <h5><%= val.slice(4) %></h5>
+              <% } %> <% if(val.slice(1,3) == 'h6'){ %>
+              <h6><%= val.slice(4) %></h6>
+              <% } %> <% }%> <% }) %> <% } %>
+              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eleifend varius nulla a maximus. Fusce efficitur pellentesque auctor. Cras eget auctor neque, ut egestas eros. Etiam risus elit, pharetra finibus erat eu, iaculis vestibulum tellus. Vivamus eleifend volutpat ultricies. Nullam a risus dictum, pharetra arcu eget, elementum mauris.</p>
                 <p>Morbi vel suscipit orci. Praesent eu est eu neque tempor suscipit. Aenean mollis leo vel mauris dignissim suscipit. In sit amet vestibulum velit, a ultricies nisl. Pellentesque hendrerit semper sem in tristique. Donec interdum elementum malesuada. Nulla volutpat urna eu ex consequat, et fringilla metus rhoncus. Sed ipsum orci, rhoncus et ultricies vitae, convallis a nisl. Aliquam iaculis vulputate ultrices. Integer commodo erat non lorem tempor hendrerit.</p>
                 <h3>Cras pellentesque dapibus dignissim faucibus tellus a risus molestie</h3>
                 <p>Traditional CRM systems often operate in isolation, making it difficult for different departments within a business to share information efficiently. This lack of integration can lead to data silos where valuable customer information is trapped in one part of the business, inaccessible to others who might need it.</p>
                 <h3>Dignissim cras pellentesque</h3>
                 <p>Without the best CRM for small businesses, they struggle to gain a deep understanding of their customers. Traditional systems might track basic details like names and contact information, but they fall short in the important aspect of capturing and analyzing customer behaviors, preferences, and trends. This limitation hinders the development of personalized marketing strategies and tailored customer experiences.</p> -->
-                </div>
             </div>
-            <!-- <div class="col-lg-4 col-md-4 col-sm-12">
+          </div>
+          <!-- <div class="col-lg-4 col-md-4 col-sm-12">
                 <div class="blogdtlsrgt">
                     <h4>Most Popular Blog</h4>
                     <div class="blogdtrgtlist">
@@ -133,9 +149,9 @@
                 </div>
             </div> -->
         </div>
-    </div>
-</section>
-<!-- <section class="makeussuccess blogslide">
+      </div>
+    </section>
+    <!-- <section class="makeussuccess blogslide">
     <div class="container suppteam">
       <h2>Shakti Blog</h2>
       <h3>Total Shakti Blog <span>50</span></h3>
@@ -161,6 +177,6 @@
         </div>
     </div>
   </section>  -->
-  <%- include('../common/footer.ejs') %>
-     </body>
-      </html>
+    <%- include('../common/footer.ejs') %>
+  </body>
+</html>

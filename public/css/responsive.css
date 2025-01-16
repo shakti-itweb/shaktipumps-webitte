@@ -26,7 +26,7 @@ only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
         padding: 20px 0;
         text-align: center;
       }
-      .whatlooking h2{font-size: 10vw; line-height: 13vw; padding: 0; text-align: center;}
+      .whatlooking h2{font-size: 8vw; line-height: 13vw; padding: 0; text-align: center;}
       .whatlooking h2 br{display: none;}
       .whatlooking .col-lg-8 {
         border-left: 0;
@@ -197,8 +197,8 @@ only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
     .jurnpan h3{font-size: 30vw;}
     .about-banner .container{top: 122px;}
     .about-banner .container h2{
-      font-size: 5vw;
-      line-height: 7vw;
+      font-size: 4vw;
+      line-height: 5vw;
     }
     .jurpic{margin-right: 8px;}
     .jurndtls h4{font-size:4vw; line-height: 6vw;}
@@ -245,11 +245,18 @@ only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
     }
     .vissn{padding-right: 15px;}
     .missn{padding-left: 15px;}
-    .tab_container h3{}
+    .tab_container h3{
+      
+    }
 }
 
 
-@media only screen and (max-width: 1024px) {}
+@media only screen and (max-width: 1024px) {
+  /* .top-right ul li {
+    padding: 0 0 0 8px;    
+  } */
+
+}
 
 @media only screen and (max-width: 992px) {}
 
@@ -272,7 +279,7 @@ only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
     cursor: pointer;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
-    -khtml-user-select: none;
+    -khtml-user-select: none; 
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
@@ -583,7 +590,7 @@ nav{
     align-items: center;
     justify-content: space-between;
     list-style: none;
-    padding: 0 14px;
+    padding: 0 10px;
   }
   nav .navbar .links li a{
     color: var(--Tertiary-Color-Dark-Blue-1000, #1F2B4C);
@@ -591,7 +598,7 @@ nav{
     font-size: 14px;
     font-style: normal;
     font-weight: 300;
-    line-height: 25px; /* 178.571% */
+    line-height: 15px; /* 178.571% */
   }
   .links li:hover .htmlcss-arrow,
   .links li:hover .js-arrow{
@@ -766,13 +773,13 @@ nav{
       font-size: 25px;
       color: #fff;
     }
-      .sidebar-logo  i,
-      .navbar .bx-menu{
-    font-size: 30px;
-    color: #000;
-    cursor: pointer;
-      }
-      .sidebar-logo i{color: #fff;}
+    .sidebar-logo  i,
+    .navbar .bx-menu{
+      font-size: 30px;
+      color: #000;
+      cursor: pointer;
+    }
+    .sidebar-logo i{color: #fff;}
     nav .navbar .links{
       display: block;
       margin-top: 20px;
@@ -781,10 +788,11 @@ nav{
     nav .navbar .links li .arrow{
       line-height: 40px;
     }
-  nav .navbar .links li{
-    display: block;
-    border-bottom: 1px solid #384465;
-    padding: 5px 0;
+    nav .navbar .links li{
+      display: block;
+      border-bottom: 1px solid #384465;
+      padding: 5px 0;
+      background-color: #23294b;
     }
   nav .navbar .links li .sub-menu{
     position: relative;
@@ -793,8 +801,7 @@ nav{
     display: none;
   }
   nav .navbar .links li .sub-menu li{
-    border-bottom: none;
-  
+    border-bottom: none;  
   }
   .navbar .links li .sub-menu .more-sub-menu{
     display: none;
@@ -809,54 +816,53 @@ nav{
   .links li:hover .htmlcss-arrow,
   .links li:hover .js-arrow{
     transform: rotate(0deg);
-    }
-    .navbar .links li .sub-menu .more-sub-menu{
+  }
+  .navbar .links li .sub-menu .more-sub-menu{
       display: none;
-    }
-    .navbar .links li .sub-menu .more span{
+  }
+  .navbar .links li .sub-menu .more span{
       /* background: red; */
       display: flex;
       align-items: center;
       /* justify-content: space-between; */
-    }
-  
-    .links li .sub-menu .more:hover .more-sub-menu{
-      display: none;
-    }
-    nav .navbar .links li:hover .htmlCss-sub-menu,
-    nav .navbar .links li:hover .js-sub-menu{
-      display: none;
-    }
-  .navbar .nav-links.show1 .links .htmlCss-sub-menu,
-    .navbar .nav-links.show3 .links .js-sub-menu,
-    .navbar .nav-links.show2 .links .more .more-sub-menu{
-        display: block;
-      }
-      .navbar .nav-links.show1 .links .htmlcss-arrow,
-      .navbar .nav-links.show3 .links .js-arrow{
-          transform: rotate(180deg);
   }
-      .navbar .nav-links.show2 .links .more-arrow{
-        transform: rotate(90deg);
-      }
-.jobintro::after {width: auto;}
-.jobintro{padding:0 15px;}
-.jobintrocont{padding-right: 0; padding-bottom: 20px;}
-.contactinfobox{flex-wrap: wrap; padding: 20px;}
-.greenenglft h2{font-size: 10vw;}
-.downloadcardpan {
-  width: auto;
-}
-.blogdetail h2{font-size: 7vw; line-height: 10vw;}
-.blogdetail h3{font-size: 16px; line-height: 26px;}
-.blgrgtcontxt h3{font-size: 11px; line-height: 18px;}
-.careerbanserch input[type="text"] {
-  width: 84%;
-}
-.videosearch select, .careerbanserch{height: 42px;}
-.careerbanserch input[type="text"]{height: 32px; padding-left: 5px;}
-.careerbanserch input[type="submit"]{margin-right: 0;
-  background-size: 14px;}
+  
+  .links li .sub-menu .more:hover .more-sub-menu{
+      display: none;
+  }
+  nav .navbar .links li:hover .htmlCss-sub-menu,
+  nav .navbar .links li:hover .js-sub-menu{
+    display: none;
+  }
+  .navbar .nav-links.show1 .links .htmlCss-sub-menu,
+  .navbar .nav-links.show3 .links .js-sub-menu,
+  .navbar .nav-links.show2 .links .more .more-sub-menu{
+    display: block;
+  }
+  .navbar .nav-links.show1 .links .htmlcss-arrow,
+  .navbar .nav-links.show3 .links .js-arrow{
+      transform: rotate(180deg);
+  }
+  .navbar .nav-links.show2 .links .more-arrow{
+    transform: rotate(90deg);
+  }
+  .jobintro::after {width: auto;}
+  .jobintro{padding:0 15px;}
+  .jobintrocont{padding-right: 0; padding-bottom: 20px;}
+  .contactinfobox{flex-wrap: wrap; padding: 20px;}
+  .greenenglft h2{font-size: 10vw;}
+  .downloadcardpan {
+    width: auto;
+  }
+  .blogdetail h2{font-size: 7vw; line-height: 10vw;}
+  .blogdetail h3{font-size: 16px; line-height: 26px;}
+  .blgrgtcontxt h3{font-size: 11px; line-height: 18px;}
+  .careerbanserch input[type="text"] {
+    width: 84%;
+  }
+  .videosearch select, .careerbanserch{height: 42px;}
+  .careerbanserch input[type="text"]{height: 32px; padding-left: 5px;}
+  .careerbanserch input[type="submit"]{margin-right: 0; background-size: 14px;}
   .blogdtlsrgt{margin-top: 15px;}
   .blogslide h3{
     top: 10px;
@@ -880,9 +886,32 @@ nav{
     right: 0;
     width: 100%;
   }
-  }
-  @media (max-width:370px){
+  
+}
+
+@media (max-width:370px){
     nav .navbar .nav-links{
     max-width: 100%;
   } 
+}
+
+@media (max-width: 1240px) and (min-width:801px) {
+  .top-left {
+    text-align: left;
   }
+
+  nav .navbar .links li a{    
+    color: var(--Tertiary-Color-Dark-Blue-1000, #1F2B4C);
+    font-size: 13px;
+    line-height: 25px;     
+  }
+}
+
+@media (min-width:1240px) {
+  .nav-home {
+    margin-top: -50px;
+    margin-left: 175px;
+  }
+}
+
+  

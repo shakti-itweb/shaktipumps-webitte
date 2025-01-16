@@ -4,50 +4,75 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shakti Pumps</title>
-    <link rel="icon" type="image/x-icon" href="/img/fav.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"  rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/img/fav.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <script type="text/javascript" src="/js/jquery.min.js"></script>
     <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
-    <link rel='stylesheet' href="/css/bootstrap.min.css">
-    <link rel='stylesheet' href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+    />
     <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
     <link rel="stylesheet" href="/css/style-loading.css" />
     <link rel="stylesheet" href="/css/responsive.css" />
 
     <style>
-       #map {
-            width: 100%;
-            height: 400px;
-          background-color: grey;
-        }
-
-
+      #map {
+        width: 100%;
+        height: 400px;
+        background-color: grey;
+      }
     </style>
   </head>
   <body>
-  
     <%- include('../common/header.ejs') %>
 
     <section class="about-banner servsuppban">
-      <div><img src="/images/banner-servicesupport.png" alt=""></div>
+      <div><img src="/images/banner-servicesupport.png" alt="" /></div>
       <div class="container">
         <div class="sevisuppbantxt">
           <h2>Service & Support</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent posuere nibh.</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+            posuere nibh.
+          </p>
           <div class="servsuppbanbtn">
-            <a href="#"><img src="/images/pdf-iconwh.png" alt=""> Download: Warranty Matters
-              of Submersible Motor</a>
-            <a href="#" class="grn"><img src="/images/pdf-iconwh.png" alt=""> Download: Mechanical
-              Shaft Seal Failure</a>
+            <a href="#"
+              ><img src="/images/pdf-iconwh.png" alt="" /> Download: Warranty
+              Matters of Submersible Motor</a
+            >
+            <a href="#" class="grn"
+              ><img src="/images/pdf-iconwh.png" alt="" /> Download: Mechanical
+              Shaft Seal Failure</a
+            >
           </div>
           <div class="servsuppbancontact">
             <ul>
-              <li><img src="/images/call-calling.png" alt="">1800-103-5555 <span>Toll Free(INDIA)</span></li>
-              <li><img src="/images/call-calling.png" alt="">1800-103-5556 <span>Miss Call NO.</span></li>
-              <li><img src="/images/email-icon.png" alt=""><a href="mailto:info@shaktipumps.com">info@shaktipumps.com</a> <span>Toll Free(INDIA)</span></li>
+              <li>
+                <img src="/images/call-calling.png" alt="" />1800-103-5555
+                <span>Toll Free(INDIA)</span>
+              </li>
+              <li>
+                <img src="/images/call-calling.png" alt="" />1800-103-5556
+                <span>Miss Call NO.</span>
+              </li>
+              <li>
+                <img src="/images/email-icon.png" alt="" /><a
+                  href="mailto:info@shaktipumps.com"
+                  >info@shaktipumps.com</a
+                >
+                <span>Toll Free(INDIA)</span>
+              </li>
             </ul>
           </div>
         </div>
@@ -57,59 +82,85 @@
       <div class="container">
         <div class="numberinc servsuppnumb">
           <!-- partial:index.partial.html -->
-    <div class="counter-container">
-        <img src="/images/Indiamap.png" alt="">
-          <div class="count-wrap"><div class="counter" data-target="07"></div>+</div>
-          <span>Total City</span>
-        </div>
-        <div class="counter-container">
-          <img src="/images/count-icon5.png" alt="">
-          <div class="count-wrap"><div class="counter" data-target="4450"></div>+</div>
-          <span>Total Customer</span>
-        </div>
-        <div class="counter-container">
-          <img src="/images/infra1.png" alt="">
-          <div class="count-wrap"><div class="counter" data-target="58"></div>+</div>
-          <span>Service Centre</span>
-        </div>
-        <div class="counter-container">
-          <img src="/images/count-icon2.png" alt="">
-          <div class="count-wrap"><div class="counter" data-target="1020"></div>+</div>
-          <span>Happy Customer</span>
-        </div>
-    <!-- partial -->
-        </div>
-      </div>
-    </section> 
-    <section class="whatlooking contribution servsupspan">
-      <div class="container">
-          <div class="row">
-            <div class="col-lg-5 col-md-5 col-sm-12">
-              <h2>Solar Panel<br>
-                Tilt Angles</h2>
+          <div class="counter-container">
+            <img src="/images/Indiamap.png" alt="" />
+            <div class="count-wrap">
+              <div class="counter" data-target="07"></div>
+              +
             </div>
-            <div class="col-lg-7 col-md-7 col-sm-12">
-              <p>The optimal angle for your solar panels varies throughout the year, depending on the seasons and your location and this calculator shows the difference in sun height on a month-by-month basis. For even more precise angling, you would need to track the sun as it moves throughout the day on a minute-by-minute basis.</p>
-            <a href="/service-support/tilt-calculator" class="readmore">Solar Panel Tilt Calculator</a>
-            <a href="#" class="readmore blk">Pipe Friction Loss</a>
-            <a href="#" class="readmore blk">Cable Selection</a>
-            </div>
+            <span>Total City</span>
           </div>
+          <div class="counter-container">
+            <img src="/images/count-icon5.png" alt="" />
+            <div class="count-wrap">
+              <div class="counter" data-target="4450"></div>
+              +
+            </div>
+            <span>Total Customer</span>
+          </div>
+          <div class="counter-container">
+            <img src="/images/infra1.png" alt="" />
+            <div class="count-wrap">
+              <div class="counter" data-target="58"></div>
+              +
+            </div>
+            <span>Service Centre</span>
+          </div>
+          <div class="counter-container">
+            <img src="/images/count-icon2.png" alt="" />
+            <div class="count-wrap">
+              <div class="counter" data-target="1020"></div>
+              +
+            </div>
+            <span>Happy Customer</span>
+          </div>
+          <!-- partial -->
+        </div>
       </div>
     </section>
-<section class="servicesupport">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 col-md-6 col-sm-12"><img src="/images/team-img.png" alt=""></div>
-      <div class="col-lg-6 col-md-6 col-sm-12">
-        <h2><span>Shakti Pumps</span> Support Team</h2>
-        <p>Are you looking for a technical support from Shakti Pumps Team?<br>
-          Let us know how we can assist you with this!</p>
-          <a href="#" class="readmore">Get Technical Support</a>
+    <section class="whatlooking contribution servsupspan">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 col-md-5 col-sm-12">
+            <h2>
+              Solar Panel<br />
+              Tilt Angles
+            </h2>
+          </div>
+          <div class="col-lg-7 col-md-7 col-sm-12">
+            <p>
+              The optimal angle for your solar panels varies throughout the
+              year, depending on the seasons and your location and this
+              calculator shows the difference in sun height on a month-by-month
+              basis. For even more precise angling, you would need to track the
+              sun as it moves throughout the day on a minute-by-minute basis.
+            </p>
+            <a href="/service-support/tilt-calculator" class="readmore"
+              >Solar Panel Tilt Calculator</a
+            >
+            <a href="#" class="readmore blk">Pipe Friction Loss</a>
+            <a href="#" class="readmore blk">Cable Selection</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
+    <section class="servicesupport">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <img src="/images/team-img.png" alt="" />
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <h2><span>Shakti Pumps</span> Support Team</h2>
+            <p>
+              Are you looking for a technical support from Shakti Pumps Team?<br />
+              Let us know how we can assist you with this!
+            </p>
+            <a href="#" class="readmore">Get Technical Support</a>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="domesticmap suppservmap">
       <div class="container-fluid">
         <div class="row">
@@ -127,23 +178,40 @@
               <select>
                 <option>City</option>
               </select>
-              <input type="text" placeholder="Zip">
+              <input type="text" placeholder="Zip" />
             </div>
           </div>
         </div>
         <div class="mapwrap">
           <div class="mapflex">
-              {/* <div class="globmap">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24135244.25614283!2d26.439265026482595!3d42.402253968254925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1724242529127!5m2!1sen!2sin" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              </div> */}
+            {/*
+            <div class="globmap">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24135244.25614283!2d26.439265026482595!3d42.402253968254925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1724242529127!5m2!1sen!2sin"
+                width="100%"
+                height="600"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            */}
 
-            <div class="globmap" id="map" style="width: 100%; height: 600px;"></div>
+            <div
+              class="globmap"
+              id="map"
+              style="width: 100%; height: 600px"
+            ></div>
 
             <div class="maprgt">
               <h3>India <span>(25)</span></h3>
               <!-- partial:index.partial.html -->
               <div id="accordion" class="maprgtscroll">
-                <h4 class="accordion-toggle active"><img src="/images/acc-location-icon.png" alt=""> Andhra Pradesh (02)</h4>
+                <h4 class="accordion-toggle active">
+                  <img src="/images/acc-location-icon.png" alt="" /> Andhra
+                  Pradesh (02)
+                </h4>
                 <div class="accordion-content default">
                   <div class="mapquerybox">
                     <h5>Aluru</h5>
@@ -166,7 +234,10 @@
                     </div>
                   </div>
                 </div>
-                <h4 class="accordion-toggle"><img src="/images/acc-location-icon.png" alt=""> Arunachal Pradesh (05)</h4>
+                <h4 class="accordion-toggle">
+                  <img src="/images/acc-location-icon.png" alt="" /> Arunachal
+                  Pradesh (05)
+                </h4>
                 <div class="accordion-content">
                   <div class="mapquerybox">
                     <h5>Aluru</h5>
@@ -179,7 +250,9 @@
                     </div>
                   </div>
                 </div>
-                <h4 class="accordion-toggle"><img src="/images/acc-location-icon.png" alt=""> Assam (10)</h4>
+                <h4 class="accordion-toggle">
+                  <img src="/images/acc-location-icon.png" alt="" /> Assam (10)
+                </h4>
                 <div class="accordion-content">
                   <div class="mapquerybox">
                     <h5>Aluru</h5>
@@ -192,7 +265,9 @@
                     </div>
                   </div>
                 </div>
-                <h4 class="accordion-toggle"><img src="/images/acc-location-icon.png" alt=""> Bihar (02)</h4>
+                <h4 class="accordion-toggle">
+                  <img src="/images/acc-location-icon.png" alt="" /> Bihar (02)
+                </h4>
                 <div class="accordion-content">
                   <div class="mapquerybox">
                     <h5>Aluru</h5>
@@ -205,7 +280,10 @@
                     </div>
                   </div>
                 </div>
-                <h4 class="accordion-toggle"><img src="/images/acc-location-icon.png" alt=""> Gujarat (15)</h4>
+                <h4 class="accordion-toggle">
+                  <img src="/images/acc-location-icon.png" alt="" /> Gujarat
+                  (15)
+                </h4>
                 <div class="accordion-content">
                   <div class="mapquerybox">
                     <h5>Aluru</h5>
@@ -218,7 +296,10 @@
                     </div>
                   </div>
                 </div>
-                <h4 class="accordion-toggle"><img src="/images/acc-location-icon.png" alt=""> Maharashtra (05)</h4>
+                <h4 class="accordion-toggle">
+                  <img src="/images/acc-location-icon.png" alt="" /> Maharashtra
+                  (05)
+                </h4>
                 <div class="accordion-content">
                   <div class="mapquerybox">
                     <h5>Aluru</h5>
@@ -231,7 +312,10 @@
                     </div>
                   </div>
                 </div>
-                <h4 class="accordion-toggle"><img src="/images/acc-location-icon.png" alt=""> Arunachal Pradesh (05)</h4>
+                <h4 class="accordion-toggle">
+                  <img src="/images/acc-location-icon.png" alt="" /> Arunachal
+                  Pradesh (05)
+                </h4>
                 <div class="accordion-content">
                   <div class="mapquerybox">
                     <h5>Aluru</h5>
@@ -244,474 +328,615 @@
                     </div>
                   </div>
                 </div>
-                
               </div>
               <!-- partial -->
-              <div>
-      
-              </div>
+              <div></div>
             </div>
           </div>
         </div>
-     
       </div>
     </section>
     <section class="partershakti govtinsta">
       <div class="container">
         <div class="row">
           <div class="col-lg-6 col-md-6 col-sm-12">
-            <h2>do you want to be a installer and work <br>in a govt project with shakti pumps</h2>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-12">
-          <a href="#" class="readmore">Apply Now</a>
-        </div>
+            <h2>
+              do you want to be a installer and work <br />in a govt project
+              with shakti pumps
+            </h2>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <a href="#" class="readmore">Apply Now</a>
+          </div>
         </div>
       </div>
-  </section>
-  <section class="suppfaq">
-    <div class="container">
-      <h2>Frequently Asked Questions</h2>
-             <!-- partial:index.partial.html -->
-             <div id="accordion1" class="faqaccod">
-              <div class="faqpan">
-                <h4 class="accordion-toggle1 active"><span>01</span> What is Shakti Pumps area of operations?</h4>
-              <div class="accordion-content1 default">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel tortor quis neque accumsan fermentum vitae vitae justo. Quisque tristique eget nisi eget facilisis. In suscipit risus in lacus interdum aliquet. In hac habitasse platea dictumst. Integer hendrerit purus vel neque eleifend condimentum. Nulla in enim nec metus luctus malesuada. Pellentesque hendrerit felis eu eros aliquet vestibulum. Etiam dolor nunc, scelerisque in turpis sit amet, laoreet ultrices ligula. Vivamus eleifend lectus quis efficitur scelerisque. Suspendisse vulputate dignissim odio, sit amet lobortis mauris.</p>
-              <div class="faqviddownlbtn">
-                <a href="#"><img src="/images/play-iconblk.png" alt=""></a> <a href="#" class="faqpdf"><img src="/images/pdf-iconwh.png" alt=""> Download</a>
-              </div>
-              </div>
-              </div>
-              <div class="faqpan">
-                <h4 class="accordion-toggle1"><span>02</span> When was Shakti Pumps founded?</h4>
-              <div class="accordion-content1">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel tortor quis neque accumsan fermentum vitae vitae justo. Quisque tristique eget nisi eget facilisis. In suscipit risus in lacus interdum aliquet. In hac habitasse platea dictumst. Integer hendrerit purus vel neque eleifend condimentum. Nulla in enim nec metus luctus malesuada. Pellentesque hendrerit felis eu eros aliquet vestibulum. Etiam dolor nunc, scelerisque in turpis sit amet, laoreet ultrices ligula. Vivamus eleifend lectus quis efficitur scelerisque. Suspendisse vulputate dignissim odio, sit amet lobortis mauris.</p>
-                <div class="faqviddownlbtn">
-                  <a href="#"><img src="/images/play-iconblk.png" alt=""></a> <a href="#" class="faqpdf"><img src="/images/pdf-iconwh.png" alt=""> Download</a>
-                </div>
-              </div>             
-              </div>
-              <div class="faqpan">
-                <h4 class="accordion-toggle1"><span>03</span> What is the employee strength of Shakti Pumps?</h4>
-              <div class="accordion-content1">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel tortor quis neque accumsan fermentum vitae vitae justo. Quisque tristique eget nisi eget facilisis. In suscipit risus in lacus interdum aliquet. In hac habitasse platea dictumst. Integer hendrerit purus vel neque eleifend condimentum. Nulla in enim nec metus luctus malesuada. Pellentesque hendrerit felis eu eros aliquet vestibulum. Etiam dolor nunc, scelerisque in turpis sit amet, laoreet ultrices ligula. Vivamus eleifend lectus quis efficitur scelerisque. Suspendisse vulputate dignissim odio, sit amet lobortis mauris.</p>
-                <div class="faqviddownlbtn">
-                  <a href="#"><img src="/images/play-iconblk.png" alt=""></a> <a href="#" class="faqpdf"><img src="/images/pdf-iconwh.png" alt=""> Download</a>
-                </div>
-              </div>             
-              </div>
-              <div class="faqpan">
-                <h4 class="accordion-toggle1"><span>04</span> Where is Shakti Pumps located?</h4>
-              <div class="accordion-content1">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel tortor quis neque accumsan fermentum vitae vitae justo. Quisque tristique eget nisi eget facilisis. In suscipit risus in lacus interdum aliquet. In hac habitasse platea dictumst. Integer hendrerit purus vel neque eleifend condimentum. Nulla in enim nec metus luctus malesuada. Pellentesque hendrerit felis eu eros aliquet vestibulum. Etiam dolor nunc, scelerisque in turpis sit amet, laoreet ultrices ligula. Vivamus eleifend lectus quis efficitur scelerisque. Suspendisse vulputate dignissim odio, sit amet lobortis mauris.</p>
-                <div class="faqviddownlbtn">
-                  <a href="#"><img src="/images/play-iconblk.png" alt=""></a> <a href="#" class="faqpdf"><img src="/images/pdf-iconwh.png" alt=""> Download</a>
-                </div>
-              </div>             
-              </div>
-              <div class="faqpan">
-                <h4 class="accordion-toggle1"><span>05</span> What is the address of Shakti Pumps’ registered office?</h4>
-              <div class="accordion-content1">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel tortor quis neque accumsan fermentum vitae vitae justo. Quisque tristique eget nisi eget facilisis. In suscipit risus in lacus interdum aliquet. In hac habitasse platea dictumst. Integer hendrerit purus vel neque eleifend condimentum. Nulla in enim nec metus luctus malesuada. Pellentesque hendrerit felis eu eros aliquet vestibulum. Etiam dolor nunc, scelerisque in turpis sit amet, laoreet ultrices ligula. Vivamus eleifend lectus quis efficitur scelerisque. Suspendisse vulputate dignissim odio, sit amet lobortis mauris.</p>
-                <div class="faqviddownlbtn">
-                  <a href="#"><img src="/images/play-iconblk.png" alt=""></a> <a href="#" class="faqpdf"><img src="/images/pdf-iconwh.png" alt=""> Download</a>
-                </div>
-              </div>             
-              </div>
-              <a href="#" class="readmore">I Want To Ask Something Else</a>
-            </div>
-            <!-- partial -->
-    </div>
-  </section>
-  <section class="complainregfrm">
-    <div class="container">
-      <h2>Complaint Registration</h2>
-      <form method="post">
-        <div class="row">
-          <div class="col-lg-3 col-md-3 col-sm-12">
-            <input type="text" placeholder="Name">
-          </div>
-          <div class="col-lg-3 col-md-3 col-sm-12">
-            <input type="email" placeholder="Email">
-          </div>
-          <div class="col-lg-3 col-md-3 col-sm-12">
-            <input type="text" placeholder="Contact Number">
-          </div>
-          <div class="col-lg-3 col-md-3 col-sm-12">
-            <input type="text" placeholder="Subject">
-          </div>
-          <div class="col-lg-12 col-md-12 col-sm-12">
-            <textarea>Message</textarea>
-          </div>
-          <div class="col-lg-12 col-md-12 col-sm-12">
-            <input type="submit" value="Submit">
-          </div>
-        </div>
-      </form>
-      
-    </div>
-  </section>
-  <section class="makeussuccess happycustom">
-    <div class="container">
-      <h2>
-        <span>About Our</span>
-        Happy Customers
-      </h2>
-      <h5>Total Happy Customers <span>50</span></h5>
-      <div class="happcusslider">
-        <div class="sucpan">
-          <img src="/images/happy-cus1.png" alt="">
-          <h3>Manjit Singh Dhillon <span>Gurdaspur, Punjab</span></h3>
-          <h4>Ratings:
-            <span>4.0 <img src="/images/ratings.png" alt=""></span>
-          </h4>
-          <h4>Feedback:</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt malesuada aliquam. Sed finibus non enim eget sagittis.</p>
-          <h4>Since: 10th January, 2024 <img src="/images/newsmore-arrow.png" alt="" class="rgtarrlink"></h4>
-        </div>
-        <div class="sucpan">
-          <img src="/images/happy-cus2.png" alt="">
-          <h3>Manjit Singh Dhillon <span>Gurdaspur, Punjab</span></h3>
-          <h4>Ratings:
-            <span>4.0 <img src="/images/ratings.png" alt=""></span>
-          </h4>
-          <h4>Feedback:</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt malesuada aliquam. Sed finibus non enim eget sagittis.</p>
-          <h4>Since: 10th January, 2024 <img src="/images/newsmore-arrow.png" alt="" class="rgtarrlink"></h4>
-        </div>
-        <div class="sucpan">
-          <img src="/images/happy-cus3.png" alt="">
-          <h3>Manjit Singh Dhillon <span>Gurdaspur, Punjab</span></h3>
-          <h4>Ratings:
-            <span>4.0 <img src="/images/ratings.png" alt=""></span>
-          </h4>
-          <h4>Feedback:</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt malesuada aliquam. Sed finibus non enim eget sagittis.</p>
-          <h4>Since: 10th January, 2024 <img src="/images/newsmore-arrow.png" alt="" class="rgtarrlink"></h4>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="foundtiontab financialyeartab servsupptab">
-    <div class="container">
-    <div class="selectcat">
-      <select>
-        <option>Select Category</option>
-      </select>
-    </div>
+    </section>
+    <section class="suppfaq">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
         <!-- partial:index.partial.html -->
-    <ul class="tabs">
-      <li class="active" rel="tab1">Pumps <span>Energy Efficient Water Pumps</span></li>
-      <li rel="tab2">Motors <span>High Efficiency Motors</span></li>
-      <li rel="tab3">Solar Pumps <span>Eco Friendly Water Solutions</span></li>
-      <li rel="tab4">Controllers <span>Advanced Controllers For Precise</span></li>
-      <li rel="tab5">Inverters <span> For Seamless Power Conversion</span></li>
-      <li rel="tab6">Special Application <span>Customized Pumping Solutions</span></li>
-    </ul>
-    <div class="tab_container">
-      <h3 class="d_active tab_drawer_heading" rel="tab1">Pumps <span>Energy Efficient Water Pumps</span></h3>
-      <div id="tab1" class="tab_content">
-        <div class="foundtabinsid financedtlstab">
-          <div class="financedtlstitle">
-            <h2><span>Installation & Service</span> Videos For Pumps</h2>
-           <div class="totalvideotxttab">Total Videos: <strong>2500</strong></div> 
+        <div id="accordion1" class="faqaccod">
+          <div class="faqpan">
+            <h4 class="accordion-toggle1 active">
+              <span>01</span> What is Shakti Pumps area of operations?
+            </h4>
+            <div class="accordion-content1 default">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                vel tortor quis neque accumsan fermentum vitae vitae justo.
+                Quisque tristique eget nisi eget facilisis. In suscipit risus in
+                lacus interdum aliquet. In hac habitasse platea dictumst.
+                Integer hendrerit purus vel neque eleifend condimentum. Nulla in
+                enim nec metus luctus malesuada. Pellentesque hendrerit felis eu
+                eros aliquet vestibulum. Etiam dolor nunc, scelerisque in turpis
+                sit amet, laoreet ultrices ligula. Vivamus eleifend lectus quis
+                efficitur scelerisque. Suspendisse vulputate dignissim odio, sit
+                amet lobortis mauris.
+              </p>
+              <div class="faqviddownlbtn">
+                <a href="#"><img src="/images/play-iconblk.png" alt="" /></a>
+                <a href="#" class="faqpdf"
+                  ><img src="/images/pdf-iconwh.png" alt="" /> Download</a
+                >
+              </div>
+            </div>
           </div>
-          <div class="suppservvideotab">
-            <ul>
-              <li>
-                <img src="/images/supp-vid1.png" alt="">
-                <img src="/images/play-icon.png" alt="" class="play-icon">
-                 <h3>Submersible Pumps</h3>
-                 <h4>Pumps <span>SHOS C Series</span></h4>
-              </li>
-              <li>
-                <img src="/images/supp-vid1.png" alt="">
-                <img src="/images/play-icon.png" alt="" class="play-icon">
-                 <h3>Submersible Pumps</h3>
-                 <h4>Pumps <span>SHOS C Series</span></h4>
-              </li>
-              <li>
-                <img src="/images/supp-vid1.png" alt="">
-                <img src="/images/play-icon.png" alt="" class="play-icon">
-                 <h3>Submersible Pumps</h3>
-                 <h4>Pumps <span>SHOS C Series</span></h4>
-              </li>
-              <li>
-                <img src="/images/supp-vid1.png" alt="">
-                <img src="/images/play-icon.png" alt="" class="play-icon">
-                 <h3>Submersible Pumps</h3>
-                 <h4>Pumps <span>SHOS C Series</span></h4>
-              </li>
-              <li>
-                <img src="/images/supp-vid1.png" alt="">
-                <img src="/images/play-icon.png" alt="" class="play-icon">
-                 <h3>Submersible Pumps</h3>
-                 <h4>Pumps <span>SHOS C Series</span></h4>
-              </li>
-              <li>
-                <img src="/images/supp-vid1.png" alt="">
-                <img src="/images/play-icon.png" alt="" class="play-icon">
-                 <h3>Submersible Pumps</h3>
-                 <h4>Pumps <span>SHOS C Series</span></h4>
-              </li>
-              <li>
-                <img src="/images/supp-vid1.png" alt="">
-                <img src="/images/play-icon.png" alt="" class="play-icon">
-                 <h3>Submersible Pumps</h3>
-                 <h4>Pumps <span>SHOS C Series</span></h4>
-              </li>
-              <li>
-                <img src="/images/supp-vid1.png" alt="">
-                <img src="/images/play-icon.png" alt="" class="play-icon">
-                 <h3>Submersible Pumps</h3>
-                 <h4>Pumps <span>SHOS C Series</span></h4>
-              </li>
-              <li>
-                <img src="/images/supp-vid1.png" alt="">
-                <img src="/images/play-icon.png" alt="" class="play-icon">
-                 <h3>Submersible Pumps</h3>
-                 <h4>Pumps <span>SHOS C Series</span></h4>
-              </li>
-              <li>
-                <img src="/images/supp-vid1.png" alt="">
-                <img src="/images/play-icon.png" alt="" class="play-icon">
-                 <h3>Submersible Pumps</h3>
-                 <h4>Pumps <span>SHOS C Series</span></h4>
-              </li>
-              <li>
-                <img src="/images/supp-vid1.png" alt="">
-                <img src="/images/play-icon.png" alt="" class="play-icon">
-                 <h3>Submersible Pumps</h3>
-                 <h4>Pumps <span>SHOS C Series</span></h4>
-              </li>
-              <li>
-                <img src="/images/supp-vid1.png" alt="">
-                <img src="/images/play-icon.png" alt="" class="play-icon">
-                 <h3>Submersible Pumps</h3>
-                 <h4>Pumps <span>SHOS C Series</span></h4>
-              </li>
-            </ul>
+          <div class="faqpan">
+            <h4 class="accordion-toggle1">
+              <span>02</span> When was Shakti Pumps founded?
+            </h4>
+            <div class="accordion-content1">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                vel tortor quis neque accumsan fermentum vitae vitae justo.
+                Quisque tristique eget nisi eget facilisis. In suscipit risus in
+                lacus interdum aliquet. In hac habitasse platea dictumst.
+                Integer hendrerit purus vel neque eleifend condimentum. Nulla in
+                enim nec metus luctus malesuada. Pellentesque hendrerit felis eu
+                eros aliquet vestibulum. Etiam dolor nunc, scelerisque in turpis
+                sit amet, laoreet ultrices ligula. Vivamus eleifend lectus quis
+                efficitur scelerisque. Suspendisse vulputate dignissim odio, sit
+                amet lobortis mauris.
+              </p>
+              <div class="faqviddownlbtn">
+                <a href="#"><img src="/images/play-iconblk.png" alt="" /></a>
+                <a href="#" class="faqpdf"
+                  ><img src="/images/pdf-iconwh.png" alt="" /> Download</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="faqpan">
+            <h4 class="accordion-toggle1">
+              <span>03</span> What is the employee strength of Shakti Pumps?
+            </h4>
+            <div class="accordion-content1">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                vel tortor quis neque accumsan fermentum vitae vitae justo.
+                Quisque tristique eget nisi eget facilisis. In suscipit risus in
+                lacus interdum aliquet. In hac habitasse platea dictumst.
+                Integer hendrerit purus vel neque eleifend condimentum. Nulla in
+                enim nec metus luctus malesuada. Pellentesque hendrerit felis eu
+                eros aliquet vestibulum. Etiam dolor nunc, scelerisque in turpis
+                sit amet, laoreet ultrices ligula. Vivamus eleifend lectus quis
+                efficitur scelerisque. Suspendisse vulputate dignissim odio, sit
+                amet lobortis mauris.
+              </p>
+              <div class="faqviddownlbtn">
+                <a href="#"><img src="/images/play-iconblk.png" alt="" /></a>
+                <a href="#" class="faqpdf"
+                  ><img src="/images/pdf-iconwh.png" alt="" /> Download</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="faqpan">
+            <h4 class="accordion-toggle1">
+              <span>04</span> Where is Shakti Pumps located?
+            </h4>
+            <div class="accordion-content1">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                vel tortor quis neque accumsan fermentum vitae vitae justo.
+                Quisque tristique eget nisi eget facilisis. In suscipit risus in
+                lacus interdum aliquet. In hac habitasse platea dictumst.
+                Integer hendrerit purus vel neque eleifend condimentum. Nulla in
+                enim nec metus luctus malesuada. Pellentesque hendrerit felis eu
+                eros aliquet vestibulum. Etiam dolor nunc, scelerisque in turpis
+                sit amet, laoreet ultrices ligula. Vivamus eleifend lectus quis
+                efficitur scelerisque. Suspendisse vulputate dignissim odio, sit
+                amet lobortis mauris.
+              </p>
+              <div class="faqviddownlbtn">
+                <a href="#"><img src="/images/play-iconblk.png" alt="" /></a>
+                <a href="#" class="faqpdf"
+                  ><img src="/images/pdf-iconwh.png" alt="" /> Download</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="faqpan">
+            <h4 class="accordion-toggle1">
+              <span>05</span> What is the address of Shakti Pumps’ registered
+              office?
+            </h4>
+            <div class="accordion-content1">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                vel tortor quis neque accumsan fermentum vitae vitae justo.
+                Quisque tristique eget nisi eget facilisis. In suscipit risus in
+                lacus interdum aliquet. In hac habitasse platea dictumst.
+                Integer hendrerit purus vel neque eleifend condimentum. Nulla in
+                enim nec metus luctus malesuada. Pellentesque hendrerit felis eu
+                eros aliquet vestibulum. Etiam dolor nunc, scelerisque in turpis
+                sit amet, laoreet ultrices ligula. Vivamus eleifend lectus quis
+                efficitur scelerisque. Suspendisse vulputate dignissim odio, sit
+                amet lobortis mauris.
+              </p>
+              <div class="faqviddownlbtn">
+                <a href="#"><img src="/images/play-iconblk.png" alt="" /></a>
+                <a href="#" class="faqpdf"
+                  ><img src="/images/pdf-iconwh.png" alt="" /> Download</a
+                >
+              </div>
+            </div>
+          </div>
+          <a href="#" class="readmore">I Want To Ask Something Else</a>
+        </div>
+        <!-- partial -->
+      </div>
+    </section>
+    <section class="complainregfrm">
+      <div class="container">
+        <h2>Complaint Registration</h2>
+        <form method="post">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-12">
+              <input type="text" placeholder="Name" />
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12">
+              <input type="email" placeholder="Email" />
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12">
+              <input type="text" placeholder="Contact Number" />
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12">
+              <input type="text" placeholder="Subject" />
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <textarea>Message</textarea>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <input type="submit" value="Submit" />
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="makeussuccess happycustom">
+      <div class="container">
+        <h2>
+          <span>About Our</span>
+          Happy Customers
+        </h2>
+        <h5>Total Happy Customers <span>50</span></h5>
+        <div class="happcusslider">
+          <div class="sucpan">
+            <img src="/images/happy-cus1.png" alt="" />
+            <h3>Manjit Singh Dhillon <span>Gurdaspur, Punjab</span></h3>
+            <h4>
+              Ratings:
+              <span>4.0 <img src="/images/ratings.png" alt="" /></span>
+            </h4>
+            <h4>Feedback:</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Pellentesque tincidunt malesuada aliquam. Sed finibus non enim
+              eget sagittis.
+            </p>
+            <h4>
+              Since: 10th January, 2024
+              <img src="/images/newsmore-arrow.png" alt="" class="rgtarrlink" />
+            </h4>
+          </div>
+          <div class="sucpan">
+            <img src="/images/happy-cus2.png" alt="" />
+            <h3>Manjit Singh Dhillon <span>Gurdaspur, Punjab</span></h3>
+            <h4>
+              Ratings:
+              <span>4.0 <img src="/images/ratings.png" alt="" /></span>
+            </h4>
+            <h4>Feedback:</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Pellentesque tincidunt malesuada aliquam. Sed finibus non enim
+              eget sagittis.
+            </p>
+            <h4>
+              Since: 10th January, 2024
+              <img src="/images/newsmore-arrow.png" alt="" class="rgtarrlink" />
+            </h4>
+          </div>
+          <div class="sucpan">
+            <img src="/images/happy-cus3.png" alt="" />
+            <h3>Manjit Singh Dhillon <span>Gurdaspur, Punjab</span></h3>
+            <h4>
+              Ratings:
+              <span>4.0 <img src="/images/ratings.png" alt="" /></span>
+            </h4>
+            <h4>Feedback:</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Pellentesque tincidunt malesuada aliquam. Sed finibus non enim
+              eget sagittis.
+            </p>
+            <h4>
+              Since: 10th January, 2024
+              <img src="/images/newsmore-arrow.png" alt="" class="rgtarrlink" />
+            </h4>
           </div>
         </div>
       </div>
-      <!-- #tab1 -->
-      <h3 class="tab_drawer_heading" rel="tab2">Motors <span>High Efficiency Motors</span></h3>
-      <div id="tab2" class="tab_content">
-        <div class="foundtabinsid financedtlstab">
-          <div class="financedtlstitle">
-            <h2><span>Installation & Service</span> Videos For Pumps</h2>
-           <div class="totalvideotxttab">Total Videos: <strong>2500</strong></div> 
-          </div>
-          <div class="suppservvideotab">
-            <ul>
-              <li>
-                <img src="/images/supp-vid1.png" alt="">
-                <img src="/images/play-icon.png" alt="" class="play-icon">
-                 <h3>Submersible Pumps</h3>
-                 <h4>Pumps <span>SHOS C Series</span></h4>
-              </li>
-              <li>
-                <img src="/images/supp-vid1.png" alt="">
-                <img src="/images/play-icon.png" alt="" class="play-icon">
-                 <h3>Submersible Pumps</h3>
-                 <h4>Pumps <span>SHOS C Series</span></h4>
-              </li>
-              <li>
-                <img src="/images/supp-vid1.png" alt="">
-                <img src="/images/play-icon.png" alt="" class="play-icon">
-                 <h3>Submersible Pumps</h3>
-                 <h4>Pumps <span>SHOS C Series</span></h4>
-              </li>
-              <li>
-                <img src="/images/supp-vid1.png" alt="">
-                <img src="/images/play-icon.png" alt="" class="play-icon">
-                 <h3>Submersible Pumps</h3>
-                 <h4>Pumps <span>SHOS C Series</span></h4>
-              </li>
-            </ul>
-          </div>
+    </section>
+    <section class="foundtiontab financialyeartab servsupptab">
+      <div class="container">
+        <div class="selectcat">
+          <select>
+            <option>Select Category</option>
+          </select>
         </div>
-      </div>
-      <!-- #tab2 -->
-      <h3 class="tab_drawer_heading" rel="tab3">Solar Pumps <span>Eco Friendly Water Solutions</span></h3>
-      <div id="tab3" class="tab_content">
-        <div class="foundtabinsid financedtlstab">
-          <div class="financedtlstitle">
-            <h2><span>Installation & Service</span> Videos For Pumps</h2>
-           <div class="totalvideotxttab">Total Videos: <strong>2500</strong></div> 
+        <!-- partial:index.partial.html -->
+        <ul class="tabs">
+          <li class="active" rel="tab1">
+            Pumps <span>Energy Efficient Water Pumps</span>
+          </li>
+          <li rel="tab2">Motors <span>High Efficiency Motors</span></li>
+          <li rel="tab3">
+            Solar Pumps <span>Eco Friendly Water Solutions</span>
+          </li>
+          <li rel="tab4">
+            Controllers <span>Advanced Controllers For Precise</span>
+          </li>
+          <li rel="tab5">
+            Inverters <span> For Seamless Power Conversion</span>
+          </li>
+          <li rel="tab6">
+            Special Application <span>Customized Pumping Solutions</span>
+          </li>
+        </ul>
+        <div class="tab_container">
+          <h3 class="d_active tab_drawer_heading" rel="tab1">
+            Pumps <span>Energy Efficient Water Pumps</span>
+          </h3>
+          <div id="tab1" class="tab_content">
+            <div class="foundtabinsid financedtlstab">
+              <div class="financedtlstitle">
+                <h2><span>Installation & Service</span> Videos For Pumps</h2>
+                <div class="totalvideotxttab">
+                  Total Videos: <strong>2500</strong>
+                </div>
+              </div>
+              <div class="suppservvideotab">
+                <ul>
+                  <li>
+                    <img src="/images/supp-vid1.png" alt="" />
+                    <img src="/images/play-icon.png" alt="" class="play-icon" />
+                    <h3>Submersible Pumps</h3>
+                    <h4>Pumps <span>SHOS C Series</span></h4>
+                  </li>
+                  <li>
+                    <img src="/images/supp-vid1.png" alt="" />
+                    <img src="/images/play-icon.png" alt="" class="play-icon" />
+                    <h3>Submersible Pumps</h3>
+                    <h4>Pumps <span>SHOS C Series</span></h4>
+                  </li>
+                  <li>
+                    <img src="/images/supp-vid1.png" alt="" />
+                    <img src="/images/play-icon.png" alt="" class="play-icon" />
+                    <h3>Submersible Pumps</h3>
+                    <h4>Pumps <span>SHOS C Series</span></h4>
+                  </li>
+                  <li>
+                    <img src="/images/supp-vid1.png" alt="" />
+                    <img src="/images/play-icon.png" alt="" class="play-icon" />
+                    <h3>Submersible Pumps</h3>
+                    <h4>Pumps <span>SHOS C Series</span></h4>
+                  </li>
+                  <li>
+                    <img src="/images/supp-vid1.png" alt="" />
+                    <img src="/images/play-icon.png" alt="" class="play-icon" />
+                    <h3>Submersible Pumps</h3>
+                    <h4>Pumps <span>SHOS C Series</span></h4>
+                  </li>
+                  <li>
+                    <img src="/images/supp-vid1.png" alt="" />
+                    <img src="/images/play-icon.png" alt="" class="play-icon" />
+                    <h3>Submersible Pumps</h3>
+                    <h4>Pumps <span>SHOS C Series</span></h4>
+                  </li>
+                  <li>
+                    <img src="/images/supp-vid1.png" alt="" />
+                    <img src="/images/play-icon.png" alt="" class="play-icon" />
+                    <h3>Submersible Pumps</h3>
+                    <h4>Pumps <span>SHOS C Series</span></h4>
+                  </li>
+                  <li>
+                    <img src="/images/supp-vid1.png" alt="" />
+                    <img src="/images/play-icon.png" alt="" class="play-icon" />
+                    <h3>Submersible Pumps</h3>
+                    <h4>Pumps <span>SHOS C Series</span></h4>
+                  </li>
+                  <li>
+                    <img src="/images/supp-vid1.png" alt="" />
+                    <img src="/images/play-icon.png" alt="" class="play-icon" />
+                    <h3>Submersible Pumps</h3>
+                    <h4>Pumps <span>SHOS C Series</span></h4>
+                  </li>
+                  <li>
+                    <img src="/images/supp-vid1.png" alt="" />
+                    <img src="/images/play-icon.png" alt="" class="play-icon" />
+                    <h3>Submersible Pumps</h3>
+                    <h4>Pumps <span>SHOS C Series</span></h4>
+                  </li>
+                  <li>
+                    <img src="/images/supp-vid1.png" alt="" />
+                    <img src="/images/play-icon.png" alt="" class="play-icon" />
+                    <h3>Submersible Pumps</h3>
+                    <h4>Pumps <span>SHOS C Series</span></h4>
+                  </li>
+                  <li>
+                    <img src="/images/supp-vid1.png" alt="" />
+                    <img src="/images/play-icon.png" alt="" class="play-icon" />
+                    <h3>Submersible Pumps</h3>
+                    <h4>Pumps <span>SHOS C Series</span></h4>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="suppservvideotab">
-            <ul>
-              <li>
-                <img src="/images/supp-vid1.png" alt="">
-                <img src="/images/play-icon.png" alt="" class="play-icon">
-                 <h3>Submersible Pumps</h3>
-                 <h4>Pumps <span>SHOS C Series</span></h4>
-              </li>
-              <li>
-                <img src="/images/supp-vid1.png" alt="">
-                <img src="/images/play-icon.png" alt="" class="play-icon">
-                 <h3>Submersible Pumps</h3>
-                 <h4>Pumps <span>SHOS C Series</span></h4>
-              </li>
-              <li>
-                <img src="/images/supp-vid1.png" alt="">
-                <img src="/images/play-icon.png" alt="" class="play-icon">
-                 <h3>Submersible Pumps</h3>
-                 <h4>Pumps <span>SHOS C Series</span></h4>
-              </li>
-              <li>
-                <img src="/images/supp-vid1.png" alt="">
-                <img src="/images/play-icon.png" alt="" class="play-icon">
-                 <h3>Submersible Pumps</h3>
-                 <h4>Pumps <span>SHOS C Series</span></h4>
-              </li>
-            </ul>
+          <!-- #tab1 -->
+          <h3 class="tab_drawer_heading" rel="tab2">
+            Motors <span>High Efficiency Motors</span>
+          </h3>
+          <div id="tab2" class="tab_content">
+            <div class="foundtabinsid financedtlstab">
+              <div class="financedtlstitle">
+                <h2><span>Installation & Service</span> Videos For Pumps</h2>
+                <div class="totalvideotxttab">
+                  Total Videos: <strong>2500</strong>
+                </div>
+              </div>
+              <div class="suppservvideotab">
+                <ul>
+                  <li>
+                    <img src="/images/supp-vid1.png" alt="" />
+                    <img src="/images/play-icon.png" alt="" class="play-icon" />
+                    <h3>Submersible Pumps</h3>
+                    <h4>Pumps <span>SHOS C Series</span></h4>
+                  </li>
+                  <li>
+                    <img src="/images/supp-vid1.png" alt="" />
+                    <img src="/images/play-icon.png" alt="" class="play-icon" />
+                    <h3>Submersible Pumps</h3>
+                    <h4>Pumps <span>SHOS C Series</span></h4>
+                  </li>
+                  <li>
+                    <img src="/images/supp-vid1.png" alt="" />
+                    <img src="/images/play-icon.png" alt="" class="play-icon" />
+                    <h3>Submersible Pumps</h3>
+                    <h4>Pumps <span>SHOS C Series</span></h4>
+                  </li>
+                  <li>
+                    <img src="/images/supp-vid1.png" alt="" />
+                    <img src="/images/play-icon.png" alt="" class="play-icon" />
+                    <h3>Submersible Pumps</h3>
+                    <h4>Pumps <span>SHOS C Series</span></h4>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
+          <!-- #tab2 -->
+          <h3 class="tab_drawer_heading" rel="tab3">
+            Solar Pumps <span>Eco Friendly Water Solutions</span>
+          </h3>
+          <div id="tab3" class="tab_content">
+            <div class="foundtabinsid financedtlstab">
+              <div class="financedtlstitle">
+                <h2><span>Installation & Service</span> Videos For Pumps</h2>
+                <div class="totalvideotxttab">
+                  Total Videos: <strong>2500</strong>
+                </div>
+              </div>
+              <div class="suppservvideotab">
+                <ul>
+                  <li>
+                    <img src="/images/supp-vid1.png" alt="" />
+                    <img src="/images/play-icon.png" alt="" class="play-icon" />
+                    <h3>Submersible Pumps</h3>
+                    <h4>Pumps <span>SHOS C Series</span></h4>
+                  </li>
+                  <li>
+                    <img src="/images/supp-vid1.png" alt="" />
+                    <img src="/images/play-icon.png" alt="" class="play-icon" />
+                    <h3>Submersible Pumps</h3>
+                    <h4>Pumps <span>SHOS C Series</span></h4>
+                  </li>
+                  <li>
+                    <img src="/images/supp-vid1.png" alt="" />
+                    <img src="/images/play-icon.png" alt="" class="play-icon" />
+                    <h3>Submersible Pumps</h3>
+                    <h4>Pumps <span>SHOS C Series</span></h4>
+                  </li>
+                  <li>
+                    <img src="/images/supp-vid1.png" alt="" />
+                    <img src="/images/play-icon.png" alt="" class="play-icon" />
+                    <h3>Submersible Pumps</h3>
+                    <h4>Pumps <span>SHOS C Series</span></h4>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- #tab3 -->
+          <h3 class="tab_drawer_heading" rel="tab4">
+            Controllers <span>Advanced Controllers For Precise</span>
+          </h3>
+          <div id="tab4" class="tab_content">
+            <div class="foundtabinsid financedtlstab">
+              <div class="financedtlstitle">
+                <h2><span>Installation & Service</span> Videos For Pumps</h2>
+                <div class="totalvideotxttab">
+                  Total Videos: <strong>2500</strong>
+                </div>
+              </div>
+              <div class="suppservvideotab">
+                <ul>
+                  <li>
+                    <img src="/images/supp-vid1.png" alt="" />
+                    <img src="/images/play-icon.png" alt="" class="play-icon" />
+                    <h3>Submersible Pumps</h3>
+                    <h4>Pumps <span>SHOS C Series</span></h4>
+                  </li>
+                  <li>
+                    <img src="/images/supp-vid1.png" alt="" />
+                    <img src="/images/play-icon.png" alt="" class="play-icon" />
+                    <h3>Submersible Pumps</h3>
+                    <h4>Pumps <span>SHOS C Series</span></h4>
+                  </li>
+                  <li>
+                    <img src="/images/supp-vid1.png" alt="" />
+                    <img src="/images/play-icon.png" alt="" class="play-icon" />
+                    <h3>Submersible Pumps</h3>
+                    <h4>Pumps <span>SHOS C Series</span></h4>
+                  </li>
+                  <li>
+                    <img src="/images/supp-vid1.png" alt="" />
+                    <img src="/images/play-icon.png" alt="" class="play-icon" />
+                    <h3>Submersible Pumps</h3>
+                    <h4>Pumps <span>SHOS C Series</span></h4>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- #tab4 -->
+          <h3 class="tab_drawer_heading" rel="tab5">
+            Inverters <span> For Seamless Power Conversion</span>
+          </h3>
+          <div id="tab5" class="tab_content">
+            <div class="foundtabinsid financedtlstab">
+              <div class="financedtlstitle">
+                <h2><span>Installation & Service</span> Videos For Pumps</h2>
+                <div class="totalvideotxttab">
+                  Total Videos: <strong>2500</strong>
+                </div>
+              </div>
+              <div class="suppservvideotab">
+                <ul>
+                  <li>
+                    <img src="/images/supp-vid1.png" alt="" />
+                    <img src="/images/play-icon.png" alt="" class="play-icon" />
+                    <h3>Submersible Pumps</h3>
+                    <h4>Pumps <span>SHOS C Series</span></h4>
+                  </li>
+                  <li>
+                    <img src="/images/supp-vid1.png" alt="" />
+                    <img src="/images/play-icon.png" alt="" class="play-icon" />
+                    <h3>Submersible Pumps</h3>
+                    <h4>Pumps <span>SHOS C Series</span></h4>
+                  </li>
+                  <li>
+                    <img src="/images/supp-vid1.png" alt="" />
+                    <img src="/images/play-icon.png" alt="" class="play-icon" />
+                    <h3>Submersible Pumps</h3>
+                    <h4>Pumps <span>SHOS C Series</span></h4>
+                  </li>
+                  <li>
+                    <img src="/images/supp-vid1.png" alt="" />
+                    <img src="/images/play-icon.png" alt="" class="play-icon" />
+                    <h3>Submersible Pumps</h3>
+                    <h4>Pumps <span>SHOS C Series</span></h4>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- #tab5 -->
+          <h3 class="tab_drawer_heading" rel="tab6">
+            Special Application <span> Customized Pumping Solutions</span>
+          </h3>
+          <div id="tab6" class="tab_content">
+            <div class="foundtabinsid financedtlstab">
+              <div class="financedtlstitle">
+                <h2><span>Installation & Service</span> Videos For Pumps</h2>
+                <div class="totalvideotxttab">
+                  Total Videos: <strong>2500</strong>
+                </div>
+              </div>
+              <div class="suppservvideotab">
+                <ul>
+                  <li>
+                    <img src="/images/supp-vid1.png" alt="" />
+                    <img src="/images/play-icon.png" alt="" class="play-icon" />
+                    <h3>Submersible Pumps</h3>
+                    <h4>Pumps <span>SHOS C Series</span></h4>
+                  </li>
+                  <li>
+                    <img src="/images/supp-vid1.png" alt="" />
+                    <img src="/images/play-icon.png" alt="" class="play-icon" />
+                    <h3>Submersible Pumps</h3>
+                    <h4>Pumps <span>SHOS C Series</span></h4>
+                  </li>
+                  <li>
+                    <img src="/images/supp-vid1.png" alt="" />
+                    <img src="/images/play-icon.png" alt="" class="play-icon" />
+                    <h3>Submersible Pumps</h3>
+                    <h4>Pumps <span>SHOS C Series</span></h4>
+                  </li>
+                  <li>
+                    <img src="/images/supp-vid1.png" alt="" />
+                    <img src="/images/play-icon.png" alt="" class="play-icon" />
+                    <h3>Submersible Pumps</h3>
+                    <h4>Pumps <span>SHOS C Series</span></h4>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- #tab6 -->
         </div>
+        <!-- .tab_container -->
       </div>
-      <!-- #tab3 -->
-      <h3 class="tab_drawer_heading" rel="tab4">Controllers <span>Advanced Controllers For Precise</span></h3>
-      <div id="tab4" class="tab_content">
-        <div class="foundtabinsid financedtlstab">
-          <div class="financedtlstitle">
-            <h2><span>Installation & Service</span> Videos For Pumps</h2>
-           <div class="totalvideotxttab">Total Videos: <strong>2500</strong></div> 
-          </div>
-          <div class="suppservvideotab">
-            <ul>
-              <li>
-                <img src="/images/supp-vid1.png" alt="">
-                <img src="/images/play-icon.png" alt="" class="play-icon">
-                 <h3>Submersible Pumps</h3>
-                 <h4>Pumps <span>SHOS C Series</span></h4>
-              </li>
-              <li>
-                <img src="/images/supp-vid1.png" alt="">
-                <img src="/images/play-icon.png" alt="" class="play-icon">
-                 <h3>Submersible Pumps</h3>
-                 <h4>Pumps <span>SHOS C Series</span></h4>
-              </li>
-              <li>
-                <img src="/images/supp-vid1.png" alt="">
-                <img src="/images/play-icon.png" alt="" class="play-icon">
-                 <h3>Submersible Pumps</h3>
-                 <h4>Pumps <span>SHOS C Series</span></h4>
-              </li>
-              <li>
-                <img src="/images/supp-vid1.png" alt="">
-                <img src="/images/play-icon.png" alt="" class="play-icon">
-                 <h3>Submersible Pumps</h3>
-                 <h4>Pumps <span>SHOS C Series</span></h4>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!-- #tab4 --> 
-      <h3 class="tab_drawer_heading" rel="tab5">Inverters <span> For Seamless Power Conversion</span></h3>
-      <div id="tab5" class="tab_content">
-        <div class="foundtabinsid financedtlstab">
-          <div class="financedtlstitle">
-            <h2><span>Installation & Service</span> Videos For Pumps</h2>
-           <div class="totalvideotxttab">Total Videos: <strong>2500</strong></div> 
-          </div>
-          <div class="suppservvideotab">
-            <ul>
-              <li>
-                <img src="/images/supp-vid1.png" alt="">
-                <img src="/images/play-icon.png" alt="" class="play-icon">
-                 <h3>Submersible Pumps</h3>
-                 <h4>Pumps <span>SHOS C Series</span></h4>
-              </li>
-              <li>
-                <img src="/images/supp-vid1.png" alt="">
-                <img src="/images/play-icon.png" alt="" class="play-icon">
-                 <h3>Submersible Pumps</h3>
-                 <h4>Pumps <span>SHOS C Series</span></h4>
-              </li>
-              <li>
-                <img src="/images/supp-vid1.png" alt="">
-                <img src="/images/play-icon.png" alt="" class="play-icon">
-                 <h3>Submersible Pumps</h3>
-                 <h4>Pumps <span>SHOS C Series</span></h4>
-              </li>
-              <li>
-                <img src="/images/supp-vid1.png" alt="">
-                <img src="/images/play-icon.png" alt="" class="play-icon">
-                 <h3>Submersible Pumps</h3>
-                 <h4>Pumps <span>SHOS C Series</span></h4>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!-- #tab5 --> 
-      <h3 class="tab_drawer_heading" rel="tab6">Special Application <span> Customized Pumping Solutions</span></h3>
-      <div id="tab6" class="tab_content">
-        <div class="foundtabinsid financedtlstab">
-          <div class="financedtlstitle">
-            <h2><span>Installation & Service</span> Videos For Pumps</h2>
-           <div class="totalvideotxttab">Total Videos: <strong>2500</strong></div> 
-          </div>
-          <div class="suppservvideotab">
-            <ul>
-              <li>
-                <img src="/images/supp-vid1.png" alt="">
-                <img src="/images/play-icon.png" alt="" class="play-icon">
-                 <h3>Submersible Pumps</h3>
-                 <h4>Pumps <span>SHOS C Series</span></h4>
-              </li>
-              <li>
-                <img src="/images/supp-vid1.png" alt="">
-                <img src="/images/play-icon.png" alt="" class="play-icon">
-                 <h3>Submersible Pumps</h3>
-                 <h4>Pumps <span>SHOS C Series</span></h4>
-              </li>
-              <li>
-                <img src="/images/supp-vid1.png" alt="">
-                <img src="/images/play-icon.png" alt="" class="play-icon">
-                 <h3>Submersible Pumps</h3>
-                 <h4>Pumps <span>SHOS C Series</span></h4>
-              </li>
-              <li>
-                <img src="/images/supp-vid1.png" alt="">
-                <img src="/images/play-icon.png" alt="" class="play-icon">
-                 <h3>Submersible Pumps</h3>
-                 <h4>Pumps <span>SHOS C Series</span></h4>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!-- #tab6 --> 
-    </div>
-    <!-- .tab_container -->
-    </div>
-  </section>
- <%- include('../common/footer.ejs') %>
- 
- <script>
-//  document.querySelectorAll('.accordion-toggle').forEach((accordion, index) => {
-//   accordion.addEventListener('click', () => {
-//     const location = locations[index];
-//     map.setCenter({ lat: location.lat, lng: location.lng });
-//     map.setZoom(10);  // Zoom in closer
-//   });
-// });
+    </section>
+    <%- include('../common/footer.ejs') %>
 
-  // map script
- 
-    function initMap() {
-      var macc = {lat: 42.1382114, lng: -71.5212585};
-      var map = new google.maps.Map(document.getElementById('map'), {zoom: 15, center: macc});
-      var marker = new google.maps.Marker({position: macc, map: map});
-    }
- 
+    <script>
+      //  document.querySelectorAll('.accordion-toggle').forEach((accordion, index) => {
+      //   accordion.addEventListener('click', () => {
+      //     const location = locations[index];
+      //     map.setCenter({ lat: location.lat, lng: location.lng });
+      //     map.setZoom(10);  // Zoom in closer
+      //   });
+      // });
 
- </script>
+      // map script
 
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvR5pNOvll3ZzLp3ioyktyntl2ilibzxM&callback=initMap"></script>
+      function initMap() {
+        var macc = { lat: 42.1382114, lng: -71.5212585 };
+        var map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 15,
+          center: macc,
+        });
+        var marker = new google.maps.Marker({ position: macc, map: map });
+      }
+    </script>
 
-     </body>
-      </html>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvR5pNOvll3ZzLp3ioyktyntl2ilibzxM&callback=initMap"
+    ></script>
+  </body>
+</html>

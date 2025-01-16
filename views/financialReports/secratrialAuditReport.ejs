@@ -4,85 +4,142 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shakti Pumps</title>
-    <link rel="icon" type="image/x-icon" href="/img/fav.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"  rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/img/fav.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <script type="text/javascript" src="/js/jquery.min.js"></script>
     <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
-    <link rel='stylesheet' href="/css/bootstrap.min.css">
-    <link rel='stylesheet' href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+    />
     <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
     <link rel="stylesheet" href="/css/style-loading.css" />
     <link rel="stylesheet" href="/css/responsive.css" />
   </head>
   <body>
-  
-  <%- include('../common/header.ejs') %>
+    <%- include('../common/header.ejs') %>
     <section class="about-banner lifeatsktban">
-      <div><img src="/images/financial-banner.png" alt=""></div>
+      <div><img src="/images/financial-banner.png" alt="" /></div>
       <div class="container">
-        <h2>Secretarial Audit<br> Reports</h2>
+        <h2>
+          Secretarial Audit<br />
+          Reports
+        </h2>
       </div>
     </section>
-  <section class="foundtiontab financialyeartab">
-    <div class="container">
-    <div class="selectcat">
-      <select>
-        <option>Select Financial Year</option>
-      </select>
-    </div>
+    <section class="foundtiontab financialyeartab">
+      <div class="container">
+        <div class="selectcat">
+          <select>
+            <option>Select Financial Year</option>
+          </select>
+        </div>
         <!-- partial:index.partial.html -->
-    <ul class="tabs">
-      <li class="active" rel="tab1">Secretarial Audit<span>Consectetur Adipiscing Elit</span></li>
-      <li class="active" rel="tab2">Annual Secretarial Audit Report<span>Consectetur Adipiscing Elit</span></li>
-    </ul>
-    <div class="tab_container">
-      <h3 class="d_active tab_drawer_heading" rel="tab1">Quarterly Results</h3>
-      <div id="tab1" class="tab_content">
-        <div class="foundtabinsid financedtlstab">
-          <div class="financedtlstitle">
-            <h2>Secretarial Audit<span>Secretarial Audit Report of Shakti Pumps (I) Ltd.</span></h2>
-            <a href="#" class="resultsbtn"><img src="/images/pdf-icon.png" alt=""> Report Download: 2023-24</a>
-          </div>
-          <div class="downloadcardlist">
-            
-            <% if (Array.isArray(secretarialAuditReport.recordset) && secretarialAuditReport.recordset.length > 0) {secretarialAuditReport.recordset.forEach(function(file) { %>
-              <div class="downloadcardpan">
-                <h3><%=file.fileName %> <span><%=file.quater%> Annual Report of Shakti Pumps (I) Ltd.</span></h3>
-                <a href="/pdfFiles/financialReports/secretarialAuditReport/<%=file.path%>" class="readmore" target="_blank"><img src="/images/pdf-iconwh.png" alt=""> Download</a>
+        <ul class="tabs">
+          <li class="active" rel="tab1">
+            Secretarial Audit<span>Consectetur Adipiscing Elit</span>
+          </li>
+          <li class="active" rel="tab2">
+            Annual Secretarial Audit Report<span
+              >Consectetur Adipiscing Elit</span
+            >
+          </li>
+        </ul>
+        <div class="tab_container">
+          <h3 class="d_active tab_drawer_heading" rel="tab1">
+            Quarterly Results
+          </h3>
+          <div id="tab1" class="tab_content">
+            <div class="foundtabinsid financedtlstab">
+              <div class="financedtlstitle">
+                <h2>
+                  Secretarial Audit<span
+                    >Secretarial Audit Report of Shakti Pumps (I) Ltd.</span
+                  >
+                </h2>
+                <a href="#" class="resultsbtn"
+                  ><img src="/images/pdf-icon.png" alt="" /> Report Download:
+                  2023-24</a
+                >
               </div>
-              <% })} %>
-          </div>        
+              <div class="downloadcardlist">
+                <% if (Array.isArray(secretarialAuditReport.recordset) &&
+                secretarialAuditReport.recordset.length > 0)
+                {secretarialAuditReport.recordset.forEach(function(file) { %>
+                <div class="downloadcardpan">
+                  <h3>
+                    <%=file.fileName %>
+                    <span
+                      ><%=file.quater%> Annual Report of Shakti Pumps (I)
+                      Ltd.</span
+                    >
+                  </h3>
+                  <a
+                    href="/pdfFiles/financialReports/secretarialAuditReport/<%=file.path%>"
+                    class="readmore"
+                    target="_blank"
+                    ><img src="/images/pdf-iconwh.png" alt="" /> Download</a
+                  >
+                </div>
+                <% })} %>
+              </div>
+            </div>
+          </div>
+          <h3 class="d_active tab_drawer_heading" rel="tab2">
+            Quarterly Results
+          </h3>
+          <div id="tab2" class="tab_content">
+            <div class="foundtabinsid financedtlstab">
+              <div class="financedtlstitle">
+                <h2>
+                  Annual Secretarial Audit Report<span
+                    >Annual Secretarial Audit Report of Shakti Pumps (I)
+                    Ltd.</span
+                  >
+                </h2>
+                <a href="#" class="resultsbtn"
+                  ><img src="/images/pdf-icon.png" alt="" /> Report Download:
+                  2023-24</a
+                >
+              </div>
+              <div class="downloadcardlist">
+                <% if (Array.isArray(annualSecretarialAuditReport.recordset) &&
+                annualSecretarialAuditReport.recordset.length > 0)
+                {annualSecretarialAuditReport.recordset.forEach(function(file) {
+                %>
+                <div class="downloadcardpan">
+                  <h3>
+                    <%=file.fileName %>
+                    <span
+                      ><%=file.quater%> Annual Report of Shakti Pumps (I)
+                      Ltd.</span
+                    >
+                  </h3>
+                  <a
+                    href="/pdfFiles/financialReports/annualSecretarialAuditReport/<%=file.path%>"
+                    class="readmore"
+                    target="_blank"
+                    ><img src="/images/pdf-iconwh.png" alt="" /> Download</a
+                  >
+                </div>
+                <% })} %>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <h3 class="d_active tab_drawer_heading" rel="tab2">Quarterly Results</h3>
-      <div id="tab2" class="tab_content">
-        <div class="foundtabinsid financedtlstab">
-          <div class="financedtlstitle">
-            <h2>Annual Secretarial Audit Report<span>Annual Secretarial Audit Report of Shakti Pumps (I) Ltd.</span></h2>
-            <a href="#" class="resultsbtn"><img src="/images/pdf-icon.png" alt=""> Report Download: 2023-24</a>
-          </div>
-          <div class="downloadcardlist">
-            
-            <% if (Array.isArray(annualSecretarialAuditReport.recordset) && annualSecretarialAuditReport.recordset.length > 0) {annualSecretarialAuditReport.recordset.forEach(function(file) { %>
-              <div class="downloadcardpan">
-                <h3><%=file.fileName %> <span><%=file.quater%> Annual Report of Shakti Pumps (I) Ltd.</span></h3>
-                <a href="/pdfFiles/financialReports/annualSecretarialAuditReport/<%=file.path%>" class="readmore" target="_blank"><img src="/images/pdf-iconwh.png" alt=""> Download</a>
-              </div>
-              <% })} %>
-          </div>        
-        </div>
-      </div>
-    
-      </div>
-
-    </div>
-    <!-- .tab_container -->
-    </div>
-  </section>
-  <%- include('../common/footer.ejs') %>
-
-     </body>
-      </html>
+      <!-- .tab_container -->
+    </section>
+    <%- include('../common/footer.ejs') %>
+  </body>
+</html>

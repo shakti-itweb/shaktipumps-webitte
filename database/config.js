@@ -5,7 +5,7 @@ const sql = require("mssql");
 var config = {
     "user": "sa", // Database username
     "password": "shakti@123", // Database password
-    "server": "13.202.132.54", // Server IP address
+    "server": "52.66.10.86", // Server IP address
     "database": "shaktiWebsite", // Database name
     "options": {
         "encrypt": false // Disable encryption
