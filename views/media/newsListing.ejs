@@ -4,24 +4,65 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shakti Pumps</title>
-    <link rel="icon" type="image/x-icon" href="/img/fav.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"  rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/img/fav.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <script type="text/javascript" src="/js/jquery.min.js"></script>
     <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
-    <link rel='stylesheet' href="/css/bootstrap.min.css">
-    <link rel='stylesheet' href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+    />
     <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
     <link rel="stylesheet" href="/css/style-loading.css" />
     <link rel="stylesheet" href="/css/responsive.css" />
   </head>
   <body>
-  
-<%- include('../common/header.ejs') %>
+    <%- include('../common/header.ejs') %>
 
-<section class="newsfilter">
+    <section class="newsfilter">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-8 col-sm-12">
+            <h2>
+              Shakti Pumps News
+              <span
+                >Total News: <%= Array.isArray(allNewsObj) ? allNewsObj.length :
+                '-' %></span
+              >
+            </h2>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-12 newfilrgt">
+            <select multiple style="height: 22px">
+              <option value="category1">Category 1</option>
+              <option value="category2">Category 2</option>
+              <option value="category3">Category 3</option>
+              <option value="category4">Category 4</option>
+              <option value="category1">Category 1</option>
+              <option value="category2">Category 2</option>
+              <option value="category3">Category 3</option>
+              <option value="category4">Category 4</option>
+              <option value="category1">Category 1</option>
+              <option value="category2">Category 2</option>
+              <option value="category3">Category 3</option>
+              <option value="category4">Category 4</option>
+            </select>
+            <input type="date" value="DD.MM.YYYY" style="height: 22px" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="newsfilter">
 <div class="container">
   <div class="row">
     <div class="col-lg-8 col-md-8 col-sm-12">
@@ -37,34 +78,40 @@
     </div>
   </div>
 </div>
-</section>
-<section class="newslist">
-  <div class="container">
-    <div class="row">
-
-
-    <% if(Array.isArray(allNewsObj) && allNewsObj.length > 0){ %>
-      <% allNewsObj.map((news)=>{ %>
-        <div class="col-lg-6 col-md-6 col-sm-12">
-          <div class="row newslistpan">
-            <div class="col-lg-4 col-md-4 col-sm-12 newslithum">
-              <img src="<%=news.image_path%><%=news.cover_image%>" alt="">
-            </div>
-            <div class="col-lg-8 col-md-8 col-sm-12 newslistdtlsrgt">
-              <h4><%= news.category_name %></h4>
-              <h2><%= news.heading %></h2>
-              <h3><span><img src="/images/calendar.png" alt=""><%= news.news_date %></span>  <span><img src="/images/news-icon.png" alt="" height="24"> Times Of India</span></h3>
-              <p><%= news.description.slice(0,90)%></p>
-              <a href="/media/news-details?id=<%= news.id %>">Read More <img src="/images/newsmore-arrow.png" alt=""></a>
+</section> -->
+    <section class="newslist">
+      <div class="container">
+        <div class="row">
+          <% if(Array.isArray(allNewsObj) && allNewsObj.length > 0){ %> <%
+          allNewsObj.map((news)=>{ %>
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="row newslistpan">
+              <div class="col-lg-4 col-md-4 col-sm-12 newslithum">
+                <img src="<%=news.image_path%><%=news.cover_image%>" alt="" />
+              </div>
+              <div class="col-lg-8 col-md-8 col-sm-12 newslistdtlsrgt">
+                <h4><%= news.category_name %></h4>
+                <h2><%= news.heading %></h2>
+                <h3>
+                  <span
+                    ><img src="/images/calendar.png" alt="" /><%= news.news_date
+                    %></span
+                  >
+                  <span
+                    ><img src="/images/news-icon.png" alt="" height="24" />
+                    Times Of India</span
+                  >
+                </h3>
+                <p><%= news.description.slice(0,90)%></p>
+                <a href="/media/news-details?id=<%= news.id %>"
+                  >Read More <img src="/images/newsmore-arrow.png" alt=""
+                /></a>
+              </div>
             </div>
           </div>
-        </div>
-      <% })%>
-      <%}%>
+          <% })%> <%}%>
 
-
-
-      <!-- <div class="col-lg-6 col-md-6 col-sm-12">
+          <!-- <div class="col-lg-6 col-md-6 col-sm-12">
         <div class="row newslistpan">
           <div class="col-lg-4 col-md-4 col-sm-12 newslithum">
             <img src="/images/news-pic1.png" alt="">
@@ -204,10 +251,10 @@
           </div>
         </div>
       </div> -->
-    </div>
-    <!-- <a href="#" class="readmore">Load More</a> -->
-  </div>
-</section>
-<%- include('../common/footer.ejs') %>
-     </body>
-      </html>
+        </div>
+        <!-- <a href="#" class="readmore">Load More</a> -->
+      </div>
+    </section>
+    <%- include('../common/footer.ejs') %>
+  </body>
+</html>

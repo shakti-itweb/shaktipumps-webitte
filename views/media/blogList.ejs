@@ -4,65 +4,79 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shakti Pumps</title>
-    <link rel="icon" type="image/x-icon" href="/img/fav.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"  rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/img/fav.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <script type="text/javascript" src="/js/jquery.min.js"></script>
     <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
-    <link rel='stylesheet' href="/css/bootstrap.min.css">
-    <link rel='stylesheet' href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+    />
     <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
     <link rel="stylesheet" href="/css/style-loading.css" />
     <link rel="stylesheet" href="/css/responsive.css" />
   </head>
   <body>
- 
     <%- include('../common/header.ejs') %>
 
-
-<section class="shaktivideobann">
-    <div class="container">
+    <section class="shaktivideobann">
+      <div class="container">
         <div class="row">
-            <div class="col-lg-5 col-md-5 col-sm-12">
-              <div class="protitlebrcam">
-                <h2>Shakti Blog</h2>
-                <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#" class="active">Shakti Blog</a></li>
-                </ul>
-              </div>
+          <div class="col-lg-5 col-md-5 col-sm-12">
+            <div class="protitlebrcam">
+              <h2>Shakti Blog</h2>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#" class="active">Shakti Blog</a></li>
+              </ul>
             </div>
-            <div class="col-lg-7 col-md-7 col-sm-12 videosearch">
-                <select>
-                    <option>Select Category</option>
-                </select>
-                <div class="careerbanserch"><input type="text" placeholder="Search By Title or Description.." value=""><input type="submit" value=""></div>
+          </div>
+          <div class="col-lg-7 col-md-7 col-sm-12 videosearch">
+            <select>
+              <option>Select Category</option>
+            </select>
+            <div class="careerbanserch">
+              <input
+                type="text"
+                placeholder="Search By Title or Description.."
+                value=""
+              /><input type="submit" value="" />
             </div>
+          </div>
         </div>
-    </div>
-</section>
-<section class="videogalleryy">
-    <div class="container">
+      </div>
+    </section>
+    <section class="videogalleryy">
+      <div class="container">
+        <div class="liferesouce">
+          <% if(Array.isArray(allBlogs) && allBlogs.length > 0){%> <%
+          allBlogs.map((blog)=>{ %>
 
-      <div class="liferesouce">
-        <% if(Array.isArray(allBlogs) && allBlogs.length > 0){%>
-          <% allBlogs.map((blog)=>{ %>
-            
-              <div class="lifrresoucecard">
-                <img src="<%= blog?.image_path %><%= blog?.cover_image2%>" alt="">
-                <h5><%= blog?.blog_category %></h5>
-                <h4><%= blog?.heading.slice(0,71)%>...</h4>
-                <h6><%= blog?.createdOn %><a href="/media/blog-details?id=<%= blog?.id %>"><img src="/images/more-arrow.png" alt=""></a></h6>
-              </div>
-          <%})%>
-          <% } %>
+          <div class="lifrresoucecard">
+            <img src="<%= blog?.image_path %><%= blog?.cover_image2%>" alt="" />
+            <h5><%= blog?.blog_category %></h5>
+            <h4><%= blog?.heading.slice(0,71)%>...</h4>
+            <h6>
+              <%= blog?.createdOn %><a
+                href="/media/blog-details?id=<%= blog?.id %>"
+                ><img src="/images/more-arrow.png" alt=""
+              /></a>
+            </h6>
+          </div>
+          <%})%> <% } %>
         </div>
 
-
-        
-            <!-- <div class="lifrresoucecard">
+        <!-- <div class="lifrresoucecard">
               <img src="/images/blog-pic1.png" alt="">
               <h5>Category Name</h5>
               <h4>Shakti Pumps has installed a total of 107 pump sets at Bharat Mandapam</h4>
@@ -110,13 +124,12 @@
               <h4>Shakti Pumps has installed a total of 107 pump sets at Bharat Mandapam</h4>
               <h6>15th May, 2024 <a href="/media/blog-details"><img src="/images/more-arrow.png" alt=""></a></h6>
             </div> -->
-          
-          <div class="moreloadpro">
-            <a href="#" class="readmore">View More 60 Shakti Blogs</a>
-          </div>
-    </div>
-</section>
-<%- include('../common/footer.ejs') %>
-  </script>
-     </body>
-      </html>
+
+        <div class="moreloadpro">
+          <a href="#" class="readmore">View More 60 Shakti Blogs</a>
+        </div>
+      </div>
+    </section>
+    <%- include('../common/footer.ejs') %>
+  </body>
+</html>

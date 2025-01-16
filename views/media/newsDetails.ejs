@@ -4,53 +4,69 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shakti Pumps</title>
-    <link rel="icon" type="image/x-icon" href="/img/fav.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"  rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/img/fav.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <script type="text/javascript" src="/js/jquery.min.js"></script>
     <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
-    <link rel='stylesheet' href="/css/bootstrap.min.css">
-    <link rel='stylesheet' href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+    />
     <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
     <link rel="stylesheet" href="/css/style-loading.css" />
     <link rel="stylesheet" href="/css/responsive.css" />
   </head>
   <body>
-  
-
     <%- include('../common/header.ejs') %>
 
-
-<section class="newsfilter newsdtlshead">
-<div class="container">
-  <div class="row">
-    <div class="col-lg-12">
-      <h2><%= newsDetail.heading %></h2>
-      <!-- <%= newsDetail.news_date %> -->
-      <h3><span><img src="/images/calendar.png" alt=""> </span>  <span><img src="/images/news-icon.png" alt="" height="24"> Times Of India</span></h3>
-    </div>
-  </div>
-</div>
-</section>
-<section class="newsdetailsdesc">
-    <div class="container">
-      <!-- <%= newsDetail.image_path %><%= newsDetail.actual_image %> -->
-        <img src="<%= newsDetail.image_path %><%= newsDetail.actual_image %>" alt="" class="ndtlsthum">
+    <section class="newsfilter newsdtlshead">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2><%= newsDetail.heading %></h2>
+            <!-- <%= newsDetail.news_date %> -->
+            <h3>
+              <span><img src="/images/calendar.png" alt="" /> </span>
+              <span
+                ><img src="/images/news-icon.png" alt="" height="24" /> Times Of
+                India</span
+              >
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="newsdetailsdesc">
+      <div class="container">
+        <!-- <%= newsDetail.image_path %><%= newsDetail.actual_image %> -->
+        <img
+          src="<%= newsDetail.image_path %><%= newsDetail.actual_image %>"
+          alt=""
+          class="ndtlsthum"
+        />
         <% for(let i=0; i<paragraphArray.length; i++){ %>
-            <p><%= paragraphArray[i] %></p>
-        <% } %>
-        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc semper consectetur est non imperdiet. Morbi velit sem, suscipit sit amet sem sed, tristique tempus felis. Nulla ornare varius turpis eget finibus. Vestibulum in nibh quis risus gravida egestas quis quis leo.</p>
+          <p><%= paragraphArray[i] %></p>
+          <% } %>
+          <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc semper consectetur est non imperdiet. Morbi velit sem, suscipit sit amet sem sed, tristique tempus felis. Nulla ornare varius turpis eget finibus. Vestibulum in nibh quis risus gravida egestas quis quis leo.</p>
         <p>Aliquam erat volutpat. In sed nibh mollis quam lobortis blandit. Integer sed massa sed orci varius vestibulum ac vel nunc. Fusce vehicula mattis libero nec pharetra. Ut at libero in lacus molestie blandit. Integer tristique non risus in sagittis. Maecenas pharetra consequat tellus id sodales.</p>
         <p>Aliquam eu sollicitudin metus, vel gravida leo. Aenean interdum fringilla consequat. Integer nisl metus, suscipit non est quis, posuere volutpat metus. Aenean rutrum posuere gravida. Duis pretium dui quis lacus sodales, quis tincidunt erat ultricies. Integer nec venenatis leo. Donec sit amet faucibus leo, nec malesuada turpis.</p>
         <p>Donec mauris odio, placerat et feugiat quis, pellentesque in nisi. Vivamus tortor metus, euismod quis aliquet vel, feugiat id sem. Pellentesque sed tincidunt nisl. Cras vitae leoskiquis augue aliquam accumsan</p>
         <br>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc semper consectetur est non imperdiet. Morbi velit sem, suscipit sit amet sem sed, tristique tempus felis. Nulla ornare varius turpis eget finibus. Vestibulum in nibh quis risus gravida egestas quis quis leo. Aliquam erat volutpat. In sed nibh mollis quam lobortis blandit. Integer sed massa sed orci varius vestibulum ac vel nunc. Fusce vehicula mattis libero nec pharetra. Ut at libero in lacus molestie blandit. Integer tristique non risus in sagittis. Maecenas pharetra consequat tellus id sodales.</p>
         <p>Aliquam eu sollicitudin metus, vel gravida leo. Aenean interdum fringilla consequat. Integer nisl metus, suscipit non est quis, posuere volutpat metus. Aenean rutrum posuere gravida. Duis pretium dui quis lacus sodales, quis tincidunt erat ultricies. Integer nec venenatis leo. Donec sit amet faucibus leo, nec malesuada turpis. Donec mauris odio, placerat.</p> -->
-    </div>
-</section>
-<!-- <section class="othernews">
+          <!-- </div> -->
+          <!-- </section> -->
+          <!-- <section class="othernews">
   <div class="container">
     <h2 class="newslihead">Other News</h2>
     <div class="othernewsslide">
@@ -70,6 +86,11 @@
   </div>
 </section> -->
 
-<%- include('../common/footer.ejs') %>
-     </body>
-      </html>
+          <%- include('../common/footer.ejs') %>
+          <!-- </body> -->
+          <!-- </html> --></paragraphArray.length;
+        >
+      </div>
+    </section>
+  </body>
+</html>

@@ -35,7 +35,6 @@ const fetchCommonData = async (req,res) => {
 //Showing data from a home page
 const getHomePage = async (req, res) => {
 
-
   await fetchCommonData();
   var data;
     if(req.query.message == 'dataSaved'){
@@ -47,7 +46,6 @@ const getHomePage = async (req, res) => {
     res.render('index' , {data, last4News, recentEvent});  // Renders index.ejs
   };
   
-
   const getHomeData = (req, res) => {
     res.json({ message: "Welcome to the home data API" });
   };
