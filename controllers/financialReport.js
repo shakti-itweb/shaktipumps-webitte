@@ -9,7 +9,9 @@ const getFinancialReport = async (req, res) => {
     const BRSR = await db.request().query(`select * from BRSR`);
     const resultRelease = await db.request().query(`select * from resultRelease`);
     const investorPresentation = await db.request().query(`select * from investorPresentation`);
-    res.render("financialReports/financial-report",{quarterlyResults,annualReturns,relatedPartyDisclosure,annualReport,BRSR,resultRelease,investorPresentation});
+    const subsidiaryResults = await db.request().query(`select * from subsidiaryResults`);
+    const conferenceCall = await db.request().query(`select * from conferenceCall`);
+    res.render("financialReports/financial-report",{quarterlyResults,annualReturns,relatedPartyDisclosure,annualReport,BRSR,resultRelease,investorPresentation,subsidiaryResults,conferenceCall});
   };
 
 

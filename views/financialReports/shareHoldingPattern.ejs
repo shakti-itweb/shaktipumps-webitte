@@ -41,8 +41,11 @@
     <section class="foundtiontab financialyeartab">
       <div class="container">
         <div class="selectcat">
-          <select>
-            <option>Select Financial Year</option>
+          <select onchange="getval(this.value);">
+            <option>ALL</option>
+            <option value="2024-2025">2024-2025</option>
+            <option value="2023-2024">2023-2024</option>
+            <option value="2022-2023">2022-2023</option>
           </select>
         </div>
         <!-- partial:index.partial.html -->
@@ -53,14 +56,14 @@
         </ul>
         <div class="tab_container">
           <h3 class="d_active tab_drawer_heading" rel="tab1">
-            Quarterly Results
+            Share Holding Pattern 
           </h3>
           <div id="tab1" class="tab_content">
             <div class="foundtabinsid financedtlstab">
               <div class="financedtlstitle">
                 <h2>
-                  Share Holding Pattern<span
-                    >Annual Report of Shakti Pumps (I) Ltd.</span
+                  Share Holding Pattern
+                  <span> Annual Report of Shakti Pumps (I) Ltd.</span
                   >
                 </h2>
                 <a href="#" class="resultsbtn"

@@ -281,47 +281,128 @@
               </div>
             </div>
           </div>
-        </div>
-
-        <h3 class="tab_drawer_heading" rel="tab6">Related Party Disclosure</h3>
-        <div id="tab6" class="tab_content">
-          <div class="foundtabinsid financedtlstab">
-            <div class="financedtlstitle">
-              <h2>
-                Related Party Disclosure
-                <span>Related Party Disclosure of Shakti Pumps (I) Ltd.</span>
-              </h2>
-              <a href="#" class="resultsbtn"
-                ><img src="/images/pdf-icon.png" alt="" /> Report Download:
-                2023-24</a
-              >
-            </div>
-            <div class="downloadcardlist">
-              <% if (Array.isArray(relatedPartyDisclosure.recordset) &&
-              relatedPartyDisclosure.recordset.length > 0)
-              {relatedPartyDisclosure.recordset.forEach(function(file) { %>
-              <div class="downloadcardpan" id="<%=file.year %>">
-                <h3>
-                  <%=file.fileName %>
-                  <span
-                    ><%=file.path%> Related Party Disclosure of Shakti Pumps (I) Ltd.</span
+          <h3 class="tab_drawer_heading" rel="tab5">Conference Call</h3>
+          <div id="tab5" class="tab_content">
+            <div class="foundtabinsid financedtlstab">
+              <div class="financedtlstitle">
+                <h2>
+                  Conference Call<span
+                    > Conference Call of Shakti Pumps (I) Ltd.</span
                   >
-                </h3>
-                <a
-                  href="/pdfFiles/financialReports/relatedPartyDisclosure/<%=file.path%>"
-                  class="readmore"
-                  target="_blank"
-                  ><img
-                    src="/pdfFiles/financialReports/relatedPartyDisclosure/<%=file.path%>"
-                    alt=""
-                  />
-                  Download</a
-                >
+                </h2>
+                <!-- <a href="#" class="resultsbtn"
+                  ><img src="/images/pdf-icon.png" alt="" /> Report Download:
+                  2023-24</a
+                > -->
               </div>
-              <% })} %>
+              <div class="downloadcardlist">
+                <% if (Array.isArray(conferenceCall.recordset) &&
+                conferenceCall.recordset.length > 0)
+                {conferenceCall.recordset.forEach(function(file) { %>
+                <div class="downloadcardpan" id="<%=file.year %>">
+                  <h3>
+                    <%=file.fileName %>
+                    <span
+                      ><%=file.year%> Conference Call of Shakti Pumps (I)
+                      Ltd.</span
+                    >
+                  </h3>
+                  <a
+                    href="/pdfFiles/financialReports/conferenceCall/<%=file.path%>"
+                    class="readmore"
+                    target="_blank"
+                    ><img src="/images/pdf-iconwh.png" alt="" /> Download</a>
+                    <audio controls>
+                      <source src="/audioFiles/conferenceCall/<%=file.audioPath%>" type="audio/mp3">
+                    </audio>
+                </div>
+                <% })} %>
+              </div>
+            </div>
+          
+          </div>
+          <h3 class="tab_drawer_heading" rel="tab6">Related Party Disclosure</h3>
+          <div id="tab6" class="tab_content">
+            <div class="foundtabinsid financedtlstab">
+              <div class="financedtlstitle">
+                <h2>
+                  Related Party Disclosure
+                  <span>Related Party Disclosure of Shakti Pumps (I) Ltd.</span>
+                </h2>
+                <!-- <a href="#" class="resultsbtn"
+                  ><img src="/images/pdf-icon.png" alt="" /> Report Download:
+                  2023-24</a
+                > -->
+              </div>
+              <div class="downloadcardlist">
+                <% if (Array.isArray(relatedPartyDisclosure.recordset) &&
+                relatedPartyDisclosure.recordset.length > 0)
+                {relatedPartyDisclosure.recordset.forEach(function(file) { %>
+                <div class="downloadcardpan" id="<%=file.year %>">
+                  <h3>
+                    <%=file.fileName %>
+                    <span
+                      ><%=file.year%> Related Party Disclosure of Shakti Pumps (I) Ltd.</span
+                    >
+                  </h3>
+                  <a
+                    href="/pdfFiles/financialReports/relatedPartyDisclosure/<%=file.path%>"
+                    class="readmore"
+                    target="_blank"
+                    ><img
+                      src="/pdfFiles/financialReports/relatedPartyDisclosure/<%=file.path%>"
+                      alt=""
+                    />
+                    Download</a
+                  >
+                </div>
+                <% })} %>
+              </div>
             </div>
           </div>
+          <h3 class="tab_drawer_heading" rel="tab7"> Subsidiary Results</h3>
+          <div id="tab7" class="tab_content">
+            <div class="foundtabinsid financedtlstab">
+              <div class="financedtlstitle">
+                <h2>
+                  Subsidiary Results
+                  <span> Subsidiary Results of Shakti Pumps (I) Ltd.</span>
+                </h2>
+                <!-- <a href="#" class="resultsbtn"
+                  ><img src="/images/pdf-icon.png" alt="" /> Report Download:
+                  2023-24</a
+                > -->
+              </div>
+              <div class="downloadcardlist">
+                <% if (Array.isArray(subsidiaryResults.recordset) &&
+                subsidiaryResults.recordset.length > 0)
+                {subsidiaryResults.recordset.forEach(function(file) { %>
+                <div class="downloadcardpan" id="<%=file.year %>">
+                  <h3>
+                    <%=file.fileName %>
+                    <span
+                      ><%=file.year%> Subsidiary Results of Shakti Pumps (I) Ltd.</span
+                    >
+                  </h3>
+                  <a
+                    href="/pdfFiles/financialReports/Subsidiary/<%=file.path%>"
+                    class="readmore"
+                    target="_blank"
+                    ><img
+                      src="/pdfFiles/financialReports/Subsidiary/<%=file.path%>"
+                      alt=""
+                    />
+                    Download</a
+                  >
+                </div>
+                <% })} %>
+              </div>
+            </div>
+          </div>
+
         </div>
+
+        
       </div>
       <!-- .tab_container -->
     </section>
