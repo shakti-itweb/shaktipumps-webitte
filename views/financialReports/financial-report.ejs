@@ -78,13 +78,13 @@
             <div class="foundtabinsid financedtlstab">
               <div class="financedtlstitle">
                 <h2>
-                  Annual Report
-                  <span>Annual Report of Shakti Pumps (I) Ltd.</span>
+                  Quarterly Results
+                  <span>Quarterly Results of Shakti Pumps (I) Ltd.</span>
                 </h2>
-                <a href="#" class="resultsbtn"
+                <!-- <a href="#" class="resultsbtn"
                   ><img src="/images/pdf-icon.png" alt="" /> Report Download:
                   2023-24</a
-                >
+                > -->
               </div>
               <div class="downloadcardlist">
                 <% if (Array.isArray(quarterlyResults.recordset) &&
@@ -93,7 +93,7 @@
                 <div class="downloadcardpan" id="<%=file.year %>">
                   <h3>
                     <%=file.fileName %><span
-                      ><%=file.quater%> Annual Report of Shakti Pumps (I)
+                      ><%=file.quater%> Quarterly Results of Shakti Pumps (I)
                       Ltd.</span
                     ><span><%=file.year %></span>
                   </h3>
@@ -118,7 +118,7 @@
                   Annual Report
                   <span>Annual Report of Shakti Pumps (I) Ltd.</span>
                 </h2>
-                <a href="#" class="resultsbtn"
+                <a href="/pdfFiles/financialReports/annualReport/Annual Report 2023-24.pdf" class="resultsbtn"
                   ><img src="/images/pdf-icon.png" alt="" /> Report Download:
                   2023-24</a
                 >
@@ -148,7 +148,7 @@
             <div class="foundtabinsid financedtlstab">
               <div class="financedtlstitle">
                 <h2>BRSR <span>BRSR of Shakti Pumps (I) Ltd.</span></h2>
-                <a href="#" class="resultsbtn"
+                <a href="/pdfFiles/financialReports/BRSR/BRSR24.pdf" class="resultsbtn"
                   ><img src="/images/pdf-icon.png" alt="" /> Report Download:
                   2023-24</a
                 >
@@ -160,7 +160,7 @@
                   <h3>
                     <%=file.fileName %>
                     <span
-                      ><%=file.year%> Annual Report of Shakti Pumps (I)
+                      ><%=file.year%> BRSR of Shakti Pumps (I)
                       Ltd.</span
                     >
                   </h3>
@@ -183,7 +183,7 @@
                   Annual Return
                   <span>Annual Return of Shakti Pumps (I) Ltd.</span>
                 </h2>
-                <a href="#" class="resultsbtn"
+                <a href="/pdfFiles/financialReports/annualReturn/Annual Return 2024.pdf" class="resultsbtn"
                   ><img src="/images/pdf-icon.png" alt="" /> Report Download:
                   2023-24</a
                 >
@@ -196,12 +196,12 @@
                   <h3>
                     <%=file.fileName %>
                     <span
-                      ><%=file.year%> Annual Report of Shakti Pumps (I)
+                      ><%=file.year%> Annual Returns of Shakti Pumps (I)
                       Ltd.</span
                     >
                   </h3>
                   <a
-                    href="/pdfFiles/financialReports/annualReturns/<%=file.path%>"
+                    href="/pdfFiles/financialReports/annualReturn/<%=file.path%>"
                     class="readmore"
                     target="_blank"
                     ><img src="/images/pdf-iconwh.png" alt="" /> Download</a
@@ -220,10 +220,10 @@
                     >Result Release of Shakti Pumps (I) Ltd.</span
                   >
                 </h2>
-                <a href="#" class="resultsbtn"
+                <!-- <a href="#" class="resultsbtn"
                   ><img src="/images/pdf-icon.png" alt="" /> Report Download:
                   2023-24</a
-                >
+                > -->
               </div>
               <div class="downloadcardlist">
                 <% if (Array.isArray(resultRelease.recordset) &&
@@ -233,7 +233,7 @@
                   <h3>
                     <%=file.fileName %>
                     <span
-                      ><%=file.year%> Annual Report of Shakti Pumps (I)
+                      ><%=file.year%> Result Release of Shakti Pumps (I)
                       Ltd.</span
                     >
                   </h3>
@@ -253,25 +253,25 @@
                   Investor Presentation
                   <span>Investor Presentation of Shakti Pumps (I) Ltd.</span>
                 </h2>
-                <a href="#" class="resultsbtn"
+                <!-- <a href="#" class="resultsbtn"
                   ><img src="/images/pdf-icon.png" alt="" /> Report Download:
                   2023-24</a
-                >
+                > -->
               </div>
               <div class="downloadcardlist">
-                <% if (Array.isArray(resultRelease.recordset) &&
-                resultRelease.recordset.length > 0)
-                {resultRelease.recordset.forEach(function(file) { %>
+                <% if (Array.isArray(investorPresentation.recordset) &&
+                investorPresentation.recordset.length > 0)
+                {investorPresentation.recordset.forEach(function(file) { %>
                 <div class="downloadcardpan" id="<%=file.year %>">
                   <h3>
                     <%=file.fileName %>
                     <span
-                      ><%=file.year%> Annual Report of Shakti Pumps (I)
+                      ><%=file.year%> Investor Presentation of Shakti Pumps (I)
                       Ltd.</span
                     >
                   </h3>
                   <a
-                    href="/pdfFiles/financialReports/resultRelease/<%=file.path%>"
+                    href="/pdfFiles/financialReports/investorPresentation/<%=file.path%>"
                     class="readmore"
                     target="_blank"
                     ><img src="/images/pdf-iconwh.png" alt="" /> Download</a
@@ -304,7 +304,7 @@
                 <h3>
                   <%=file.fileName %>
                   <span
-                    ><%=file.path%> Annual Report of Shakti Pumps (I) Ltd.</span
+                    ><%=file.path%> Related Party Disclosure of Shakti Pumps (I) Ltd.</span
                   >
                 </h3>
                 <a
