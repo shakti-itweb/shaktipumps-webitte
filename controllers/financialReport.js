@@ -2,15 +2,15 @@ const db = require("../database/pumpTable");
 
 const getFinancialReport = async (req, res) => {
     await db.connect();
-    const quarterlyResults = await db.request().query(`select * from quarterlyResults ORDER BY year DESC;`);
-    const annualReturns = await db.request().query(`select * from annualReturn ORDER BY year DESC;`);
-    const relatedPartyDisclosure = await db.request().query(`select * from relatedPartyDisclosure ORDER BY year DESC;`);
-    const annualReport = await db.request().query(`select * from annualReport ORDER BY year DESC;`);
-    const BRSR = await db.request().query(`select * from BRSR ORDER BY year DESC;`);
-    const resultRelease = await db.request().query(`select * from resultRelease ORDER BY year DESC;`);
-    const investorPresentation = await db.request().query(`select * from investorPresentation ORDER BY year DESC;`);
-    const subsidiaryResults = await db.request().query(`select * from subsidiaryResults ORDER BY year DESC;`);
-    const conferenceCall = await db.request().query(`select * from conferenceCall ORDER BY year DESC;`);
+    const quarterlyResults = await db.request().query(`select * from quarterlyResults ORDER BY year DESC, quater;`);
+    const annualReturns = await db.request().query(`select * from annualReturn`);
+    const relatedPartyDisclosure = await db.request().query(`select * from relatedPartyDisclosure`);
+    const annualReport = await db.request().query(`select * from annualReport`);
+    const BRSR = await db.request().query(`select * from BRSR`);
+    const resultRelease = await db.request().query(`select * from resultRelease`);
+    const investorPresentation = await db.request().query(`select * from investorPresentation`);
+    const subsidiaryResults = await db.request().query(`select * from subsidiaryResults`);
+    const conferenceCall = await db.request().query(`select * from conferenceCall`);
     res.render("financialReports/financial-report",{quarterlyResults,annualReturns,relatedPartyDisclosure,annualReport,BRSR,resultRelease,investorPresentation,subsidiaryResults,conferenceCall});
   };
 
