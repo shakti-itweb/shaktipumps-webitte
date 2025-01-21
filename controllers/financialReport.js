@@ -2,14 +2,16 @@ const db = require("../database/pumpTable");
 
 const getFinancialReport = async (req, res) => {
     await db.connect();
-    const quarterlyResults = await db.request().query(`select * from quarterlyResults`);
+    const quarterlyResults = await db.request().query(`select * from quarterlyResults ORDER BY year DESC, quater;`);
     const annualReturns = await db.request().query(`select * from annualReturn`);
     const relatedPartyDisclosure = await db.request().query(`select * from relatedPartyDisclosure`);
     const annualReport = await db.request().query(`select * from annualReport`);
     const BRSR = await db.request().query(`select * from BRSR`);
     const resultRelease = await db.request().query(`select * from resultRelease`);
     const investorPresentation = await db.request().query(`select * from investorPresentation`);
-    res.render("financialReports/financial-report",{quarterlyResults,annualReturns,relatedPartyDisclosure,annualReport,BRSR,resultRelease,investorPresentation});
+    const subsidiaryResults = await db.request().query(`select * from subsidiaryResults`);
+    const conferenceCall = await db.request().query(`select * from conferenceCall`);
+    res.render("financialReports/financial-report",{quarterlyResults,annualReturns,relatedPartyDisclosure,annualReport,BRSR,resultRelease,investorPresentation,subsidiaryResults,conferenceCall});
   };
 
 
@@ -73,6 +75,12 @@ const getFinancialReport = async (req, res) => {
     res.render("financialReports/investorsEducation",{unpaidDividendInvestors,IEPFShares,IEPFAmount});
   };
 
+  const getGeneralInfo = async (req, res) => {
+    await db.connect();
+    const generalInfo = await db.request().query(`select * from generalInfo`);
+    res.render("financialReports/general-info",{generalInfo});
+  };
+
   const getFinancialReportInfo = (req, res) => {
     res.json({ info: "financial report information" });
   };
@@ -90,6 +98,7 @@ const getFinancialReport = async (req, res) => {
     getNewsAndAnnouncement,
     getBoardMeeting,
     getInvestorEducation,
-    getChairmanProfile
+    getChairmanProfile,
+    getGeneralInfo
   };
   
