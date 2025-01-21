@@ -28,46 +28,49 @@
   </head>
   <body>
     <%- include('../common/header.ejs') %>
+
     <section class="about-banner lifeatsktban">
       <div><img src="/images/financial-banner.png" alt="" /></div>
       <div class="container">
         <h2>
-          Secretarial Audit<br />
-          Reports
+          Financial<br />
+          Report
         </h2>
       </div>
     </section>
     <section class="foundtiontab financialyeartab">
       <div class="container">
         <div class="selectcat">
-          <select>
-            <option>Select Financial Year</option>
+          <select onchange="getval(this.value);">
+            <option>ALL</option>
+            <option value="2024-2025">2024-2025</option>
+            <option value="2023-2024">2023-2024</option>
+            <option value="2022-2023">2022-2023</option>
           </select>
         </div>
         <!-- partial:index.partial.html -->
         <ul class="tabs">
           <li class="active" rel="tab1">
-            Secretarial Audit<span>Consectetur Adipiscing Elit</span>
+            Secretarial Audit
+            <!-- <span>Consectetur Adipiscing Elit</span> -->
           </li>
-          <li class="active" rel="tab2">
-            Annual Secretarial Audit Report<span
-              >Consectetur Adipiscing Elit</span
-            >
-          </li>
+          <li rel="tab2">
+            Annual Secretarial Audit Report
+             <!-- <span>Shakti Pumps India Ltd.</span>-->
+          </li> 
         </ul>
         <div class="tab_container">
           <h3 class="d_active tab_drawer_heading" rel="tab1">
-            Quarterly Results
+            Secretarial Audit
           </h3>
           <div id="tab1" class="tab_content">
             <div class="foundtabinsid financedtlstab">
               <div class="financedtlstitle">
                 <h2>
-                  Secretarial Audit<span
-                    >Secretarial Audit Report of Shakti Pumps (I) Ltd.</span
-                  >
+                  Secretarial Audit
+                  <span>Secretarial Audit of Shakti Pumps (I) Ltd.</span>
                 </h2>
-                <a href="#" class="resultsbtn"
+                <a href="/pdfFiles/secretarialAuditReports/secretarialAuditReport/MR-3_Secretarial_Audit_Report_2024.pdf" class="resultsbtn"
                   ><img src="/images/pdf-icon.png" alt="" /> Report Download:
                   2023-24</a
                 >
@@ -76,16 +79,16 @@
                 <% if (Array.isArray(secretarialAuditReport.recordset) &&
                 secretarialAuditReport.recordset.length > 0)
                 {secretarialAuditReport.recordset.forEach(function(file) { %>
-                <div class="downloadcardpan">
+                <div class="downloadcardpan" id="<%=file.year %>">
                   <h3>
-                    <%=file.fileName %>
-                    <span
-                      ><%=file.quater%> Annual Report of Shakti Pumps (I)
+                    <%=file.fileName %><span
+                      ><%=file.quater%> Secretarial Audit of Shakti Pumps (I)
                       Ltd.</span
-                    >
+                    ><span><%=file.year %></span>
                   </h3>
+                  <!-- <h3><span><%=file.year %></span></h3> -->
                   <a
-                    href="/pdfFiles/financialReports/secretarialAuditReport/<%=file.path%>"
+                    href="/pdfFiles/secretarialAuditReports/secretarialAuditReport/<%=file.path%>"
                     class="readmore"
                     target="_blank"
                     ><img src="/images/pdf-iconwh.png" alt="" /> Download</a
@@ -95,38 +98,33 @@
               </div>
             </div>
           </div>
-          <h3 class="d_active tab_drawer_heading" rel="tab2">
-            Quarterly Results
-          </h3>
+          <!-- #tab1 -->
+          <h3 class="tab_drawer_heading" rel="tab2">Annual Secretarial Audit Report</h3>
           <div id="tab2" class="tab_content">
             <div class="foundtabinsid financedtlstab">
               <div class="financedtlstitle">
                 <h2>
-                  Annual Secretarial Audit Report<span
-                    >Annual Secretarial Audit Report of Shakti Pumps (I)
-                    Ltd.</span
-                  >
+                  Annual Secretarial Audit Report
+                  <span>Annual Secretarial Audit Report of Shakti Pumps (I) Ltd.</span>
                 </h2>
-                <a href="#" class="resultsbtn"
-                  ><img src="/images/pdf-icon.png" alt="" /> Report Download:
-                  2023-24</a
+                <a href="/pdfFiles/secretarialAuditReports/annualSecretarialAuditReport/Annual_Secretarial_Compliance_Report_31_03_2023.pdf" class="resultsbtn"
+                  ><img src="/images/pdf-icon.png" alt="" /> Report Download:22-23</a
                 >
               </div>
               <div class="downloadcardlist">
                 <% if (Array.isArray(annualSecretarialAuditReport.recordset) &&
                 annualSecretarialAuditReport.recordset.length > 0)
-                {annualSecretarialAuditReport.recordset.forEach(function(file) {
-                %>
-                <div class="downloadcardpan">
+                {annualSecretarialAuditReport.recordset.forEach(function(file) { %>
+                <div class="downloadcardpan" id="<%=file.year %>">
                   <h3>
                     <%=file.fileName %>
                     <span
-                      ><%=file.quater%> Annual Report of Shakti Pumps (I)
+                      ><%=file.year%> Annual Secretarial Audit Report of Shakti Pumps (I)
                       Ltd.</span
                     >
                   </h3>
                   <a
-                    href="/pdfFiles/financialReports/annualSecretarialAuditReport/<%=file.path%>"
+                    href="/pdfFiles/secretarialAuditReports/annualSecretarialAuditReport/<%=file.path%>"
                     class="readmore"
                     target="_blank"
                     ><img src="/images/pdf-iconwh.png" alt="" /> Download</a
@@ -135,8 +133,14 @@
                 <% })} %>
               </div>
             </div>
+          
           </div>
+      
+      
+
         </div>
+
+        
       </div>
       <!-- .tab_container -->
     </section>
