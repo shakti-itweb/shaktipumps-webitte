@@ -33,7 +33,7 @@
       <div><img src="/images/financial-banner.png" alt="" /></div>
       <div class="container">
         <h2>
-          Share Holding Pattern <br />
+          Financial<br />
           Report
         </h2>
       </div>
@@ -51,40 +51,41 @@
         <!-- partial:index.partial.html -->
         <ul class="tabs">
           <li class="active" rel="tab1">
-            Share Holding Pattern <span>Consectetur Adipiscing Elit</span>
+            Share Holding Pattern 
+            <!-- <span>Consectetur Adipiscing Elit</span> -->
           </li>
         </ul>
         <div class="tab_container">
           <h3 class="d_active tab_drawer_heading" rel="tab1">
-            Share Holding Pattern 
+            Share Holding Pattern
           </h3>
           <div id="tab1" class="tab_content">
             <div class="foundtabinsid financedtlstab">
               <div class="financedtlstitle">
                 <h2>
                   Share Holding Pattern
-                  <span> Annual Report of Shakti Pumps (I) Ltd.</span
-                  >
+                  <span>Share Holding Pattern of Shakti Pumps (I) Ltd.</span>
                 </h2>
-                <a href="#" class="resultsbtn"
+                <!-- <a href="#" class="resultsbtn"
                   ><img src="/images/pdf-icon.png" alt="" /> Report Download:
                   2023-24</a
-                >
+                > -->
               </div>
               <div class="downloadcardlist">
                 <% if (Array.isArray(shareholding.recordset) &&
                 shareholding.recordset.length > 0)
                 {shareholding.recordset.forEach(function(file) { %>
-                <div class="downloadcardpan">
+                <div class="downloadcardpan" id="<%=file.year %>">
                   <h3>
-                    <%=file.fileName %>
-                    <span
-                      ><%=file.quater%> Annual Report of Shakti Pumps (I)
+                    <%=file.fileName %><span
+                      ><%=file.year%> Share Holding Pattern of Shakti Pumps (I)
                       Ltd.</span
                     >
+                    <!-- <span><%=file.year %></span> -->
                   </h3>
+                  <!-- <h3><span><%=file.year %></span></h3> -->
                   <a
-                    href="/pdfFiles/financialReports/shareholding/<%=file.path%>"
+                    href="/pdfFiles/shareHoldingPattern/<%=file.path%>"
                     class="readmore"
                     target="_blank"
                     ><img src="/images/pdf-iconwh.png" alt="" /> Download</a
@@ -95,6 +96,8 @@
             </div>
           </div>
         </div>
+
+        
       </div>
       <!-- .tab_container -->
     </section>
