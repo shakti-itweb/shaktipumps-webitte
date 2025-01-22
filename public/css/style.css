@@ -1575,7 +1575,8 @@ nav ul li a {
 /* General Styles */
 
 .shaktijour {
-  background: url(../images/aboutjourn.png) center 80px no-repeat;
+  /* background: url(../images/aboutjourn.png) center 80px no-repeat; */
+  background: url(../images/Our_Journey.png) center 80px no-repeat;
   background-attachment: scroll;
   background-size: auto;
   background-size: cover;
@@ -7209,3 +7210,8 @@ dl.dropdown dt span:nth-child(3) {
  width: 585px; 
  margin-right: 10px;
 } */
+
+
+
+
+
