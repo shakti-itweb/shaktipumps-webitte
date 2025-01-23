@@ -3,13 +3,13 @@ const db = require("../database/pumpTable");
 const getFinancialReport = async (req, res) => {
     await db.connect();
     const quarterlyResults = await db.request().query(`select * from quarterlyResults ORDER BY year DESC, quater;`);
-    const annualReturns = await db.request().query(`select * from annualReturn`);
-    const relatedPartyDisclosure = await db.request().query(`select * from relatedPartyDisclosure`);
+    const annualReturns = await db.request().query(`select * from annualReturn  order by year desc `);
+    const relatedPartyDisclosure = await db.request().query(`select * from relatedPartyDisclosure `);
     const annualReport = await db.request().query(`select * from annualReport`);
     const BRSR = await db.request().query(`select * from BRSR`);
     const resultRelease = await db.request().query(`select * from resultRelease`);
     const investorPresentation = await db.request().query(`select * from investorPresentation`);
-    const subsidiaryResults = await db.request().query(`select * from subsidiaryResults`);
+    const subsidiaryResults = await db.request().query(`select * from subsidiaryResults order by year desc `);
     const conferenceCall = await db.request().query(`select * from conferenceCall`);
     res.render("financialReports/financial-report",{quarterlyResults,annualReturns,relatedPartyDisclosure,annualReport,BRSR,resultRelease,investorPresentation,subsidiaryResults,conferenceCall});
   };
