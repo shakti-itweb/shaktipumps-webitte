@@ -20,9 +20,9 @@ const getFinancialReport = async (req, res) => {
     res.render("financialReports/chairman-profile");
   };
 
-  const getSubsidiaryResult = async (req, res) => {
+  const getShareholding = async (req, res) => {
     await db.connect();
-    const shareholding = await db.request().query(`select * from shareholding`);
+    const shareholding = await db.request().query(`select * from shareholding order by year DESC`);
     res.render("financialReports/shareHoldingPattern",{shareholding});
   };
 
@@ -90,7 +90,7 @@ const getFinancialReport = async (req, res) => {
   module.exports = {
     getFinancialReport,
     getFinancialReportInfo,
-    getSubsidiaryResult,
+    getShareholding,
     getreportOfCopyGovernance,
     getauditSecratrialReport,
     getcomplianceCertificateReport,
