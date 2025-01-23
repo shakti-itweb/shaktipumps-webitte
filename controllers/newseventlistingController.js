@@ -14,7 +14,7 @@ const getNewsListingInfo = (req, res) => {
 
 const getEventListing = async (req, res) => {
 
-
+// /images/events/
   try {
     await db.connect();
     let allEvents = await db.request().query(`select * from shakti_events`);
