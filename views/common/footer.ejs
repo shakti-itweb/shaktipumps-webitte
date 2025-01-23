@@ -600,7 +600,9 @@
 <script>
   function getval(selectedYear) {
     // Get all divs with class 'downloadcardpan'
-    var reportDivs = document.getElementsByClassName("downloadcardpan");
+    var reportDivs = document.getElementsByClassName("downloadcardpan"); 
+    
+    var reportTr = document.getElementsByClassName("aps"); 
 
     // Loop through each div
     for (var i = 0; i < reportDivs.length; i++) {
@@ -611,8 +613,20 @@
         div.style.display = "block"; // Show the matching div
       } else {
         div.style.display = "none"; // Hide the non-matching divs
-      }
+      }      
     }
+
+    // Loop through each div
+    for (var i = 0; i < reportTr.length; i++) {
+      var tr = reportTr[i];
+      console.log('TR'+tr);
+      // Show all divs if 'ALL' is selected, otherwise hide non-matching years
+      if (selectedYear === "ALL" || tr.id === selectedYear) {
+        tr.style.display = "block"; // Show the matching div
+      } else {
+        tr.style.display = "none"; // Hide the non-matching divs
+      }      
+    }  
   }
 </script>
 
