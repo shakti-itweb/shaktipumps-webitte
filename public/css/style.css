@@ -7244,7 +7244,6 @@ dl.dropdown dt span:nth-child(3) {
 .subsidaryrestpan a {
   height: 44px;
 }
-
 .careerdept .container {
   display: flex;
   justify-content: space-between;
@@ -7277,15 +7276,42 @@ dl.dropdown dt span:nth-child(3) {
   margin-top: 120px;
 }
 .lifeshaktitetimonials h2 {
-  color: var(--Tertiary-Color-Dark-1000, #161e3e);
-
-  /* Font/Title */
+color: var(--Tertiary-Color-Dark-1000, #161e3e);}
+.concalllist{background: #fff;}
+.concalllist thead{background: #161E3E;
+  height: 44px;
+  color: var(--White, #FFF);
   font-family: Poppins;
-  font-size: 48px;
+  font-size: 12px;
   font-style: normal;
-  font-weight: 300;
-  line-height: 56px; /* 116.667% */
-}
+  font-weight: 600;
+  line-height: 15px;}
+  .concalllist thead th{padding-left: 15px;}
+  .concalllist td{padding: 15px;}
+  .concalllist td a.welresultsbtn{
+    width: 150px;
+  height: 42px;
+  line-height: 42px;
+  } 
+  .concalllist td a.welresultsbtn img{margin-right: 5px;}
+  .concalllist td p{
+    color: var(--Tertiary-Color-Dark-1000, #161E3E);
+    /* Font/Poppins Medium 16px */
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px; /* 168.75% */
+  }
+  .concalllist td p span{display: block; color: var(--Tertiary-Color-Dark-400, #9FA4B2);
+
+    /* Font/Poppins Light 11px */
+    font-family: Poppins;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;}
+
 .lifeshaktitetimonials h2 span {
   color: var(--Tertiary-Color-Dark-1000, #161e3e);
   font-family: Poppins;
@@ -7294,6 +7320,20 @@ dl.dropdown dt span:nth-child(3) {
   font-weight: 400;
   line-height: 25px; /* 178.571% */
 }
+
+/* 
+     Concall :: END 
+    >>>>>>> ed56722b308c24f0c94cd90862f95a61680c856c
+    =======
+   Font/Title 
+      font-family: Poppins;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 56px; /* 116.667% 
+    }
+    
+*/
 
 .lifeattrive {
   background: #f8f9fc;
