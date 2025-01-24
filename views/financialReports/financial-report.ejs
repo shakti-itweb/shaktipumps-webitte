@@ -40,7 +40,7 @@
     </section>
     <section class="foundtiontab financialyeartab">
       <div class="container">
-        <div class="selectcat">
+        <div class="selectcat ">
           <select onchange="getval(this.value);">
             <option>ALL</option>
             <option value="2024-2025">2024-2025</option>
@@ -97,10 +97,7 @@
                   Quarterly Results
                   <span>Quarterly Results of Shakti Pumps (I) Ltd.</span>
                 </h2>
-                <!-- <a href="#" class="resultsbtn"
-                  ><img src="/images/pdf-icon.png" alt="" /> Report Download:
-                  2023-24</a
-                > -->
+                <!-- <a href="#" class="resultsbtn"><img src="/images/pdf-icon.png" alt="" /> Report Download: 2023-24</a> -->
               </div>
               <div class="downloadcardlist">
                 <% if (Array.isArray(quarterlyResults.recordset) &&
@@ -311,28 +308,46 @@
                   2023-24</a
                 > -->
               </div>
-              <div class="downloadcardlist">
-                <% if (Array.isArray(conferenceCall.recordset) &&
-                conferenceCall.recordset.length > 0)
-                {conferenceCall.recordset.forEach(function(file) { %>
-                <div class="downloadcardpan" id="<%=file.year %>">
-                  <h3>
-                    <%=file.fileName %>
-                    <span
-                      ><%=file.year%> Conference Call of Shakti Pumps (I)
-                      Ltd.</span
-                    >
-                  </h3>
-                  <a
-                    href="/pdfFiles/financialReports/conferenceCall/<%=file.path%>"
-                    class="readmore"
-                    target="_blank"
-                    ><img src="/images/pdf-iconwh.png" alt="" /> Download</a>
-                    <audio controls>
-                      <source src="/audioFiles/conferenceCall/<%=file.audioPath%>" type="audio/mp3">
-                    </audio>
-                </div>
-                <% })} %>
+              
+              <div class="concalllist ">
+                <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                  <thead>
+                    <th>Description & Date</th>
+                    <th>Audio File</th>
+                    <th>Transcript</th>
+                  </thead>
+                  <tbody>
+                    
+                      <% if (Array.isArray(conferenceCall.recordset) &&
+                      conferenceCall.recordset.length > 0)
+                      {conferenceCall.recordset.forEach(function(file) { %>
+                      
+                        <tr class="aps" id="<%=file.year %>">
+                          
+                            <td>
+                              <p>  <%=file.fileName %>
+                               <span> <%=file.year%> Subsidiary Results of Shakti Pumps (I) Ltd.</span>
+                              </p>
+                            </td>
+                            <td>
+                              <audio controls>
+                                <!-- <source src="/audioFiles/conCall/CHR5020241028155982.mp3" type="audio/ogg"> -->
+                                <source src="/audioFiles/conCall/sample4.mp3" type="audio/mp3">                                
+                              </audio>
+                              <!-- <img src="images/music-play.png" alt=""> -->
+                            </td>
+                            <td>
+                              <a href="#" class="welresultsbtn"><img src="/images/pdf-icon.png" alt=""> Download</a>
+                            </td>
+                          
+                          </tr>
+      
+                    
+                      <% })} %>
+                    
+                  
+                  </tbody>
+                </table>
               </div>
             </div>
           
