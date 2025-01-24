@@ -44,7 +44,7 @@ const getfetchProductsForListing = async (req, res) => {
       return; //This will prevent from multiple rendering
     }else if (pageType == "other") {
         await db.connect();
-        const queryResponse = await db.request().query(`select * from specialApplication`);
+        const queryResponse = await db.request().query(`select * from specialApplication `); 
         console.log(queryResponse);
       res.render("product/product-listing",queryResponse);
       return; //This will prevent from multiple rendering
