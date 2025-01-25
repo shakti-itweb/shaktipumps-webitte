@@ -202,17 +202,8 @@
               </div>
             </div>
             <div class="prodlistrow">
-              <!-- <div class="sucpan">
-                <img src="/images/proulistpic1.png" alt="" />
-                <h3>Submersible Pumps</h3>
-                <h4>SHOS C Series</h4>
-              </div> -->
-
               <% if (Array.isArray(recordset) && recordset.length > 0)
-              {recordset.forEach(function(pump) { %>
-              <!-- <li><%= pump %></li>  -->
-              <!-- <img src="/pumpImages/<%= pump.img1 %>" alt=""> -->
-
+              {recordset.forEach( (pump) => { %>
               <div class="sucpan">
                 <a
                   href="/product/product-details/<%= pump.category %>/<%= pump.id %>"
@@ -221,19 +212,15 @@
                   <h3><%=pump.productName %></h3>
                   <h4><%pump.perfo1 %></h4>
                 </a>
-                <a href="/product/product-details/pumps/1" class="readmore"
+                <a
+                  href="/product/product-details/<%= pump.category %>/<%= pump.id %>"
+                  class="readmore"
                   >Read More</a
                 >
               </div>
-
-              <!-- <div class="sucpan">
-                <img src="/images/proulistpic1.png" alt="" />
-                <h3>Submersible Pumps</h3>
-                <h4>SHOS C Series</h4>
-              </div> -->
-
               <% })} %>
             </div>
+
             <div class="moreloadpro">
               <a href="#" class="readmore">View More 2488 Products</a>
             </div>
@@ -244,3 +231,42 @@
     <%- include('../common/footer.ejs')%>
   </body>
 </html>
+<!-- <div class="prodlistrow">
+    <% if (Array.isArray(recordset) && recordset.length > 0)
+    {recordset.forEach(function(motor) { %>
+    <div class="sucpan">
+      <a
+        href="/product/product-details/<%= motor.category %>/<%= motor.id %>"
+      >
+        <img src="/images/proulistpic1.png" alt="" />
+        <h3><%=motor.productName %></h3>
+        <h4><%motor.perfo1 %></h4>
+      </a>
+      <a href="/product/product-details/motor/<%= motor.id %>" class="readmore"
+        >Read More</a>
+    </div>
+    <% })} %>
+  </div> -->
+
+<!-- <div class="prodlistrow">
+    <% if (Array.isArray(recordset) && recordset.length > 0)
+    {recordset.forEach(function(solarpumps) { %>
+    <div class="sucpan">
+      <a
+        href="/product/product-details/<%= solarpumps.category %>/<%= solarpumps.id %>"
+      >
+        <img src="/images/proulistpic1.png" alt="" />
+        <h3><%=solarpumps.productName %></h3>
+        <h4><%solarpumps.perfo1 %></h4>
+      </a>
+      <a href="/product/product-details/solarpumps/<%= solarpumps.id %>" class="readmore"
+        >Read More</a>
+    </div>
+    <% })} %>
+  </div> -->
+<!-- put it inside the div -->
+<!-- <div class="sucpan">
+                <img src="/images/proulistpic1.png" alt="" />
+                <h3>Submersible Pumps</h3>
+                <h4>SHOS C Series</h4>
+              </div> -->
