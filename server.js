@@ -54,7 +54,6 @@ app.use('/service-support', serviceSupport);
 app.use('/investor-relation',financial);
 
 
-
 app.get('/check',(req,res)=>{
     // res.send("Your are rendreing from HTML");
     // return res.render("test")
