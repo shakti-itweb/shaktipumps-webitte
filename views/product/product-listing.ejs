@@ -185,10 +185,14 @@
             <div class="row">
               <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="protitlebrcam">
-                  <h2>Pumps</h2>
+                  <% if (Array.isArray(recordset)){%>
+                    <h3><%= recordset[0].category.toUpperCase()%></h3>
+                    <%} %>
                   <ul>
                     <li><a href="#">Product</a></li>
-                    <li><a href="#" class="active">Pumps</a></li>
+                    <li>
+                      <a href="#" class="active"><%= recordset[0].category %></a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -203,24 +207,23 @@
             </div>
             <div class="prodlistrow">
               <% if (Array.isArray(recordset) && recordset.length > 0)
-              {recordset.forEach( (pump) => { %>
+              {recordset.forEach( (product) => { %>
               <div class="sucpan">
                 <a
-                  href="/product/product-details/<%= pump.category %>/<%= pump.id %>"
+                  href="/product/product-details/<%= product.category %>/<%= product.id %>"
                 >
                   <img src="/images/proulistpic1.png" alt="" />
-                  <h3><%=pump.productName %></h3>
-                  <h4><%pump.perfo1 %></h4>
+                  <h3><%=product.productName %></h3>
+                  <h4><%product.perfo1 %></h4>
                 </a>
                 <a
-                  href="/product/product-details/<%= pump.category %>/<%= pump.id %>"
+                  href="/product/product-details/<%= product.category %>/<%= product.id %>"
                   class="readmore"
                   >Read More</a
                 >
               </div>
               <% })} %>
             </div>
-
             <div class="moreloadpro">
               <a href="#" class="readmore">View More 2488 Products</a>
             </div>
@@ -231,42 +234,3 @@
     <%- include('../common/footer.ejs')%>
   </body>
 </html>
-<!-- <div class="prodlistrow">
-    <% if (Array.isArray(recordset) && recordset.length > 0)
-    {recordset.forEach(function(motor) { %>
-    <div class="sucpan">
-      <a
-        href="/product/product-details/<%= motor.category %>/<%= motor.id %>"
-      >
-        <img src="/images/proulistpic1.png" alt="" />
-        <h3><%=motor.productName %></h3>
-        <h4><%motor.perfo1 %></h4>
-      </a>
-      <a href="/product/product-details/motor/<%= motor.id %>" class="readmore"
-        >Read More</a>
-    </div>
-    <% })} %>
-  </div> -->
-
-<!-- <div class="prodlistrow">
-    <% if (Array.isArray(recordset) && recordset.length > 0)
-    {recordset.forEach(function(solarpumps) { %>
-    <div class="sucpan">
-      <a
-        href="/product/product-details/<%= solarpumps.category %>/<%= solarpumps.id %>"
-      >
-        <img src="/images/proulistpic1.png" alt="" />
-        <h3><%=solarpumps.productName %></h3>
-        <h4><%solarpumps.perfo1 %></h4>
-      </a>
-      <a href="/product/product-details/solarpumps/<%= solarpumps.id %>" class="readmore"
-        >Read More</a>
-    </div>
-    <% })} %>
-  </div> -->
-<!-- put it inside the div -->
-<!-- <div class="sucpan">
-                <img src="/images/proulistpic1.png" alt="" />
-                <h3>Submersible Pumps</h3>
-                <h4>SHOS C Series</h4>
-              </div> -->
