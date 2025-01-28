@@ -55,7 +55,7 @@ const getFinancialReport = async (req, res) => {
   const getNewsAndAnnouncement = async (req, res) => {
     await db.connect();
     const creditRating = await db.request().query(`select * from creditRating ORDER BY year DESC`);
-    const disclosureUnderReg30 = await db.request().query(`select * from disclosureUnderReg30`);
+    const disclosureUnderReg30 = await db.request().query(`select * from disclosureUnderReg30 ORDER BY year DESC`);
     const newspaperPublication = await db.request().query(`select * from newspaperPublication ORDER BY year DESC`);
     res.render("financialReports/newsAndAnnouncements",{creditRating,disclosureUnderReg30,newspaperPublication});
   };
@@ -93,6 +93,22 @@ const getFinancialReport = async (req, res) => {
     res.json({ info: "financial report information" });
   };
 
+  const getqip = (req, res) => {
+    res.render("financialReports/qip");
+  };
+
+  const getpostalBallot = async (req, res) => {
+    await db.connect();
+    const postalBallot = await db.request().query(`select * from postalBallot ORDER BY year DESC`);
+    res.render("financialReports/postal-ballot",{postalBallot});
+  };
+
+  
+  const getgeneralMeeting = async (req, res) => {
+    await db.connect();
+    const generalMeeting = await db.request().query(`select * from generalMeeting ORDER BY year DESC`);
+    res.render("financialReports/general-meeting",{generalMeeting});
+  };
 
   
   module.exports = {
@@ -108,6 +124,9 @@ const getFinancialReport = async (req, res) => {
     getInvestorEducation,
     getChairmanProfile,
     getGeneralInfo,
-    getpoliciesPrograms
+    getpoliciesPrograms,
+    getqip,
+    getpostalBallot,
+    getgeneralMeeting
   };
   

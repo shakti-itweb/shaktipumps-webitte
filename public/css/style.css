@@ -7478,3 +7478,32 @@ dl.dropdown dt span:nth-child(3) {
 .projectpopdtls a.readmore {
   background: #161e3e;
 }
+
+.qipsec {
+  /* background: linear-gradient(180deg, #e4e4e4 0%, #fff 100%); */
+  background: white;
+  padding-top: 70px;
+}
+
+.qipsec p {
+  color: var(--Tertiary-Color-Dark-Blue-1000, #1f2b4c);
+  text-align: justify;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  padding-top: 20px;
+  margin: 0;
+}
+
+.qipsec h2 span {
+  color: var(--Tertiary-Color-Dark-Blue-1000, #1f2b4c);
+  font-family: Poppins;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 23px;
+  text-transform: capitalize;
+  display: block;
+}
