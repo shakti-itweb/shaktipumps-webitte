@@ -35,8 +35,8 @@
         <div class="row"></div>
         <div class="col-lg-8 col-md-8 col-sm-12">
           <div class="protitlebrcam">
-            <h2><% %></h2>
-            <h2>Submersible Pumps</h2>
+            <h2><%= recordset[0].productName%></h2>
+            <!-- <h2>Submersible Pumps</h2> -->
             <ul>
               <li><a href="#">Product</a></li>
               <li><a href="#">Pumps</a></li>
@@ -67,7 +67,7 @@
         <!-- partial:index.partial.html -->
 
         <ul class="tabs">
-          <li class="active" rel="tab1">Submersible Pumps</li>
+          <li class="active" rel="tab1"><%= recordset[0].productName %></li>
           <li rel="tab2">Positive Displacement Submersible Pumpset</li>
           <li rel="tab3">Inverter Submersible Pumpset</li>
           <li rel="tab4">Shakti Submersible Plug and Play Pump</li>
@@ -379,6 +379,7 @@
 
           <h3 class="tab_drawer_heading" rel="tab3">
             Inverter Submersible Pumpset
+            <%= recordset[0].productName%>
           </h3>
           <div id="tab3" class="tab_content">
             <div class="row">

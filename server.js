@@ -1,6 +1,6 @@
 const express = require('express');
-const env = require("dotenv");
 const app = express();
+const env = require("dotenv");
 const path = require('path');
 const homeRoutes = require('./routes/homeRoutes');
 const aboutRoutes = require('./routes/aboutRoutes');
@@ -67,3 +67,7 @@ const port = process.env.port || 3000;
 app.listen(port,()=>{
     console.log(`You are listining at ${port}`);
 })
+
+
+
+// Shakti Domestic pumps are Ideal for homes to maintain water pressure in taps and for general applications.
