@@ -21,6 +21,11 @@ router.get('/boardMeeting',financialReports.getBoardMeeting);
 router.get('/investorEducation',financialReports.getInvestorEducation);
 router.get('/general-info',financialReports.getGeneralInfo);
 router.get('/policies-programs',financialReports.getpoliciesPrograms);
+router.get('/qip',financialReports.getqip);
+router.get('/postal-ballot',financialReports.getpostalBallot);
+router.get('/general-meeting',financialReports.getgeneralMeeting);
+
+
 
 ///Testing 
 router.get('/info',financialReports.getFinancialReportInfo);
