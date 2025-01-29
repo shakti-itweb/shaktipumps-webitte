@@ -28,6 +28,7 @@
   </head>
   <body>
     <%- include('../common/header.ejs') %>
+
     <section class="about-banner lifeatsktban">
       <div><img src="/images/financial-banner.png" alt="" /></div>
       <div class="container">
@@ -40,24 +41,43 @@
     <section class="foundtiontab financialyeartab">
       <div class="container">
         <div class="selectcat">
-          <select>
-            <option>Select Financial Year</option>
+          <select onchange="getval(this.value);">
+            <option>ALL</option>
+            <option value="2024-2025">2024-2025</option>
+            <option value="2023-2024">2023-2024</option>
+            <option value="2022-2023">2022-2023</option>
+            <option value="2021-2022">2021-2022</option>
+            <option value="2020-2021">2020-2021</option>
+            <option value="2019-2020">2019-2020</option>
+            <option value="2018-2019">2018-2019</option>
+            <option value="2017-2018">2017-2018</option>
+            <option value="2016-2017">2016-2017</option>
+            <option value="2015-2016">2015-2016</option>
+            <option value="2014-2015">2014-2015</option>
+            <option value="2013-2014">2013-2014</option>
+            <option value="2012-2013">2012-2013</option>
+            <option value="2011-2012">2011-2012</option>
           </select>
         </div>
         <!-- partial:index.partial.html -->
         <ul class="tabs">
           <li class="active" rel="tab1">
-            Credit Rating<span>Consectetur Adipiscing Elit</span>
+            Credit Rating
+            <!-- <span>Consectetur Adipiscing Elit</span> -->
           </li>
           <li rel="tab2">
-            Disclosure Under Reg.30<span>Shakti Pumps India Ltd.</span>
+            Disclosure Under Reg.30
+            <!-- <span>Shakti Pumps India Ltd.</span> -->
           </li>
           <li rel="tab3">
-            Newspaper Publication<span>Consectetur Adipiscing Elit</span>
+            Newspaper Publication
+            <!-- <span>Consectetur Adipiscing Elit</span> -->
           </li>
         </ul>
         <div class="tab_container">
-          <h3 class="d_active tab_drawer_heading" rel="tab1">Credit Rating</h3>
+          <h3 class="d_active tab_drawer_heading" rel="tab1">
+            Credit Rating Report
+          </h3>
           <div id="tab1" class="tab_content">
             <div class="foundtabinsid financedtlstab">
               <div class="financedtlstitle">
@@ -65,70 +85,55 @@
                   Credit Rating
                   <span>Credit Rating Report of Shakti Pumps (I) Ltd.</span>
                 </h2>
-                <a href="#" class="resultsbtn"
+                <!-- <a href="/pdfFiles/compilance/complianceCertificate/Compaliance_Certificate_Regulation_40_30March2024.pdf" class="resultsbtn"
                   ><img src="/images/pdf-icon.png" alt="" /> Report Download:
                   2023-24</a
-                >
+                > -->
               </div>
               <div class="downloadcardlist">
-                <div class="downloadcardpan">
-                  <h3>
-                    Select Financial Year
-                    <span>Credit Rating Report of Shakti Pumps (I) Ltd.</span>
-                  </h3>
-                  <a href="#" class="readmore"
-                    ><img src="/images/pdf-iconwh.png" alt="" /> Download</a
-                  >
-                </div>
                 <% if (Array.isArray(creditRating.recordset) &&
                 creditRating.recordset.length > 0)
                 {creditRating.recordset.forEach(function(file) { %>
-                <div class="downloadcardpan">
+                <div class="downloadcardpan" id="<%=file.year %>">
                   <h3>
-                    <%=file.fileName %>
-                    <span
-                      ><%=file.quater%> Annual Report of Shakti Pumps (I)
-                      Ltd.</span
-                    >
+                    <%=file.fileName %><span
+                      ><%=file.year%> Credit Rating Report of Shakti Pumps (I) Ltd.</span >
+                    <!-- <span><%=file.year %></span> -->
                   </h3>
+                  <!-- <h3><span><%=file.year %></span></h3> -->
                   <a
                     href="/pdfFiles/newsAndAnnouncement/creditRating/<%=file.path%>"
                     class="readmore"
                     target="_blank"
-                    ><img src="/images/pdf-iconwh.png" alt="" /> Download</a
+                    ><img src="/images/pdf-iconwh.png" alt="" />Download</a
                   >
                 </div>
                 <% })} %>
               </div>
             </div>
           </div>
-
-          <h3 class="tab_drawer_heading" rel="tab2">
-            Disclosure Under Reg.30 Report
-          </h3>
+          <!-- #tab1 -->
+          <h3 class="tab_drawer_heading" rel="tab2">Disclosure Under Reg.30 Report</h3>
           <div id="tab2" class="tab_content">
             <div class="foundtabinsid financedtlstab">
               <div class="financedtlstitle">
                 <h2>
-                  Disclosure Under Reg.30<span
-                    >Disclosure Under Reg.30 Report of Shakti Pumps (I)
-                    Ltd.</span
-                  >
+                  Disclosure Under Reg.30 Report
+                  <span>Disclosure Under Reg.30 Report of Shakti Pumps (I) Ltd.</span>
                 </h2>
-                <a href="#" class="resultsbtn"
-                  ><img src="/images/pdf-icon.png" alt="" /> Report Download:
-                  2023-24</a
-                >
+                <!-- <a href="pdfFiles/compilance/reconciliationCertificate/2023.pdf" class="resultsbtn"
+                  ><img src="/images/pdf-icon.png" alt="" /> Report Download:22-23</a
+                > -->
               </div>
               <div class="downloadcardlist">
                 <% if (Array.isArray(disclosureUnderReg30.recordset) &&
                 disclosureUnderReg30.recordset.length > 0)
                 {disclosureUnderReg30.recordset.forEach(function(file) { %>
-                <div class="downloadcardpan">
+                <div class="downloadcardpan" id="<%=file.year %>">
                   <h3>
                     <%=file.fileName %>
                     <span
-                      ><%=file.year%> Annual Report of Shakti Pumps (I)
+                      ><%=file.year%> Disclosure Under Reg.30 Report of Shakti Pumps (I)
                       Ltd.</span
                     >
                   </h3>
@@ -142,30 +147,30 @@
                 <% })} %>
               </div>
             </div>
+          
           </div>
-          <h3 class="tab_drawer_heading" rel="tab3">Newspaper Publication</h3>
+      
+          <h3 class="tab_drawer_heading" rel="tab3">Newspaper Publication Report</h3>
           <div id="tab3" class="tab_content">
             <div class="foundtabinsid financedtlstab">
               <div class="financedtlstitle">
                 <h2>
-                  Newspaper Publication<span>
-                    Newspaper Publication of Shakti Pumps (I) Ltd.</span
-                  >
+                  Newspaper Publication
+                  <span>Newspaper Publication Report of Shakti Pumps (I) Ltd.</span>
                 </h2>
-                <a href="#" class="resultsbtn"
-                  ><img src="/images/pdf-icon.png" alt="" /> Report Download:
-                  2023-24</a
-                >
+                <!-- <a href="pdfFiles/compilance/reconciliationCertificate/2023.pdf" class="resultsbtn"
+                  ><img src="/images/pdf-icon.png" alt="" /> Report Download:22-23</a
+                > -->
               </div>
               <div class="downloadcardlist">
                 <% if (Array.isArray(newspaperPublication.recordset) &&
                 newspaperPublication.recordset.length > 0)
                 {newspaperPublication.recordset.forEach(function(file) { %>
-                <div class="downloadcardpan">
+                <div class="downloadcardpan" id="<%=file.year %>">
                   <h3>
                     <%=file.fileName %>
                     <span
-                      ><%=file.year%> Annual Report of Shakti Pumps (I)
+                      ><%=file.year%> Newspaper Publication Report of Shakti Pumps (I)
                       Ltd.</span
                     >
                   </h3>
@@ -179,10 +184,12 @@
                 <% })} %>
               </div>
             </div>
+          
           </div>
+
         </div>
-        <!-- .tab_container -->
       </div>
+      <!-- .tab_container -->
     </section>
     <%- include('../common/footer.ejs') %>
   </body>
