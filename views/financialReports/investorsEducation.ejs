@@ -28,6 +28,7 @@
   </head>
   <body>
     <%- include('../common/header.ejs') %>
+
     <section class="about-banner lifeatsktban">
       <div><img src="/images/financial-banner.png" alt="" /></div>
       <div class="container">
@@ -40,84 +41,103 @@
     <section class="foundtiontab financialyeartab">
       <div class="container">
         <div class="selectcat">
-          <select>
-            <option>Select Financial Year</option>
+          <select onchange="getval(this.value);">
+            <option>ALL</option>
+            <option value="2024-2025">2024-2025</option>
+            <option value="2023-2024">2023-2024</option>
+            <option value="2022-2023">2022-2023</option>
+            <option value="2021-2022">2021-2022</option>
+            <option value="2020-2021">2020-2021</option>
+            <option value="2019-2020">2019-2020</option>
+            <option value="2018-2019">2018-2019</option>
+            <option value="2017-2018">2017-2018</option>
+            <option value="2016-2017">2016-2017</option>
+            <option value="2015-2016">2015-2016</option>
+            <option value="2014-2015">2014-2015</option>
+            <option value="2013-2014">2013-2014</option>
+            <option value="2012-2013">2012-2013</option>
+            <option value="2011-2012">2011-2012</option>
+            <option value="2010-2011">2010-2011</option>
+            <option value="2009-2010">2009-2010</option>
+            <option value="2008-2009">2008-2009</option>
+
           </select>
         </div>
         <!-- partial:index.partial.html -->
         <ul class="tabs">
           <li class="active" rel="tab1">
-            Unpaid Dividend Investors<span>Consectetur Adipiscing Elit</span>
+            Unpaid Dividend Investors
+            <!-- <span>Consectetur Adipiscing Elit</span> -->
           </li>
-          <li rel="tab2">IEPF-Shares<span>Shakti Pumps India Ltd.</span></li>
+          <li rel="tab2">
+            IEPF-Shares
+            <!-- <span>Shakti Pumps India Ltd.</span> -->
+          </li>
           <li rel="tab3">
-            IEPF-Amount<span>Consectetur Adipiscing Elit</span>
+            IEPF-Amount
+            <!-- <span>Consectetur Adipiscing Elit</span> -->
           </li>
         </ul>
         <div class="tab_container">
-          <h3 class="d_active tab_drawer_heading" rel="tab1">Credit Rating</h3>
+          <h3 class="d_active tab_drawer_heading" rel="tab1">
+            Unpaid Dividend Investors Report
+          </h3>
           <div id="tab1" class="tab_content">
             <div class="foundtabinsid financedtlstab">
               <div class="financedtlstitle">
                 <h2>
                   Unpaid Dividend Investors
-                  <span
-                    >Unpaid Dividend Investors Report of Shakti Pumps (I)
-                    Ltd.</span
-                  >
+                  <span>Unpaid Dividend Investors Report of Shakti Pumps (I) Ltd.</span>
                 </h2>
-                <a href="#" class="resultsbtn"
+                <!-- <a href="/pdfFiles/compilance/complianceCertificate/Compaliance_Certificate_Regulation_40_30March2024.pdf" class="resultsbtn"
                   ><img src="/images/pdf-icon.png" alt="" /> Report Download:
                   2023-24</a
-                >
+                > -->
               </div>
               <div class="downloadcardlist">
                 <% if (Array.isArray(unpaidDividendInvestors.recordset) &&
                 unpaidDividendInvestors.recordset.length > 0)
                 {unpaidDividendInvestors.recordset.forEach(function(file) { %>
-                <div class="downloadcardpan">
+                <div class="downloadcardpan" id="<%=file.year %>">
                   <h3>
-                    <%=file.fileName %>
-                    <span
-                      ><%=file.quater%> Annual Report of Shakti Pumps (I)
-                      Ltd.</span
-                    >
+                    <%=file.fileName %><span
+                      ><%=file.year%> Unpaid Dividend Investors Report of Shakti Pumps (I) Ltd.</span >
+                    <!-- <span><%=file.year %></span> -->
                   </h3>
+                  <!-- <h3><span><%=file.year %></span></h3> -->
                   <a
                     href="/pdfFiles/investorEducation/unpaidDividendInvestors/<%=file.path%>"
                     class="readmore"
                     target="_blank"
-                    ><img src="/images/pdf-iconwh.png" alt="" /> Download</a
+                    ><img src="/images/pdf-iconwh.png" alt="" />Download</a
                   >
                 </div>
                 <% })} %>
               </div>
             </div>
           </div>
-
+          <!-- #tab1 -->
           <h3 class="tab_drawer_heading" rel="tab2">IEPF-Shares Report</h3>
           <div id="tab2" class="tab_content">
             <div class="foundtabinsid financedtlstab">
               <div class="financedtlstitle">
                 <h2>
-                  IEPF-Shares<span
-                    >IEPF-Shares Report of Shakti Pumps (I) Ltd.</span
-                  >
+                  IEPF-Shares Report
+                  <span>IEPF-Shares Report of Shakti Pumps (I) Ltd.</span>
                 </h2>
-                <a href="#" class="resultsbtn"
-                  ><img src="/images/pdf-icon.png" alt="" /> Report Download:
-                  2023-24</a
-                >
+                <!-- <a href="pdfFiles/compilance/reconciliationCertificate/2023.pdf" class="resultsbtn"
+                  ><img src="/images/pdf-icon.png" alt="" /> Report Download:22-23</a
+                > -->
               </div>
               <div class="downloadcardlist">
                 <% if (Array.isArray(IEPFShares.recordset) &&
                 IEPFShares.recordset.length > 0)
                 {IEPFShares.recordset.forEach(function(file) { %>
-                <div class="downloadcardpan">
+                <div class="downloadcardpan" id="<%=file.year %>">
                   <h3>
                     <%=file.fileName %>
                     <span
-                      ><%=file.year%> Annual Report of Shakti Pumps (I)
+                      ><%=file.year%> IEPF-Shares Report of Shakti Pumps (I)
                       Ltd.</span
                     >
                   </h3>
@@ -131,28 +151,30 @@
                 <% })} %>
               </div>
             </div>
+          
           </div>
-          <h3 class="tab_drawer_heading" rel="tab3">IEPF-Amount</h3>
+      
+          <h3 class="tab_drawer_heading" rel="tab3">IEPF-Amount Report</h3>
           <div id="tab3" class="tab_content">
             <div class="foundtabinsid financedtlstab">
               <div class="financedtlstitle">
                 <h2>
-                  IEPF-Amount<span> IEPF-Amount of Shakti Pumps (I) Ltd.</span>
+                  IEPF-Amount
+                  <span>IEPF-Amount Report of Shakti Pumps (I) Ltd.</span>
                 </h2>
-                <a href="#" class="resultsbtn"
-                  ><img src="/images/pdf-icon.png" alt="" /> Report Download:
-                  2023-24</a
-                >
+                <!-- <a href="pdfFiles/compilance/reconciliationCertificate/2023.pdf" class="resultsbtn"
+                  ><img src="/images/pdf-icon.png" alt="" /> Report Download:22-23</a
+                > -->
               </div>
               <div class="downloadcardlist">
                 <% if (Array.isArray(IEPFAmount.recordset) &&
                 IEPFAmount.recordset.length > 0)
                 {IEPFAmount.recordset.forEach(function(file) { %>
-                <div class="downloadcardpan">
+                <div class="downloadcardpan" id="<%=file.year %>">
                   <h3>
                     <%=file.fileName %>
                     <span
-                      ><%=file.year%> Annual Report of Shakti Pumps (I)
+                      ><%=file.year%> IEPF-Amount Report of Shakti Pumps (I)
                       Ltd.</span
                     >
                   </h3>
@@ -166,10 +188,12 @@
                 <% })} %>
               </div>
             </div>
+          
           </div>
+
         </div>
-        <!-- .tab_container -->
       </div>
+      <!-- .tab_container -->
     </section>
     <%- include('../common/footer.ejs') %>
   </body>

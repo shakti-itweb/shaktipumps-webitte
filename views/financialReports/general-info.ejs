@@ -29,14 +29,16 @@
   <body>
     <%- include('../common/header.ejs') %>
 
-    <section class="about-banner lifeatsktban">
-      <div><img src="/images/financial-banner.png" alt="" /></div>
+    <!-- heading general info  -->
+    <section class="shaktivideobann">
       <div class="container">
-        <h2>
-          General <br />
-          Information
-        </h2>
+          <div class="row">
+              <div class="col-lg-12">
+                  <h2>General Information</h2>
+              </div>
+          </div>
       </div>
+      
     </section>
 
     <section class="foundtiontab financialyeartab">
@@ -157,940 +159,291 @@
                 const teamCardsContainer =
                   document.getElementById("team-cards");
 
-                teamMembers.forEach((member) => {
-                  const teamCard = document.createElement("div");
-                  teamCard.classList.add(
-                    "col-lg-4",
-                    "col-md-6",
-                    "col-sm-12",
-                    "mempan"
-                  );
-                  teamCard.innerHTML = `
-                        <img src="${member.image}" alt="${member.name}">
-                        <h3>${member.name} <span>${member.title}</span></h3>
-                        <img src="/images/plus-icon.png" alt="plus icon" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup${member.id}">
-                    `;
-                  teamCardsContainer.appendChild(teamCard);
 
-                  const modal = document.createElement("div");
-                  modal.classList.add("modal", "fade");
-                  modal.id = `teampopup${member.id}`;
-                  modal.setAttribute("data-bs-backdrop", "static");
-                  modal.setAttribute("data-bs-keyboard", "false");
-                  modal.setAttribute("tabindex", "-1");
-                  modal.setAttribute(
-                    "aria-labelledby",
-                    `teampopup${member.id}`
-                  );
-                  modal.setAttribute("aria-hidden", "true");
-                  modal.innerHTML = `
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                                    <img src="/images/pop-close.png" alt="Close">
-                                </button>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <div class="col-lg-5 col-md-5 col-sm-12 teampropic">
-                                            <img src="${member.modalImage}" alt="Team Member Image">
-                                        </div>
-                                        <div class="col-lg-7 col-md-7 col-sm-12 teampopdtls">
-                                            <h3>${member.name} <span>${member.title}</span></h3>
-                                            <p>${member.description}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    `;
-                  document.body.appendChild(modal);
-                });
-              }
-
-              window.onload = function () {
-                generateTeamMembers();
-              };
-            </script>
-          </div>
-        </section>
-
-        <section class="ourvalue">
-          <div class="container" data-animation="fadeInUp">
-            <h2>Our Committee</h2>
-            <ul class="tabs">
-              <li class="active" rel="tab1">Audit</li>
-              <li rel="tab2">Nomination & Remuneration</li>
-              <li rel="tab3">Treasury</li>
-              <li rel="tab4">Stakeholder Relationship</li>
-              <li rel="tab5">Risk Management</li>
-              <li rel="tab6">Corporate Social Responsibility</li>
-            </ul>
-            <div class="tab_container">
-              <h3 class="d_active tab_drawer_heading" rel="tab1">Audit</h3>
-              <div id="tab1" class="tab_content">
-                <div class="managerlists membtab">
-                  <div class="mempan">
-                    <img src="/images/dummy-pic.png" alt="" />
-                    <h3>Mr. Ravi Patidar <span>Company Secretary</span></h3>
-                    <img
-                      src="/images/plus-icon.png"
-                      alt=""
-                      class="popicon"
-                      data-bs-toggle="modal"
-                      data-bs-target="#teampopup"
-                    />
-                  </div>
-                  <div class="mempan">
-                    <img src="/images/dummy-pic.png" alt="" />
-                    <h3>
-                      Dr Chinmay Jain <span>Chief Technical Officer</span>
-                    </h3>
-                    <img
-                      src="/images/plus-icon.png"
-                      alt=""
-                      class="popicon"
-                      data-bs-toggle="modal"
-                      data-bs-target="#teampopup"
-                    />
-                  </div>
-                  <div class="mempan">
-                    <img src="/images/dummy-pic.png" alt="" />
-                    <h3>
-                      Prof. BM Sharma
-                      <span>Overall Head (Operations & HR)</span>
-                    </h3>
-                    <img
-                      src="/images/plus-icon.png"
-                      alt=""
-                      class="popicon"
-                      data-bs-toggle="modal"
-                      data-bs-target="#teampopup"
-                    />
-                  </div>
-                </div>
-              </div>
-              <!- #tab1 ->
-              <h3 class="tab_drawer_heading" rel="tab2">
-                Nomination & Remuneration
-              </h3>
-              <div id="tab2" class="tab_content">
-                <div class="managerlists membtab">
-                  <div class="mempan">
-                    <img src="/images/dummy-pic.png" alt="" />
-                    <h3>Mr. Ravi Patidar <span>Company Secretary</span></h3>
-                    <img
-                      src="/images/plus-icon.png"
-                      alt=""
-                      class="popicon"
-                      data-bs-toggle="modal"
-                      data-bs-target="#teampopup"
-                    />
-                  </div>
-                  <div class="mempan">
-                    <img src="/images/dummy-pic.png" alt="" />
-                    <h3>
-                      Dr Chinmay Jain <span>Chief Technical Officer</span>
-                    </h3>
-                    <img
-                      src="/images/plus-icon.png"
-                      alt=""
-                      class="popicon"
-                      data-bs-toggle="modal"
-                      data-bs-target="#teampopup"
-                    />
-                  </div>
-                  <div class="mempan">
-                    <img src="/images/dummy-pic.png" alt="" />
-                    <h3>
-                      Prof. BM Sharma
-                      <span>Overall Head (Operations & HR)</span>
-                    </h3>
-                    <img
-                      src="/images/plus-icon.png"
-                      alt=""
-                      class="popicon"
-                      data-bs-toggle="modal"
-                      data-bs-target="#teampopup"
-                    />
-                  </div>
-                </div>
-              </div>
-              <!- #tab2 ->
-              <h3 class="tab_drawer_heading" rel="tab3">Treasury</h3>
-              <div id="tab3" class="tab_content">
-                <div class="managerlists membtab">
-                  <div class="mempan">
-                    <img src="/images/dummy-pic.png" alt="" />
-                    <h3>Mr. Ravi Patidar <span>Company Secretary</span></h3>
-                    <img
-                      src="/images/plus-icon.png"
-                      alt=""
-                      class="popicon"
-                      data-bs-toggle="modal"
-                      data-bs-target="#teampopup"
-                    />
-                  </div>
-                  <div class="mempan">
-                    <img src="/images/dummy-pic.png" alt="" />
-                    <h3>
-                      Dr Chinmay Jain <span>Chief Technical Officer</span>
-                    </h3>
-                    <img
-                      src="/images/plus-icon.png"
-                      alt=""
-                      class="popicon"
-                      data-bs-toggle="modal"
-                      data-bs-target="#teampopup"
-                    />
-                  </div>
-                  <div class="mempan">
-                    <img src="/images/dummy-pic.png" alt="" />
-                    <h3>
-                      Prof. BM Sharma
-                      <span>Overall Head (Operations & HR)</span>
-                    </h3>
-                    <img
-                      src="/images/plus-icon.png"
-                      alt=""
-                      class="popicon"
-                      data-bs-toggle="modal"
-                      data-bs-target="#teampopup"
-                    />
-                  </div>
-                </div>
-              </div>
-              <!- #tab3 ->
-              <h3 class="tab_drawer_heading" rel="tab4">
-                Stakeholder Relationship
-              </h3>
-              <div id="tab4" class="tab_content">
-                <div class="managerlists membtab">
-                  <div class="mempan">
-                    <img src="/images/dummy-pic.png" alt="" />
-                    <h3>Mr. Ravi Patidar <span>Company Secretary</span></h3>
-                    <img
-                      src="/images/plus-icon.png"
-                      alt=""
-                      class="popicon"
-                      data-bs-toggle="modal"
-                      data-bs-target="#teampopup"
-                    />
-                  </div>
-                  <div class="mempan">
-                    <img src="/images/dummy-pic.png" alt="" />
-                    <h3>
-                      Dr Chinmay Jain <span>Chief Technical Officer</span>
-                    </h3>
-                    <img
-                      src="/images/plus-icon.png"
-                      alt=""
-                      class="popicon"
-                      data-bs-toggle="modal"
-                      data-bs-target="#teampopup"
-                    />
-                  </div>
-                  <div class="mempan">
-                    <img src="/images/dummy-pic.png" alt="" />
-                    <h3>
-                      Prof. BM Sharma
-                      <span>Overall Head (Operations & HR)</span>
-                    </h3>
-                    <img
-                      src="/images/plus-icon.png"
-                      alt=""
-                      class="popicon"
-                      data-bs-toggle="modal"
-                      data-bs-target="#teampopup"
-                    />
-                  </div>
-                </div>
-              </div>
-              <!- #tab4 ->
-              <h3 class="tab_drawer_heading" rel="tab5">Risk Management</h3>
-              <div id="tab5" class="tab_content">
-                <div class="managerlists membtab">
-                  <div class="mempan">
-                    <img src="/images/dummy-pic.png" alt="" />
-                    <h3>Mr. Ravi Patidar <span>Company Secretary</span></h3>
-                    <img
-                      src="/images/plus-icon.png"
-                      alt=""
-                      class="popicon"
-                      data-bs-toggle="modal"
-                      data-bs-target="#teampopup"
-                    />
-                  </div>
-                  <div class="mempan">
-                    <img src="/images/dummy-pic.png" alt="" />
-                    <h3>
-                      Dr Chinmay Jain <span>Chief Technical Officer</span>
-                    </h3>
-                    <img
-                      src="/images/plus-icon.png"
-                      alt=""
-                      class="popicon"
-                      data-bs-toggle="modal"
-                      data-bs-target="#teampopup"
-                    />
-                  </div>
-                  <div class="mempan">
-                    <img src="/images/dummy-pic.png" alt="" />
-                    <h3>
-                      Prof. BM Sharma
-                      <span>Overall Head (Operations & HR)</span>
-                    </h3>
-                    <img
-                      src="/images/plus-icon.png"
-                      alt=""
-                      class="popicon"
-                      data-bs-toggle="modal"
-                      data-bs-target="#teampopup"
-                    />
-                  </div>
-                </div>
-              </div>
-              <!- #tab5 ->
-              <h3 class="tab_drawer_heading" rel="tab6">
-                Corporate Social Responsibility
-              </h3>
-              <div id="tab6" class="tab_content">
-                <div class="managerlists membtab">
-                  <div class="mempan">
-                    <img src="/images/dummy-pic.png" alt="" />
-                    <h3>Mr. Ravi Patidar <span>Company Secretary</span></h3>
-                    <img
-                      src="/images/plus-icon.png"
-                      alt=""
-                      class="popicon"
-                      data-bs-toggle="modal"
-                      data-bs-target="#teampopup"
-                    />
-                  </div>
-                  <div class="mempan">
-                    <img src="/images/dummy-pic.png" alt="" />
-                    <h3>
-                      Dr Chinmay Jain <span>Chief Technical Officer</span>
-                    </h3>
-                    <img
-                      src="/images/plus-icon.png"
-                      alt=""
-                      class="popicon"
-                      data-bs-toggle="modal"
-                      data-bs-target="#teampopup"
-                    />
-                  </div>
-                  <div class="mempan">
-                    <img src="/images/dummy-pic.png" alt="" />
-                    <h3>
-                      Prof. BM Sharma
-                      <span>Overall Head (Operations & HR)</span>
-                    </h3>
-                    <img
-                      src="/images/plus-icon.png"
-                      alt=""
-                      class="popicon"
-                      data-bs-toggle="modal"
-                      data-bs-target="#teampopup"
-                    />
-                  </div>
-                </div>
-              </div>
-              <!- #tab6 ->
-            </div>
-          </div>
-        </section>
-
-        <section class="ourvalue mediasoacial">
-          <div class="container" data-animation="fadeInUp">
-            <h2>Other Information</h2>
-            <ul class="tabssinfo">
-              <li class="active" rel="tab11">
-                Terms of Appointment of Independent Director
-              </li>
-              <li rel="tab22">Transfer of shares to IEPF</li>
-              <li rel="tab33">Resignation Letter</li>
-            </ul>
-            <div class="tab_container">
-              <h3 class="d_active tab_drawer_heading" rel="tab11">
-                Terms of Appointment of Independent Director
-              </h3>
-              <div id="tab11" class="tab_contentsinfo">
-                <div class="foundtabinsid financedtlstab">
-                  <div class="downloadcardlist">
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!- #tab1 ->
-              <h3 class="tab_drawer_heading" rel="tab22">
-                Transfer of shares to IEPF
-              </h3>
-              <div id="tab22" class="tab_contentsinfo">
-                <div class="foundtabinsid financedtlstab">
-                  <div class="downloadcardlist">
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!- #tab2 ->
-              <h3 class="tab_drawer_heading" rel="tab33">Resignation Letter</h3>
-              <div id="tab33" class="tab_contentsinfo">
-                <div class="foundtabinsid financedtlstab">
-                  <div class="downloadcardlist">
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                    <div class="downloadcardpan subsidaryrestpan">
-                      <h3>SESPL Result 2022-23 Q4</h3>
-                      <a href="#" class="readmore"
-                        ><img src="assets/images/pdf-iconwh.png" alt="" />
-                        Download</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!- #tab3 ->
-            </div>
-          </div>
-        </section>
-      </div>
-      <!-- .tab_container -->
-    </section>
-    <%- include('../common/footer.ejs') %>
-  </body>
-</html>
-
-<!-- <div class="tab_container">
-    <h3 class="d_active tab_drawer_heading" rel="tab1">
-      General Information
-    </h3>
-    <div id="tab1" class="tab_content">
-      <div class="foundtabinsid financedtlstab">
-        <div class="financedtlstitle">
-          <h2>
-              General Information
-            <span>Share Holding Pattern of Shakti Pumps (I) Ltd.</span>
-          </h2>
-          <!- <a href="#" class="resultsbtn"
-            ><img src="/images/pdf-icon.png" alt="" /> Report Download:
-            2023-24</a
-          > ->
+  <!-- directorlists -->
+  <section class="boarddirector">
+    <div class="container">
+      <h2>Board of Directors</h2>
+      <div class="directorlists">
+        <div class="mempan">
+          <img src="/images/member1.png" alt="">
+          <h3>Mr. Dinesh Patidar <span>Chairman & Director</span></h3>
+          <img src="/images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup">
         </div>
-        <div class="downloadcardlist">
-          <% if (Array.isArray(generalInfo.recordset) &&
-          generalInfo.recordset.length > 0)
-          {generalInfo.recordset.forEach(function(file) { %>
-          <div class="downloadcardpan" id="<%=file.year %>">
-            <h3>
-              <%=file.fileName %><span
-                ><%=file.year%> Share Holding Pattern of Shakti Pumps (I)
-                Ltd.</span
-              >
-              <!- <span><%=file.year %></span> ->
-            </h3>
-            <!- <h3><span><%=file.year %></span></h3> ->
-            <a
-              href="/pdfFiles/shareHoldingPattern/<%=file.path%>"
-              class="readmore"
-              target="_blank"
-              ><img src="/images/pdf-iconwh.png" alt="" /> Download</a
-            >
-          </div>
-          <% })} %>
+        <div class="mempan">
+          <img src="/images/member2.png" alt="">
+          <h3>Mr. Ramesh Patidar <span>Managing Director</span></h3>
+          <img src="/images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup">
+        </div>
+        <div class="mempan">
+          <img src="/images/member3.png" alt="">
+          <h3>Mr. Sunil Patidar <span>Executive Director</span></h3>
+          <img src="/images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup">
+        </div>
+        <div class="mempan">
+          <img src="/images/member4.png" alt="">
+          <h3>Mr. Ashwin Bhootda <span>Whole Time Director</span></h3>
+          <img src="/images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup">
+        </div>
+        <div class="mempan">
+          <img src="/images/member5.png" alt="">
+          <h3>Mr. Hirabhai Somabhai Patel <span>Independent Director</span></h3>
+          <img src="/images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup">
+        </div>
+        <div class="mempan">
+          <img src="/images/member6.png" alt="">
+          <h3>Mr. Bhim Singh <span>Independent Director</span></h3>
+          <img src="/images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup">
+        </div>
+        <div class="mempan">
+          <img src="/images/member7.png" alt="">
+          <h3>Mr. V.S.S. Pavan Kumar Hari <span>Independent Director</span></h3>
+          <img src="/images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup">
+        </div>
+        <div class="mempan">
+          <img src="/images/member8.png" alt="">
+          <h3>Mr. Keyur Bipinchandra Thaker <span>Executive Director</span></h3>
+          <img src="/images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup">
+        </div>
+        <div class="mempan">
+          <img src="/images/member9.png" alt="">
+          <h3>Mrs. Nishtha Neema <span>Independent Director</span></h3>
+          <img src="/images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup">
+        </div>
+        <div class="mempan">
+          <img src="/images/" alt="">
+          <h3>Mr. Ramakrishna Sataluri <span>Non-Executive & Non-Independent Director</span></h3>
+          <img src="/images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup">
         </div>
       </div>
     </div>
-  </div> -->
+  </section>
+
+  <!-- ourvalue section -->
+  <section class="ourvalue">
+    <div class="container"  data-animation="fadeInUp">
+      <h2>Our Committee</h2>
+      <!-- partial:index.partial.html -->
+    <ul class="tabs">
+      <li class="active" rel="tab1">Audit</li>
+      <li rel="tab2">Nomination & Remuneration</li>
+      <li rel="tab3">Treasury</li>
+      <li rel="tab4">Stakeholder Relationship</li>
+      <li rel="tab5">Risk Management</li>
+      <li rel="tab6">Corporate Social Responsibility</li>
+    </ul>
+    <div class="tab_container">
+      <h3 class="d_active tab_drawer_heading" rel="tab1">Audit</h3>
+      <div id="tab1" class="tab_content">
+        <div class="managerlists membtab">
+          <div class="mempan">
+            <!-- <img src=" /images/dummy-pic.png" alt=""> -->
+            <h3>Mr. Keyur Bipinchandra Thaker <span>Chair Person</span></h3>
+            <!-- <img src="/images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup"> -->
+          </div>
+          <div class="mempan">
+            <!-- <img src=" /images/dummy-pic.png" alt=""> -->
+            <h3>Mr. Ramesh Patidar	 <span>Member   </span></h3>
+            <!-- <img src=" /images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup"> -->
+          </div>
+          <div class="mempan">
+            <!-- <img src=" /images/dummy-pic.png" alt=""> -->
+            <h3>Mr. V.S.S. Pavan Kumar Hari <span> Member     </span></h3>
+            <!-- <img src=" /images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup"> -->
+          </div>
+        </div>
+      </div>
+    <!-- #tab1 -->
+    <h3 class="tab_drawer_heading" rel="tab2">Nomination & Remuneration</h3>
+    <div id="tab2" class="tab_content">
+      <div class="managerlists membtab">
+        <div class="mempan">
+          <!-- <img src=" /images/dummy-pic.png" alt=""> -->
+          <h3>Mr. Keyur Bipinchandra Thaker <span>Chair Person </span></h3>
+          <!-- <img src=" /images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup"> -->
+        </div>
+        <div class="mempan">
+          <!-- <img src=" /images/dummy-pic.png" alt=""> -->
+          <h3>Mr. V.S.S. Pavan Kumar Hari <span>Member</span></h3>
+          <!-- <img src=" /images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup"> -->
+        </div>
+        <div class="mempan">
+          <!-- <img src=" /images/dummy-pic.png" alt=""> -->
+          <h3>Mr. Ramakrishna Sataluri <span>Member</span></h3>
+          <!-- <img src=" /images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup"> -->
+        </div>
+      </div>
+    </div>
+    <!-- #tab2 -->
+    <h3 class="tab_drawer_heading" rel="tab3">Treasury</h3>
+    <div id="tab3" class="tab_content">
+      <div class="managerlists membtab">
+        <div class="mempan">
+          <!-- <img src=" /images/dummy-pic.png" alt=""> -->
+          <h3>Mr. Ramesh Patidar <span>Chair Person          </span></h3>
+          <!-- <img src=" /images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup"> -->
+        </div>
+        <div class="mempan">
+          <!-- <img src=" /images/dummy-pic.png" alt=""> -->
+          <h3>Mr. Dinesh Patidar <span> Member</span></h3>
+          <!-- <img src=" /images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup"> -->
+        </div>
+        <div class="mempan">
+          <!-- <img src=" /images/dummy-pic.png" alt=""> -->
+          <h3>Mr. Keyur Bipinchandra Thaker	 <span>Member</span></h3>
+          <!-- <img src=" /images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup"> -->
+        </div>
+      </div>
+    </div>
+    <!-- #tab3 -->
+    <h3 class="tab_drawer_heading" rel="tab4">Stakeholder Relationship</h3>
+    <div id="tab4" class="tab_content">
+      <div class="managerlists membtab">
+        <div class="mempan">
+          <!-- <img src="/images/dummy-pic.png" alt=""> -->
+          <h3>Mr. Keyur Bipinchandra Thaker	 <span>Chair Person</span></h3>
+          <!-- <img src="/images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup"> -->
+        </div>
+        <div class="mempan">
+          <!-- <img src="/images/dummy-pic.png" alt=""> -->
+          <h3>Mr. Ashwin Bhootda<span>Member</span></h3>
+          <!-- <img src="/images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup"> -->
+        </div>
+        <div class="mempan">
+          <!-- <img src="/images/dummy-pic.png" alt=""> -->
+          <h3>Mr. V.S.S. Pavan Kumar Hari <span>Member</span></h3>
+          <!-- <img src="/images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup"> -->
+        </div>
+      </div>
+    </div>
+    <!-- #tab4 --> 
+    <h3 class="tab_drawer_heading" rel="tab5">Risk Management</h3>
+    <div id="tab5" class="tab_content">
+      <div class="managerlists membtab">
+        <div class="mempan">
+          <!-- <img src="/images/dummy-pic.png" alt=""> -->
+          <h3>Mr. Ramesh Patidar	<span>Chair Person</span></h3>
+          <!-- <img src="/images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup"> -->
+        </div>
+        <div class="mempan">
+          <!-- <img src="/images/dummy-pic.png" alt=""> -->
+          <h3>Mr. V.S.S. Pavan Kumar Hari<span>Member</span></h3>
+          <!-- <img src="/images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup"> -->
+        </div>
+        <div class="mempan">
+          <!-- <img src="/images/dummy-pic.png" alt=""> -->
+          <h3>Mr. Ashwin Bhootda	<span>Member</span></h3>
+          <!-- <img src="/images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup"> -->
+        </div>
+      </div>
+    </div>
+    <!-- #tab5 --> 
+    <h3 class="tab_drawer_heading" rel="tab6">Corporate Social Responsibility</h3>
+    <div id="tab6" class="tab_content">
+      <div class="managerlists membtab">
+        <div class="mempan">
+          <!-- <img src="/images/dummy-pic.png" alt=""> -->
+          <h3>Mr. Ashwin Bhootda	<span>Chair Person</span></h3>
+          <!-- <img src=" /images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup"> -->
+        </div>
+        <div class="mempan">
+          <!-- <img src="/images/dummy-pic.png" alt=""> -->
+          <h3>Mr. Keyur Bipinchandra Thaker	 <span>Member</span></h3>
+          <!-- <img src=" /images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup"> -->
+        </div>
+        <div class="mempan">
+          <!-- <img src="/images/dummy-pic.png" alt=""> -->
+          <h3>Mr. V.S.S. Pavan Kumar Hari	 <span>Member</span></h3>
+          <!-- <img src="/images/plus-icon.png" alt="" class="popicon" data-bs-toggle="modal" data-bs-target="#teampopup"> -->
+        </div>
+      </div>
+    </div>
+    <!-- #tab6 --> 
+  </div>
+  <!-- .tab_container -->
+  </div>
+  <!-- partial -->
+    </div>
+</section>
+
+
+<!-- Other Information -->
+<section class="ourvalue mediasoacial">
+  <div class="container"  data-animation="fadeInUp">
+    <h2>Other Information</h2>
+    <!-- partial:index.partial.html -->
+    <ul class="tabssinfo">
+      <li class="active" rel="tab11">Terms of Appointment of Independent Director</li>
+      <li rel="tab22">Certificate & Articles</li>
+      <li rel="tab33">Resignation Letter</li>
+    </ul>
+    <div class="tab_container">
+      <h3 class="d_active tab_drawer_heading" rel="tab11">Terms of Appointment of Independent Director</h3>
+      <div id="tab11" class="tab_contentsinfo">
+        <div class="foundtabinsid financedtlstab">
+          <div class="downloadcardlist">
+            <div class="downloadcardpan subsidaryrestpan">
+              <h3>Terms of Appointment of Independent Director.</h3>
+              <a href="/pdfFiles/generalInfo/Terms_of_Appoinment_of_Independent_Director.pdf" class="readmore"><img src="assets/images/pdf-iconwh.png" alt=""> Download</a>
+            </div>
+
+          </div>        
+        </div>
+      </div>
+      <!-- #tab1 -->
+      <h3 class="tab_drawer_heading" rel="tab22">Certificate & Articles</h3>
+      <div id="tab22" class="tab_contentsinfo">
+        <div class="foundtabinsid financedtlstab">
+          <div class="downloadcardlist">
+            <div class="downloadcardpan subsidaryrestpan">
+              <h3>MOA & AOA</h3>
+              <a href="/pdfFiles/generalInfo/moa&aoa.pdf" class="readmore"><img src="assets/images/pdf-iconwh.png" alt=""> Download</a>
+            </div>
+      
+            <div class="downloadcardpan subsidaryrestpan">
+              <h3>COI</h3>
+              <a href="/pdfFiles/generalInfo/COI.pdf" class="readmore"><img src="assets/images/pdf-iconwh.png" alt=""> Download</a>
+            </div>
+          </div>        
+        </div>
+      </div>
+      <!-- #tab2 -->
+      <h3 class="tab_drawer_heading" rel="tab33">Resignation Letter</h3>
+      <div id="tab33" class="tab_contentsinfo">
+        <div class="foundtabinsid financedtlstab">
+          <div class="downloadcardlist">
+            <div class="downloadcardpan subsidaryrestpan">
+              <h3>Resignation Letter Mr. B.M. Sharma</h3>
+              <a href="/pdfFiles/generalInfo/Resignation_Letter_of_Mr_BM_Sharma.pdf" class="readmore"><img src="assets/images/pdf-iconwh.png" alt=""> Download</a>
+            </div>
+            <div class="downloadcardpan subsidaryrestpan">
+              <h3>Resignation Letter Mr. Rajkumar Jain</h3>
+              <a href="/pdfFiles/generalInfo/Resignation_Letter_of_Mr_Rajkumar_Jain.pdf" class="readmore"><img src="assets/images/pdf-iconwh.png" alt=""> Download</a>
+            </div>
+          
+            <div class="downloadcardpan subsidaryrestpan">
+              <h3>Resignation Letter Mr. S.S. Raghuwanshi</h3>
+              <a href="/pdfFiles/generalInfo/Resignation_Letter_of_Mr_SS_Raghuwanshi.pdf" class="readmore"><img src="assets/images/pdf-iconwh.png" alt=""> Download</a>
+            </div>
+            <div class="downloadcardpan subsidaryrestpan">
+              <h3>Resignation Letter Mr. Sridhar Narayan</h3>
+              <a href="/pdfFiles/generalInfo/Resignation_Letter_of_Mr_Sridhar_Narayan.pdf" class="readmore"><img src="assets/images/pdf-iconwh.png" alt=""> Download</a>
+            </div>
+          </div>        
+        </div>
+      </div>
+      <!-- #tab3 -->
+    </div>
+    <!-- .tab_container -->
+    </div>
+    <!-- partial -->
+      </div>
+</section>
+
+
+ 
+    <%- include('../common/footer.ejs') %>
+ 
+ 
+  </body>
+</html>
