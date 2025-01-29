@@ -7540,7 +7540,7 @@ dl.dropdown dt span:nth-child(3) {
     font-weight: 500;
     line-height: 27px; /* 168.75% */
   }
-  .concalllist td p span{display: block; color: var(--Tertiary-Color-Dark-400, #9FA4B2);
+  .concalllist td p span{ color: var(--Tertiary-Color-Dark-400, #9FA4B2);
 
     /* Font/Poppins Light 11px */
     font-family: Poppins;
