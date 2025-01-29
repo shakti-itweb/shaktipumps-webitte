@@ -391,9 +391,9 @@ nav ul li a {
   padding: 0 20px;
   display: inline-block;
 }
-.readmore:hover {
+/* .readmore:hover {
   background: #16f684;
-}
+} */
 
 .worldlarmap {
   text-align: center;
@@ -4214,7 +4214,8 @@ nav ul li a {
 .financedtlstitle .resultsbtn {
   margin: 0;
   border-radius: 100px;
-  background: var(--Secondary-Color-Green-Green-5, #00da6b);
+  /* background: var(--Secondary-Color-Green-Green-5, #00da6b); */
+  background: var(--Tertiary-Color-Dark-Blue-1000, #1f2b4c) ;
   text-align: left;
   width: 270px;
   color: #fff;
@@ -5812,6 +5813,7 @@ ul.tabss li.active,
 }
 .downloadcardpan a {
   line-height: 44px;
+  background-color: var(--Tertiary-Color-Dark-Blue-1000, #1f2b4c);
 }
 .downloadcardpan a img {
   height: 18px;
