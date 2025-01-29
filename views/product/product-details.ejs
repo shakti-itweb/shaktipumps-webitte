@@ -35,12 +35,15 @@
         <div class="row"></div>
         <div class="col-lg-8 col-md-8 col-sm-12">
           <div class="protitlebrcam">
-            <h2>Shallow Well & Slow Speed Pumps</h2>
+            <h2><%= recordset[0].productName%></h2>
+            <!-- <h2>Submersible Pumps</h2> -->
             <ul>
               <li><a href="#">Product</a></li>
               <li><a href="#">Pumps</a></li>
               <li>
-                <a href="#" class="active">Shallow Well & Slow Speed Pumps</a>
+                <a href="#" class="active"
+                  ><!-- Shallow Well & Slow Speed Pumps --></a
+                >
               </li>
             </ul>
           </div>
@@ -62,16 +65,22 @@
       <div class="container" data-animation="fadeInUp">
         <h2 class="rangetitle">Range Of Products</h2>
         <!-- partial:index.partial.html -->
+
         <ul class="tabs">
-          <li class="active" rel="tab1">V3</li>
-          <li rel="tab2">V4</li>
-          <li rel="tab3">V6</li>
-          <li rel="tab4">V8</li>
-          <li rel="tab5">V10</li>
+          <li class="active" rel="tab1"><%= recordset[0].productName %></li>
+          <li rel="tab2">Positive Displacement Submersible Pumpset</li>
+          <li rel="tab3">Inverter Submersible Pumpset</li>
+          <li rel="tab4">Shakti Submersible Plug and Play Pump</li>
+          <!-- <li rel="tab5">V10</li> -->
         </ul>
         <div class="tab_container">
-          <h3 class="d_active tab_drawer_heading" rel="tab1">V3</h3>
+          <h3 class="d_active tab_drawer_heading" rel="tab1">
+            Submersible Pump
+          </h3>
+
           <div id="tab1" class="tab_content">
+            <% if (Array.isArray(recordset) && recordset.length > 0)
+            {recordset.forEach( (pump) => { if(pump.id == 1){%>
             <div class="row">
               <div class="col-lg-5 col-md-5 col-sm-12">
                 <div class="prodsligall">
@@ -84,40 +93,40 @@
                           <img
                             class="xzoom"
                             id="xzoom-default"
-                            src="/images/product-big.png"
-                            xoriginal="/images/product-big.png"
+                            src="/images/submersiblePumps.png"
+                            xoriginal="/images/submersiblePumps.png"
                           />
                           <div class="xzoom-thumbs">
-                            <a href="/images/product-big.png"
+                            <a href="/images/submersiblePumps.png"
                               ><img
                                 class="xzoom-gallery"
                                 width="80"
-                                src="/images/product-big.png"
-                                xpreview="/images/product-big.png"
+                                src="/images/submersiblePumps.png"
+                                xpreview="/images/submersiblePumps.png"
                                 title="The description goes here"
                             /></a>
-                            <a href="/images/product-big.png"
+                            <a href="/images/submersiblePumps.png"
                               ><img
                                 class="xzoom-gallery"
                                 width="80"
-                                src="/images/product-big.png"
-                                xpreview="/images/product-big.png"
+                                src="/images/submersiblePumps.png"
+                                xpreview="/images/submersiblePumps.png"
                                 title="The description goes here"
                             /></a>
-                            <a href="/images/product-big.png"
+                            <a href="/images/submersiblePumps.png"
                               ><img
                                 class="xzoom-gallery"
                                 width="80"
-                                src="/images/product-big.png"
-                                xpreview="/images/product-big.png"
+                                src="/images/submersiblePumps.png"
+                                xpreview="/images/submersiblePumps.png"
                                 title="The description goes here"
                             /></a>
-                            <a href="/images/product-big.png"
+                            <a href="/images/submersiblePumps.png"
                               ><img
                                 class="xzoom-gallery"
                                 width="80"
-                                src="/images/product-big.png"
-                                xpreview="/images/product-big.png"
+                                src="/images/submersiblePumps.png"
+                                xpreview="/images/submersiblePumps.png"
                                 title="The description goes here"
                             /></a>
                           </div>
@@ -126,7 +135,7 @@
                       <div class="large-7 column"></div>
                     </div>
                   </section>
-                  <!-- default end -->
+                  <!- default end ->
                 </div>
                 <div class="amzbtn">
                   <a href="#" class="readmore">Enquire Now</a>
@@ -146,44 +155,43 @@
                     <div class="prodesc">
                       <label>Description</label>
                       <div class="prodesdtls">
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Mauris eu commodo dui. Maecenas id facilisis
-                          mauris, at sagittis nisl. Phasellus porta imperdiet
-                          nunc eget vehicula. Donec lobortis mi eget enim
-                          viverra euismod.
-                        </p>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Mauris eu commodo dui. Maecenas id facilisis
-                          mauris, at sagittis nisl. Phasellus porta imperdiet
-                          nunc eget vehicula. Donec lobortis mi eget enim
-                          viverra euismod.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="prodesc">
-                      <label>Performance</label>
-                      <div class="performdtls">
-                        <p>
-                          <span>Head. H</span> <strong>22 m to 28 m</strong>
-                        </p>
-                        <p>
-                          <span>Discharge</span>
-                          <strong>30 LPM to 102 LPM</strong>
-                        </p>
-                        <p><span>Flow. Q</span> <strong>90 LPM</strong></p>
-                        <p><span>Rating</span> <strong>HP</strong></p>
+                        <p><%=pump.description %></p>
+                        <p><%=pump.rangeOfProduct %></p>
+                        <div class="prodesc">
+                          <label>Performance</label>
+                          <div class="performdtls">
+                            <p>
+                              <span>Head. H :</span>
+                              <strong><% pump.f1 %> </strong>
+                            </p>
+                            <p>
+                              <span>Discharge :</span>
+                              <strong>Max. 7333 LPM</strong>
+                            </p>
+                            <p>
+                              <span>Flow. Q :</span> <strong>440 m°/ hr</strong>
+                            </p>
+                            <p>
+                              <span>Rating :</span>
+                              <strong>0.5 HP to 335 HP</strong>
+                            </p>
+                            <p>
+                              <span>Liquid Temp. : </span>
+                              <strong>0° C to 40° C O</strong>
+                            </p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <div class="prodesc">
                       <label>Features</label>
                       <div class="featudtls">
                         <ul>
-                          <li>High Operating Efficiency</li>
-                          <li>Highly Durable & Hygienic</li>
-                          <li>Good Resistance To Stand</li>
-                          <li>Good Resistance To Stand</li>
+                          <li>High operating efficiency.</li>
+                          <li>Highly durable & Hygienic.</li>
+                          <li>Good Resistance to sand.</li>
+                          <li>Can be easily dismantled and repaired.</li>
+                          <li>Can handle upthrust load.</li>
                         </ul>
                       </div>
                     </div>
@@ -191,12 +199,10 @@
                       <label>Application</label>
                       <div class="featudtls">
                         <ul>
-                          <li>Rural And Urban Draining Water Installations</li>
-                          <li>Water Supply To High Rise Buildings</li>
-                          <li>Water Circulating System For Lawns & Gardens</li>
-                          <li>
-                            Agricultural Lift Sprinkler And Drip Irrigation
-                          </li>
+                          <li>Irrigation, domestic water supply.</li>
+                          <li>Fountains, industrial water supply.</li>
+                          <li>Pressure boosting units , ponds</li>
+                          <li>Gardens, Sprinkler systems and mining.</li>
                         </ul>
                       </div>
                     </div>
@@ -204,9 +210,10 @@
                       <label>Delivery</label>
                       <div class="deliverdtls">
                         <p>
-                          <strong>25 MM</strong> <strong>50 MM</strong>
-                          <strong>65 MM</strong> <strong>75 MM</strong>
-                          <strong>100 MM</strong>
+                          <strong>32 MM</strong> <strong>38 MM</strong>
+                          <strong>50 MM</strong> <strong>65 MM</strong>
+                          <strong>75 MM</strong> <strong>100 MM</strong>
+                          <strong>150 MM</strong>
                         </p>
                       </div>
                     </div>
@@ -215,9 +222,16 @@
               </div>
             </div>
           </div>
+          <% }})} %>
           <!-- #tab1 -->
-          <h3 class="tab_drawer_heading" rel="tab2">V4</h3>
+          <!-- Tab-2 = -->
+          <h3 class="d_active tab_drawer_heading" rel="tab2">
+            Submersible Pump
+          </h3>
+
           <div id="tab2" class="tab_content">
+            <% if (Array.isArray(recordset) && recordset.length > 0)
+            {recordset.forEach( (pump) => { if(pump.id == 1){%>
             <div class="row">
               <div class="col-lg-5 col-md-5 col-sm-12">
                 <div class="prodsligall">
@@ -230,40 +244,40 @@
                           <img
                             class="xzoom"
                             id="xzoom-default"
-                            src="/images/product-big.png"
-                            xoriginal="/images/product-big.png"
+                            src="/images/submersiblePumps.png"
+                            xoriginal="/images/submersiblePumps.png"
                           />
                           <div class="xzoom-thumbs">
-                            <a href="/images/product-big.png"
+                            <a href="/images/submersiblePumps.png"
                               ><img
                                 class="xzoom-gallery"
                                 width="80"
-                                src="/images/product-big.png"
-                                xpreview="/images/product-big.png"
+                                src="/images/submersiblePumps.png"
+                                xpreview="/images/submersiblePumps.png"
                                 title="The description goes here"
                             /></a>
-                            <a href="/images/product-big.png"
+                            <a href="/images/submersiblePumps.png"
                               ><img
                                 class="xzoom-gallery"
                                 width="80"
-                                src="/images/product-big.png"
-                                xpreview="/images/product-big.png"
+                                src="/images/submersiblePumps.png"
+                                xpreview="/images/submersiblePumps.png"
                                 title="The description goes here"
                             /></a>
-                            <a href="/images/product-big.png"
+                            <a href="/images/submersiblePumps.png"
                               ><img
                                 class="xzoom-gallery"
                                 width="80"
-                                src="/images/product-big.png"
-                                xpreview="/images/product-big.png"
+                                src="/images/submersiblePumps.png"
+                                xpreview="/images/submersiblePumps.png"
                                 title="The description goes here"
                             /></a>
-                            <a href="/images/product-big.png"
+                            <a href="/images/submersiblePumps.png"
                               ><img
                                 class="xzoom-gallery"
                                 width="80"
-                                src="/images/product-big.png"
-                                xpreview="/images/product-big.png"
+                                src="/images/submersiblePumps.png"
+                                xpreview="/images/submersiblePumps.png"
                                 title="The description goes here"
                             /></a>
                           </div>
@@ -272,7 +286,7 @@
                       <div class="large-7 column"></div>
                     </div>
                   </section>
-                  <!-- default end -->
+                  <!- default end ->
                 </div>
                 <div class="amzbtn">
                   <a href="#" class="readmore">Enquire Now</a>
@@ -292,44 +306,43 @@
                     <div class="prodesc">
                       <label>Description</label>
                       <div class="prodesdtls">
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Mauris eu commodo dui. Maecenas id facilisis
-                          mauris, at sagittis nisl. Phasellus porta imperdiet
-                          nunc eget vehicula. Donec lobortis mi eget enim
-                          viverra euismod.
-                        </p>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Mauris eu commodo dui. Maecenas id facilisis
-                          mauris, at sagittis nisl. Phasellus porta imperdiet
-                          nunc eget vehicula. Donec lobortis mi eget enim
-                          viverra euismod.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="prodesc">
-                      <label>Performance</label>
-                      <div class="performdtls">
-                        <p>
-                          <span>Head. H</span> <strong>22 m to 28 m</strong>
-                        </p>
-                        <p>
-                          <span>Discharge</span>
-                          <strong>30 LPM to 102 LPM</strong>
-                        </p>
-                        <p><span>Flow. Q</span> <strong>90 LPM</strong></p>
-                        <p><span>Rating</span> <strong>HP</strong></p>
+                        <p><%=pump.description %></p>
+                        <p><%=pump.rangeOfProduct %></p>
+                        <div class="prodesc">
+                          <label>Performance</label>
+                          <div class="performdtls">
+                            <p>
+                              <span>Head. H :</span>
+                              <strong><% pump.f1 %> </strong>
+                            </p>
+                            <p>
+                              <span>Discharge :</span>
+                              <strong>Max. 7333 LPM</strong>
+                            </p>
+                            <p>
+                              <span>Flow. Q :</span> <strong>440 m°/ hr</strong>
+                            </p>
+                            <p>
+                              <span>Rating :</span>
+                              <strong>0.5 HP to 335 HP</strong>
+                            </p>
+                            <p>
+                              <span>Liquid Temp. : </span>
+                              <strong>0° C to 40° C O</strong>
+                            </p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <div class="prodesc">
                       <label>Features</label>
                       <div class="featudtls">
                         <ul>
-                          <li>High Operating Efficiency</li>
-                          <li>Highly Durable & Hygienic</li>
-                          <li>Good Resistance To Stand</li>
-                          <li>Good Resistance To Stand</li>
+                          <li>High operating efficiency.</li>
+                          <li>Highly durable & Hygienic.</li>
+                          <li>Good Resistance to sand.</li>
+                          <li>Can be easily dismantled and repaired.</li>
+                          <li>Can handle upthrust load.</li>
                         </ul>
                       </div>
                     </div>
@@ -337,12 +350,10 @@
                       <label>Application</label>
                       <div class="featudtls">
                         <ul>
-                          <li>Rural And Urban Draining Water Installations</li>
-                          <li>Water Supply To High Rise Buildings</li>
-                          <li>Water Circulating System For Lawns & Gardens</li>
-                          <li>
-                            Agricultural Lift Sprinkler And Drip Irrigation
-                          </li>
+                          <li>Irrigation, domestic water supply.</li>
+                          <li>Fountains, industrial water supply.</li>
+                          <li>Pressure boosting units , ponds</li>
+                          <li>Gardens, Sprinkler systems and mining.</li>
                         </ul>
                       </div>
                     </div>
@@ -350,9 +361,10 @@
                       <label>Delivery</label>
                       <div class="deliverdtls">
                         <p>
-                          <strong>25 MM</strong> <strong>50 MM</strong>
-                          <strong>65 MM</strong> <strong>75 MM</strong>
-                          <strong>100 MM</strong>
+                          <strong>32 MM</strong> <strong>38 MM</strong>
+                          <strong>50 MM</strong> <strong>65 MM</strong>
+                          <strong>75 MM</strong> <strong>100 MM</strong>
+                          <strong>150 MM</strong>
                         </p>
                       </div>
                     </div>
@@ -361,14 +373,19 @@
               </div>
             </div>
           </div>
-          <!-- #tab2 -->
-          <h3 class="tab_drawer_heading" rel="tab3">V6</h3>
+          <% }})} %>
+          <!-- Tab-2 end -->
+          <!-- Tab-3 = Inverter Submersible Pumpset starts form here -->
+
+          <h3 class="tab_drawer_heading" rel="tab3">
+            Inverter Submersible Pumpset
+            <%= recordset[0].productName%>
+          </h3>
           <div id="tab3" class="tab_content">
             <div class="row">
               <div class="col-lg-5 col-md-5 col-sm-12">
                 <div class="prodsligall">
                   <!-- <img src="/images/product-detailsgall.png" alt=""> -->
-                  <!-- default start -->
                   <section id="default" class="padding-top0">
                     <div class="row">
                       <div class="large-5 column">
@@ -418,7 +435,6 @@
                       <div class="large-7 column"></div>
                     </div>
                   </section>
-                  <!-- default end -->
                 </div>
                 <div class="amzbtn">
                   <a href="#" class="readmore">Enquire Now</a>
@@ -507,14 +523,18 @@
               </div>
             </div>
           </div>
+
           <!-- #tab3 -->
-          <h3 class="tab_drawer_heading" rel="tab4">V8</h3>
+          <!-- Tab-4 = Shakti Submersible Plug and Play Pump starts from here  -->
+
+          <h3 class="tab_drawer_heading" rel="tab4">
+            Shakti Submersible Plug and Play Pump
+          </h3>
           <div id="tab4" class="tab_content">
             <div class="row">
               <div class="col-lg-5 col-md-5 col-sm-12">
                 <div class="prodsligall">
                   <!-- <img src="/images/product-detailsgall.png" alt=""> -->
-                  <!-- default start -->
                   <section id="default" class="padding-top0">
                     <div class="row">
                       <div class="large-5 column">
@@ -564,7 +584,6 @@
                       <div class="large-7 column"></div>
                     </div>
                   </section>
-                  <!-- default end -->
                 </div>
                 <div class="amzbtn">
                   <a href="#" class="readmore">Enquire Now</a>
@@ -654,13 +673,15 @@
             </div>
           </div>
           <!-- #tab8 -->
-          <h3 class="tab_drawer_heading" rel="tab5">V10</h3>
+          <!-- <h3 class="tab_drawer_heading" rel="tab5">
+            Shakti Submersible Plug and Play Pump
+          </h3>
           <div id="tab5" class="tab_content">
             <div class="row">
               <div class="col-lg-5 col-md-5 col-sm-12">
                 <div class="prodsligall">
-                  <!-- <img src="/images/product-detailsgall.png" alt=""> -->
-                  <!-- default start -->
+                  <!- <img src="/images/product-detailsgall.png" alt=""> ->
+                  <!- default start ->
                   <section id="default" class="padding-top0">
                     <div class="row">
                       <div class="large-5 column">
@@ -710,7 +731,6 @@
                       <div class="large-7 column"></div>
                     </div>
                   </section>
-                  <!-- default end -->
                 </div>
                 <div class="amzbtn">
                   <a href="#" class="readmore">Enquire Now</a>
@@ -798,12 +818,9 @@
                 </div>
               </div>
             </div>
-          </div>
-          <!-- #tab8 -->
+          </div> -->
         </div>
-        <!-- .tab_container -->
       </div>
-      <!-- partial -->
     </section>
     <section class="makeussuccess relatedproducts interpro">
       <div class="container">
@@ -833,12 +850,12 @@
             <h4>Pumps <span>50 Hz</span></h4>
           </div>
         </div>
-        <div class="productsbtns">
-          <a href="#">Check All Products</a>
+        <div class="productsbtns" style="margin-top: 30px">
+          <!-- <a href="#">Check All Products</a> -->
         </div>
       </div>
     </section>
-    <section class="testimoni">
+    <!-- <section class="testimoni">
       <div class="container">
         <h2><span>Employee Testimonials</span> Imagine With Us</h2>
         <div class="testimonialslide">
@@ -876,7 +893,26 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <%- include('../common/footer.ejs')%>
   </body>
 </html>
+<!-- <div class="prodlistrow">
+                      <% if (Array.isArray(recordset) && recordset.length > 0)
+                      {recordset.forEach( (pump) => { %>
+                      <div class="sucpan">
+                        <a
+                          href="/product/product-details/<%= pump.category %>/<%= pump.id %>"
+                        >
+                          <img src="/images/proulistpic1.png" alt="" />
+                          <h3><%=pump.productName %></h3>
+                          <h4><%pump.perfo1 %></h4>
+                        </a>
+                        <a
+                          href="/product/product-details/<%= pump.category %>/<%= pump.id %>"
+                          class="readmore"
+                          >Read More</a
+                        >
+                      </div>
+                      <% })} %>
+                    </div> -->

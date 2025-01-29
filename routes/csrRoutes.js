@@ -8,4 +8,4 @@ router.get('/', csrController.getCsrPage);
 // Route for some about-related information
 router.get('/info', csrController.getCsrInfo);
 
-module.exports = router;
+module.exports = router; 

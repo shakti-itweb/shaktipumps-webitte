@@ -38,7 +38,127 @@
               </div>
           </div>
       </div>
-  </section>
+      
+    </section>
+
+    <section class="foundtiontab financialyeartab">
+      <div class="container">
+        <!-- <div class="selectcat">
+          <select onchange="getval(this.value);">
+            <option>ALL</option>
+            <option value="2024-2025">2024-2025</option>
+            <option value="2023-2024">2023-2024</option>
+            <option value="2022-2023">2022-2023</option>
+          </select>
+        </div> -->
+        <!-- <ul class="tabs">
+          <li class="active" rel="tab1">
+            General Information
+            <!- <span>Consectetur Adipiscing Elit</span> ->
+          </li>
+        </ul> -->
+        <section class="boarddirector">
+          <div class="container">
+            <h2>Board of Directors</h2>
+            <div id="team-cards" class="row"></div>
+            <script>
+              const teamMembers = [
+                {
+                  id: 0,
+                  name: "Mr. Dinesh Patidar",
+                  title: "Chairman & Director",
+                  image: "/images/member1.png",
+                  modalImage: "/images/popup-team1.png",
+                  description:
+                    "Dinesh Patidar, esteemed Chairman of Shakti Pumps (India) Limited, embodies a visionary leader propelling innovation and excellence in pump manufacturing. With Shakti Pumps' roots dating back to 1982, the company has etched itself as an industry pioneer, crafting India's inaugural BEE 5 Star rated pumps and pioneering 100% stainless steel pumps and energy-efficient motors.Hailing from an agricultural background, Mr. Patidar pursued a Commerce degree in Indore and apprenticed under his father, dedicating unwavering commitment to nurture Shakti Pumps. Assuming leadership in 1986, his foresight expanded Shakti Pumps to 120+ countries, introducing stainless steel pumps and establishing the brand as a national leader across diverse pump categories. Mr. Patidar leads Shakti Pumps with a holistic approach, infusing core values into all operations. He drives product design, manufacturing, and strategic decisions, fostering transparency and innovation. His guidance led to Shakti Pumps becoming India's pioneering 5-star pump manufacturer, contributing significantly to the nation's energy goals. His relentless pursuit of innovation earned nine patents, while advocating for equality shaped the company's values of respect, ethics, and customer-centricity.",
+                },
+                {
+                  id: 1,
+                  name: "Mr. Ramesh Patidar",
+                  title: "Managing Director",
+                  image: "/images/file.png",
+                  modalImage: "/images/file.png",
+                  description:
+                    "Mr. Ramesh Patidar is the Managing Director of Shakti Pumps, a leading name in the field of water pumping solutions. With a diverse background and extensive experience spanning over 15 years, Mr. Patidar has been instrumental in driving the company's growth and success in both domestic and international markets. Graduated in Business Administration, Mr. Patidar brings a wealth of knowledge and expertise to his role as Managing Director. He has demonstrated exceptional leadership in international business development, spearheading initiatives to explore and expand new business opportunities across the globe. Mr. Patidar is recognized for his innovative thinking and ability to identify emerging trends, which he leverages to achieve organizational objectives and enhance profitability.",
+                },
+                {
+                  id: 3,
+                  name: "Mr. Sunil Patidar",
+                  title: "Executive Director",
+                  image: "/images/member3.png",
+                  modalImage: "/images/member3.png",
+                  description:
+                    "Is a visionary, self-made industrialist and leader with a strong business acumen and knowledge in development of engineering products and management.",
+                },
+                {
+                  id: 4,
+                  name: "Mr. Ashwin Bhootda",
+                  title: "Whole Time Director",
+                  image: "/images/member4.png",
+                  modalImage: "/images/member4.png",
+                  description:
+                    "Expert in operations and execution of various business strategies.",
+                },
+                {
+                  id: 5,
+                  name: "Mr. Hirabhai Somabhai Patel",
+                  title: "Independent Director",
+                  image: "/images/member5.png",
+                  modalImage: "/images/member5.png",
+                  description:
+                    "Highly experienced in independent board governance and management.",
+                },
+                {
+                  id: 6,
+                  name: "Mr. Bhim Singh",
+                  title: "Independent Director",
+                  image: "/images/member6.png",
+                  modalImage: "/images/member6.png",
+                  description:
+                    "Specializes in strategic oversight and long-term planning.",
+                },
+                {
+                  id: 7,
+                  name: "Mr. V.S.S. Pavan Kumar Hari",
+                  title: "Independent Director",
+                  image: "/images/member7.png",
+                  modalImage: "/images/member7.png",
+                  description:
+                    "Has a strong background in advisory roles and regulatory affairs.",
+                },
+                {
+                  id: 8,
+                  name: "Mr. Keyur Bipinchandra Thaker",
+                  title: "Executive Director",
+                  image: "/images/member8.png",
+                  modalImage: "/images/member8.png",
+                  description:
+                    "Focused on corporate strategy and executive-level decision making.",
+                },
+                {
+                  id: 9,
+                  name: "Mrs. Nishtha Neema",
+                  title: "Independent Director",
+                  image: "/images/member9.png",
+                  modalImage: "/images/member9.png",
+                  description:
+                    "Experienced professional in corporate governance and stakeholder relations.",
+                },
+                {
+                  id: 10,
+                  name: "Mr. Ramakrishna Sataluri",
+                  title: "Non-Executive & Non-Independent Director",
+                  image: "/images/ramkishan.png",
+                  modalImage: "/images/ramkishan.png",
+                  description:
+                    "Experienced professional in corporate governance and stakeholder relations.",
+                },
+              ];
+
+              function generateTeamMembers() {
+                const teamCardsContainer =
+                  document.getElementById("team-cards");
+
 
   <!-- directorlists -->
   <section class="boarddirector">
