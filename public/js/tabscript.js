@@ -86,3 +86,52 @@
       $('ul.tabss li').last().addClass("tab_lasts");
   });
   
+
+    // genral info content
+    // http://www.entheosweb.com/tutorials/css/tabs.asp
+    $(document).ready(function() {
+      // Hide all tab contents except the first one
+      $(".tab_contentsinfo").hide();
+      $(".tab_contentsinfo:first").show();
+  
+      /* If in tab mode */
+      $("ul.tabssinfo li").click(function() {
+          // Hide all tab contents
+          $(".tab_contentsinfo").hide();
+  
+          // Get the value of the 'rel' attribute and show the corresponding tab content
+          var activeTab = $(this).attr("rel"); 
+          $("#" + activeTab).fadeIn();        
+  
+          // Update the active tab styling
+          $("ul.tabssinfo li").removeClass("active");
+          $(this).addClass("active");
+  
+          // Update drawer headings styling
+          $(".tab_drawer_heading").removeClass("d_actives");
+          $(".tab_drawer_heading[rel^='" + activeTab + "']").addClass("d_actives");
+      });
+  
+      /* If in drawer mode */
+      $(".tab_drawer_heading").click(function() {
+          // Hide all tab contents
+          $(".tab_contentsinfo").hide();
+  
+          // Get the value of the 'rel' attribute and show the corresponding tab content
+          var d_activeTab = $(this).attr("rel"); 
+          $("#" + d_activeTab).fadeIn();
+          
+          // Update the active drawer heading styling
+          $(".tab_drawer_heading").removeClass("d_actives");
+          $(this).addClass("d_actives");
+          
+          // Update the active tab styling
+          $("ul.tabssinfo li").removeClass("active");
+          $("ul.tabssinfo li[rel^='" + d_activeTab + "']").addClass("active");
+      });
+  
+      /* Extra class "tab_last" 
+         to add border to the right side of the last tab */
+      $('ul.tabssinfo li').last().addClass("tab_lastss");
+  });
+  

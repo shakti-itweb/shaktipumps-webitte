@@ -40,15 +40,16 @@
     </section>
     <section class="foundtiontab financialyeartab">
       <div class="container">
-        <div class="selectcat">
+        <!-- <div class="selectcat">
           <select>
             <option>Select Financial Year</option>
           </select>
-        </div>
+        </div> -->
         <!-- partial:index.partial.html -->
         <ul class="tabs">
           <li class="active" rel="tab1">
-            KYC Updation<span>Consectetur Adipiscing Elit</span>
+            KYC Updation
+            <!-- <span>Consectetur Adipiscing Elit</span> -->
           </li>
           <!-- <li class="active" rel="tab2">Reconciliation Certificate<span>Consectetur Adipiscing Elit</span></li> -->
         </ul>
@@ -61,14 +62,14 @@
               <div class="financedtlstitle">
                 <h2>
                   KYC Updation<span
-                    >Compliance Certificate Report of Shakti Pumps (I)
+                    > kyc Updation Report of Shakti Pumps (I)
                     Ltd.</span
                   >
                 </h2>
-                <a href="#" class="resultsbtn"
+                <!-- <a href="#" class="resultsbtn"
                   ><img src="/images/pdf-icon.png" alt="" /> Report Download:
                   2023-24</a
-                >
+                > -->
               </div>
               <div class="downloadcardlist">
                 <% if (Array.isArray(kycUpdation.recordset) &&
@@ -78,12 +79,12 @@
                   <h3>
                     <%=file.fileName %>
                     <span
-                      ><%=file.quater%> Annual Report of Shakti Pumps (I)
+                      ><%=file.quater%> kyc Updation Report of Shakti Pumps (I)
                       Ltd.</span
                     >
                   </h3>
                   <a
-                    href="/pdfFiles/financialReports/kycUpdation/<%=file.path%>"
+                    href="/pdfFiles/kycUpdation/<%=file.path%>"
                     class="readmore"
                     target="_blank"
                     ><img src="/images/pdf-iconwh.png" alt="" /> Download</a
