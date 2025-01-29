@@ -33,10 +33,11 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6 col-md-6 col-sm-12">
-            <h2>Shakti Pumps</h2>
+            <h2><%= recordset[0].category.toUpperCase()%></h2>
             <p>
-              Innovative, energy-efficient pumping solutions designed to empower
-              industries, agriculture, and communities worldwide
+              <!-- Innovative, energy-efficient pumping solutions designed to empower
+              industries, agriculture, and communities worldwide -->
+              <%= recordset[0].description%>
             </p>
             <div class="indusbannerbtn">
               <a href="#" class="welresultsbtn"
@@ -178,14 +179,22 @@
             </ul>
             <!-- partial -->
           </div>
-          <div class="col-lg-10 col-md-10 col-sm-12 prorgtlist">
+          <div
+            class="col-lg-10 col-md-10 col-sm-12 prorgtlist"
+            style="padding: 60px"
+          >
             <div class="row">
               <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="protitlebrcam">
-                  <h2>Pumps</h2>
+                  <!-- <% if (Array.isArray(recordset)){%>
+                    <h3><%= recordset[0].category.toUpperCase()%></h3>
+                    <%} %> -->
+                    <h3><%= recordset[0].category.toUpperCase()%></h3>
                   <ul>
                     <li><a href="#">Product</a></li>
-                    <li><a href="#" class="active">Pumps</a></li>
+                    <li>
+                      <a href="#" class="active"><%= recordset[0].category %></a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -199,96 +208,23 @@
               </div>
             </div>
             <div class="prodlistrow">
-              <!-- <div class="sucpan">
-                <img src="/images/proulistpic1.png" alt="" />
-                <h3>Submersible Pumps</h3>
-                <h4>SHOS C Series</h4>
-              </div> -->
-
               <% if (Array.isArray(recordset) && recordset.length > 0)
-              {recordset.forEach(function(pump) { %>
-              <!-- <li><%= pump %></li>  -->
-              <!-- <img src="/pumpImages/<%= pump.img1 %>" alt=""> -->
-
+              {recordset.forEach( (product) => { %>
               <div class="sucpan">
                 <a
-                  href="/product/product-details/<%= pump.category %>/<%= pump.id %>"
+                  href="/product/product-details/<%= product.category %>/<%= product.id %>"
                 >
                   <img src="/images/proulistpic1.png" alt="" />
-                  <h3><%=pump.productName %></h3>
-                  <h4><%pump.perfo1 %></h4>
+                  <h3><%=product.productName %></h3>
+                  <h4><%product.perfo1 %></h4>
                 </a>
-                <a href="#" class="readmore">Read More</a>
+                <a
+                  href="/product/product-details/<%= product.category %>/<%= product.id %>"
+                  class="readmore"
+                  >Read More</a
+                >
               </div>
-
-              <!-- <div class="sucpan">
-                <img src="/images/proulistpic1.png" alt="" />
-                <h3>Submersible Pumps</h3>
-                <h4>SHOS C Series</h4>
-              </div> -->
-
               <% })} %>
-
-              <!-- <div class="sucpan">
-                <img src="/images/proulistpic1.png" alt="" />
-                <h3>Submersible Pumps</h3>
-                <h4>SHOS C Series</h4>
-              </div> -->
-
-              <!-- <div class="sucpan">
-                <img src="/images/proulistpic1.png" alt="" />
-                <h3>Submersible Pumps</h3>
-                <h4>SHOS C Series</h4>
-              </div> -->
-
-              <!-- <div class="sucpan">
-                <img src="/images/proulistpic1.png" alt="" />
-                <h3>Submersible Pumps</h3>
-                <h4>SHOS C Series</h4>
-              </div> -->
-
-              <!-- <div class="sucpan">
-                <img src="/images/proulistpic1.png" alt="">
-                <h3>Submersible Pumps</h3>
-                <h4>SHOS C Series</h4>
-              </div> -->
-
-              <!-- <div class="sucpan">
-                <img src="/images/proulistpic1.png" alt="">
-                <h3>Submersible Pumps</h3>
-                <h4>SHOS C Series</h4>
-              </div> -->
-
-              <!-- <div class="sucpan">
-                <img src="/images/proulistpic1.png" alt="">
-                <h3>Submersible Pumps</h3>
-                <h4>SHOS C Series</h4>
-              </div>
-              <div class="sucpan">
-                <img src="/images/proulistpic1.png" alt="">
-                <h3>Submersible Pumps</h3>
-                <h4>SHOS C Series</h4>
-              </div>
-              <div class="sucpan">
-                <img src="/images/proulistpic1.png" alt="">
-                <h3>Submersible Pumps</h3>
-                <h4>SHOS C Series</h4>
-              </div>
-              <div class="sucpan">
-                <img src="/images/proulistpic1.png" alt="">
-                <h3>Submersible Pumps</h3>
-                <h4>SHOS C Series</h4>
-              </div>
-              <div class="sucpan">
-                <img src="/images/proulistpic1.png" alt="">
-                <h3>Submersible Pumps</h3>
-                <h4>SHOS C Series</h4>
-              </div>
-              <div class="sucpan">
-                <img src="/images/proulistpic1.png" alt="">
-                <h3>Submersible Pumps</h3>
-                <h4>SHOS C Series</h4>
-              </div> -->
             </div>
             <div class="moreloadpro">
               <a href="#" class="readmore">View More 2488 Products</a>
@@ -297,7 +233,6 @@
         </div>
       </div>
     </section>
-
     <%- include('../common/footer.ejs')%>
   </body>
 </html>
