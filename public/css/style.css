@@ -391,9 +391,9 @@ nav ul li a {
   padding: 0 20px;
   display: inline-block;
 }
-.readmore:hover {
+/* .readmore:hover {
   background: #16f684;
-}
+} */
 
 .worldlarmap {
   text-align: center;
@@ -4214,7 +4214,8 @@ nav ul li a {
 .financedtlstitle .resultsbtn {
   margin: 0;
   border-radius: 100px;
-  background: var(--Secondary-Color-Green-Green-5, #00da6b);
+  /* background: var(--Secondary-Color-Green-Green-5, #00da6b); */
+  background: var(--Tertiary-Color-Dark-Blue-1000, #1f2b4c) ;
   text-align: left;
   width: 270px;
   color: #fff;
@@ -5812,6 +5813,7 @@ ul.tabss li.active,
 }
 .downloadcardpan a {
   line-height: 44px;
+  background-color: var(--Tertiary-Color-Dark-Blue-1000, #1f2b4c);
 }
 .downloadcardpan a img {
   height: 18px;
@@ -6609,6 +6611,51 @@ ul.tabssinfo li.active {
   z-index: 9;
 }
 
+ul.tabs::after, ul.tabss::after, ul.tabssinfo::after{content: ''; position: absolute; bottom: 0; left: 0; height: 1px; width: 100%; background-color: #02E270;}
+
+ul.tabs li, ul.tabss li, ul.tabssinfo li {
+  float: left;
+  margin: 0;
+  cursor: pointer;
+  padding: 0 15px;
+  height: 40px;
+  line-height: 40px;
+  overflow: hidden;
+  position: relative;
+  color: var(--White, #FFF);
+text-align: center;
+
+/* Font/Poppins Semibold 12px */
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 600;
+border: 1px solid transparent;
+border-bottom: 0;
+}
+
+.tab_last {}
+
+ul.tabs li:hover, ul.tabss li:hover, ul.tabssinfo li:hover {
+	color: #02E270;
+  border-radius: 5px 5px 0 0;
+  border: 1px solid #02E270;
+  border-bottom: 0;
+}
+
+ul.tabs li.active, ul.tabss li.active,ul.tabssinfo li.active {
+	color: #02E270;
+	display: block;
+  border-radius: 5px 5px 0 0;
+  border: 1px solid #02E270;
+  border-bottom: 0;
+  background: #364C9B;
+  position: relative;
+  z-index: 9;
+}
+
+
+
 .tab_container,
 .tab_containers {
   border: 0;
@@ -7244,6 +7291,7 @@ dl.dropdown dt span:nth-child(3) {
 .subsidaryrestpan a {
   height: 44px;
 }
+
 .careerdept .container {
   display: flex;
   justify-content: space-between;
@@ -7276,42 +7324,15 @@ dl.dropdown dt span:nth-child(3) {
   margin-top: 120px;
 }
 .lifeshaktitetimonials h2 {
-color: var(--Tertiary-Color-Dark-1000, #161e3e);}
-.concalllist{background: #fff;}
-.concalllist thead{background: #161E3E;
-  height: 44px;
-  color: var(--White, #FFF);
+  color: var(--Tertiary-Color-Dark-1000, #161e3e);
+
+  /* Font/Title */
   font-family: Poppins;
-  font-size: 12px;
+  font-size: 48px;
   font-style: normal;
-  font-weight: 600;
-  line-height: 15px;}
-  .concalllist thead th{padding-left: 15px;}
-  .concalllist td{padding: 15px;}
-  .concalllist td a.welresultsbtn{
-    width: 150px;
-  height: 42px;
-  line-height: 42px;
-  } 
-  .concalllist td a.welresultsbtn img{margin-right: 5px;}
-  .concalllist td p{
-    color: var(--Tertiary-Color-Dark-1000, #161E3E);
-    /* Font/Poppins Medium 16px */
-    font-family: Poppins;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 27px; /* 168.75% */
-  }
-  .concalllist td p span{display: block; color: var(--Tertiary-Color-Dark-400, #9FA4B2);
-
-    /* Font/Poppins Light 11px */
-    font-family: Poppins;
-    font-size: 11px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 16px;}
-
+  font-weight: 300;
+  line-height: 56px; /* 116.667% */
+}
 .lifeshaktitetimonials h2 span {
   color: var(--Tertiary-Color-Dark-1000, #161e3e);
   font-family: Poppins;
@@ -7320,20 +7341,6 @@ color: var(--Tertiary-Color-Dark-1000, #161e3e);}
   font-weight: 400;
   line-height: 25px; /* 178.571% */
 }
-
-/* 
-     Concall :: END 
-    >>>>>>> ed56722b308c24f0c94cd90862f95a61680c856c
-    =======
-   Font/Title 
-      font-family: Poppins;
-      font-size: 48px;
-      font-style: normal;
-      font-weight: 300;
-      line-height: 56px; /* 116.667% 
-    }
-    
-*/
 
 .lifeattrive {
   background: #f8f9fc;
@@ -7473,3 +7480,73 @@ color: var(--Tertiary-Color-Dark-1000, #161e3e);}
 .projectpopdtls a.readmore {
   background: #161e3e;
 }
+
+.qipsec {
+  /* background: linear-gradient(180deg, #e4e4e4 0%, #fff 100%); */
+  background: white;
+  padding-top: 70px;
+}
+
+.qipsec p {
+  color: var(--Tertiary-Color-Dark-Blue-1000, #1f2b4c);
+  text-align: justify;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  padding-top: 20px;
+  margin: 0;
+}
+
+.qipsec h2 span {
+  color: var(--Tertiary-Color-Dark-Blue-1000, #1f2b4c);
+  font-family: Poppins;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 23px;
+  text-transform: capitalize;
+  display: block;
+}
+
+
+
+/* Concall :: Start */
+
+.concalllist{background: #fff;}
+.concalllist thead{background: #161E3E;
+  height: 44px;
+  color: var(--White, #FFF);
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 15px;}
+  .concalllist thead th{padding-left: 15px;}
+  .concalllist td{padding: 15px;}
+  .concalllist td a.welresultsbtn{
+    width: 150px;
+  height: 42px;
+  line-height: 42px;
+  } 
+  .concalllist td a.welresultsbtn img{margin-right: 5px;}
+  .concalllist td p{
+    color: var(--Tertiary-Color-Dark-1000, #161E3E);
+    /* Font/Poppins Medium 16px */
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px; /* 168.75% */
+  }
+  .concalllist td p span{display: block; color: var(--Tertiary-Color-Dark-400, #9FA4B2);
+
+    /* Font/Poppins Light 11px */
+    font-family: Poppins;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;}
+
+    /* Concall :: END */
