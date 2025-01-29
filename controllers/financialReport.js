@@ -5,10 +5,10 @@ const getFinancialReport = async (req, res) => {
     const quarterlyResults = await db.request().query(`select * from quarterlyResults ORDER BY year DESC, quater;`);
     const annualReturns = await db.request().query(`select * from annualReturn  order by year desc `);
     const relatedPartyDisclosure = await db.request().query(`select * from relatedPartyDisclosure `);
-    const annualReport = await db.request().query(`select * from annualReport`);
-    const BRSR = await db.request().query(`select * from BRSR`);
-    const resultRelease = await db.request().query(`select * from resultRelease`);
-    const investorPresentation = await db.request().query(`select * from investorPresentation`);
+    const annualReport = await db.request().query(`select * from annualReport ORDER BY year DESC`);
+    const BRSR = await db.request().query(`select * from BRSR ORDER BY year DESC`);
+    const resultRelease = await db.request().query(`select * from resultRelease ORDER BY year DESC`);
+    const investorPresentation = await db.request().query(`select * from investorPresentation ORDER BY year DESC`);
     const subsidiaryResults = await db.request().query(`select * from subsidiaryResults order by year desc `);
     const conferenceCall = await db.request().query(`select * from conferenceCall`);
     res.render("financialReports/financial-report",{quarterlyResults,annualReturns,relatedPartyDisclosure,annualReport,BRSR,resultRelease,investorPresentation,subsidiaryResults,conferenceCall});
@@ -20,29 +20,29 @@ const getFinancialReport = async (req, res) => {
     res.render("financialReports/chairman-profile");
   };
 
-  const getSubsidiaryResult = async (req, res) => {
+  const getShareholding = async (req, res) => {
     await db.connect();
-    const shareholding = await db.request().query(`select * from shareholding`);
+    const shareholding = await db.request().query(`select * from shareholding order by year DESC`);
     res.render("financialReports/shareHoldingPattern",{shareholding});
   };
 
   const getreportOfCopyGovernance = async (req, res) => {
     await db.connect();
-    const reportOfCopyGovernance = await db.request().query(`select * from reportOfCopyGovernance`);
+    const reportOfCopyGovernance = await db.request().query(`select * from reportOfCopyGovernance ORDER BY year DESC`);
     res.render("financialReports/reportOfCopyGovernance",{reportOfCopyGovernance});
   };
 
   const getauditSecratrialReport = async (req, res) => {
     await db.connect();
-    const secretarialAuditReport = await db.request().query(`select * from secretarialAuditReport`);
-    const annualSecretarialAuditReport = await db.request().query(`select * from annualSecretarialAuditReport`);
+    const secretarialAuditReport = await db.request().query(`select * from secretarialAuditReport ORDER BY year DESC`);
+    const annualSecretarialAuditReport = await db.request().query(`select * from annualSecretarialAuditReport ORDER BY year DESC`);
     res.render("financialReports/secratrialAuditReport",{secretarialAuditReport,annualSecretarialAuditReport});
   };
 
   const getcomplianceCertificateReport = async (req, res) => {
     await db.connect();
-    const complianceCertificate = await db.request().query(`select * from complianceCertificate`);
-    const reconciliationCertificate = await db.request().query(`select * from reconciliationCertificate`);
+    const complianceCertificate = await db.request().query(`select * from complianceCertificate ORDER BY year DESC`);
+    const reconciliationCertificate = await db.request().query(`select * from reconciliationCertificate ORDER BY year DESC`);
     res.render("financialReports/complianceCertificate",{complianceCertificate,reconciliationCertificate});
   };
   
@@ -54,9 +54,9 @@ const getFinancialReport = async (req, res) => {
 
   const getNewsAndAnnouncement = async (req, res) => {
     await db.connect();
-    const creditRating = await db.request().query(`select * from creditRating`);
-    const disclosureUnderReg30 = await db.request().query(`select * from disclosureUnderReg30`);
-    const newspaperPublication = await db.request().query(`select * from newspaperPublication`);
+    const creditRating = await db.request().query(`select * from creditRating ORDER BY year DESC`);
+    const disclosureUnderReg30 = await db.request().query(`select * from disclosureUnderReg30 ORDER BY year DESC`);
+    const newspaperPublication = await db.request().query(`select * from newspaperPublication ORDER BY year DESC`);
     res.render("financialReports/newsAndAnnouncements",{creditRating,disclosureUnderReg30,newspaperPublication});
   };
 
@@ -81,16 +81,40 @@ const getFinancialReport = async (req, res) => {
     res.render("financialReports/general-info",{generalInfo});
   };
 
+  const getpoliciesPrograms = async (req, res) => {
+    await db.connect();
+    const policiesPrograms = await db.request().query(`select * from policiesPrograms`);
+    const otherPolicies = await db.request().query(`select * from otherPolicies`);
+    
+    res.render("financialReports/policies-programs",{policiesPrograms,otherPolicies});
+  };
+  
   const getFinancialReportInfo = (req, res) => {
     res.json({ info: "financial report information" });
   };
 
+  const getqip = (req, res) => {
+    res.render("financialReports/qip");
+  };
+
+  const getpostalBallot = async (req, res) => {
+    await db.connect();
+    const postalBallot = await db.request().query(`select * from postalBallot ORDER BY year DESC`);
+    res.render("financialReports/postal-ballot",{postalBallot});
+  };
+
+  
+  const getgeneralMeeting = async (req, res) => {
+    await db.connect();
+    const generalMeeting = await db.request().query(`select * from generalMeeting ORDER BY year DESC`);
+    res.render("financialReports/general-meeting",{generalMeeting});
+  };
 
   
   module.exports = {
     getFinancialReport,
     getFinancialReportInfo,
-    getSubsidiaryResult,
+    getShareholding,
     getreportOfCopyGovernance,
     getauditSecratrialReport,
     getcomplianceCertificateReport,
@@ -99,6 +123,10 @@ const getFinancialReport = async (req, res) => {
     getBoardMeeting,
     getInvestorEducation,
     getChairmanProfile,
-    getGeneralInfo
+    getGeneralInfo,
+    getpoliciesPrograms,
+    getqip,
+    getpostalBallot,
+    getgeneralMeeting
   };
   

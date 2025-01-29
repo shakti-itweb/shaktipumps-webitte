@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shakti Pumps</title>
+    <link rel="icon" type="image/x-icon" href="/img/fav.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    <link rel="stylesheet" href="/css/style-loading.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+  </head>
+  <body>
+    <%- include('../common/header.ejs') %>
+
+    <section class="about-banner lifeatsktban">
+      <div><img src="/images/financial-banner.png" alt="" /></div>
+      <div class="container">
+        <h2>
+          Financial<br />
+          Report
+        </h2>
+      </div>
+    </section>
+    <section class="foundtiontab financialyeartab">
+      <div class="container">
+        <div class="selectcat">
+          <select onchange="getval(this.value);">
+            <option>ALL</option>
+            <option value="2024-2025">2024-2025</option>
+            <option value="2023-2024">2023-2024</option>
+            <option value="2022-2023">2022-2023</option>
+            <option value="2021-2022">2021-2022</option>
+            <option value="2020-2021">2020-2021</option>
+            <option value="2019-2020">2019-2020</option>
+            <option value="2018-2019">2018-2019</option>
+            <option value="2017-2018">2017-2018</option>
+            <option value="2016-2017">2016-2017</option>
+            <option value="2015-2016">2015-2016</option>
+            <option value="2014-2015">2014-2015</option>
+          </select>
+        </div>
+        <!-- partial:index.partial.html -->
+        <ul class="tabs">
+          <li class="active" rel="tab1">
+            General Meeting 
+            <!-- <span>Consectetur Adipiscing Elit</span> -->
+          </li>
+        </ul>
+        <div class="tab_container">
+          <h3 class="d_active tab_drawer_heading" rel="tab1">
+            General Meeting
+          </h3>
+          <div id="tab1" class="tab_content">
+            <div class="foundtabinsid financedtlstab">
+              <div class="financedtlstitle">
+                <h2>
+                  General Meeting
+                  <span>General Meeting of Shakti Pumps (I) Ltd.</span>
+                </h2>
+                <!-- <a href="#" class="resultsbtn"
+                  ><img src="/images/pdf-icon.png" alt="" /> Report Download:
+                  2023-24</a
+                > -->
+              </div>
+              <div class="downloadcardlist">
+                <% if (Array.isArray(generalMeeting.recordset) &&
+                generalMeeting.recordset.length > 0)
+                {generalMeeting.recordset.forEach(function(file) { %>
+                <div class="downloadcardpan" id="<%=file.year %>">
+                  <h3>
+                    <%=file.fileName %><span
+                      ><%=file.year%> General Meeting of Shakti Pumps (I)
+                      Ltd.</span
+                    >
+                    <!-- <span><%=file.year %></span> -->
+                  </h3>
+                  <!-- <h3><span><%=file.year %></span></h3> -->
+                  <a
+                    href="/pdfFiles/shareHoldingPattern/<%=file.path%>"
+                    class="readmore"
+                    target="_blank"
+                    ><img src="/images/pdf-iconwh.png" alt="" /> Download</a
+                  >
+                </div>
+                <% })} %>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+      </div>
+      <!-- .tab_container -->
+    </section>
+    <%- include('../common/footer.ejs') %>
+  </body>
+</html>
