@@ -153,7 +153,7 @@ const newsListing = async (req,res) => {
         await db.connect();
 
         // fetch all news from db
-        const allNews = await db.request().query(`select * from shakti_news;`);
+        const allNews = await db.request().query(`select * from shakti_news order by createdOn desc;`);
         if(allNews.rowsAffected == 0){
             console.log("No news found of some error occured");
             throw "some error occured or no news found in db";
