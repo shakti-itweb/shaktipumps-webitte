@@ -51,33 +51,7 @@
         </div>
       </div>
     </section>
-    <!-- <section class="whatlooking meadiastaytxt" data-animation="fadeInUp">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 col-md-4 col-sm-12">
-            <h2>
-              Stay Informed<br />
-              With Shakti<br />
-              Pumps
-            </h2>
-          </div>
-          <div class="col-lg-8 col-md-8 col-sm-12">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu
-              commodo dui. Maecenas id facilisis mauris, at sagittis nisl.
-              Phasellus porta imperdiet nunc eget vehicula. Donec lobortis mi
-              eget enim viverra euismod. Nunc sit amet odio sit amet.
-            </p>
-            <p>
-              Duis nec est a nisl lacinia blandit euismod nec tortor. Fusce
-              iaculis purus eu iaculis blandit. Maecenas pretium, erat nec
-              tempor gravida, enim diam consequat tellus, sed consequat arcu
-              nulla in lectus. Curabitur blandit.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section> -->
+   
     <section class="newsevent">
       <div class="container">
         <div class="row">
@@ -88,7 +62,8 @@
                 <% if(Array.isArray(last4News) && last4News.length > 0){%> <%
                 last4News.map((news)=>{ %>
                 <li>
-                  <a href="/media/news-listing">
+                  
+                  <a href="/media/newsListing">
                     <p><%= news?.heading.slice(0,72)%>...</p>
                     <div>
                       <span> <%= news?.news_date%></span>
@@ -97,30 +72,15 @@
                   </a>
                 </li>
                 <% })%> <%}%>
-                <!-- <li>
-            <p>Shakti Domestic pumps are Ideal for homes to maintain water pressure in</p>
-            <div><span> 10th Jan, 2024</span> <span>Times Of India</span></div>
-          </li>
-          <li>
-            <p>Shakti Domestic pumps are Ideal for homes to maintain water pressure in</p>
-            <div><span> 10th Jan, 2024</span> <span>Times Of India</span></div>
-          </li>
-          <li>
-            <p>Shakti Domestic pumps are Ideal for homes to maintain water pressure in</p>
-            <div><span> 10th Jan, 2024</span> <span>Times Of India</span></div>
-          </li>
-          <li>
-            <p>Shakti Domestic pumps are Ideal for homes to maintain water pressure in</p>
-            <div><span> 10th Jan, 2024</span> <span>Times Of India</span></div>
-          </li> -->
+              
               </ul>
-              <a href="/media/news-listing" class="readmore">View All News</a>
+              <a href="/media/newsListing" class="readmore">View All News</a>
             </div>
           </div>
           <div class="col-lg-8 col-md-8 col-sm-12">
             <div class="eventdtls">
               <h2>Events</h2>
-              <div class="eventslide">
+              <!-- <div class="eventslide"> -->
                 <div class="eventpan">
                   <img src="images/eventpic1.png" />
                   <p>
@@ -130,13 +90,15 @@
                     >
                   </p>
                 </div>
-              </div>
+              <!-- </div> -->
 
               <a href="/newseventListing/event-list" class="readmore"
                 >All Events</a
               >
             </div>
           </div>
+
+
         </div>
       </div>
     </section>

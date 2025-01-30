@@ -51,40 +51,38 @@
     <section class="newsdetailsdesc">
       <div class="container">
         <img
-          src="<%= eventDetails.image_path%><%= eventDetails.actual_image%>"
+          src="<%=eventDetails.image_path%><%= eventDetails.actual_image%>"
           alt=""
           class="ndtlsthum"
         />
         <% for(let i=0; i<paragraphArray.length; i++){ %>
           <p><%= paragraphArray[i] %></p>
           <% } %>
-          <!-- </div> -->
-          <!-- </section> -->
-          <!-- <section class="othernews">
-  <div class="container">
-    <h2 class="newslihead">Other News</h2>
-    <div class="othernewsslide">
-          <div class="row newslistpan">
-            <div class="col-lg-4 col-md-4 col-sm-12 newslithum">
-              <img src="/images/news-pic9.png" alt="">
-            </div>
-            <div class="col-lg-8 col-md-8 col-sm-12 newslistdtlsrgt">
-              <h4>Category Name</h4>
-              <h2>Shakti Domestic pumps are Ideal for homes to maintain water pressure in taps and for general applications.</h2>
-              <h3><span><img src="/images/calendar.png" alt=""> 10th Jan, 2024</span>  <span><img src="/images/news-icon.png" alt="" height="24"> Times Of India</span></h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sempernon imperdiet. Morbi velit...</p>
-              <a href="#">Read More <img src="/images/newsmore-arrow.png" alt=""></a>
-            </div>
-          </div>
-    </div>
-  </div>
-</section> -->
-
-          <%- include('../common/footer.ejs') %>
-          <!-- </body> -->
-          <!-- </html> --></paragraphArray.length;
+          </paragraphArray.length;
         >
       </div>
+
+      <!-- <div class="container">
+
+        <img
+          src="<%=eventDetails.image_path%>subImages/<%= eventDetails.sub_image1%>"
+          alt=""
+         
+        />
+
+        <img
+        src="<%=eventDetails.image_path%>subImages/<%= eventDetails.sub_image2%>"
+        alt=""
+      
+       />
+        <img
+        src="<%=eventDetails.image_path%>subImages/<%= eventDetails.sub_image3%>"
+        alt=""
+        
+        />
+      </div> -->
     </section>
+
+    <%- include('../common/footer.ejs') %>
   </body>
 </html>
