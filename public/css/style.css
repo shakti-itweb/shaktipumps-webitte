@@ -7550,3 +7550,97 @@ dl.dropdown dt span:nth-child(3) {
     line-height: 16px;}
 
     /* Concall :: END */
+
+    .officers {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      background-color: #f4f4f4;
+      padding: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      border-radius: 10px;
+    }
+    
+    .responsive-section {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      padding: 40px;
+      background-color: #f4f4f4;
+    }
+    
+    .card-container {
+      background: white;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      transition: transform 0.3s ease-in-out;
+    }
+    
+    .card-container:hover {
+      transform: translateY(-5px);
+    }
+    
+    .card-button {
+      width: 100%;
+      padding: 15px;
+      background: #1f2b4c;
+      color: white;
+      border: none;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 15px;
+      transition: background 0.3s;
+    }
+    
+    .card-button:hover {
+      background: #0075be;
+    }
+    
+    .card-content {
+      padding: 15px;
+      font-size: 14px;
+      color: #333;
+      text-align: center;
+    }
+    .card-content p {
+      margin: 10px 0;
+      font-size: 16px;
+      color: #333;
+      text-align: center;
+    }
+
+    .card-content a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    .card-content a:hover {
+      text-decoration: underline;
+    }
+    
+    @media (max-width: 1024px) {
+      .responsive-section {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .responsive-section {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .responsive-section {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
