@@ -2336,8 +2336,7 @@ nav ul li a {
   margin-top: 30px;
 }
 .newsdetailsdesc {
-  padding-top: 50px;
-  padding-bottom: 20px;
+  padding: 60px 0;
 }
 .newsdetailsdesc img.ndtlsthum {
   background: #f2f2f2;
@@ -2348,21 +2347,6 @@ nav ul li a {
   float: left;
   margin: 0 25px 15px 0;
 }
-
- .imgevent img.ndtlsthum {
-  background: #f2f2f2;
-  border-radius: 10px;
-  border: 0.5px solid var(--Tertiary-Color-Dark-400, #9fa4b2);
-  background: var(--White, #fff);
-  padding: 8px;
-  margin-bottom: 40px;
- }
-
- img.ndtlsthum {
-  width: auto;
-  padding: 10px;
-}
-
 .newsdetailsdesc p {
   color: var(--Tertiary-Color-Dark-1000, #161e3e);
   text-align: justify;
@@ -7525,3 +7509,152 @@ dl.dropdown dt span:nth-child(3) {
   text-transform: capitalize;
   display: block;
 }
+
+
+
+/* Concall :: Start */
+
+.concalllist{background: #fff;}
+.concalllist thead{background: #161E3E;
+  height: 44px;
+  color: var(--White, #FFF);
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 15px;}
+  .concalllist thead th{padding-left: 15px;}
+  .concalllist td{padding: 15px;}
+  .concalllist td a.welresultsbtn{
+    width: 150px;
+  height: 42px;
+  line-height: 42px;
+  } 
+  .concalllist td a.welresultsbtn img{margin-right: 5px;}
+  .concalllist td p{
+    color: var(--Tertiary-Color-Dark-1000, #161E3E);
+    /* Font/Poppins Medium 16px */
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px; /* 168.75% */
+  }
+  .concalllist td p span{display: block; color: var(--Tertiary-Color-Dark-400, #9FA4B2);
+
+    /* Font/Poppins Light 11px */
+    font-family: Poppins;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;}
+
+    /* Concall :: END */
+
+    .officers {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      background-color: #f4f4f4;
+      padding: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      border-radius: 10px;
+    }
+    
+    .responsive-section {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      padding: 40px;
+      background-color: #f4f4f4;
+    }
+    
+    .card-container {
+      background: white;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      transition: transform 0.3s ease-in-out;
+    }
+    
+    .card-container:hover {
+      transform: translateY(-5px);
+    }
+    
+    .card-button {
+      width: 100%;
+      padding: 15px;
+      background: #1f2b4c;
+      color: white;
+      border: none;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 15px;
+      transition: background 0.3s;
+    }
+    
+    .card-button:hover {
+      background: #0075be;
+    }
+    
+    .card-content {
+      padding: 15px;
+      font-size: 14px;
+      color: #333;
+      text-align: center;
+    }
+    .card-content p {
+      margin: 10px 0;
+      font-size: 16px;
+      color: #333;
+      text-align: center;
+    }
+
+    .card-content a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    .card-content a:hover {
+      text-decoration: underline;
+    }
+    
+    @media (max-width: 1024px) {
+      .responsive-section {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .responsive-section {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .responsive-section {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    .imgevent img.ndtlsthum {
+      background: #f2f2f2;
+      border-radius: 10px;
+      border: 0.5px solid var(--Tertiary-Color-Dark-400, #9fa4b2);
+      background: var(--White, #fff);
+      padding: 8px;
+      margin-bottom: 40px;
+     }
+    
+     img.ndtlsthum {
+      width: auto;
+      padding: 10px;
+    }
