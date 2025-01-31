@@ -2336,7 +2336,8 @@ nav ul li a {
   margin-top: 30px;
 }
 .newsdetailsdesc {
-  padding: 60px 0;
+  padding-top: 50px;
+  padding-bottom: 20px;
 }
 .newsdetailsdesc img.ndtlsthum {
   background: #f2f2f2;
@@ -2347,6 +2348,21 @@ nav ul li a {
   float: left;
   margin: 0 25px 15px 0;
 }
+
+ .imgevent img.ndtlsthum {
+  background: #f2f2f2;
+  border-radius: 10px;
+  border: 0.5px solid var(--Tertiary-Color-Dark-400, #9fa4b2);
+  background: var(--White, #fff);
+  padding: 8px;
+  margin-bottom: 40px;
+ }
+
+ img.ndtlsthum {
+  width: auto;
+  padding: 10px;
+}
+
 .newsdetailsdesc p {
   color: var(--Tertiary-Color-Dark-1000, #161e3e);
   text-align: justify;

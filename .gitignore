@@ -3,7 +3,7 @@ node_modules/
 
 
 # Ignore public images
-public/images/
+# public/images/
 
 # Ignore JavaScript files in public
 public/js/*.js
