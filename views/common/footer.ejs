@@ -610,7 +610,7 @@
 
       // Show all divs if 'ALL' is selected, otherwise hide non-matching years
       if (selectedYear === "ALL" || div.id === selectedYear) {
-        div.style.display = ""; // Show the matching div
+        div.style.display = "block"; // Show the matching div
       } else {
         div.style.display = "none"; // Hide the non-matching divs
       }      
@@ -622,7 +622,7 @@
       console.log('TR'+tr);
       // Show all divs if 'ALL' is selected, otherwise hide non-matching years
       if (selectedYear === "ALL" || tr.id === selectedYear) {
-        tr.style.display = ""; // Show the matching div
+        tr.style.display = "block"; // Show the matching div
       } else {
         tr.style.display = "none"; // Hide the non-matching divs
       }      

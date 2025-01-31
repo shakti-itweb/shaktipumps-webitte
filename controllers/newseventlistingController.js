@@ -23,12 +23,7 @@ const getEventListing = async (req, res) => {
       throw "No events found in db";
     }else{
       allEvents = await allEvents.recordset;
-      // // console.log(allEvents);
-      // console.log(allEvents.at(0).event_frm_date, typeof allEvents.at(0).event_frm_date);
-      // const stringDate = String(allEvents.at(0).event_frm_date);
-      // console.log("String date :: ", stringDate.slice(0,10), " - ", stringDate.slice(4,15), typeof stringDate);
-      
-
+     
       // Updating event_frm_date and event_to_date to string format
       allEvents = allEvents.map(event => {
         return {

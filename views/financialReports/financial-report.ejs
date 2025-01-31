@@ -40,7 +40,7 @@
     </section>
     <section class="foundtiontab financialyeartab">
       <div class="container">
-        <div class="selectcat">
+        <div class="selectcat ">
           <select onchange="getval(this.value);">
             <option>ALL</option>
             <option value="2024-2025">2024-2025</option>
@@ -63,32 +63,29 @@
         <!-- partial:index.partial.html -->
         <ul class="tabs">
           <li class="active" rel="tab1">
-            Quarterly Results
+            Quarterly Results 
             <!-- <span>Consectetur Adipiscing Elit</span> -->
           </li>
-          <li rel="tab2">
-            Annual Report
-            <!-- <span>Shakti Pumps India Ltd.</span></li> -->
-          </li>
-
+          <li rel="tab2">Annual Report
+             <!-- <span>Shakti Pumps India Ltd.</span></li> -->
           <li rel="tab3">
-            Annual Return
+            Annual Return 
             <!-- <span>Consectetur Adipiscing Elit</span> -->
           </li>
           <li rel="tab4">
-            Investor Presentation
+            Investor Presentation 
             <!-- <span>Consectetur Adipiscing Elit</span> -->
           </li>
           <li rel="tab5">
-            Conference Call
+            Conference Call 
             <!-- <span>Consectetur Adipiscing Elit</span> -->
           </li>
           <li rel="tab6">
             Related Party Disclosure
-            <!-- <span>Consectetur Adipiscing Elit</span> -->
+             <!-- <span>Consectetur Adipiscing Elit</span> -->
           </li>
           <li rel="tab7">
-            Subsidiary Results
+            Subsidiary Results 
             <!-- <span>Consectetur Adipiscing Elit</span> -->
           </li>
         </ul>
@@ -137,9 +134,7 @@
                   Annual Report
                   <span>Annual Report of Shakti Pumps (I) Ltd.</span>
                 </h2>
-                <a
-                  href="/pdfFiles/financialReports/annualReport/Annual Report 2023-24.pdf"
-                  class="resultsbtn"
+                <a href="/pdfFiles/financialReports/annualReport/Annual Report 2023-24.pdf" class="resultsbtn"
                   ><img src="/images/pdf-icon.png" alt="" /> Report Download:
                   2023-24</a
                 >
@@ -169,9 +164,7 @@
             <div class="foundtabinsid financedtlstab">
               <div class="financedtlstitle">
                 <h2>BRSR <span>BRSR of Shakti Pumps (I) Ltd.</span></h2>
-                <a
-                  href="/pdfFiles/financialReports/BRSR/BRSR24.pdf"
-                  class="resultsbtn"
+                <a href="/pdfFiles/financialReports/BRSR/BRSR24.pdf" class="resultsbtn"
                   ><img src="/images/pdf-icon.png" alt="" /> Report Download:
                   2023-24</a
                 >
@@ -182,7 +175,10 @@
                 <div class="downloadcardpan" id="<%=file.year %>">
                   <h3>
                     <%=file.fileName %>
-                    <span><%=file.year%> BRSR of Shakti Pumps (I) Ltd.</span>
+                    <span
+                      ><%=file.year%> BRSR of Shakti Pumps (I)
+                      Ltd.</span
+                    >
                   </h3>
                   <a
                     href="/pdfFiles/financialReports/BRSR/<%=file.path%>"
@@ -203,9 +199,7 @@
                   Annual Return
                   <span>Annual Return of Shakti Pumps (I) Ltd.</span>
                 </h2>
-                <a
-                  href="/pdfFiles/financialReports/annualReturn/Annual Return 2024.pdf"
-                  class="resultsbtn"
+                <a href="/pdfFiles/financialReports/annualReturn/Annual Return 2024.pdf" class="resultsbtn"
                   ><img src="/images/pdf-icon.png" alt="" /> Report Download:
                   2023-24</a
                 >
@@ -308,8 +302,8 @@
             <div class="foundtabinsid financedtlstab">
               <div class="financedtlstitle">
                 <h2>
-                  Conference Call<span>
-                    Conference Call of Shakti Pumps (I) Ltd.</span
+                  Conference Call<span
+                    > Conference Call of Shakti Pumps (I) Ltd.</span
                   >
                 </h2>
                 <!-- <a href="#" class="resultsbtn"
@@ -317,8 +311,8 @@
                   2023-24</a
                 > -->
               </div>
-
-              <div class="concalllist">
+              
+              <div class="concalllist ">
                 <table width="100%" cellspacing="0" cellpadding="0" border="0">
                   <thead>
                     <th>Description & Date</th>
@@ -326,47 +320,42 @@
                     <th>Transcript</th>
                   </thead>
                   <tbody>
-                    <% if (Array.isArray(conferenceCall.recordset) &&
-                    conferenceCall.recordset.length > 0)
-                    {conferenceCall.recordset.forEach(function(file) { %>
-
-                    <tr class="aps" id="<%=file.year %>">
-                      <td>
-                        <p>
-                          <%=file.fileName %>
-                          <span>
-                            <%=file.year%> </span
-                          >
-                        </p>
-                      </td>
-                      <td>
-                        <audio controls>
-                          <!-- <source src="/audioFiles/conCall/CHR5020241028155982.mp3" type="audio/ogg"> -->
-                          <source
-                            src="/audioFiles/conCall/<%=file.audioPath%>"
-                            type="audio/mp3"
-                          />
-                        </audio>
-                        <!-- <img src="images/music-play.png" alt=""> -->
-                      </td>
-                      <td>
-                        <a
-                          href="/pdfFiles/financialReports/conferenceCall/<%=file.path%>"
-                          class="welresultsbtn"
-                          ><img src="/images/pdf-icon.png" alt="" /> Download</a
-                        >
-                      </td>
-                    </tr>
-
-                    <% })} %>
+                    
+                      <% if (Array.isArray(conferenceCall.recordset) &&
+                      conferenceCall.recordset.length > 0)
+                      {conferenceCall.recordset.forEach(function(file) { %>
+                      
+                        <tr class="aps" id="<%=file.year %>">
+                          
+                            <td>
+                              <p>  <%=file.fileName %>
+                               <span> <%=file.year%> Subsidiary Results of Shakti Pumps (I) Ltd.</span>
+                              </p>
+                            </td>
+                            <td>
+                              <audio controls>
+                                <!-- <source src="/audioFiles/conCall/CHR5020241028155982.mp3" type="audio/ogg"> -->
+                                <source src="/audioFiles/conCall/sample4.mp3" type="audio/mp3">                                
+                              </audio>
+                              <!-- <img src="images/music-play.png" alt=""> -->
+                            </td>
+                            <td>
+                              <a href="#" class="welresultsbtn"><img src="/images/pdf-icon.png" alt=""> Download</a>
+                            </td>
+                          
+                          </tr>
+      
+                    
+                      <% })} %>
+                    
+                  
                   </tbody>
                 </table>
               </div>
             </div>
+          
           </div>
-          <h3 class="tab_drawer_heading" rel="tab6">
-            Related Party Disclosure
-          </h3>
+          <h3 class="tab_drawer_heading" rel="tab6">Related Party Disclosure</h3>
           <div id="tab6" class="tab_content">
             <div class="foundtabinsid financedtlstab">
               <div class="financedtlstitle">
@@ -387,8 +376,7 @@
                   <h3>
                     <%=file.fileName %>
                     <span
-                      ><%=file.year%> Related Party Disclosure of Shakti Pumps
-                      (I) Ltd.</span
+                      ><%=file.year%> Related Party Disclosure of Shakti Pumps (I) Ltd.</span
                     >
                   </h3>
                   <a
@@ -406,7 +394,7 @@
               </div>
             </div>
           </div>
-          <h3 class="tab_drawer_heading" rel="tab7">Subsidiary Results</h3>
+          <h3 class="tab_drawer_heading" rel="tab7"> Subsidiary Results</h3>
           <div id="tab7" class="tab_content">
             <div class="foundtabinsid financedtlstab">
               <div class="financedtlstitle">
@@ -427,8 +415,7 @@
                   <h3>
                     <%=file.fileName %>
                     <span
-                      ><%=file.year%> Subsidiary Results of Shakti Pumps (I)
-                      Ltd.</span
+                      ><%=file.year%> Subsidiary Results of Shakti Pumps (I) Ltd.</span
                     >
                   </h3>
                   <a
@@ -446,7 +433,10 @@
               </div>
             </div>
           </div>
+
         </div>
+
+        
       </div>
       <!-- .tab_container -->
     </section>

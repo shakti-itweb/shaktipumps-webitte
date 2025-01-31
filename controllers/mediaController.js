@@ -19,7 +19,7 @@ const fetchCommonData = async () => {
 
 
             // last 4 news
-            last4News = await db.request().query(`select top 4 * from shakti_news order by createdOn desc;`);
+            last4News = await db.request().query(`select top 3 * from shakti_news order by createdOn desc;`);
             if(last4News.rowsAffected == 0){
                 console.log("Last 4 news not found in db");
                 throw "Last 4 news not found in db";
@@ -27,7 +27,7 @@ const fetchCommonData = async () => {
                 last4News = last4News.recordset;
             }
 
-
+ 
 
             // most recent event
             recentEvent = await db.request().query(`select top 1 * from shakti_events ORDER BY createdOn Desc;`);
@@ -60,13 +60,6 @@ const fetchCommonData = async () => {
         await db.close(); 
     }
 }
-
-
-
-
-
-
-
 
 
 const mediaHome = async (req,res) => {
@@ -160,7 +153,7 @@ const newsListing = async (req,res) => {
         await db.connect();
 
         // fetch all news from db
-        const allNews = await db.request().query(`select * from shakti_news;`);
+        const allNews = await db.request().query(`select * from shakti_news order by createdOn desc;`);
         if(allNews.rowsAffected == 0){
             console.log("No news found of some error occured");
             throw "some error occured or no news found in db";
