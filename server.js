@@ -29,6 +29,7 @@ app.use(express.urlencoded({extended : true}));
 app.set('trust proxy', true); // Important for getting the correct IP address
 app.use(express.static(path.join(__dirname,'public')));
 app.use('/pdfFiles', express.static(path.join(__dirname, 'pdfFiles')));
+app.use('/audioFiles', express.static(path.join(__dirname, 'audioFiles')));
 app.set('view engine', 'ejs');
 app.set('views',path.resolve("./views"));
 
