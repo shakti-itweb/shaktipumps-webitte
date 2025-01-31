@@ -365,7 +365,7 @@ nav ul li a {
 }
 .welresultsbtn {
   border-radius: 100px;
-  background: var(--Tertiary-Color-Dark-Blue-1000, #1f2b4c);
+  background: var(--Tertiary-Color-Dark-Blue-1000, #1f254c);
   width: 300px;
   height: 52px;
   font-size: 14px;
@@ -380,15 +380,15 @@ nav ul li a {
 }
 .readmore {
   border-radius: 100px;
-  background: var(--Secondary-Color-Green-1000, #02e270);
+  background: var(--Secondary-Color-Green-1000, #0f0263);
   color: var(--White, #fff);
   text-align: center;
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 4  00;
   line-height: 50px;
-  padding: 0 20px;
+  padding: 0 40px;
   display: inline-block;
 }
 /* .readmore:hover {
