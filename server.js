@@ -28,9 +28,10 @@ app.use(express.urlencoded({extended : true}));
 // Set trust proxy if your app is behind a proxy (like Heroku, AWS, etc.)
 app.set('trust proxy', true); // Important for getting the correct IP address
 app.use(express.static(path.join(__dirname,'public')));
+app.use('/pdfFiles', express.static(path.join(__dirname, 'pdfFiles')));
 app.set('view engine', 'ejs');
 app.set('views',path.resolve("./views"));
-app.use('/audioFiles', express.static(path.join(__dirname, 'audioFiles')));
+
 //Path for calling a routes
 app.use('/', homeRoutes);  
 app.use('/about', aboutRoutes);
@@ -44,7 +45,8 @@ app.use('/noticeInvestor',investorNotice);//Contain both notice as well as inves
 app.use('/patent',patent);
 app.use('/pmKusum',pmKusum);
 app.use('/career', career);
-app.use('/contact', contact)
+app.use('/contact', contact);
+app.use('/media', media);
 app.use('/industrial',industrial);
 app.use('/product',product);
 app.use('/solaroem',solaroem);
