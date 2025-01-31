@@ -1,33 +1,29 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shakti Pumps</title>
-    <link rel="icon" type="image/x-icon" href="/img/fav.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <script type="text/javascript" src="/js/jquery.min.js"></script>
-    <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="/css/bootstrap.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
-    />
-    <link rel="stylesheet" href="/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
-    />
-    <link rel="stylesheet" href="/css/style-loading.css" />
-    <link rel="stylesheet" href="/css/responsive.css" />
-  </head>
-  <body>
-    <%- include('../common/header.ejs') %>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shakti Pumps</title>
+  <link rel="icon" type="image/x-icon" href="/img/fav.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+  <link rel="stylesheet" href="/css/style-loading.css" />
+  <link rel="stylesheet" href="/css/responsive.css" />
+</head>
+
+<body>
+  <%- include('../common/header.ejs') %>
 
     <section class="about-banner lifeatsktban">
       <div><img src="/images/financial-banner.png" alt="" /></div>
@@ -63,29 +59,29 @@
         <!-- partial:index.partial.html -->
         <ul class="tabs">
           <li class="active" rel="tab1">
-            Quarterly Results 
+            Quarterly Results
             <!-- <span>Consectetur Adipiscing Elit</span> -->
           </li>
           <li rel="tab2">Annual Report
-             <!-- <span>Shakti Pumps India Ltd.</span></li> -->
+            <!-- <span>Shakti Pumps India Ltd.</span></li> -->
           <li rel="tab3">
-            Annual Return 
+            Annual Return
             <!-- <span>Consectetur Adipiscing Elit</span> -->
           </li>
           <li rel="tab4">
-            Investor Presentation 
+            Investor Presentation
             <!-- <span>Consectetur Adipiscing Elit</span> -->
           </li>
           <li rel="tab5">
-            Conference Call 
+            Conference Call
             <!-- <span>Consectetur Adipiscing Elit</span> -->
           </li>
           <li rel="tab6">
             Related Party Disclosure
-             <!-- <span>Consectetur Adipiscing Elit</span> -->
+            <!-- <span>Consectetur Adipiscing Elit</span> -->
           </li>
           <li rel="tab7">
-            Subsidiary Results 
+            Subsidiary Results
             <!-- <span>Consectetur Adipiscing Elit</span> -->
           </li>
         </ul>
@@ -103,25 +99,22 @@
                 <!-- <a href="#" class="resultsbtn"><img src="/images/pdf-icon.png" alt="" /> Report Download: 2023-24</a> -->
               </div>
               <div class="downloadcardlist">
-                <% if (Array.isArray(quarterlyResults.recordset) &&
-                quarterlyResults.recordset.length > 0)
-                {quarterlyResults.recordset.forEach(function(file) { %>
-                <div class="downloadcardpan" id="<%=file.year %>">
-                  <h3>
-                    <%=file.fileName %><span
-                      ><%=file.quater%> Quarterly Results of Shakti Pumps (I)
-                      Ltd.</span
-                    ><span><%=file.year %></span>
-                  </h3>
-                  <!-- <h3><span><%=file.year %></span></h3> -->
-                  <a
-                    href="/pdfFiles/financialReports/qualityResults/<%=file.path%>"
-                    class="readmore"
-                    target="_blank"
-                    ><img src="/images/pdf-iconwh.png" alt="" /> Download</a
-                  >
-                </div>
-                <% })} %>
+                <% if (Array.isArray(quarterlyResults.recordset) && quarterlyResults.recordset.length> 0)
+                  {quarterlyResults.recordset.forEach(function(file) { %>
+                  <div class="downloadcardpan" id="<%=file.year %>">
+                    <h3>
+                      <%=file.fileName %><span>
+                          <%=file.quater%> Quarterly Results of Shakti Pumps (I)
+                            Ltd.
+                        </span><span>
+                          <%=file.year %>
+                        </span>
+                    </h3>
+                    <!-- <h3><span><%=file.year %></span></h3> -->
+                    <a href="/pdfFiles/financialReports/qualityResults/<%=file.path%>" class="readmore"
+                      target="_blank"><img src="/images/pdf-iconwh.png" alt="" /> Download</a>
+                  </div>
+                  <% })} %>
               </div>
             </div>
           </div>
@@ -134,60 +127,49 @@
                   Annual Report
                   <span>Annual Report of Shakti Pumps (I) Ltd.</span>
                 </h2>
-                <a href="/pdfFiles/financialReports/annualReport/Annual Report 2023-24.pdf" class="resultsbtn"
-                  ><img src="/images/pdf-icon.png" alt="" /> Report Download:
-                  2023-24</a
-                >
+                <a href="/pdfFiles/financialReports/annualReport/Annual Report 2023-24.pdf" class="resultsbtn"><img
+                    src="/images/pdf-icon.png" alt="" /> Report Download:
+                  2023-24</a>
               </div>
               <div class="downloadcardlist">
-                <% if (Array.isArray(annualReport.recordset) &&
-                annualReport.recordset.length > 0)
-                {annualReport.recordset.forEach(function(file) { %>
-                <div class="downloadcardpan" id="<%=file.year %>">
-                  <h3>
-                    <%=file.fileName %>
-                    <span
-                      ><%=file.year%> Annual Report of Shakti Pumps (I)
-                      Ltd.</span
-                    >
-                  </h3>
-                  <a
-                    href="/pdfFiles/financialReports/annualReport/<%=file.path%>"
-                    class="readmore"
-                    target="_blank"
-                    ><img src="/images/pdf-iconwh.png" alt="" /> Download</a
-                  >
-                </div>
-                <% })} %>
+                <% if (Array.isArray(annualReport.recordset) && annualReport.recordset.length> 0)
+                  {annualReport.recordset.forEach(function(file) { %>
+                  <div class="downloadcardpan" id="<%=file.year %>">
+                    <h3>
+                      <%=file.fileName %>
+                        <span>
+                          <%=file.year%> Annual Report of Shakti Pumps (I)
+                            Ltd.
+                        </span>
+                    </h3>
+                    <a href="/pdfFiles/financialReports/annualReport/<%=file.path%>" class="readmore"
+                      target="_blank"><img src="/images/pdf-iconwh.png" alt="" /> Download</a>
+                  </div>
+                  <% })} %>
               </div>
             </div>
             <div class="foundtabinsid financedtlstab">
               <div class="financedtlstitle">
                 <h2>BRSR <span>BRSR of Shakti Pumps (I) Ltd.</span></h2>
-                <a href="/pdfFiles/financialReports/BRSR/BRSR24.pdf" class="resultsbtn"
-                  ><img src="/images/pdf-icon.png" alt="" /> Report Download:
-                  2023-24</a
-                >
+                <a href="/pdfFiles/financialReports/BRSR/BRSR24.pdf" class="resultsbtn"><img src="/images/pdf-icon.png"
+                    alt="" /> Report Download:
+                  2023-24</a>
               </div>
               <div class="downloadcardlist">
-                <% if (Array.isArray(BRSR.recordset) && BRSR.recordset.length >
-                0) {BRSR.recordset.forEach(function(file) { %>
-                <div class="downloadcardpan" id="<%=file.year %>">
-                  <h3>
-                    <%=file.fileName %>
-                    <span
-                      ><%=file.year%> BRSR of Shakti Pumps (I)
-                      Ltd.</span
-                    >
-                  </h3>
-                  <a
-                    href="/pdfFiles/financialReports/BRSR/<%=file.path%>"
-                    class="readmore"
-                    target="_blank"
-                    ><img src="/images/pdf-iconwh.png" alt="" /> Download</a
-                  >
-                </div>
-                <% })} %>
+                <% if (Array.isArray(BRSR.recordset) && BRSR.recordset.length>
+                  0) {BRSR.recordset.forEach(function(file) { %>
+                  <div class="downloadcardpan" id="<%=file.year %>">
+                    <h3>
+                      <%=file.fileName %>
+                        <span>
+                          <%=file.year%> BRSR of Shakti Pumps (I)
+                            Ltd.
+                        </span>
+                    </h3>
+                    <a href="/pdfFiles/financialReports/BRSR/<%=file.path%>" class="readmore" target="_blank"><img
+                        src="/images/pdf-iconwh.png" alt="" /> Download</a>
+                  </div>
+                  <% })} %>
               </div>
             </div>
           </div>
@@ -199,31 +181,25 @@
                   Annual Return
                   <span>Annual Return of Shakti Pumps (I) Ltd.</span>
                 </h2>
-                <a href="/pdfFiles/financialReports/annualReturn/Annual Return 2024.pdf" class="resultsbtn"
-                  ><img src="/images/pdf-icon.png" alt="" /> Report Download:
-                  2023-24</a
-                >
+                <a href="/pdfFiles/financialReports/annualReturn/Annual Return 2024.pdf" class="resultsbtn"><img
+                    src="/images/pdf-icon.png" alt="" /> Report Download:
+                  2023-24</a>
               </div>
               <div class="downloadcardlist">
-                <% if (Array.isArray(annualReturns.recordset) &&
-                annualReturns.recordset.length > 0)
-                {annualReturns.recordset.forEach(function(file) { %>
-                <div class="downloadcardpan" id="<%=file.year %>">
-                  <h3>
-                    <%=file.fileName %>
-                    <span
-                      ><%=file.year%> Annual Returns of Shakti Pumps (I)
-                      Ltd.</span
-                    >
-                  </h3>
-                  <a
-                    href="/pdfFiles/financialReports/annualReturn/<%=file.path%>"
-                    class="readmore"
-                    target="_blank"
-                    ><img src="/images/pdf-iconwh.png" alt="" /> Download</a
-                  >
-                </div>
-                <% })} %>
+                <% if (Array.isArray(annualReturns.recordset) && annualReturns.recordset.length> 0)
+                  {annualReturns.recordset.forEach(function(file) { %>
+                  <div class="downloadcardpan" id="<%=file.year %>">
+                    <h3>
+                      <%=file.fileName %>
+                        <span>
+                          <%=file.year%> Annual Returns of Shakti Pumps (I)
+                            Ltd.
+                        </span>
+                    </h3>
+                    <a href="/pdfFiles/financialReports/annualReturn/<%=file.path%>" class="readmore"
+                      target="_blank"><img src="/images/pdf-iconwh.png" alt="" /> Download</a>
+                  </div>
+                  <% })} %>
               </div>
             </div>
           </div>
@@ -232,9 +208,7 @@
             <div class="foundtabinsid financedtlstab">
               <div class="financedtlstitle">
                 <h2>
-                  Result Release<span
-                    >Result Release of Shakti Pumps (I) Ltd.</span
-                  >
+                  Result Release<span>Result Release of Shakti Pumps (I) Ltd.</span>
                 </h2>
                 <!-- <a href="#" class="resultsbtn"
                   ><img src="/images/pdf-icon.png" alt="" /> Report Download:
@@ -242,25 +216,20 @@
                 > -->
               </div>
               <div class="downloadcardlist">
-                <% if (Array.isArray(resultRelease.recordset) &&
-                resultRelease.recordset.length > 0)
-                {resultRelease.recordset.forEach(function(file) { %>
-                <div class="downloadcardpan" id="<%=file.year %>">
-                  <h3>
-                    <%=file.fileName %>
-                    <span
-                      ><%=file.year%> Result Release of Shakti Pumps (I)
-                      Ltd.</span
-                    >
-                  </h3>
-                  <a
-                    href="/pdfFiles/financialReports/resultRelease/<%=file.path%>"
-                    class="readmore"
-                    target="_blank"
-                    ><img src="/images/pdf-iconwh.png" alt="" /> Download</a
-                  >
-                </div>
-                <% })} %>
+                <% if (Array.isArray(resultRelease.recordset) && resultRelease.recordset.length> 0)
+                  {resultRelease.recordset.forEach(function(file) { %>
+                  <div class="downloadcardpan" id="<%=file.year %>">
+                    <h3>
+                      <%=file.fileName %>
+                        <span>
+                          <%=file.year%> Result Release of Shakti Pumps (I)
+                            Ltd.
+                        </span>
+                    </h3>
+                    <a href="/pdfFiles/financialReports/resultRelease/<%=file.path%>" class="readmore"
+                      target="_blank"><img src="/images/pdf-iconwh.png" alt="" /> Download</a>
+                  </div>
+                  <% })} %>
               </div>
             </div>
             <div class="foundtabinsid financedtlstab">
@@ -275,25 +244,20 @@
                 > -->
               </div>
               <div class="downloadcardlist">
-                <% if (Array.isArray(investorPresentation.recordset) &&
-                investorPresentation.recordset.length > 0)
-                {investorPresentation.recordset.forEach(function(file) { %>
-                <div class="downloadcardpan" id="<%=file.year %>">
-                  <h3>
-                    <%=file.fileName %>
-                    <span
-                      ><%=file.year%> Investor Presentation of Shakti Pumps (I)
-                      Ltd.</span
-                    >
-                  </h3>
-                  <a
-                    href="/pdfFiles/financialReports/investorPresentation/<%=file.path%>"
-                    class="readmore"
-                    target="_blank"
-                    ><img src="/images/pdf-iconwh.png" alt="" /> Download</a
-                  >
-                </div>
-                <% })} %>
+                <% if (Array.isArray(investorPresentation.recordset) && investorPresentation.recordset.length> 0)
+                  {investorPresentation.recordset.forEach(function(file) { %>
+                  <div class="downloadcardpan" id="<%=file.year %>">
+                    <h3>
+                      <%=file.fileName %>
+                        <span>
+                          <%=file.year%> Investor Presentation of Shakti Pumps (I)
+                            Ltd.
+                        </span>
+                    </h3>
+                    <a href="/pdfFiles/financialReports/investorPresentation/<%=file.path%>" class="readmore"
+                      target="_blank"><img src="/images/pdf-iconwh.png" alt="" /> Download</a>
+                  </div>
+                  <% })} %>
               </div>
             </div>
           </div>
@@ -302,16 +266,14 @@
             <div class="foundtabinsid financedtlstab">
               <div class="financedtlstitle">
                 <h2>
-                  Conference Call<span
-                    > Conference Call of Shakti Pumps (I) Ltd.</span
-                  >
+                  Conference Call<span> Conference Call of Shakti Pumps (I) Ltd.</span>
                 </h2>
                 <!-- <a href="#" class="resultsbtn"
                   ><img src="/images/pdf-icon.png" alt="" /> Report Download:
                   2023-24</a
                 > -->
               </div>
-              
+
               <div class="concalllist ">
                 <table width="100%" cellspacing="0" cellpadding="0" border="0">
                   <thead>
@@ -320,40 +282,43 @@
                     <th>Transcript</th>
                   </thead>
                   <tbody>
-                    
-                      <% if (Array.isArray(conferenceCall.recordset) &&
-                      conferenceCall.recordset.length > 0)
+
+                    <% if (Array.isArray(conferenceCall.recordset) && conferenceCall.recordset.length> 0)
                       {conferenceCall.recordset.forEach(function(file) { %>
-                      
-                        <tr class="aps" id="<%=file.year %>">
-                          
-                            <td>
-                              <p>  <%=file.fileName %>
-                               <span> <%=file.year%> Subsidiary Results of Shakti Pumps (I) Ltd.</span>
-                              </p>
-                            </td>
-                            <td>
-                              <audio controls>
-                                <!-- <source src="/audioFiles/conCall/CHR5020241028155982.mp3" type="audio/ogg"> -->
-                                <source src="/audioFiles/conCall/sample4.mp3" type="audio/mp3">                                
-                              </audio>
-                              <!-- <img src="images/music-play.png" alt=""> -->
-                            </td>
-                            <td>
-                              <a href="#" class="welresultsbtn"><img src="/images/pdf-icon.png" alt=""> Download</a>
-                            </td>
-                          
-                          </tr>
-      
-                    
+
+                      <tr class="aps" id="<%=file.year %>">
+
+                        <td>
+                          <p>
+                            <%=file.fileName %>
+                              <span>
+                                <%=file.year%> Conference Call Results of Shakti Pumps (I) Ltd.
+                              </span>
+                          </p>
+                        </td>
+                        <td>
+                          <audio controls>
+                            <source src="/audioFiles/conCall/<%=file.audioPath%>" type="audio/mp3" />
+                          </audio>
+                          <!-- <img src="images/music-play.png" alt=""> -->
+
+                        </td>
+                        <td>
+                          <a href="/pdfFiles/financialReports/conferenceCall/<%=file.path%>" class="welresultsbtn"><img
+                              src="/images/pdf-icon.png" alt="" /> Download</a>
+                        </td>
+
+                      </tr>
+
+
                       <% })} %>
-                    
-                  
+
+
                   </tbody>
                 </table>
               </div>
             </div>
-          
+
           </div>
           <h3 class="tab_drawer_heading" rel="tab6">Related Party Disclosure</h3>
           <div id="tab6" class="tab_content">
@@ -369,28 +334,21 @@
                 > -->
               </div>
               <div class="downloadcardlist">
-                <% if (Array.isArray(relatedPartyDisclosure.recordset) &&
-                relatedPartyDisclosure.recordset.length > 0)
-                {relatedPartyDisclosure.recordset.forEach(function(file) { %>
-                <div class="downloadcardpan" id="<%=file.year %>">
-                  <h3>
-                    <%=file.fileName %>
-                    <span
-                      ><%=file.year%> Related Party Disclosure of Shakti Pumps (I) Ltd.</span
-                    >
-                  </h3>
-                  <a
-                    href="/pdfFiles/financialReports/relatedPartyDisclosure/<%=file.path%>"
-                    class="readmore"
-                    target="_blank"
-                    ><img
-                      src="/pdfFiles/financialReports/relatedPartyDisclosure/<%=file.path%>"
-                      alt=""
-                    />
-                    Download</a
-                  >
-                </div>
-                <% })} %>
+                <% if (Array.isArray(relatedPartyDisclosure.recordset) && relatedPartyDisclosure.recordset.length> 0)
+                  {relatedPartyDisclosure.recordset.forEach(function(file) { %>
+                  <div class="downloadcardpan" id="<%=file.year %>">
+                    <h3>
+                      <%=file.fileName %>
+                        <span>
+                          <%=file.year%> Related Party Disclosure of Shakti Pumps (I) Ltd.
+                        </span>
+                    </h3>
+                    <a href="/pdfFiles/financialReports/relatedPartyDisclosure/<%=file.path%>" class="readmore"
+                      target="_blank"><img src="/pdfFiles/financialReports/relatedPartyDisclosure/<%=file.path%>"
+                        alt="" />
+                      Download</a>
+                  </div>
+                  <% })} %>
               </div>
             </div>
           </div>
@@ -408,38 +366,31 @@
                 > -->
               </div>
               <div class="downloadcardlist">
-                <% if (Array.isArray(subsidiaryResults.recordset) &&
-                subsidiaryResults.recordset.length > 0)
-                {subsidiaryResults.recordset.forEach(function(file) { %>
-                <div class="downloadcardpan" id="<%=file.year %>">
-                  <h3>
-                    <%=file.fileName %>
-                    <span
-                      ><%=file.year%> Subsidiary Results of Shakti Pumps (I) Ltd.</span
-                    >
-                  </h3>
-                  <a
-                    href="/pdfFiles/financialReports/Subsidiary/<%=file.path%>"
-                    class="readmore"
-                    target="_blank"
-                    ><img
-                      src="/pdfFiles/financialReports/Subsidiary/<%=file.path%>"
-                      alt=""
-                    />
-                    Download</a
-                  >
-                </div>
-                <% })} %>
+                <% if (Array.isArray(subsidiaryResults.recordset) && subsidiaryResults.recordset.length> 0)
+                  {subsidiaryResults.recordset.forEach(function(file) { %>
+                  <div class="downloadcardpan" id="<%=file.year %>">
+                    <h3>
+                      <%=file.fileName %>
+                        <span>
+                          <%=file.year%> Subsidiary Results of Shakti Pumps (I) Ltd.
+                        </span>
+                    </h3>
+                    <a href="/pdfFiles/financialReports/Subsidiary/<%=file.path%>" class="readmore" target="_blank"><img
+                        src="/pdfFiles/financialReports/Subsidiary/<%=file.path%>" alt="" />
+                      Download</a>
+                  </div>
+                  <% })} %>
               </div>
             </div>
           </div>
 
         </div>
 
-        
+
       </div>
       <!-- .tab_container -->
     </section>
     <%- include('../common/footer.ejs') %>
-  </body>
+</body>
+
 </html>
