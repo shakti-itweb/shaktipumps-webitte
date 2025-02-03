@@ -12,8 +12,7 @@ const getfetchProductsForListing = async (req, res) => {
   console.log(
     "Printing product type before going to actual content",
     req.params.pageValue
-  );
-
+  ); 
   const pageType = req.params.pageValue;
   try {
     if (pageType == "pumps") {
@@ -32,7 +31,7 @@ const getfetchProductsForListing = async (req, res) => {
       await db.connect();
       const queryResponse = await db.request().query(`select * from solarPump`);
       console.log(queryResponse);
-      res.render("product/product-listing", queryResponse);
+      res.render("product/product-listing", queryResponse); 
       return; //This will prevent from multiple rendering
     }
     if (pageType == "controllers") {
