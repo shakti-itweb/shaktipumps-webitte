@@ -189,11 +189,11 @@
                   <!-- <% if (Array.isArray(recordset)){%>
                     <h3><%= recordset[0].category.toUpperCase()%></h3>
                     <%} %> -->
-                    <h3><%= recordset[0].category.toUpperCase()%></h3>
+                    <h3><%= recordset[0].category.charAt(0).toUpperCase() + recordset[0].category.slice(1) %></h3>
                   <ul>
                     <li><a href="#">Product</a></li>
                     <li>
-                      <a href="#" class="active"><%= recordset[0].category %></a>
+                      <a href="#" class="active"><%= recordset[0].category.charAt(0).toUpperCase() + recordset[0].category.slice(1) %></a>
                     </li>
                   </ul>
                 </div>
